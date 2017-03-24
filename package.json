@@ -1,0 +1,19 @@
+{
+  "name": "@nrk/style-icons",
+  "homepage": "http://nrkno.github.io/style-icons/",
+  "description": "The official icons for NRK.",
+  "author": "NRK <opensource@nrk.no> (http://www.nrk.no/)",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrkno/style-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nrkno/style-icons/issues"
+  },
+  "devDependencies": {
+    "@nrk/static-publish-cli": "^3.0.4"
+  }
+}
