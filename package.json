@@ -1,0 +1,26 @@
+{
+  "name": "@nrk/core-icons",
+  "description": "The official icons for NRK.",
+  "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "node bin/build",
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "prebuild": "rimraf dist && mkdirp dist && cpx 'src/*.html' dist/"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "eslint": "^3.18.0",
+    "eslint-config-nrk": "^5.1.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrkno/core-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nrkno/core-icons/issues"
+  }
+}
