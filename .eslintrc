@@ -1,0 +1,6 @@
+{
+  "extends": "nrk",
+  "env": {
+    "node": true
+  }
+}

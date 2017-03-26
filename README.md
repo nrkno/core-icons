@@ -1,2 +1,2 @@
-# icons
-Felles ikoner-bibliotek, for web, mobil og prototyping
+# @nrk/style-icons
+Common icons for web services and native apps.

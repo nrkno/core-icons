@@ -1,19 +1,22 @@
 {
   "name": "@nrk/style-icons",
-  "homepage": "http://nrkno.github.io/style-icons/",
-  "description": "The official icons for NRK.",
+  "description": "Common icons for web services and native apps.",
   "author": "NRK <opensource@nrk.no> (http://www.nrk.no/)",
   "version": "1.0.0",
-  "license": "MIT",
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nrkno/style-icons.git"
+  "main": "dist/nrk-icons.js",
+  "scripts": {
+    "build": "node bin/build",
+    "prebuild": "rimraf dist && mkdirp dist"
   },
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-nrk": "^5.1.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.1"
+  },
+  "repository": "git+https://github.com/nrkno/style-icons.git",
   "bugs": {
     "url": "https://github.com/nrkno/style-icons/issues"
   },
-  "devDependencies": {
-    "@nrk/static-publish-cli": "^3.0.4"
-  }
+  "license": "MIT"
 }
