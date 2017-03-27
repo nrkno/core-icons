@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "node bin/build",
-    "prebuild": "rimraf dist && mkdirp dist && cpx 'src/*.html' dist/",
+    "prebuild": "rimraf dist && mkdirp dist && cpx 'src/*.{html,svg}' dist/",
     "static-publish": "static-publish publish --directory ./dist --package ./package.json --verbose --latest"
   },
   "devDependencies": {
