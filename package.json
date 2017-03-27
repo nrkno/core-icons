@@ -6,10 +6,11 @@
   "license": "MIT",
   "scripts": {
     "build": "node bin/build",
-    "deploy": "git subtree push --prefix dist origin gh-pages",
-    "prebuild": "rimraf dist && mkdirp dist && cpx 'src/*.html' dist/"
+    "prebuild": "rimraf dist && mkdirp dist && cpx 'src/*.html' dist/",
+    "static-publish": "static-publish publish --directory ./dist --package ./package.json --verbose --latest"
   },
   "devDependencies": {
+    "@nrk/static-publish-cli": "^3.0.2",
     "cpx": "^1.5.0",
     "eslint": "^3.18.0",
     "eslint-config-nrk": "^5.1.0",
