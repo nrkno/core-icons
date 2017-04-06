@@ -18,6 +18,7 @@ const buildSvg = () => Promise
   .then((files) => files.map((file) => svgToSymbol(file, fs.readFileSync(path.join(SRC_PATH, file)))))
   .then((symbols) => `<svg xmlns="http://www.w3.org/2000/svg" style="display:none">${symbols.join('')}</svg>`)
   .then((svg) => `document.documentElement.firstElementChild.insertAdjacentHTML('beforeend', '${svg}')`)
+  .then((js) => `/*! Copyright (c) 2015-${new Date().getFullYear()} NRK <opensource@nrk.no> */\n${js}`)
   .then((js) => {
     fs.writeFileSync(path.join(DIST_PATH, SVG_FILENAME), js);
     fs.writeFileSync(path.join(DIST_PATH, SVG_FILENAME_MIN), js);
