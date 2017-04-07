@@ -29,7 +29,7 @@
   <div class="docs-container nrk-grid">
     <div class="nrk-xs-12of12 nrk-md-3of12" style="padding-right:30px">
       <h2>@nrk/core-icons</h2>
-      <p><input type="text" class="nrk-xs-12of12" placeholder="Finn ikon"></p>
+      <p><input name="search" type="text" class="nrk-xs-12of12" placeholder="Finn ikon"></p>
       <h2>Sizing</h2>
       <p>
         Icons should be used in dimensions <code class="language-markup">15x15</code>,
@@ -47,7 +47,7 @@
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
-  <script src="https://static.nrk.no/core-icons/1.0.0/core-icons.min.js"></script>
+  <script src="https://static.nrk.no/core-icons/latest/core-icons.min.js"></script>
   <!--<script src="core-icons.js"></script>-->
   <script>
     const symbols = Array.from(document.querySelectorAll('symbol[id]')).map((symbol) => symbol.id);
@@ -59,6 +59,19 @@
       (groups[ns] = groups[ns] || []).push(id);
     });
     console.log(groups);
+
+    document.addEventListener('input', (event) => {
+      if (event.target.name === 'search') {
+        Array.from(document.querySelectorAll('.docs-sample'))
+          .forEach((el) => {
+            el.style.display = el.querySelector('use')
+              .getAttribute('xlink:href')
+              .slice(3) // Remove 'nrk-'
+              .indexOf(event.target.value) < 0 ? 'none'
+              : '';
+          });
+      }
+    });
 
     // Make icon-grid
     document.getElementById('icons').insertAdjacentHTML('beforeend', symbols.map((id) => markup(id)).join(''));
