@@ -5,101 +5,63 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>@nrk/core-icons</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
-  <link rel="stylesheet" href="https://static.nrk.no/core-css/1.0.0/core-css.min.css">
   <link rel="stylesheet" href="https://static.nrk.no/core-fonts/1.0.0/core-fonts.min.css">
+  <link rel="stylesheet" href="https://static.nrk.no/core-css/1.0.0/core-css.min.css">
   <style>
-    body { transition: background-color .5s }
+    body { padding: 70px 0; min-height: 100vh; font: 16px/1.5 'LFT Etica',sans-serif }
+    body::after{content:'';position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;background:inherit} /* Fixes invert: https://bugs.chromium.org/p/chromium/issues/detail?id=340168 */
+    h2 { font-size: 13px; margin: 2em 0 -1em; text-transform: uppercase }
+    input[readonly] { box-sizing: border-box; cursor: pointer; border: 0; padding: 10px; font-family: monospace }
+    input, select, textarea { font: inherit }
 
-    /* Docs-specific CSS (extends core-css) */
-    .docs-container { margin: auto; padding: 1rem; max-width: 1080px }
-    .docs-content { padding-bottom: 15%; outline: 0 } /* Focusable without outline */
-    .docs-content > hr { margin: 3rem 0 2rem 0; padding: 0; border: 0; border-top: 1px solid; opacity: .1 }
-    .docs-grid > * { box-sizing: border-box; padding: 3px 9px; box-shadow: inset 0 0 0 1px #eee }
-    .docs-color { padding: 1em; font:.8em/1 monospace; box-shadow: 0 2px 3px rgba(0,0,0,.3) }
-    .docs-icons input { position: absolute; pointer-events: none; opacity: 0; width: 1px; height: 1px }
-    .docs-icons svg { display: block; pointer-events: none; margin: auto; height: 30px; width: 50% }
-    .docs-icons a { position: relative; padding: 15px; white-space: nowrap; transition: .2s }
-    .docs-icons a:active { z-index: 2; transform: scale(.9) }
-
-    .nrk-color-super { background: #009fbb; color: #fff }  /* For demo only */
-    .nrk-color-invert pre, .nrk-color-invert :not(pre) > code { -webkit-filter: invert(100%); filter: invert(100%) }
-    .nrk-color-invert .docs-grid > * { box-shadow: inset 0 0 0 1px #333 }
-
-    @media(min-width:720px){
-      .docs-menu { position: fixed }
-      .docs-icons a::after { content: 'Click to copy'; pointer-events: none; position: absolute; z-index: 2; padding: 0 5px; border-radius: 3px; font-size: 13px; background:#141517; color: #fff; opacity: 0; transition: .2s }
-      .docs-icons a:active::after { content: 'Copied!' }
-      .docs-icons a:hover::after { opacity: 1 }
-    }
+    .docs-container { margin: auto; padding: 0 10px; max-width: 1200px }
+    .docs-masthead { position: fixed; z-index: 3; top: 0; left: 0; right: 0; box-shadow: 0 0 2px rgba(0,0,0,.5) }
+    .docs-masthead li { padding-right: 14px; font-size: 14px; line-height: 44px }
   </style>
 </head>
 <body class="nrk-color-base">
-  <a class="nrk-sr-focus" href="#content">Hopp til innhold</a>
-  <header class="nrk-color-invert">
-    <h1 class="docs-container" style="font-size:1em">@nrk/core-icons</h1>
+  <header class="docs-masthead nrk-color-base">
+    <ul class="docs-container nrk-grid">
+      <li><a target="_top" href="https://github.com/nrkno/core-icons">Github</a></li>
+      <li><a target="_top" href="https://github.com/nrkno/core-icons/archive/master.zip">Download</a></li>
+    </ul>
   </header>
-  <div class="nrk-grid docs-container">
-    <aside class="nrk-xs-12of12 nrk-sm-3of12">
-      <nav class="docs-menu">
-        <label><input type="radio" name="color" value="nrk-color-base" checked /> Normal</label>
-        <br /><label><input type="radio" name="color" value="nrk-color-invert" /> Invert</label>
-        <br /><label><input type="radio" name="color" value="nrk-color-super" /> Super</label>
-        <p>
-          <a class="nrk-button" href="https://github.com/nrkno/core-icons">View on Github</a><br>
-          <a class="nrk-button" href="https://github.com/nrkno/core-icons/archive/master.zip">Download ZIP</a>
-        </p>
-      </nav>
-    </aside>
-    <div class="docs-content nrk-xs-12of12 nrk-sm-9of12" id="content" tabindex="-1">
-      <h1>@nrk/core-icons</h1>
-
+  <div class="docs-container nrk-grid">
+    <div class="nrk-xs-12of12 nrk-md-3of12" style="padding-right:30px">
+      <h2>@nrk/core-icons</h2>
+      <p><input type="text" class="nrk-xs-12of12" placeholder="Finn ikon"></p>
+      <h2>Sizing</h2>
       <p>
         Icons should be used in dimensions <code class="language-markup">15x15</code>,
         <code class="language-markup">21x21</code> or <code class="language-markup">30x30</code>.
         For easier usage, caching and cross-domain compability, icons are loaded by including
-        <code class="language-javascript">&lt;script src=&quot;core-icons.js&quot;&gt;&lt;/script&gt;</code>.
-        In combination with @nrk/core-css, circular buttons can be used for single icons with
-        <code class="language-css">nrk-button nrk-button--o</code>.
       </p>
-      <p class="docs-o">
-        <button class="nrk-button nrk-button--o"><svg><use xlink:href="#nrk-close" /></svg></button>
-        <button class="nrk-button nrk-button--o"><svg><use xlink:href="#nrk-arrow-right" /></svg></button>
-        <button class="nrk-button nrk-button--o"><svg><use xlink:href="#nrk-some-facebook" /></svg></button>
-        <button class="nrk-button nrk-button--o"><svg><use xlink:href="#nrk-some-twitter" /></svg></button>
-        <button class="nrk-button nrk-button--o"><svg><use xlink:href="#nrk-some-instagram" /></svg></button>
-      </p>
-      <pre><code data-markup=".docs-o" class="language-markup"></code></pre>
-      <div class="docs-icons docs-grid nrk-grid"></div>
+      <h2>Colors</h2>
+      <p>The icons automatically inherits their color form the surrounding text.</p>
+      <p><label><input type="checkbox" name="invert" onchange="document.body.style.filter=this.checked?'invert(1)':''"> Show negative</label></p>
+    </div>
+    <div class="nrk-xs-12of12 nrk-md-9of12" id="icons">
+      <h2>Usage</h2>
+      <p>Copy this into your <code class="language-markup">&lt;body&gt;</code>:</p>
+      <p><input type="text" onclick="this.select();document.execCommand('copy')" readonly class="nrk-xs-12of12 nrk-color-shade-1" value="&lt;script src=&quot;https://static.nrk.no/core-icons/latest/core-icons.min.js&quot;&gt;&lt;/script&gt;"></p>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
-  <script src="core-icons.js"></script>
+  <script src="https://static.nrk.no/core-icons/1.0.0/core-icons.min.js"></script>
+  <!--<script src="core-icons.js"></script>-->
   <script>
-    // Import html-markup
-    [].forEach.call(document.querySelectorAll('[data-markup]'), function(el){
-      el.textContent = document.querySelector(el.getAttribute('data-markup')).outerHTML.split('\n').reduce(function(r, v, k){
-        return r.concat(k? v.replace(el.strip = el.strip || new RegExp('^[\\s|\\t]{' + Math.max(0, String(v.match(/^[\s\t]+/) || '').length-1) + '}'), '') : v);
-      },[]).join('\n').replace(/docs-\w+\s*/g,'').replace(' class=""','').trim(); //Hide docs-classes
+    const symbols = Array.from(document.querySelectorAll('symbol[id]')).map((symbol) => symbol.id);
+    const markup = (id) => `<p class="docs-sample nrk-color-shade-1" href="#copy"><svg><use xlink:href="#${id}" /></svg></p>`;
+    const groups = {};
+
+    symbols.forEach((id) => {
+      const ns = id.split('-')[1];
+      (groups[ns] = groups[ns] || []).push(id);
     });
-    // Activate dev-tool switches
-    document.addEventListener('change', function(e){
-      if(e.target.name === 'color'){
-        document.body.className = document.body.className.replace(/nrk-color-[^-]+/,'') + ' ' + e.target.value;
-      }
-    });
+    console.log(groups);
+
     // Make icon-grid
-    document.querySelector('.docs-icons').innerHTML =
-      [].map.call(document.querySelectorAll('symbol[id]'), function(symbol, svg){
-        this.setAttribute('value', svg = '<svg><use xlink:href="#' + symbol.id + '" /></svg>');
-        return '<a class="nrk-xs-4of12 nrk-sm-2of12" href="#copy" draggable="true">' + svg + this.outerHTML + '</a>';
-      }, document.createElement('input')).join('');
-    // Copy on click
-    document.addEventListener('click', function(event){
-      if(event.target.hash !== '#copy')return;
-      event.preventDefault();
-      event.target.querySelector('input').select();
-      document.execCommand('copy');
-    });
+    document.getElementById('icons').insertAdjacentHTML('beforeend', symbols.map((id) => markup(id)).join(''));
   </script>
 </body>
 </html>
