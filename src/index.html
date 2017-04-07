@@ -17,6 +17,7 @@
     .docs-container { margin: auto; padding: 0 10px; max-width: 1200px }
     .docs-masthead { position: fixed; z-index: 3; top: 0; left: 0; right: 0; box-shadow: 0 0 2px rgba(0,0,0,.5) }
     .docs-masthead li { padding-right: 14px; font-size: 14px; line-height: 44px }
+    .docs-sample { padding: 10px; margin-bottom: 5px }
   </style>
 </head>
 <body class="nrk-color-base">
@@ -29,8 +30,6 @@
   <div class="docs-container nrk-grid">
     <div class="nrk-xs-12of12 nrk-md-3of12" style="padding-right:30px">
       <h2>@nrk/core-icons</h2>
-      <p><input name="search" type="text" class="nrk-xs-12of12" placeholder="Finn ikon"></p>
-      <h2>Sizing</h2>
       <p>
         Icons should be used in dimensions <code class="language-markup">15x15</code>,
         <code class="language-markup">21x21</code> or <code class="language-markup">30x30</code>.
@@ -43,7 +42,9 @@
     <div class="nrk-xs-12of12 nrk-md-9of12" id="icons">
       <h2>Usage</h2>
       <p>Copy this into your <code class="language-markup">&lt;body&gt;</code>:</p>
-      <p><input type="text" onclick="this.select();document.execCommand('copy')" readonly class="nrk-xs-12of12 nrk-color-shade-1" value="&lt;script src=&quot;https://static.nrk.no/core-icons/latest/core-icons.min.js&quot;&gt;&lt;/script&gt;"></p>
+      <p><input type="text" onclick="this.select()" readonly class="nrk-xs-12of12 nrk-color-shade-1" value="&lt;script src=&quot;https://static.nrk.no/core-icons/latest/core-icons.min.js&quot;&gt;&lt;/script&gt;"></p>
+      <h2>Icons</h2>
+      <p><input name="search" type="text" class="nrk-xs-12of12" placeholder="Search for icon"></p><br>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
@@ -51,14 +52,16 @@
   <!--<script src="core-icons.js"></script>-->
   <script>
     const symbols = Array.from(document.querySelectorAll('symbol[id]')).map((symbol) => symbol.id);
-    const markup = (id) => `<p class="docs-sample nrk-color-shade-1" href="#copy"><svg><use xlink:href="#${id}" /></svg></p>`;
-    const groups = {};
+    const markup = (id) =>  `<div class="docs-sample nrk-color-shade-1 nrk-grid">
+      <svg width="60" height="60"><use xlink:href="#${id}" /></svg>
+      <pre><code class="language-markup">&lt;svg&gt;&lt;use xlink:href="#${id}" /&gt;&lt;/svg&gt;</code></pre>
+    </div>`;
 
+    const groups = {}; //WIP
     symbols.forEach((id) => {
       const ns = id.split('-')[1];
       (groups[ns] = groups[ns] || []).push(id);
     });
-    console.log(groups);
 
     document.addEventListener('input', (event) => {
       if (event.target.name === 'search') {
@@ -68,7 +71,7 @@
               .getAttribute('xlink:href')
               .slice(3) // Remove 'nrk-'
               .indexOf(event.target.value) < 0 ? 'none'
-              : '';
+              : 'flex';
           });
       }
     });
