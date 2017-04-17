@@ -4,80 +4,142 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>@nrk/core-icons</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css">
-  <link rel="stylesheet" href="https://static.nrk.no/core-fonts/1.0.0/core-fonts.min.css">
-  <link rel="stylesheet" href="https://static.nrk.no/core-css/1.0.0/core-css.min.css">
+	<link rel="stylesheet" href="https://static.nrk.no/core-fonts/latest/core-fonts.min.css">
+  <link rel="stylesheet" href="https://static.nrk.no/core-css/latest/core-css.min.css">
   <style>
-    body { padding: 70px 0; min-height: 100vh; font: 16px/1.5 'LFT Etica',sans-serif }
-    body::after{content:'';position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;background:inherit} /* Fixes invert: https://bugs.chromium.org/p/chromium/issues/detail?id=340168 */
-    h2 { font-size: 13px; margin: 2em 0 -1em; text-transform: uppercase }
-    input[readonly] { box-sizing: border-box; cursor: pointer; border: 0; padding: 10px; font-family: monospace }
-    input, select, textarea { font: inherit }
+    html { font: 110%/1.5 'LFT Etica',sans-serif; background: #fcfcfc; color: #26292a }
+    .prettyprint.prettyprint { overflow: auto; border: 0; padding: 4px 6px; font-size: 14px; background: #f6f6f6 }
+    .docs-menu { list-style: none; margin: 0; padding: 20px; font-size: 14px; line-height: 2 }
+    .docs-menu a { display: block; text-decoration: none; opacity: .7; transition: .2s }
+    .docs-menu a:hover, .docs-menu a:focus, .docs-menu a.is-active { font-weight: 700; opacity: 1 }
+    .docs-page h2:not(:first-child) { margin-top: 3rem; padding-top: 3rem; border-top: 1px solid #ddd }
+    .docs-page h3 { font-size: 12px; letter-spacing: .05em; text-transform: uppercase; margin: 2em 0 -1em }
+    .docs-page p { max-width: 700px; -webkit-font-smoothing: antialiased }.docs-page { padding: 4% }
 
-    .docs-container { margin: auto; padding: 0 10px; max-width: 1200px }
-    .docs-masthead { position: fixed; z-index: 3; top: 0; left: 0; right: 0; box-shadow: 0 0 2px rgba(0,0,0,.5) }
-    .docs-masthead li { padding-right: 14px; font-size: 14px; line-height: 44px }
-    .docs-sample { padding: 10px; margin-bottom: 5px }
+    @media(min-width:720px){
+      .docs-menu { position: fixed; width: 160px; height: 100vh; padding-top: 90px }
+      .docs-menu ~ iframe { position: fixed; width: calc(100% - 200px); height: 100% }
+      .docs-menu ~ * { margin-left: 200px }
+    }
+    .docs-icon { border: 1px solid #fcfcfc; padding: 9px; transition: .2s }
+    .docs-icon a:active { display: inline-block; transform: scale(.9) }
+    .docs-icon .nrk-grid > * { font-size: 13px; margin: 5px }
+    .docs-icon:hover { background: #141517; color: #fff }
   </style>
 </head>
-<body class="nrk-color-base">
-  <header class="docs-masthead nrk-color-base">
-    <ul class="docs-container nrk-grid">
-      <li><a target="_top" href="https://github.com/nrkno/core-icons">Github</a></li>
-      <li><a target="_top" href="https://github.com/nrkno/core-icons/archive/master.zip">Download</a></li>
-    </ul>
-  </header>
-  <div class="docs-container nrk-grid">
-    <div class="nrk-xs-12of12 nrk-md-3of12" style="padding-right:30px">
-      <h2>@nrk/core-icons</h2>
+<body>
+  <ul class="docs-menu nrk-color-shade-1">
+    <li><a href="#">Getting started</a></li>
+    <li><a href="#icons">Icons</a></li>
+    <li><a href="#a11y">Accessbility</a></li>
+    <li><a href="#interact">Interactivity</a></li>
+    <li><a href="#examples">Examples</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <article class="docs-page">
+    <h2>@nrk/core-icons</h2>
+    <p>
+      <h3>Getting started</h3>
       <p>
-        Icons should be used in dimensions <code class="language-markup">15x15</code>,
-        <code class="language-markup">21x21</code> or <code class="language-markup">30x30</code>.
-        For easier usage, caching and cross-domain compability, icons are loaded by including
+        Icons should be used in dimensions <code class="prettyprint">15x15</code> or <code class="prettyprint">30x30</code>.
+        Logos size autmatically scale based on surrounding font-size.
+        Insert the code below into the <code class="prettyprint">&lt;body&gt;</code> of your page, and all icons
+        will be available as <a target="_blank" href="https://css-tricks.com/svg-symbol-good-choice-icons/">svg symbols</a>:
       </p>
-      <h2>Colors</h2>
-      <p>The icons automatically inherits their color form the surrounding text.</p>
-      <p><label><input type="checkbox" name="invert" onchange="document.body.style.filter=this.checked?'invert(1)':''"> Show negative</label></p>
-    </div>
-    <div class="nrk-xs-12of12 nrk-md-9of12" id="icons">
-      <h2>Usage</h2>
-      <p>Copy this into your <code class="language-markup">&lt;body&gt;</code>:</p>
-      <p><input type="text" onclick="this.select()" readonly class="nrk-xs-12of12 nrk-color-shade-1" value="&lt;script src=&quot;https://static.nrk.no/core-icons/latest/core-icons.min.js&quot;&gt;&lt;/script&gt;"></p>
-      <h2>Icons</h2>
-      <p><input name="search" type="text" class="nrk-xs-12of12" placeholder="Search for icon"></p><br>
-    </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
-  <script src="https://static.nrk.no/core-icons/latest/core-icons.min.js"></script>
-  <!--<script src="core-icons.js"></script>-->
+      <pre class="prettyprint">&lt;script async src="https://static.nrk.no/core-icons/latest/core-icons.min.js"&gt;&lt;/script&gt;</pre>
+      <h3>Shortcuts</h3>
+      <p>
+        <a class="nrk-button" target="_top" href="https://github.com/nrkno/core-icons/archive/master.zip"><svg width="15" height="15"><use xlink:href="#nrk-download" /></svg> Download icons</a>
+        <a class="nrk-button" target="_top" href="https://github.com/nrkno/core-icons">View on Github</a>
+      </p>
+    </p>
+    <h2 id="icons">Icons</h2>
+    <p><input type="text" name="search" style="font:inherit" placeholder="Search for icon"></p>
+    <div class="nrk-grid docs-icons"></div>
+    <h2 id="a11y">Accessbility</h2>
+    <p>
+      Modern versions of assistive technologies will announce SVG content, but there is still a lot of <a target="_blank" href="http://simplyaccessible.com/article/7-solutions-svgs/">differences between browsers</a>.
+      To avoid unintended and confusion (particularly when icons are used for decoration), we hide them with the <code class="prettyprint">aria-hidden="true"</code> attribute.
+      If you're using an icon to convey meaning (rather than only as a decorative element), ensure that this meaning is also conveyed to assistive technologies:
+      <pre class="prettyprint">&lt;span class="nrk-sr"&gt;Content available to screen readers&lt;/span&gt;</pre>
+    </p>
+    <h2 id="interact">Interactivity</h2>
+    <p>WIP</p>
+    <h2 id="examples">Examples</h2>
+    <p>WIP</p>
+    <h2 id="faq">FAQ</h2>
+    <h3>Can I load a subset of icons?</h3>
+    <p>
+      One of the missions of having a shared iconset, is to provide a consistent and predictabe coding environment across platforms and products.
+      Please include the full <a href="https://static.nrk.no/core-icons/latest/core-icons.min.js"><code class="prettyprint">core-icons.min.js</code></a>, even though your product currently is not using all icons.
+    </p>
+    <h3>How can I request a new icon?</h3>
+    <p>
+      Please <a target="_blank" href="https://github.com/nrkno/core-icons/issues">see if your icon request</a> already exists, and add a +1 reaction if found.
+      For <a target="_blank" href="https://github.com/nrkno/core-icons/issues/new?title=Icon%20Request:%20">new icon requests</a>,
+      describe how you plan to use the icon and subjects to be covered. Icon requests are processed by the NRK Design Forum.
+    </p>
+    <h3>Why loading icons as a javascript-file?</h3>
+    <p>
+      SVG symbols are <a target="_blank" href="https://css-tricks.com/svg-symbol-good-choice-icons/">great for styling and accessibility</a>,
+      but can not load cross domain, or from external file and in IE (9,10,11).
+      Javascript provideds us a cacheable, cross-domain method load the icons, withouh adding extra overhead to each html-file.
+    </p>
+    <h3>What is the naming convention?</h3>
+    <p>
+      All icons are prefixed with <code class="prettyprint">nrk-</code>  to play nice with existing code.
+      Furthermore, we follow <a target="_blank" href="http://getbem.com/">BEM</a> name conventions, so
+      all related icons are scopes equally (i.e. <code class="prettyprint">nrk-logo-</code> or <code class="prettyprint">nrk-media-</code>),
+      and postfixed with modifiers for states (i.e. <code class="prettyprint">--active</code>)
+    </p>
+  </article>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css" defer></script>
+  <script src="core-icons.js"></script>
   <script>
-    const symbols = Array.from(document.querySelectorAll('symbol[id]')).map((symbol) => symbol.id);
-    const markup = (id) =>  `<div class="docs-sample nrk-color-shade-1 nrk-grid">
-      <svg width="60" height="60"><use xlink:href="#${id}" /></svg>
-      <pre><code class="language-markup">&lt;svg&gt;&lt;use xlink:href="#${id}" /&gt;&lt;/svg&gt;</code></pre>
-    </div>`;
+    const groups = {misc:{}};
 
-    const groups = {}; //WIP
-    symbols.forEach((id) => {
-      const ns = id.split('-')[1];
-      (groups[ns] = groups[ns] || []).push(id);
+    //Group icons by type and name
+    Array.from(document.querySelectorAll('symbol[id]')).forEach((icon) => {
+      const name = icon.id.slice(4).split('--')[0]; //without nrk- and state
+      const type = name.split('-')[0];
+      ((groups[type] = groups[type] || {})[name] = groups[type][name] || []).push(icon);
     });
 
-    document.addEventListener('input', (event) => {
-      if (event.target.name === 'search') {
-        Array.from(document.querySelectorAll('.docs-sample'))
-          .forEach((el) => {
-            el.style.display = el.querySelector('use')
-              .getAttribute('xlink:href')
-              .slice(3) // Remove 'nrk-'
-              .indexOf(event.target.value) < 0 ? 'none'
-              : 'flex';
-          });
+    //Merge all single-icon groups
+    Object.keys(groups).forEach((type) => {
+      if(Object.keys(groups[type]).length === 1){
+        Object.assign(groups.misc, groups[type]);
+        delete groups[type];
       }
     });
 
-    // Make icon-grid
-    document.getElementById('icons').insertAdjacentHTML('beforeend', symbols.map((id) => markup(id)).join(''));
+    //Search
+    document.addEventListener('input', (event) => {
+      if (event.target.name === 'search') {
+        Array.from(document.querySelectorAll('.docs-icons > *')).forEach((el) => {
+          el.style.display = el.id.indexOf(event.target.value) < 0 ? 'none' : '';
+        });
+      }
+    });
+
+    //Render icon-grid
+    document.querySelector('.docs-icons').innerHTML = Object.keys(groups).map((type) => `
+      <h3 class="nrk-xs-12of12">${type}<br>&nbsp;</h3>
+      ${Object.keys(groups[type]).map((name) => `
+        <div class="docs-icon nrk-color-shade-1 nrk-xs-6of12 nrk-lg-3of12" id="${name}">
+          ${groups[type][name].sort().map((icon) => `
+            <div class="nrk-grid">
+              <svg aria-hidden="true" width="${icon.style.width||30}" height="${icon.style.height||30}"><use xlink:href="#${icon.id}" /></svg>
+              <div>${icon.id}<br>
+                <a href="./${icon.id}.svg" download>Download</a> |
+                <a href="#" onclick="return !(this.nextElementSibling.select(),document.execCommand('copy')||1)">Copy code</a>
+                <input type="text" class="nrk-sr" value="&lt;svg width=&quot;${icon.style.width||30}&quot; height=&quot;${icon.style.height||30}&quot; aria-hidden=&quot;true&quot;&gt;&lt;use xlink:href=&quot;#${icon.id}&quot; /&gt;&lt;/svg&gt;">
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `).join('')
+    }`).join('');
   </script>
 </body>
 </html>
