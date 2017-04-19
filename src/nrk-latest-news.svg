@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+  <title>
+    nrk-siste-nytt
+  </title>
+  <g id="Artboards" fill="none" fill-rule="evenodd">
+    <g id="nrk-siste-nytt">
+      <path id="nrk-siste-nytt__circle" fill="#000" d="M7.499844 9.25C6.5335726 9.25 5.75 8.466497 5.75 7.5s.7835728-1.75 1.749844-1.75C8.466427 5.75 9.25 6.533503 9.25 7.5s-.7835728 1.75-1.750156 1.75z"/>
+      <g id="nrk-siste-nytt__l" fill-rule="nonzero" stroke="#000" stroke-linecap="round">
+        <path id="nrk-siste-nytt__l2" stroke-width=".8" d="M2.713346 11.4999997c-.756986-1.0092265-1.2-2.4519076-1.2-4 0-1.5480925.443014-2.9907736 1.2-4"/>
+        <path id="nrk-siste-nytt__l1" stroke-width=".6" d="M4.387949 10.4999997c-.5601376-.7569198-.8879494-1.8389307-.8879494-3 0-1.1610694.3278118-2.2430802.8879494-3"/>
+      </g>
+      <g id="nrk-siste-nytt__r" fill-rule="nonzero" stroke="#000" stroke-linecap="round">
+        <path id="nrk-siste-nytt__r2" stroke-width=".8" d="M12.313346 11.4999997c.756986-1.0092264 1.2-2.4519076 1.2-4 0-1.5480924-.443014-2.9907736-1.2-4"/>
+        <path id="nrk-siste-nytt__r1" stroke-width=".6" d="M10.6120503 10.4999997c.5601376-.7569198.8879494-1.8389307.8879494-3 0-1.1610694-.3278118-2.2430802-.8879494-3"/>
+      </g>
+    </g>
+  </g>
+</svg>
