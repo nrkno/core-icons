@@ -33,7 +33,6 @@
     <li><a href="#icons">Icons</a></li>
     <li><a href="#a11y">Accessbility</a></li>
     <li><a href="#interact">Interactivity</a></li>
-    <li><a href="#examples">Examples</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <article class="docs-page">
@@ -57,13 +56,23 @@
     <h2 id="a11y">Accessbility</h2>
     <p>
       Modern versions of assistive technologies will announce SVG content, but there is still a lot of <a target="_blank" href="http://simplyaccessible.com/article/7-solutions-svgs/">differences between browsers</a>.
-      To avoid unintended and confusion (particularly when icons are used for decoration), we hide them with the <code class="prettyprint">aria-hidden="true"</code> attribute.
-      If you're using an icon to convey meaning (rather than only as a decorative element), ensure that this meaning is also conveyed to assistive technologies:
-      <pre class="prettyprint">&lt;span class="nrk-sr"&gt;Content available to screen readers&lt;/span&gt;</pre>
+      To avoid confusion, use the following conventions:
     </p>
+    <div class="nrk-grid">
+      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-4of12" style="padding-right:15px">
+        <div class="nrk-color-shade-1" style="padding:1em;text-align:center"><a class="nrk-button" href="https://nrk.no/">Gå til nrk.no <svg width="30" height="30" aria-hidden="true" class="nrk-fade"><use xlink:href="#nrk-arrow-right-long" /></svg></a></div>
+        <h3>Icon used as decoration</h3><p><small>Use the <code class="prettyprint">aria-hidden="true"</code> attribute to hide the icon from screen readers while keeping it visually perceivable.</small></p>
+      </div>
+      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-4of12" style="padding-right:15px">
+        <div class="nrk-color-shade-1" style="padding:1em;text-align:center"><a class="nrk-button" href="https://nrk.no/" style="border:0"><svg width="3.5em" height="1.4em" aria-hidden="true"><use xlink:href="#nrk-logo-nrk" /></svg><span class="nrk-sr">Gå til nrk.no</span></a></div>
+        <h3>Icon conveying meaning</h3><p><small>Visually hide the icon with <code class="prettyprint">aria-hidden="true"</code>, and add screen reader content in a <code class="prettyprint lang-css">.nrk-sr</code>. Example: <code class="prettyprint">&lt;svg aria-hidden="true"&gt;&hellip;&lt;/svg&gt;&lt;span class=&quot;nrk-sr&quot;&gt;Gå til nrk.no&lt;/span&gt;</code></small></p>
+      </div>
+      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-4of12" style="padding-right:15px">
+        <div class="nrk-color-shade-1" style="padding:1em;text-align:center"><a class="nrk-button" href="https://nrk.no/" style="border:0"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#nrk-dice-6--active" /></svg> Fantastisk!</a></div>
+        <h3>Icon augmenting meaning</h3><p><small>Visually hide the icon with <code class="prettyprint">aria-hidden="true"</code>, and optionally add screen reader content. Example: <code class="prettyprint">&lt;svg aria-hidden="true"&gt;&hellip;&lt;/svg&gt;<br>&lt;span class=&quot;nrk-sr&quot;&gt;Terningkast seks:&lt;/span&gt; Fantastisk!</code></small></p>
+      </div>
+    </div>
     <h2 id="interact">Interactivity</h2>
-    <p>WIP</p>
-    <h2 id="examples">Examples</h2>
     <p>WIP</p>
     <h2 id="faq">FAQ</h2>
     <h3>Can I load a subset of icons?</h3>
