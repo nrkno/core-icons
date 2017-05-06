@@ -1,5 +1,6 @@
 {
   "name": "@nrk/core-icons",
+  "homepage": "https://static.nrk.no/core-icons/latest/",
   "description": "The official icons for NRK.",
   "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
   "version": "1.0.0",
@@ -7,6 +8,10 @@
   "scripts": {
     "build": "node bin/build",
     "prebuild": "rimraf dist && mkdirp dist && cpx 'src/*.{html,svg}' dist/",
+    "publish:patch": "npm version patch -m 'Release patch %s' && npm run push",
+    "publish:minor": "npm version minor -m 'Release minor %s' && npm run push",
+    "publish:major": "npm version major -m 'Release major %s' && npm run push",
+    "push": "git push && git push --tags && npm publish",
     "static-publish": "static-publish publish --directory ./dist --package ./package.json --verbose --latest"
   },
   "devDependencies": {
