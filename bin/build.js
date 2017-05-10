@@ -1,29 +1,40 @@
-/* eslint-disable no-console, no-sync */
+/* eslint-disable no-console, no-process-exit */
+const chalk = require('chalk');
+const emoji = require('node-emoji');
 const path = require('path');
-const fs = require('fs');
 
-const SVG_FILENAME = 'core-icons.js';
-const SVG_FILENAME_MIN = 'core-icons.min.js';
-const SRC_PATH = path.join(__dirname, '../src');
-const DIST_PATH = path.join(__dirname, '../dist');
+const concatSvg = require('./concat-svg');
+const parseArgs = require('minimist');
 
-const svgToSymbol = (file, xml) => String(xml) // Work with file as string
-  .replace('>', ` id="${file.slice(0, -4)}">`) // Add filename as id
-  .replace(/(<\/?)svg/gi, '$1symbol')          // Convert to symbols
-  .replace(/\s*xmlns=[^\s>]+/gi, '')           // Remove xmlns
-  .replace(/\s*([<>])\s*/g, '$1');             // Strip white space around tokens
+const yearReplacePattern = '||YEAR_FOR_COPYRIGHT||';
 
-const buildSvg = () => Promise
-  .resolve(fs.readdirSync(SRC_PATH).filter((file) => file.slice(-4) === '.svg'))
-  .then((files) => files.map((file) => svgToSymbol(file, fs.readFileSync(path.join(SRC_PATH, file)))))
-  .then((symbols) => `<svg xmlns="http://www.w3.org/2000/svg" style="display:none">${symbols.join('')}</svg>`)
-  .then((svg) => `document.documentElement.firstElementChild.insertAdjacentHTML('beforeend', '${svg}')`)
-  .then((js) => `/*! Copyright (c) 2015-${new Date().getFullYear()} NRK <opensource@nrk.no> */\n${js}`)
-  .then((js) => {
-    fs.writeFileSync(path.join(DIST_PATH, SVG_FILENAME), js);
-    fs.writeFileSync(path.join(DIST_PATH, SVG_FILENAME_MIN), js);
-  });
+const defaultOptions = {
+  svgFileName: 'core-icons.js',
+  svgFileNameMin: 'core-icons.min.js',
+  srcPath: path.join(__dirname, '../src'),
+  distPath: path.join(__dirname, '../dist'),
+  banner: `Copyright (c) 2015-${yearReplacePattern} NRK <opensource@nrk.no>`
+};
 
-buildSvg()
-  .then(() => console.log('Merged and minified SVG'))
+console.log(chalk.yellow('Building SVG'));
+const argv = parseArgs(process.argv.slice(2), {
+  string: [
+    'svgFileName',
+    'svgFileNameMin',
+    'srcPath',
+    'distPath',
+    'banner'
+  ],
+  default: defaultOptions,
+  unknown: () => {
+    console.log(`Passed in invalid options: ${chalk.styles.red.open}${process.argv.slice(2)}${chalk.styles.red.close}`);
+    console.log('Usage: $ node build.js ');
+    Object.keys(defaultOptions).map((key) => console.log(`  --${key} ${defaultOptions[key]}`));
+    console.log('');
+    process.exit(1);
+  }
+});
+argv.banner = argv.banner.replace(yearReplacePattern, new Date().getFullYear());
+concatSvg(argv)
+  .then(() => console.log(chalk.green(` ${emoji.get('heavy_check_mark')} merged and minified SVG`)))
   .catch((err) => console.log(err.stack));
