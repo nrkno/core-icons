@@ -112,7 +112,26 @@
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css" defer></script>
   <script src="core-icons.js"></script>
   <script>
+    const objectMap = (obj, cb) => Object.keys(obj).map((key) => cb(key, obj[key]));
     const groups = {misc:{}};
+
+    const renderGroup = (id, icons) =>
+      `<h3 class="nrk-xs-12of12">${id}<br>&nbsp;</h3>${objectMap(icons, renderIcon).join('')}`;
+
+    const renderIcon = (id, types) =>
+      `<div class="docs-icon nrk-color-shade-1 nrk-xs-6of12 nrk-lg-3of12" id="${id}">
+        ${types.sort().map(renderType).join('')}
+      </div>`;
+
+    const renderType = ({id, style: {width, height}}) =>
+      `<div class="nrk-grid">
+        <svg aria-hidden="true" width="${width||30}" height="${height||30}"><use xlink:href="#${id}" /></svg>
+        <div>${id}<br>
+          <a href="./${id}.svg" download>SVG</a> | <a href="javascript:svg2pdf('${id}')">PDF</a> |
+          <a href="javascript:void(0)" onclick="this.nextElementSibling.select(),document.execCommand('copy')">Copy HTML</a>
+          <input type="text" class="nrk-sr" value="&lt;svg width=&quot;${width||30}&quot; height=&quot;${height||30}&quot; aria-hidden=&quot;true&quot;&gt;&lt;use xlink:href=&quot;#${id}&quot; /&gt;&lt;/svg&gt;">
+        </div>
+      </div>`;
 
     //Group icons by type and name
     Array.from(document.querySelectorAll('symbol[id]')).forEach((icon) => {
@@ -139,23 +158,7 @@
     });
 
     //Render icon-grid
-    document.querySelector('.docs-icons').innerHTML = Object.keys(groups).map((type) => `
-      <h3 class="nrk-xs-12of12" style="color:#26292a">${type}<br>&nbsp;</h3>
-      ${Object.keys(groups[type]).map((name) => `
-        <div class="docs-icon nrk-color-shade-1 nrk-xs-6of12 nrk-lg-3of12" id="${name}">
-          ${groups[type][name].sort().map((icon) => `
-            <div class="nrk-grid">
-              <svg aria-hidden="true" width="${icon.style.width||30}" height="${icon.style.height||30}"><use xlink:href="#${icon.id}" /></svg>
-              <div>${icon.id}<br>
-                <a href="./${icon.id}.svg" download>SVG</a> | <a href="javascript:svg2pdf('${icon.id}')">PDF</a> |
-                <a href="javascript:void(0)" onclick="this.nextElementSibling.select(),document.execCommand('copy')">Copy HTML</a>
-                <input type="text" class="nrk-sr" value="&lt;svg width=&quot;${icon.style.width||30}&quot; height=&quot;${icon.style.height||30}&quot; aria-hidden=&quot;true&quot;&gt;&lt;use xlink:href=&quot;#${icon.id}&quot; /&gt;&lt;/svg&gt;">
-              </div>
-            </div>
-          `).join('')}
-        </div>
-      `).join('')
-    }`).join('');
+    document.querySelector('.docs-icons').innerHTML = objectMap(groups, renderGroup).join('');
 
     //Utilities
     const downloadAs = (fileName, url) => document.body.appendChild(Object.assign(document.createElement('a'), {download: fileName, href: url})).click();
