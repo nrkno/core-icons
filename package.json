@@ -24,9 +24,6 @@
     "node-emoji": "^1.5.1",
     "rimraf": "^2.6.1"
   },
-  "optionalDependencies": {
-    "@nrk/static-publish-cli": "^3.0.2"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nrkno/core-icons.git"
