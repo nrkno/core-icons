@@ -3,7 +3,7 @@ const chalk = require('chalk');
 const emoji = require('node-emoji');
 const path = require('path');
 
-const concatSvg = require('./concat-svg');
+const concatSvg = require('@nrk/svg-to-js');
 const parseArgs = require('minimist');
 
 const yearReplacePattern = '||YEAR_FOR_COPYRIGHT||';

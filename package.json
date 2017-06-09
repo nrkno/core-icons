@@ -22,7 +22,8 @@
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "node-emoji": "^1.5.1",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "@nrk/svg-to-js": "1.0.0"
   },
   "repository": {
     "type": "git",
