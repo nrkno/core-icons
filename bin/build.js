@@ -1,6 +1,5 @@
 /* eslint-disable no-console, no-process-exit */
 const chalk = require('chalk');
-const emoji = require('node-emoji');
 const path = require('path');
 
 const concatSvg = require('@nrk/svg-to-js');
@@ -36,5 +35,5 @@ const argv = parseArgs(process.argv.slice(2), {
 });
 argv.banner = argv.banner.replace(yearReplacePattern, new Date().getFullYear());
 concatSvg(argv)
-  .then(() => console.log(chalk.green(` ${emoji.get('heavy_check_mark')} merged and minified SVG`)))
+  .then(() => console.log(chalk.green('Merged and minified SVG')))
   .catch((err) => console.log(err.stack));
