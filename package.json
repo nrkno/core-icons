@@ -15,15 +15,14 @@
     "static-publish": "static-publish publish --directory ./dist --package ./package.json --verbose --latest"
   },
   "devDependencies": {
-    "chalk": "^1.1.3",
+    "@nrk/svg-to-js": "1.0.0",
+    "chalk": "^2.1.0",
     "cpx": "^1.5.0",
-    "eslint": "^3.18.0",
+    "eslint": "^4.5.0",
     "eslint-config-nrk": "^5.1.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
-    "node-emoji": "^1.5.1",
-    "rimraf": "^2.6.1",
-    "@nrk/svg-to-js": "1.0.0"
+    "rimraf": "^2.6.1"
   },
   "repository": {
     "type": "git",
