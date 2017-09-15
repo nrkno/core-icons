@@ -28,7 +28,7 @@ First clone `@nrk/core-icons` and install its dependencies:
 ```bash
 git clone git@github.com:nrkno/core-icons.git
 cd core-icons
-npm install --no-optional
+npm install
 ```
 
 ## Building and committing
