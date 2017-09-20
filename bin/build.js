@@ -10,7 +10,10 @@ const config = {
   banner: `Copyright (c) 2015-${new Date().getFullYear()} NRK <opensource@nrk.no>`
 };
 
-console.log('Building SVG');
-concatSvg(config)
-  .then(() => console.log('Merged and minified SVG'))
+console.log('Building SVG and JSON');
+Promise
+  .resolve(fs.readdirSync(config.srcPath).filter((file) => file.slice(-4) === '.svg'))
+  .then((files) => fs.writeFileSync(path.join(config.distPath, `core-icons.json`), JSON.stringify(files)))
+  .then(concatSvg(config))
+  .then(() => console.log('Done building'))
   .catch((err) => console.log(err.stack));
