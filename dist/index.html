@@ -21,11 +21,13 @@
       .docs-menu ~ iframe { position: fixed; width: calc(100% - 200px); height: 100% }
       .docs-menu ~ * { margin-left: 200px }
     }
-    .docs-icon { border: 1px solid #fcfcfc; color: inherit; padding: 9px; transition: .2s }
+    .docs-icon { border: 1px solid #fcfcfc; color: inherit!important; padding: 9px; transition: .2s }
     .docs-icon a:active { display: inline-block; transform: scale(.9) }
     .docs-icon .nrk-grid > * { font-size: 13px; margin: 5px }
     .docs-icon .nrk-grid > svg { font-size: 10px }
-    .docs-icon:hover { background: #141517; color: #fff }
+    .docs-icon:hover,
+    .nrk-color-invert .nrk-color-shade-1 { background: #26292a; border-color: #141517; color: #fff }
+    .nrk-color-invert .prettyprint.prettyprint { -webkit-filter: invert(1); filter: invert(1) }
   </style>
 </head>
 <body>
@@ -60,7 +62,7 @@
       </label>
       <label class="nrk-button" style="background:#000">
         <span style="font-weight:500;filter:invert(1) grayscale(1) contrast(9)">Choose color</span>
-        <input type="color" name="color" class="nrk-sr" value="#000000" onchange="document.querySelector('.docs-icons').style.color = this.parentNode.style.background = this.previousElementSibling.textContent = this.value">
+        <input type="color" name="color" class="nrk-sr" value="#000000" onchange="document.body.classList.toggle('nrk-color-invert', get_brightness(document.querySelector('.docs-icons').style.color = this.parentNode.style.background = this.previousElementSibling.textContent = this.value) > 125)">
       </label>
     </p>
     <div class="nrk-grid docs-icons"></div>
@@ -149,6 +151,15 @@
         delete groups[type];
       }
     });
+
+    //Calculate RGB brightness
+    function get_brightness(hex) {
+      // strip off any leading # and expand if the letters long
+      hex = hex.replace('#', '').replace(/^(\S)(\S)(\S)$/, '$1$1$2$2$3$3');
+      return ((parseInt(hex.substr(0, 2),16) * 299) +
+              (parseInt(hex.substr(2, 2),16) * 587) +
+              (parseInt(hex.substr(4, 2),16) * 114)) / 1000;
+    }
 
     //Search
     document.addEventListener('input', (event) => {
