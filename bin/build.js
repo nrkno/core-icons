@@ -1,4 +1,4 @@
-const concatSvg = require('@nrk/svg-to-js');
+const concatSvg = require('svg-to-js');
 const path = require('path');
 const fs = require('fs');
 
