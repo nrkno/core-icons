@@ -25,6 +25,7 @@
     .docs-icon a:active { display: inline-block; transform: scale(.9) }
     .docs-icon .nrk-grid > * { font-size: 13px; margin: 5px }
     .docs-icon .nrk-grid > svg { font-size: 10px }
+    .docs-ally-icon { display: flex; align-items: center; justify-content: center; min-height: 80px }
     .nrk-color-invert .nrk-color-shade-1 { background: #26292a; border-color: #141517; color: #fff }
     .nrk-color-invert .prettyprint.prettyprint { -webkit-filter: invert(1); filter: invert(1) }
   </style>
@@ -71,17 +72,62 @@
       To avoid confusion, use the following conventions:
     </p>
     <div class="nrk-grid">
-      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-4of12" style="padding-right:15px">
-        <div class="nrk-color-shade-1" style="padding:1em;text-align:center"><a class="nrk-button" href="https://nrk.no/">Gå til nrk.no <svg width="30" height="30" aria-hidden="true" class="nrk-fade"><use xlink:href="#nrk-arrow-right-long" /></svg></a></div>
-        <h3>Icon used as decoration</h3><p><small>Use the <code class="prettyprint">aria-hidden="true"</code> attribute to hide the icon from screen readers while keeping it visually perceivable.</small></p>
+      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-3of12" style="padding-right:15px">
+        <div class="nrk-color-shade-1 docs-ally-icon">
+          <a class="nrk-button" href="https://nrk.no/">
+            Gå til nrk.no
+            <svg width="30" height="30" aria-hidden="true" class="nrk-fade"><use xlink:href="#nrk-arrow-right-long" /></svg>
+          </a>
+        </div>
+        <h3>Icon used as decoration</h3>
+        <p><small>Use the <code class="prettyprint">aria-hidden="true"</code> attribute to hide the icon from screen readers while keeping it visually perceivable. Example:</small></p>
+        <pre class="prettyprint">&lt;a href=&quot;&hellip;&quot;&gt;
+  Gå til NRK.no
+  &lt;svg aria-hidden="true"&gt;&hellip;&lt;/svg&gt;
+&lt;/a&gt;</pre>
       </div>
-      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-4of12" style="padding-right:15px">
-        <div class="nrk-color-shade-1" style="padding:1em;text-align:center"><a class="nrk-button" href="https://nrk.no/" style="border:0"><svg width="3.5em" height="1.4em" aria-hidden="true"><use xlink:href="#nrk-logo-nrk" /></svg><span class="nrk-sr">Gå til nrk.no</span></a></div>
-        <h3>Icon conveying meaning</h3><p><small>Visually hide the icon with <code class="prettyprint">aria-hidden="true"</code>, and add screen reader content in a <code class="prettyprint lang-css">.nrk-sr</code>. Example: <code class="prettyprint">&lt;svg aria-hidden="true"&gt;&hellip;&lt;/svg&gt;&lt;span class=&quot;nrk-sr&quot;&gt;Gå til nrk.no&lt;/span&gt;</code></small></p>
+      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-3of12" style="padding-right:15px">
+        <div class="nrk-color-shade-1 docs-ally-icon">
+          <a href="https://nrk.no/" aria-label="Gå til nrk.no">
+            <svg width="3.5em" height="1.4em" aria-hidden="true"><use xlink:href="#nrk-logo-nrk" /></svg>
+          </a>
+        </div>
+        <h3>Clickable icon</h3>
+        <p><small>Add screen reader content to the clickable element with <code class="prettyprint lang-css">aria-label=&quot;&hellip;&quot;</code>, and hide the icon from screen readers with <code class="prettyprint">aria-hidden="true"</code> Example:</small></p>
+        <pre class="prettyprint">&lt;a href=&quot;&hellip;&quot; aria-label=&quot;Gå til NRK.no&quot;&gt;
+  &lt;svg aria-hidden="true"&gt;&hellip;&lt;/svg&gt;
+&lt;/a&gt;</pre>
       </div>
-      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-4of12" style="padding-right:15px">
-        <div class="nrk-color-shade-1" style="padding:1em;text-align:center"><a class="nrk-button" href="https://nrk.no/" style="border:0"><svg width="30" height="30" aria-hidden="true"><use xlink:href="#nrk-dice-6--active" /></svg> Fantastisk!</a></div>
-        <h3>Icon augmenting meaning</h3><p><small>Visually hide the icon with <code class="prettyprint">aria-hidden="true"</code>, and optionally add screen reader content. Example: <code class="prettyprint">&lt;svg aria-hidden="true"&gt;&hellip;&lt;/svg&gt;<br>&lt;span class=&quot;nrk-sr&quot;&gt;Terningkast seks:&lt;/span&gt; Fantastisk!</code></small></p>
+
+      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-3of12" style="padding-right:15px">
+        <div class="nrk-color-shade-1 docs-ally-icon">
+          <span role="img" aria-label="NRK">
+            <span class="nrk-sr">NRK</span>
+            <svg width="3.5em" height="1.4em" aria-hidden="true"><use xlink:href="#nrk-logo-nrk" /></svg>
+          </span>
+        </div>
+        <h3>Non-clickable icon</h3>
+        <p><small>Hide the icon from screen readers with <code class="prettyprint">aria-hidden="true"</code>, and add screen reader content to a wrapper with <code class="prettyprint lang-css">role=&quot;img&quot; aria-label=&quot;&hellip;&quot;</code>, as well as inside a <code class="prettyprint lang-css">.nrk-sr</code>. Example:</small></p>
+        <pre class="prettyprint">&lt;span role=&quot;img&quot; aria-label=&quot;NRK&quot;&gt;
+  &lt;span class=&quot;nrk-sr&quot;&gt;NRK&lt;/span&gt;
+  &lt;svg aria-hidden="true"&gt;&hellip;&lt;/svg&gt;
+&lt;/span&gt;</pre>
+      </div>
+      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-3of12" style="padding-right:15px">
+        <div class="nrk-color-shade-1 docs-ally-icon">
+          <span role="img" aria-label="Terningkast seks" style="transform:translate(-4px, 3px)">
+            <span class="nrk-sr">Terningkast seks</span>
+            <svg width="30" height="30" aria-hidden="true"><use xlink:href="#nrk-dice-6--active" /></svg>
+          </span>
+          Fantastisk!
+        </div>
+        <h3>Icon augmenting meaning</h3>
+        <p><small>Hide the icon from screen readers with <code class="prettyprint">aria-hidden="true"</code>, and add screen reader content to a wrapper with <code class="prettyprint lang-css">role=&quot;img&quot; aria-label=&quot;&hellip;&quot;</code>, as well as inside a <code class="prettyprint lang-css">.nrk-sr</code>. Example:</small></p>
+        <pre class="prettyprint">&lt;span role=&quot;img&quot; aria-label=&quot;Terningkast seks&quot;&gt;
+  &lt;span class=&quot;nrk-sr&quot;&gt;Terningkast seks&lt;/span&gt;
+  &lt;svg aria-hidden="true"&gt;&hellip;&lt;/svg&gt;
+&lt;/span&gt;
+Fantastisk!</pre>
       </div>
     </div>
     <h2 id="interact">Interactivity</h2>
@@ -113,7 +159,7 @@
     </p>
   </article>
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css" defer></script>
-  <script src="core-icons.js"></script>
+  <script src="core-icons.min.js"></script>
   <script>
     const objectMap = (obj, cb) => Object.keys(obj).map((key) => cb(key, obj[key]));
     const groups = {misc:{}};
