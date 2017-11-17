@@ -34,7 +34,7 @@
   <ul class="docs-menu nrk-color-shade-1">
     <li><a href="#">Getting started</a></li>
     <li><a href="#icons">Icons</a></li>
-    <li><a href="#a11y">Accessbility</a></li>
+    <li><a href="#a11y">Accessibility</a></li>
     <li><a href="#interact">Interactivity</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
@@ -66,13 +66,13 @@
       </label>
     </p>
     <div class="nrk-grid docs-icons"></div>
-    <h2 id="a11y">Accessbility</h2>
+    <h2 id="a11y">Accessibility</h2>
     <p>
       Modern versions of assistive technologies will announce SVG content, but there is still a lot of <a target="_blank" href="http://simplyaccessible.com/article/7-solutions-svgs/">differences between browsers</a>.
       To avoid confusion, use the following conventions:
     </p>
     <div class="nrk-grid">
-      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-4of12" style="padding-right:15px">
+      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-3of12" style="padding-right:15px">
         <div class="nrk-color-shade-1 docs-ally-icon">
           <a class="nrk-button" href="https://nrk.no/">
             Gå til nrk.no
@@ -86,7 +86,8 @@
   &lt;svg aria-hidden="true"&gt;&hellip;&lt;/svg&gt;
 &lt;/a&gt;</pre>
       </div>
-      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-4of12" style="padding-right:15px">
+
+      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-3of12" style="padding-right:15px">
         <div class="nrk-color-shade-1 docs-ally-icon">
           <a href="https://nrk.no/" aria-label="Gå til nrk.no">
             <svg width="3.5em" height="1.4em" aria-hidden="true"><use xlink:href="#nrk-logo-nrk" /></svg>
@@ -94,12 +95,18 @@
         </div>
         <h3>Clickable icon</h3>
         <p><small>Add screen reader content to the clickable element with <code class="prettyprint lang-css">aria-label=&quot;&hellip;&quot;</code>, and hide the icon from screen readers with <code class="prettyprint">aria-hidden="true"</code> Example:</small></p>
-        <pre class="prettyprint">&lt;a href=&quot;&hellip;&quot; aria-label=&quot;Gå til NRK.no&quot;&gt;
+        <pre class="prettyprint">&lt;!-- As link: --&gt;
+&lt;a href=&quot;&hellip;&quot; aria-label=&quot;Gå til NRK.no&quot;&gt;
   &lt;svg aria-hidden="true"&gt;&hellip;&lt;/svg&gt;
-&lt;/a&gt;</pre>
+&lt;/a&gt;
+
+&lt;!-- ...or button: --&gt;
+&lt;button aria-label=&quot;Gå til NRK.no&quot;&gt;
+&lt;svg aria-hidden="true"&gt;&hellip;&lt;/svg&gt;
+&lt;/button&gt;</pre>
       </div>
 
-      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-4of12" style="padding-right:15px">
+      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-3of12" style="padding-right:15px">
         <div class="nrk-color-shade-1 docs-ally-icon">
           <span role="img" aria-label="NRK">
             <span class="nrk-sr">NRK</span>
@@ -113,7 +120,8 @@
   &lt;svg aria-hidden="true"&gt;&hellip;&lt;/svg&gt;
 &lt;/span&gt;</pre>
       </div>
-      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-4of12" style="padding-right:15px">
+
+      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-3of12" style="padding-right:15px">
         <div class="nrk-color-shade-1 docs-ally-icon">
           <span role="img" aria-label="Terningkast seks" style="transform:translate(-4px, 3px)">
             <span class="nrk-sr">Terningkast seks</span>
@@ -129,19 +137,7 @@
 &lt;/span&gt;
 Fantastisk!</pre>
       </div>
-      <div class="nrk-xs-12of12 nrk-md-6of12 nrk-lg-4of12" style="padding-right:15px">
-        <div class="nrk-color-shade-1 docs-ally-icon">
-          <button class="nrk-button nrk-button--o" aria-label="Stop">
-            <svg aria-hidden="true"><use xlink:href="#nrk-media-stop" /></svg>
-          </button>
-        </div>
-        <h3>Button with icon</h3>
-        <p><small>Hide the icon from screen readers with <code class="prettyprint">aria-hidden="true"</code>.</p>
-        <pre class="prettyprint">&lt;button class=&quot;nrk-button nrk-button--o&quot; aria-label=&quot;Stop&quot;&gt;
-  &lt;svg aria-hidden="true"&gt;&hellip;&lt;/svg&gt;
-&lt;/button&gt;
-Fantastisk!</pre>
-      </div>
+
     </div>
     <h2 id="interact">Interactivity</h2>
     <p>WIP</p>
