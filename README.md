@@ -18,8 +18,8 @@ Or choose a specific version:
 npm install @nrk/core-icons --save
 ```
 
-```css
-@import '@nrk/core-icons/dist/core-icons.css';
+```js
+import '@nrk/core-icons/dist/core-icons.js'
 ```
 
 ## Local development
