@@ -5,26 +5,23 @@
   "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
   "version": "3.0.1",
   "license": "MIT",
+  "main": "lib/export.min.js",
   "scripts": {
-    "build": "node bin/build",
-    "prebuild": "rimraf dist && mkdirp dist && cpx 'src/*.{html,svg,js}' dist/",
+    "build": "rollup --config",
     "publish:patch": "npm version patch -m 'Release patch %s' && npm run push",
     "publish:minor": "npm version minor -m 'Release minor %s' && npm run push",
     "publish:major": "npm version major -m 'Release major %s' && npm run push",
     "push": "git push && git push --tags && npm publish",
-    "static-publish": "static-publish publish --directory ./dist --package ./package.json --verbose --latest"
+    "static-publish": "static-publish publish --directory ./lib --package ./package.json --verbose --latest"
   },
   "devDependencies": {
-    "cpx": "^1.5.0",
-    "mkdirp": "^0.5.1",
-    "rimraf": "^2.6.2",
+    "rollup": "^0.57.1",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-uglify": "^3.0.0",
     "svg-to-js": "^1.1.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nrkno/core-icons.git"
-  },
-  "bugs": {
-    "url": "https://github.com/nrkno/core-icons/issues"
   }
 }
