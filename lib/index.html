@@ -14,6 +14,7 @@
     .docs-menu a:hover, .docs-menu a:focus, .docs-menu a.is-active { font-weight: 700; opacity: 1 }
     .docs-page h2:not(:first-child) { margin-top: 3rem; padding-top: 3rem; border-top: 1px solid #ddd }
     .docs-page h3 { font-size: 12px; letter-spacing: .05em; text-transform: uppercase; margin: 2em 0 -1em }
+    .docs-page h3 small { font-size: 15px; font-weight: 400; letter-spacing: normal; text-transform: none }
     .docs-page p { max-width: 700px; -webkit-font-smoothing: antialiased }.docs-page { padding: 4% }
 
     @media(min-width:720px){
@@ -35,6 +36,8 @@
     <li><a href="#">Getting started</a></li>
     <li><a href="#icons">Icons</a></li>
     <li><a href="#a11y">Accessibility</a></li>
+    <li><a href="#js">Javascript</a></li>
+    <li><a href="#jsx">React</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <article class="docs-page">
@@ -46,8 +49,15 @@
       Insert the code below into the <code class="prettyprint">&lt;body&gt;</code> of your page, and all icons
       will be available as <a target="_blank" href="https://css-tricks.com/svg-symbol-good-choice-icons/">svg symbols</a>:
     </p>
+    <p><small>Note: For sharpest rendering, scale icons with font sizes divisible with 10. E.g: <code class="prettyprint">svg { font-size: 10px }</code></small></p>
+    <h3>Use from static.nrk.no <small> - recommended</small></h3>
     <pre class="prettyprint">&lt;script async src="https://static.nrk.no/core-icons/latest/core-icons.min.js"&gt;&lt;/script&gt;</pre>
-    <p><small>Note: For sharpest rendering, scale icons with font sizes divisible with 10 (E.g: <code class="prettyprint">svg { font-size: 10px }</code>)</small></p>
+    <h3>Use from npmjs.com <small> - for access to Javascript API</small></h3>
+    <pre class="prettyprint">npm install @nrk/core-icons --save</pre>
+    <pre class="prettyprint">
+import coreIcons from '@nrk/core-icons'    // Vanilla JS
+import CoreIcon from '@nrk/core-icons/jsx' // ...or React/Preact compatible JSX
+</pre>
     <h3>Shortcuts</h3>
     <p>
       <a class="nrk-button" target="_top" href="https://github.com/nrkno/core-icons/archive/master.zip"><svg width="15" height="15"><use xlink:href="#nrk-download" /></svg> Download icons</a>
@@ -137,6 +147,40 @@
 Fantastisk!</pre>
       </div>
     </div>
+    <h2 id="js">Javascript</h2>
+    <p>
+      <code class="prettyprint">@nrk/core-icons</code> provides a javascript API.
+      You can either access it directly from <code class="prettyprint">window.coreIcons</code> (when included as a <code class="prettyprint">&lt;script&gt;</code> tag),
+      or import as a NPM module:
+    </p>
+    <pre class="prettyprint">
+import coreIcons from '@nrk/core-icons'
+
+coreIcons()               // => returns Array of all icons: [{id, width, height, body, sprite, symbol, svg}]
+coreIcons('nrk-logo-nrk') // => returns Object {id, width, height, body, sprite, symbol, svg}
+
+// Where:
+// id     = {String} icon id
+// width  = {Number} original pixel width
+// height = {Number} original pixel height
+// body   = {String} HTML content of &lt;svg&gt;
+// sprite = {String} HTML &lt;svg&gt; tag with &lt;use&gt; for sprite usage
+// symbol = {String} HTML &lt;symbol&gt; tag. Usefull when generating a sprite
+// svg    = {String} HTML the actual &lt;svg&gt;
+</pre>
+
+    <h2 id="jsx">React</h2>
+    <p>
+      <code class="prettyprint">@nrk/core-icons</code> provides a React/Preact API.
+      You can access it as a NPM module:
+    </p>
+    <pre class="prettyprint">
+import CoreIcon from '@nrk/core-icons/jsx'
+
+&lt;CoreIcon id='nrk-logo-nrk' /&gt;                          // Render a NRK logo
+&lt;CoreIcon id='nrk-logo-nrk' style={{color: 'red'}} /&gt;   // Additional props will be used for attributes
+</pre>
+
     <h2 id="faq">FAQ</h2>
     <h3>Can I load a subset of icons?</h3>
     <p>
