@@ -7,30 +7,33 @@
   "license": "MIT",
   "main": "lib/core-icons.min.js",
   "scripts": {
-    "build": "rollup --config",
-    "lint": "standard lib/",
+    "build": "npm run build:code && npm run build:docs",
+    "build:code": "rollup --config",
+    "build:docs": "stylemark -i lib -o docs -c .stylemark.yml",
     "publish:patch": "npm version patch -m 'Release patch %s' && npm run push",
     "publish:minor": "npm version minor -m 'Release minor %s' && npm run push",
     "publish:major": "npm version major -m 'Release major %s' && npm run push",
-    "push": "git push && git push --tags && npm publish",
-    "static-publish": "static-publish publish --directory ./lib --package ./package.json --verbose --latest",
-    "test": "npm run build && npm run lint && jest",
-    "test:watch": "jest --watch",
-    "watch": "rollup --config --watch"
+    "push": "npm run build && git push && git push --tags && npm publish",
+    "start": "npm-run-all --parallel 'build:code -- --watch' 'build:docs -- -w -b'",
+    "static-publish": "npm run build && static-publish publish --directory ./docs --package ./package.json --verbose --latest",
+    "test": "npm run build:code && standard && jest"
   },
   "devDependencies": {
     "jest": "^22.4.3",
     "rollup": "^0.57.1",
     "rollup-plugin-buble": "^0.19.2",
     "rollup-plugin-uglify": "^3.0.0",
-    "standard": "^11.0.1"
+    "standard": "^11.0.1",
+    "stylemark": "^0.6.5"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nrkno/core-icons.git"
   },
-  "optionalDependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+  "standard": {
+    "ignore": [
+      "docs",
+      "jsx"
+    ]
   }
 }
