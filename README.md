@@ -19,7 +19,8 @@ npm install @nrk/core-icons --save
 ```
 
 ```js
-import '@nrk/core-icons/dist/core-icons.js'
+import coreIcons from '@nrk/core-icons'    // Vanilla JS
+import CoreIcon from '@nrk/core-icons/jsx' // ...or React/Preact compatible JSX
 ```
 
 ## Local development
@@ -29,6 +30,7 @@ First clone `@nrk/core-icons` and install its dependencies:
 git clone git@github.com:nrkno/core-icons.git
 cd core-icons
 npm install
+npm start # Your browser will open documentation with hot reloading
 ```
 
 ## Building and committing
