@@ -11,6 +11,6 @@ category: Introduction
   <input type="color" name="color" class="nrk-sr" value="#000000">
 </label>
 <div class="docs-icons nrk-grid"></div>
-<script src="pdfkit-and-blob-stream.min.js"></script>
+<script src="pdfkit-and-blob-stream.js"></script>
 <script src="core-icons.min.js"></script>
 <script src="docs.js"></script>
