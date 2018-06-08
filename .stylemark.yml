@@ -9,7 +9,7 @@ assets:
   - docs.js          # Include JS for documentation
   - core-icons.js     # Include core icons
   - core-icons.min.js # Include core icons minified
-  - pdfkit-and-blob-stream.min.js # Include PDFKit
+  - pdfkit-and-blob-stream.js # Include PDFKit
 
 sidebar:
   background: "#3d2351"
