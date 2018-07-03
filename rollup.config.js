@@ -1,4 +1,4 @@
-const uglify = require('rollup-plugin-uglify')
+const {uglify} = require('rollup-plugin-uglify')
 const buble = require('rollup-plugin-buble')
 const pkg = require('./package.json')
 const path = require('path')
