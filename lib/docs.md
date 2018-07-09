@@ -6,7 +6,7 @@
 
 ## Installation
 [Download the full kit](https://github.com/nrkno/core-icons/archive/master.zip) for sketching, [individual SVGs](#icons) for Android, [PDFs](#icons)
-for iOS. As [SVG symbols](https://css-tricks.com/svg-symbol-good-choice-icons/) can not can load cross domain, or from external file and in IE (9,10,11), `core-icons` provides a cacheable, cross-domain [Javascript API](#javascript-api) and [React API](#react-api). All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
+for iOS. As [SVG symbols](https://css-tricks.com/svg-symbol-good-choice-icons/) can not can load cross domain, or from external file and in IE (9,10,11), `@nrk/core-icons` provides a cacheable, cross-domain [Javascript API](#javascript-api) and [React API](#react-api). All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
 
 ```bash
 npm install @nrk/core-icons --save  # Use from NPM
@@ -20,7 +20,7 @@ npm install @nrk/core-icons --save  # Use from NPM
 
 ## Scaling
 
-All icons are produced for sharpest rendering at `15×15`, `30×30` etc., but not all *logos* are the same dimensions. Therefore, `core-icons` provides scaling based on `font-size`. When used on web, scale the icons by using font sizes divisible with `10`:
+All icons are produced for sharpest rendering at `15×15`, `30×30` etc., but not all *logos* are the same dimensions. Therefore, `@nrk/core-icons` provides scaling based on `font-size`. When used on web, scale the icons by using font sizes divisible with `10`:
 
 ✅ Do | 🚫 Don't
 :-- | :--
