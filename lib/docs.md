@@ -1,48 +1,117 @@
+# Core Icons
+
+## Icon and logo kit providing a consistent and predictable user experience across platforms and NRK services
+
 ---
-name: Core Icons
-category: Introduction
----
 
-<link rel="stylesheet" href="docs.css">
+## Installation
+[Download the full kit](https://github.com/nrkno/core-icons/archive/master.zip) for sketching, [individual SVGs](#icons) for Android, [PDFs](#icons)
+for iOS. As [SVG symbols](https://css-tricks.com/svg-symbol-good-choice-icons/) can not can load cross domain, or from external file and in IE (9,10,11), `core-icons` provides a cacheable, cross-domain [Javascript API](#javascript-api) and [React API](#react-api). All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
 
-> `core-icons` exposes a set of standard NRK icons. Icons scale based `font-size`, and gives sharpest rendering with font sizes divisible with 10. E.g: `svg { font-size: 10px }`. Insert the code below into the `<body>` of your page to use icons as [svg symbols](https://css-tricks.com/svg-symbol-good-choice-icons/).
-
-<a class="nrk-button" href="https://github.com/nrkno/core-icons">View on Github</a>
-<a class="nrk-button" href="https://github.com/nrkno/core-icons/archive/master.zip">Download icons</a>
-
-## Use from static.nrk.no *- recommended*
-
+```bash
+npm install @nrk/core-icons --save  # Use from NPM
+```
 ```html
+<!-- Use from static.nrk.no: insert just before </body> -->
 <script async src="https://static.nrk.no/core-icons/latest/core-icons.min.js"></script>
 ```
 
-## Use from NPM *- gives access to [Javascript API](/#javascript)*
-```bash
-npm install @nrk/core-icons --save
+---
+
+## Scaling
+
+All icons are produced for sharpest rendering at `15×15`, `30×30` etc., but not all *logos* are the same dimensions. Therefore, `core-icons` provides scaling based on `font-size`. When used on web, scale the icons by using font sizes divisible with `10`:
+
+✅ Do | 🚫 Don't
+:-- | :--
+`svg { font-size: 10px }` | `svg { width: 30px; height: 30px }`
+
+---
+
+## Icons
+
+<label class="nrk-button">
+  <span class="nrk-sr">Filter icons</span>
+  <input type="text" name="search" placeholder="Type to search" class="nrk-unset">
+</label><label class="nrk-button">
+  <span>Choose color</span>
+  <input type="color" name="color" class="nrk-sr" value="#000000">
+</label>
+<div class="docs-icons nrk-grid" style="padding:0 7vw;margin:0 -7vw;transition:.2s"></div>
+<script src="pdfkit-and-blob-stream.js"></script>
+<script src="core-icons.min.js"></script>
+<script src="docs.js"></script>
+
+---
+
+## Accessibility
+
+Modern versions of assistive technologies will announce SVG content, but there is still a lot of differences between browsers. To avoid confusion, use the following conventions:
+
+<div class="nrk-grid">
+  <div class="nrk-xs-12of12 nrk-md-4of12" style="padding-right:15px">
+    <div class="doc-demo">
+      <a href="https://nrk.no/">
+        Gå til nrk.no
+        <svg aria-hidden="true" width="30" height="15"><use xlink:href="#nrk-arrow-right-long" /></svg>
+      </a>
+    </div>
+    <h3>Icon used as decoration</h3>
+    Use the <code>aria-hidden="true"</code> attribute to hide the icon from screen readers while keeping it visually perceivable.
+  </div>
+  <div class="nrk-xs-12of12 nrk-md-4of12" style="padding-right:15px">
+    <div class="doc-demo">
+      <a aria-label="Gå til nrk.no" href="https://nrk.no/">
+        <svg aria-hidden="true" width="3.5em" height="1em"><use xlink:href="#nrk-logo-nrk" /></svg>
+      </a>
+    </div>
+    <h3>Clickable icon</h3>
+    Add screen reader content to the clickable element (<code>button</code> or <code>a</code>) with <code>aria-label="…"</code>, and hide the icon from screen readers with <code>aria-hidden="true"</code>
+  </div>
+  <div class="nrk-xs-12of12 nrk-md-4of12" style="padding-right:15px">
+    <div class="doc-demo">
+      <span role="img" aria-label="Terningkast seks">
+        <span class="nrk-sr">Terningkast seks</span>
+        <svg aria-hidden="true" style="width:1.5em;height:1.5em;vertical-align:middle"><use xlink:href="#nrk-dice-6--active" /></svg>
+      </span>
+      Fantastisk!
+    </div>
+    <h3>Non-clickable icon</h3>
+    Hide the icon from screen readers with <code>aria-hidden="true"</code>, and add screen reader content to a wrapper with <code>role="img" aria-label="…"</code>, as well as inside a <code>.nrk-sr</code>.
+  </div>
+</div>
+
+---
+
+## Javascript API
+
+`@nrk/core-icons` provides a javascript API. You can either access it directly from `window.coreIcons` (when included as a `<script>` tag), or import as a NPM module:
+
+```js
+import coreIcons from '@nrk/core-icons'
+
+coreIcons()               // => returns Array of all icons: [{id, width, height, body, sprite, symbol, svg}]
+coreIcons('nrk-logo-nrk') // => returns Object {id, width, height, body, sprite, symbol, svg}
+
+// Where:
+// id     = {String} icon id
+// width  = {Number} original pixel width
+// height = {Number} original pixel height
+// body   = {String} HTML content of <svg>
+// sprite = {String} HTML <svg> tag with <use> for sprite usage
+// symbol = {String} HTML <symbol> tag. Usefull when generating a sprite
+// svg    = {String} HTML the actual <svg>
 ```
-``` js
-import coreIcons from '@nrk/core-icons'    // Vanilla JS
-import CoreIcon from '@nrk/core-icons/jsx' // ...or React/Preact compatible JSX
+
+---
+
+## React API
+
+`@nrk/core-icons` provides a React/Preact API. You can access it as a NPM module:
+
+```jsx
+import CoreIcon from '@nrk/core-icons/jsx'
+
+<CoreIcon id='nrk-logo-nrk' />                          // Render a NRK logo
+<CoreIcon id='nrk-logo-nrk' style={{color: 'red'}} />   // Additional props will be used for attributes
 ```
-
-## FAQ
-
-<details>
-<summary>Can I load a subset of icons?</summary>
-One of the missions of having a shared icon set, is to provide a consistent and predictable coding environment across platforms and products. Please include the full [`core-icons.min.js`](https://static.nrk.no/core-icons/latest/core-icons.min.js), even though your product currently is not using all icons.
-</details>
-
-<details>
-<summary>How can I request a new icon?</summary>
-Please [see if your icon request already exists](https://github.com/nrkno/core-icons/issues?q=is%3Aissue+is%3Aopen+Icon+request), and add a +1 reaction if found. For [new icon requests](https://github.com/nrkno/core-icons/issues/new?title=Icon%20Request:%20&labels=enhancement), describe how you plan to use the icon and subjects to be covered. Icon requests are processed by the NRK Design Forum.
-</details>
-
-<details>
-<summary>Why loading icons as a javascript-file?</summary>
-SVG symbols are [great for styling and accessibility](https://css-tricks.com/svg-symbol-good-choice-icons/), but can not load cross domain, or from external file and in IE (9,10,11). Javascript provides us a cacheable, cross-domain method load the icons, without adding extra overhead to each html-file.
-</details>
-
-<details>
-<summary>What is the naming convention?</summary>
-All icons are prefixed with nrk- to play nice with existing code. Furthermore, we follow [BEM name conventions](http://getbem.com/), so all related icons are scopes equally (i.e. `nrk-logo-` or `nrk-media-`), and postfixed with modifiers for states (i.e. `--active`)
-</details>
