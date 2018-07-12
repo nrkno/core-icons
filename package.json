@@ -13,7 +13,7 @@
     "publish:major": "npm version major -m 'Release major %s' && npm run push",
     "push": "npm run build && git push && git push --tags && npm publish",
     "start": "rollup --config --watch",
-    "static-publish": "npm run build && static-publish --directory=docs --account=nrk-core --latest --major",
+    "static-publish": "npm run build && static-publish --directory=lib --account=nrk-core --latest --major",
     "test": "npm run build && standard && jest"
   },
   "devDependencies": {
