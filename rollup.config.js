@@ -1,49 +1,46 @@
-const {uglify} = require('rollup-plugin-uglify')
-const buble = require('rollup-plugin-buble')
-const pkg = require('./package.json')
-const path = require('path')
-const fs = require('fs')
+import {uglify} from 'rollup-plugin-uglify'
+import buble from 'rollup-plugin-buble'
+import serve from 'rollup-plugin-serve'
+import fs from 'fs'
 
-const ROOT = path.join(__dirname, 'lib')
-const GLOBALS = {'react-dom': 'ReactDOM', react: 'React'} // Do not include react in out package
+const globals = {'react-dom': 'ReactDOM', react: 'React'} // Do not include react in out package
+const plugins = [buble(), uglify(), !process.env.ROLLUP_WATCH || serve('lib')]
 
 export default [{
   input: 'lib/core-icons.js',
   output: {
-    file: pkg.main,
+    file: 'lib/core-icons.min.js',
     format: 'umd',
     name: 'coreIcons',
-    intro: getIcons(ROOT), // Include icons
-    sourcemap: true
+    sourcemap: true,
+    intro
   },
   watch: {include: 'lib/*.(svg|js)'},
-  plugins: [buble(), uglify()]
+  plugins
 }, {
   input: 'lib/core-icons.jsx',
   output: {
     file: 'jsx/index.js',
     format: 'umd',
-    intro: getIcons(ROOT), // Include icons
     name: 'CoreIcon',
     sourcemap: true,
-    globals: GLOBALS
+    intro,
+    globals
   },
-  external: Object.keys(GLOBALS),
-  plugins: [buble(), uglify()]
+  external: Object.keys(globals),
+  plugins
 }]
 
-function getIcons (dir) {
-  return Promise.resolve(
-    fs.readdirSync(dir)
-      .filter((file) => file.slice(-4) === '.svg')
-      .reduce((acc, file, i, files) => {
-        if (!i) fs.writeFileSync(path.join(dir, 'core-icons.json'), JSON.stringify(files))
+function intro () {
+  const files = fs.readdirSync('./lib').filter((file) => file.slice(-4) === '.svg')
+  const icons = files.map((file) => {
+    const code = String(fs.readFileSync(`./lib/${file}`))
+    const body = code.replace(/^[^>]+>|<[^<]+$/g, '').replace(/\s*([<>])\s*/g, '$1') // Strip white space around tokens
+    const size = String(code.match(/viewBox="[^"]+/)).split(' ').map(Number)
+    return `'${file.slice(0, -4)}':['${body}',${size[2]},${size[3]}]` // Generate JS instead of JSON to save bytes
+  })
 
-        const id = file.slice(0, -4)
-        const code = String(fs.readFileSync(path.join(dir, file)))
-        const body = code.replace(/^[^>]+>|<[^<]+$/g, '').replace(/\s*([<>])\s*/g, '$1') // Strip white space around tokens
-        const size = String(code.match(/viewBox="[^"]+/)).split(' ').map(Number)
-        return acc.concat(`'${id}':['${body}',${size[2]},${size[3]}]`)
-      }, []))
-    .then((icons) => `var ICONS = {${icons.join(',')}}`) // Generate JS instead of JSON to save bytes
+  fs.writeFileSync('./lib/core-icons.json', JSON.stringify(files))
+
+  return `var ICONS = {${icons.join(',')}}`
 }
