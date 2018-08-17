@@ -24,7 +24,8 @@ All icons are produced for sharpest rendering at `15×15`, `30×30` etc., but no
 
 ✅ Do | 🚫 Don't
 :-- | :--
-`svg { font-size: 10px }` | `svg { width: 30px; height: 30px }`
+`.parent { font-size: 10px }` | `.parent svg { width: 30px; height: 30px }`
+<div>`<div class="parent"><svg style="width:1.5em;height:1.5em">…`</div><small>Note: correct width/height for each icon comes from @nrk/core-icons</small> | `<div class="parent"><svg style="width:30px;height:30px">…`
 
 ---
 
@@ -39,6 +40,7 @@ All icons are produced for sharpest rendering at `15×15`, `30×30` etc., but no
 </label>
 <div class="docs-icons nrk-grid" style="padding:0 7vw;margin:0 -7vw;transition:.2s"></div>
 <script src="pdfkit-and-blob-stream.js"></script>
+<script src="core-icons.jsx.js"></script>
 <script src="core-icons.min.js"></script>
 <script src="docs.js"></script>
 
@@ -109,9 +111,17 @@ coreIcons('nrk-logo-nrk') // => returns Object {id, width, height, body, sprite,
 
 `@nrk/core-icons` provides a React/Preact API. You can access it as a NPM module:
 
-```jsx
+```js
 import CoreIcon from '@nrk/core-icons/jsx'
 
 <CoreIcon id='nrk-logo-nrk' />                          // Render a NRK logo
 <CoreIcon id='nrk-logo-nrk' style={{color: 'red'}} />   // Additional props will be used for attributes
+```
+
+```html
+<!--demo-->
+<div id="jsx-core-icon"></div>
+<script type="text/jsx">
+  ReactDOM.render(<CoreIcon id='nrk-logo-nrk' />, document.getElementById('jsx-core-icon'))
+</script>
 ```

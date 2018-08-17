@@ -5,7 +5,7 @@
   "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
   "version": "3.4.1",
   "license": "MIT",
-  "main": "lib/core-icons.min.js",
+  "main": "lib/core-icons.cjs.js",
   "scripts": {
     "build": "rollup --config",
     "publish:patch": "npm version patch -m 'Release patch %s' && npm run push",
@@ -17,8 +17,10 @@
     "test": "npm run build && standard && jest"
   },
   "devDependencies": {
-    "jest": "23.4.1",
-    "rollup": "0.63.4",
+    "jest": "23.5.0",
+    "react": "16.4.2",
+    "react-dom": "16.4.2",
+    "rollup": "0.64.1",
     "rollup-plugin-buble": "0.19.2",
     "rollup-plugin-serve": "0.4.2",
     "rollup-plugin-uglify": "4.0.0",
