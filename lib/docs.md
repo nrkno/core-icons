@@ -13,7 +13,7 @@ npm install @nrk/core-icons --save  # Use from NPM
 ```
 ```html
 <!-- Use from static.nrk.no: insert just before </body> -->
-<script async src="https://static.nrk.no/core-icons/latest/core-icons.min.js"></script>
+<script async src="https://static.nrk.no/core-icons/major/3/core-icons.min.js"></script>
 ```
 
 ---

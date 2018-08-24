@@ -59,6 +59,7 @@ export default [{
 }]
 
 function intro () {
+  const md = fs.readFileSync('./lib/docs.md')
   const files = fs.readdirSync('./lib').filter((file) => file.slice(-4) === '.svg')
   const icons = files.map((file) => {
     const code = String(fs.readFileSync(`./lib/${file}`))
@@ -67,6 +68,7 @@ function intro () {
     return `'${file.slice(0, -4)}':['${body}',${size[2]},${size[3]}]` // Generate JS instead of JSON to save bytes
   })
 
+  fs.writeFileSync('./lib/docs.md', String(md).replace(/\/major\/\d+/, `/major/${pkg.version.match(/\d+/)}`))
   fs.writeFileSync('./lib/core-icons.json', JSON.stringify(files))
   return `var ICONS = {${icons.join(',')}}`
 }
