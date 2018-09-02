@@ -59,7 +59,6 @@ export default [{
 }]
 
 function intro () {
-  const md = fs.readFileSync('./lib/docs.md')
   const files = fs.readdirSync('./lib').filter((file) => file.slice(-4) === '.svg')
   const icons = files.map((file) => {
     const code = String(fs.readFileSync(`./lib/${file}`))
@@ -68,7 +67,15 @@ function intro () {
     return `'${file.slice(0, -4)}':['${body}',${size[2]},${size[3]}]` // Generate JS instead of JSON to save bytes
   })
 
-  fs.writeFileSync('./lib/docs.md', String(md).replace(/\/major\/\d+/, `/major/${pkg.version.match(/\d+/)}`))
+  const semverint = Number(pkg.version.split('.').map((v) => v.padStart(3, '0')).join(''))
+  const sketch = String(fs.readFileSync('./lib/core-icons.rss'))
+  const docs = String(fs.readFileSync('./lib/docs.md'))
+
   fs.writeFileSync('./lib/core-icons.json', JSON.stringify(files))
+  fs.writeFileSync('./lib/docs.md', docs.replace(/\/major\/\d+/, `/major/${pkg.version.match(/\d+/)}`))
+  fs.writeFileSync('./lib/core-icons.rss', sketch
+    .replace(/(<pubDate>)[^<]+/, `$1${new Date().toUTCString()}`) // Add publish date to sketch
+    .replace(/(sparkle:version=")[^"]+/, `$1${semverint}`)) // Convert semver to int version number
+
   return `var ICONS = {${icons.join(',')}}`
 }
