@@ -13,3 +13,7 @@ yarn-error*
 **/*.jsx.js
 **/jsx.js
 docs/
+index.js
+index.jsx
+nrk-*.js
+nrk-*.jsx

@@ -1,6 +1,7 @@
 import {uglify} from 'rollup-plugin-uglify'
 import buble from 'rollup-plugin-buble'
 import serve from 'rollup-plugin-serve'
+import path from 'path';
 import pkg from './package.json'
 import fs from 'fs'
 
@@ -8,6 +9,10 @@ const banner = `/*! ${pkg.name} v${pkg.version} - Copyright (c) 2017-${new Date(
 const globals = {'react-dom': 'ReactDOM', react: 'React'} // Do not include react in out package
 const pluginsCJS = [buble(), !process.env.ROLLUP_WATCH || serve('lib')]
 const pluginsMIN = pluginsCJS.concat(uglify({output: {comments: /^!/}}))
+
+let iconsString
+
+generateFiles()
 
 export default [{
   watch: {include: 'lib/*.(svg|js)'},
@@ -44,32 +49,42 @@ export default [{
   },
   external: Object.keys(globals),
   plugins: pluginsMIN
-}, {
-  input: 'lib/core-icons.jsx', // CJS for JSX NPM install
-  output: {
-    name: 'CoreIcon',
-    file: 'jsx.js',
-    format: 'cjs',
-    intro,
-    banner,
-    globals
-  },
-  external: Object.keys(globals),
-  plugins: pluginsCJS
 }]
 
-function intro () {
-  const files = fs.readdirSync('./lib').filter((file) => file.slice(-4) === '.svg')
-  const icons = files.map((file) => {
+function generateFiles() {
+  const ext = '.svg'
+  const files = fs.readdirSync('./lib').filter((file) => path.extname(file) === ext)
+  const icons = files.reduce((icons, file) => {
     const code = String(fs.readFileSync(`./lib/${file}`))
     const size = String(code.match(/viewBox="[^"]+/)).split(' ').map(Number)
     const body = code.replace(/^[^>]+>|<[^<]+$/g, '').replace(/\s*([<>])\s*/g, '$1') // Strip white space around tokens
-    return `'${file.slice(0, -4)}':['${body}',${size[2]},${size[3]}]` // Generate JS instead of JSON to save bytes
-  })
+    icons[path.basename(file, ext)] = [body, size[2], size[3]]
+    return icons
+  }, {})
 
-  const sketch = String(fs.readFileSync('./lib/core-icons.rss'))
+  const jsIconTmpl = fs.readFileSync('./src/icon-tmpl.js', 'utf8')
+  const jsxIconTmpl = fs.readFileSync('./src/icon-tmpl.jsx', 'utf8')
+  const jsIndexTmpl = fs.readFileSync('./src/index-tmpl.js', 'utf8')
+  const jsxIndexTmpl = fs.readFileSync('./src/index-tmpl.jsx', 'utf8')
+  const sketch = fs.readFileSync('./lib/core-icons.rss', 'utf8')
   const date = new Date(fs.statSync('./lib/core-icons.rss').mtime)
-  const docs = String(fs.readFileSync('./lib/docs.md'))
+  const docs = fs.readFileSync('./lib/docs.md', 'utf8')
+
+  for (const id in icons) {
+    const [body, width, height] = icons[id]
+    const jsIconContent = jsIconTmpl
+      .replace('{{BODY}}', body)
+      .replace('{{WIDTH}}', width)
+      .replace('{{HEIGHT}}', height)
+      .replace('{{ID}}', id)
+    fs.writeFileSync(`${id}.js`, jsIconContent)
+    const jsxIconContent = jsxIconTmpl
+      .replace('{{BODY}}', body)
+      .replace('{{WIDTH}}', width)
+      .replace('{{HEIGHT}}', height)
+      .replace('{{ID}}', id)
+    fs.writeFileSync(`${id}.jsx`, jsxIconContent)
+  }
 
   fs.writeFileSync('./lib/core-icons.json', JSON.stringify(files))
   fs.writeFileSync('./lib/docs.md', docs.replace(/\/major\/\d+/, `/major/${pkg.version.match(/\d+/)}`))
@@ -77,5 +92,14 @@ function intro () {
     .replace(/(<pubDate>)[^<]+/, `$1${date.toUTCString()}`) // Add publish date to sketch
     .replace(/(sparkle:version=")[^"]+/, `$1${date.getTime()}`)) // Use mtime as version
 
-  return `var ICONS = {${icons.join(',')}}`
+  iconsString = `{${Object.keys(icons).map((id) => `'${id}':['${icons[id][0]}', ${icons[id][1]}, ${icons[id][2]}]`).join(',')}}`
+
+  const jsIndexContent = jsIndexTmpl.replace('{{ICONS}}', iconsString)
+  fs.writeFileSync(`index.js`, jsIndexContent)
+  const jsxIndexContent = jsxIndexTmpl.replace('{{ICONS}}', iconsString)
+  fs.writeFileSync(`index.jsx`, jsxIndexContent)
+}
+
+function intro () {
+  return `var ICONS = ${iconsString}`
 }

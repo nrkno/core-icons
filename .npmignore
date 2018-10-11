@@ -1,7 +1,4 @@
-.DS_Store
-.npm
-.vscode
-.idea
+.*
 node_modules/
 npm-debug*
 yarn-error*
@@ -11,3 +8,7 @@ yarn-error*
 *.css
 *.md
 docs/
+src/
+dist/
+rollup.config.js
+package-lock.json

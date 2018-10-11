@@ -5,9 +5,12 @@
   "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
   "version": "4.1.0",
   "license": "MIT",
-  "main": "lib/core-icons.cjs.js",
+  "main": "index.js",
   "scripts": {
+    "clean": "rm -f nrk-*.{js,jsx}",
     "build": "rollup --config",
+    "prepublishOnly": "npm run build",
+    "postpublish": "npm run clean",
     "publish:patch": "npm version patch -m 'Release patch %s' && npm run push",
     "publish:minor": "npm version minor -m 'Release minor %s' && npm run push",
     "publish:major": "npm version major -m 'Release major %s' && npm run push",
