@@ -9,6 +9,6 @@ yarn-error*
 *.md
 docs/
 src/
-dist/
+lib/
 rollup.config.js
 package-lock.json
