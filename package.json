@@ -7,7 +7,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -f nrk-*.{js,jsx}",
+    "clean": "rm -f nrk-*.{mjs,js,jsx}",
     "build": "rollup --config",
     "prepublishOnly": "npm run build",
     "postpublish": "npm run clean",

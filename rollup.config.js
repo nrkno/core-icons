@@ -52,6 +52,8 @@ export default [{
 }]
 
 function generateFiles () {
+  const version = process.env['npm_package_version']
+  const major = version.slice(0, version.indexOf('.'))
   const ext = '.svg'
   const files = fs.readdirSync('./lib').filter((file) => path.extname(file) === ext)
   const icons = files.reduce((icons, file) => {
@@ -63,6 +65,7 @@ function generateFiles () {
   }, {})
 
   const jsIconTmpl = fs.readFileSync('./src/icon-tmpl.js', 'utf8')
+  const mjsIconTmpl = fs.readFileSync('./src/icon-tmpl.mjs', 'utf8')
   const jsxIconTmpl = fs.readFileSync('./src/icon-tmpl.jsx', 'utf8')
   const jsIndexTmpl = fs.readFileSync('./src/index-tmpl.js', 'utf8')
   const jsxIndexTmpl = fs.readFileSync('./src/index-tmpl.jsx', 'utf8')
@@ -73,11 +76,18 @@ function generateFiles () {
   for (const id in icons) {
     const [body, width, height] = icons[id]
     const jsIconContent = jsIconTmpl
+      .replace('{{GLOBAL}}', `coreIcons${major}`)
       .replace('{{BODY}}', body)
       .replace('{{WIDTH}}', width)
       .replace('{{HEIGHT}}', height)
       .replace('{{ID}}', id)
-    fs.writeFileSync(`${id}.js`, jsIconContent)
+      fs.writeFileSync(`${id}.js`, jsIconContent)
+      const mjsIconContent = mjsIconTmpl
+      .replace('{{BODY}}', body)
+      .replace('{{WIDTH}}', width)
+      .replace('{{HEIGHT}}', height)
+      .replace('{{ID}}', id)
+    fs.writeFileSync(`${id}.mjs`, mjsIconContent)
     const jsxIconContent = jsxIconTmpl
       .replace('{{BODY}}', body)
       .replace('{{WIDTH}}', width)
