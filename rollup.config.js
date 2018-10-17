@@ -81,7 +81,7 @@ function generateFiles () {
       .replace('{{WIDTH}}', width)
       .replace('{{HEIGHT}}', height)
       .replace('{{ID}}', id)
-      fs.writeFileSync(`${id}.js`, jsIconContent)
+      fs.writeFileSync(`lib/${id}.js`, jsIconContent)
       const mjsIconContent = mjsIconTmpl
       .replace('{{BODY}}', body)
       .replace('{{WIDTH}}', width)
