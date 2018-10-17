@@ -1,7 +1,7 @@
 import {uglify} from 'rollup-plugin-uglify'
 import buble from 'rollup-plugin-buble'
 import serve from 'rollup-plugin-serve'
-import path from 'path';
+import path from 'path'
 import pkg from './package.json'
 import fs from 'fs'
 
@@ -51,7 +51,7 @@ export default [{
   plugins: pluginsMIN
 }]
 
-function generateFiles() {
+function generateFiles () {
   const ext = '.svg'
   const files = fs.readdirSync('./lib').filter((file) => path.extname(file) === ext)
   const icons = files.reduce((icons, file) => {
@@ -67,7 +67,7 @@ function generateFiles() {
   const jsIndexTmpl = fs.readFileSync('./src/index-tmpl.js', 'utf8')
   const jsxIndexTmpl = fs.readFileSync('./src/index-tmpl.jsx', 'utf8')
   const sketch = fs.readFileSync('./lib/core-icons.rss', 'utf8')
-  const date = new Date(fs.statSync('./lib/core-icons.rss').mtime)
+  const date = new Date(fs.statSync('./lib/core-icons.sketch').mtime)
   const docs = fs.readFileSync('./lib/docs.md', 'utf8')
 
   for (const id in icons) {

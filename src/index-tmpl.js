@@ -1,25 +1,23 @@
-const ICONS = {{ICONS}};
+const ICONS = '{{ICONS}}'
 
 module.exports = {
   renderSymbols,
   renderSymbol,
   renderSprite,
   renderSVG
-};
+}
 
 /**
  * Render one or more icons as block of symbol definitions
  * @param {[string]} [ids]
  * @returns {string}
  */
-function renderSymbols(ids = Object.keys(ICONS)) {
-  if (!Array.isArray(ids)) {
-    ids = [ids];
-  }
+function renderSymbols (ids = Object.keys(ICONS)) {
+  if (!Array.isArray(ids)) ids = [ids]
 
   return `<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
     ${ids.forEach(renderSymbol)}
-  </svg>`;
+  </svg>`
 }
 
 /**
@@ -27,14 +25,12 @@ function renderSymbols(ids = Object.keys(ICONS)) {
  * @param {string} id
  * @returns {string}
  */
-function renderSymbol(id) {
-  if (!ICONS.hasOwnProperty(id)) {
-    return '';
-  }
+function renderSymbol (id) {
+  if (!ICONS.hasOwnProperty(id)) return ''
 
-  const [body, width, height] = ICONS[id];
+  const [body, width, height] = ICONS[id]
 
-  return `<symbol id="${id}" viewBox="0 0 ${width} ${height}">${body}</symbol>`;
+  return `<symbol id="${id}" viewBox="0 0 ${width} ${height}">${body}</symbol>`
 }
 
 /**
@@ -42,14 +38,12 @@ function renderSymbol(id) {
  * @param {string} id
  * @returns {string}
  */
-function renderSprite(id) {
-  if (!ICONS.hasOwnProperty(id)) {
-    return '';
-  }
+function renderSprite (id) {
+  if (!ICONS.hasOwnProperty(id)) return ''
 
-  const [body, width, height] = ICONS[id];
+  const [, width, height] = ICONS[id]
 
-  return `<svg style="width:${width / 10}em;height:${height / 10}em" focusable="false" aria-hidden="true"><use xlink:href="#${id}" /></svg>`;
+  return `<svg style="width:${width / 10}em;height:${height / 10}em" focusable="false" aria-hidden="true"><use xlink:href="#${id}" /></svg>`
 }
 
 /**
@@ -57,12 +51,10 @@ function renderSprite(id) {
  * @param {string} id
  * @returns {string}
  */
-function renderSVG(id) {
-  if (!ICONS.hasOwnProperty(id)) {
-    return '';
-  }
+function renderSVG (id) {
+  if (!ICONS.hasOwnProperty(id)) return ''
 
-  const [body, width, height] = ICONS[id];
+  const [body, width, height] = ICONS[id]
 
-  return `<svg style="width:${width / 10}em;height:${height / 10}em" viewBox="0 0 ${width} ${height}" focusable="false" aria-hidden="true">${body}</svg>`;
+  return `<svg style="width:${width / 10}em;height:${height / 10}em" viewBox="0 0 ${width} ${height}" focusable="false" aria-hidden="true">${body}</svg>`
 }

@@ -96,13 +96,13 @@ coreIcons()               // => returns Array of all icons: [{id, width, height,
 coreIcons('nrk-logo-nrk') // => returns Object {id, width, height, body, sprite, symbol, svg}
 
 // Where:
-// id     = {String} icon id
-// width  = {Number} original pixel width
-// height = {Number} original pixel height
-// body   = {String} HTML content of <svg>
-// sprite = {String} HTML <svg> tag with <use> for sprite usage
-// symbol = {String} HTML <symbol> tag. Usefull when generating a sprite
-// svg    = {String} HTML the actual <svg>
+coreIcons('nrk-logo-nrk').id     // => {String} icon id
+coreIcons('nrk-logo-nrk').width  // => {Number} original pixel width
+coreIcons('nrk-logo-nrk').height // => {Number} original pixel height
+coreIcons('nrk-logo-nrk').body   // => {String} HTML content of <svg>
+coreIcons('nrk-logo-nrk').sprite // => {String} HTML <svg> tag with <use> for sprite usage
+coreIcons('nrk-logo-nrk').symbol // => {String} HTML <symbol> tag. Usefull when generating a sprite
+coreIcons('nrk-logo-nrk').svg    // => {String} HTML the actual <svg>
 ```
 
 ---

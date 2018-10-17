@@ -1,30 +1,28 @@
-const React = require('react');
+const React = require('react')
 
-const ICONS = {{ICONS}};
+const ICONS = '{{ICONS}}'
 
 module.exports = {
   renderSymbols,
   renderSymbol,
   renderSprite,
   renderSVG
-};
+}
 
 /**
  * Render one or more icons as block of symbol definitions
  * @param {[string]} [ids]
  * @returns {string}
  */
-function renderSymbols(ids = Object.keys(ICONS)) {
-  if (!Array.isArray(ids)) {
-    ids = [ids];
-  }
+function renderSymbols (ids = Object.keys(ICONS)) {
+  if (!Array.isArray(ids)) ids = [ids]
 
   return React.createElement('svg', {
     xmlns: 'http://www.w3.org/2000/svg',
     style: {
       display: 'none'
     }
-  }, ids.forEach(renderSymbol));
+  }, ids.forEach(renderSymbol))
 }
 
 /**
@@ -32,18 +30,16 @@ function renderSymbols(ids = Object.keys(ICONS)) {
  * @param {string} id
  * @returns {string}
  */
-function renderSymbol(id) {
-  if (!ICONS.hasOwnProperty(id)) {
-    return null;
-  }
+function renderSymbol (id) {
+  if (!ICONS.hasOwnProperty(id)) return null
 
-  const [body, width, height] = ICONS[id];
+  const [body, width, height] = ICONS[id]
 
   return React.createElement('symbol', {
     dangerouslySetInnerHTML: { __html: body },
     id,
     viewbox: `0 0 ${width} ${height}`
-  });
+  })
 }
 
 /**
@@ -51,12 +47,10 @@ function renderSymbol(id) {
  * @param {string} id
  * @returns {string}
  */
-function renderSprite(id) {
-  if (!ICONS.hasOwnProperty(id)) {
-    return null;
-  }
+function renderSprite (id) {
+  if (!ICONS.hasOwnProperty(id)) return null
 
-  const [body, width, height] = ICONS[id];
+  const [, width, height] = ICONS[id]
 
   return React.createElement('svg', {
     'aria-hidden': true,
@@ -65,9 +59,7 @@ function renderSprite(id) {
       width: `${width / 10}em`,
       height: `${height / 10}em`
     }
-  }, [React.createElement('use', {
-    'xlink:href': `#${id}`
-  })]);
+  }, [React.createElement('use', {'xlink:href': `#${id}`})])
 }
 
 /**
@@ -75,12 +67,10 @@ function renderSprite(id) {
  * @param {string} id
  * @returns {string}
  */
-function renderSVG(id) {
-  if (!ICONS.hasOwnProperty(id)) {
-    return null;
-  }
+function renderSVG (id) {
+  if (!ICONS.hasOwnProperty(id)) return null
 
-  const [body, width, height] = ICONS[id];
+  const [body, width, height] = ICONS[id]
 
   return React.createElement('svg', {
     'aria-hidden': true,
@@ -91,5 +81,5 @@ function renderSVG(id) {
       height: `${height / 10}em`
     },
     viewbox: `0 0 ${width} ${height}`
-  });
+  })
 }
