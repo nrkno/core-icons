@@ -19,7 +19,7 @@ generateMJS()
 generateJSX()
 
 function generateJSON () {
-  fs.writeFileSync('lib/core-icons.json', JSON.stringify(icons.map(({id}) => id)))
+  fs.writeFileSync('lib/core-icons.json', JSON.stringify(icons.map(({id}) => `${id}.svg`)))
 }
 
 function generateMJS () {
