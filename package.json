@@ -5,37 +5,24 @@
   "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
   "version": "4.1.0",
   "license": "MIT",
-  "main": "core-icons.mjs",
+  "main": "core-icons.cjs",
+  "module": "core-icons.mjs",
   "scripts": {
-    "clean": "rm -f nrk-*.{mjs,jsx} && rm -f lib/nrk-*.js",
     "build": "node bin/build.js",
-    "prepublishOnly": "npm run build",
-    "postpublish": "npm run clean",
+    "lint": "standard",
     "publish:patch": "npm version patch -m 'Release patch %s' && npm run push",
     "publish:minor": "npm version minor -m 'Release minor %s' && npm run push",
     "publish:major": "npm version major -m 'Release major %s' && npm run push",
     "push": "npm run build && git push && git push --tags && npm publish",
-    "start": "rollup --config --watch",
-    "static-publish": "npm run build && static-publish --directory=lib --account=nrk-core --latest --major",
-    "test": "npm run build && standard && jest"
+    "start": "npm run build && http-server lib -p 10001 -o -c-1",
+    "static-publish": "npm run build && static-publish --directory=lib --account=nrk-core --latest --major"
   },
   "devDependencies": {
-    "jest": "23.5.0",
-    "react": "16.4.2",
-    "react-dom": "16.4.2",
-    "rollup": "0.64.1",
-    "rollup-plugin-buble": "0.19.2",
-    "rollup-plugin-serve": "0.4.2",
-    "rollup-plugin-uglify": "4.0.0",
-    "standard": "11.0.1"
+    "http-server": "0.11.1",
+    "standard": "12.0.1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nrkno/core-icons.git"
-  },
-  "standard": {
-    "ignore": [
-      "jsx"
-    ]
   }
 }

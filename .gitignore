@@ -8,4 +8,6 @@ yarn-error*
 *.code-workspace
 *.tar
 core-icons.jsx
+core-icons.cjs
 core-icons.mjs
+core-icons.min.js
