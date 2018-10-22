@@ -5,10 +5,10 @@
   "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
   "version": "4.1.0",
   "license": "MIT",
-  "main": "index.js",
+  "main": "core-icons.mjs",
   "scripts": {
     "clean": "rm -f nrk-*.{mjs,jsx} && rm -f lib/nrk-*.js",
-    "build": "rollup --config",
+    "build": "node bin/build.js",
     "prepublishOnly": "npm run build",
     "postpublish": "npm run clean",
     "publish:patch": "npm version patch -m 'Release patch %s' && npm run push",
