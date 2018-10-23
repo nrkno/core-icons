@@ -20,12 +20,15 @@ npm install @nrk/core-icons --save  # Use from NPM
 
 ## Scaling
 
-All icons are produced for sharpest rendering at `15×15`, `30×30` etc., but not all *logos* are the same dimensions. Therefore, `@nrk/core-icons` provides scaling based on `font-size`. When used on web, scale the icons by using font sizes divisible with `10`:
+Since logos do not have consistent dimensions, `@nrk/core-icons` provides scaling based on `font-size`.
+Scale the icons/logos by using font sizes divisible with `10` for sharpest rendering. Example: `font-size: 10px` = `15×15` icon, `font-size: 20px` = `30×30` icon, etc.
 
 ✅ Do | 🚫 Don't
 :-- | :--
 `.parent { font-size: 10px }` | `.parent svg { width: 30px; height: 30px }`
-<div>`<div class="parent"><svg style="width:1.5em;height:1.5em">…`</div><small>Note: correct width/height for each icon comes from @nrk/core-icons</small> | `<div class="parent"><svg style="width:30px;height:30px">…`
+<div>`<div class="parent"><svg style="width:1.5em;height:1.5em">…`</div> | `<div class="parent"><svg style="width:30px;height:30px">…`
+
+<small>Note: correct width/height in `em` for each icon is automatically provided by `@nrk/core-icons`</small>
 
 ---
 
@@ -40,7 +43,6 @@ All icons are produced for sharpest rendering at `15×15`, `30×30` etc., but no
 </label>
 <div class="docs-icons nrk-grid" style="padding:0 7vw;margin:0 -7vw;transition:.2s"></div>
 <script src="pdfkit-and-blob-stream.js"></script>
-<script src="core-icons.jsx.js"></script>
 <script src="core-icons.min.js"></script>
 <script src="docs.js"></script>
 
@@ -87,41 +89,22 @@ Modern versions of assistive technologies will announce SVG content, but there i
 
 ## Javascript API
 
-`@nrk/core-icons` provides a javascript API. You can either access it directly from `window.coreIcons` (when included as a `<script>` tag), or import as a NPM module:
+*NB: requires tree shaking*. `@nrk/core-icons` exposes icons as individually exported constants (enabling [tree shaking](https://medium.com/@netxm/what-is-tree-shaking-de7c6be5cadd)) when included as a NPM module:
 
 ```js
-import coreIcons from '@nrk/core-icons'
+import {nrkLogoNrk} from '@nrk/core-icons'
 
-coreIcons()               // => returns Array of all icons: [{id, width, height, body, sprite, symbol, svg}]
-coreIcons('nrk-logo-nrk') // => returns Object {id, width, height, body, sprite, symbol, svg}
-
-// Where:
-coreIcons('nrk-logo-nrk').id     // => {String} icon id
-coreIcons('nrk-logo-nrk').width  // => {Number} original pixel width
-coreIcons('nrk-logo-nrk').height // => {Number} original pixel height
-coreIcons('nrk-logo-nrk').body   // => {String} HTML content of <svg>
-coreIcons('nrk-logo-nrk').sprite // => {String} HTML <svg> tag with <use> for sprite usage
-coreIcons('nrk-logo-nrk').symbol // => {String} HTML <symbol> tag. Usefull when generating a sprite
-coreIcons('nrk-logo-nrk').svg    // => {String} HTML the actual <svg>
+nrkLogoNrk // Is a HTML string of <svg>…</svg>
 ```
 
 ---
 
 ## React API
-
-`@nrk/core-icons` provides a React/Preact API. You can access it as a NPM module:
+*NB: requires tree shaking*. `@nrk/core-icons` provides a React/Preact API:
 
 ```js
-import CoreIcon from '@nrk/core-icons/jsx'
+import {NrkLogoNrk} from '@nrk/core-icons/core-icons.jsx'
 
-<CoreIcon id='nrk-logo-nrk' />                          // Render a NRK logo
-<CoreIcon id='nrk-logo-nrk' style={{color: 'red'}} />   // Additional props will be used for attributes
-```
-
-```html
-<!--demo-->
-<div id="jsx-core-icon"></div>
-<script type="text/jsx">
-  ReactDOM.render(<CoreIcon id='nrk-logo-nrk' />, document.getElementById('jsx-core-icon'))
-</script>
+<NrkLogoNrk />                          // Render a NRK logo
+<NrkLogoNrk style={{color: 'red'}} />   // Additional props will be used for attributes
 ```
