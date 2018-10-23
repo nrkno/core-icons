@@ -5,7 +5,7 @@
   "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
   "version": "4.1.0",
   "license": "MIT",
-  "main": "core-icons.cjs",
+  "main": "core-icons.js",
   "module": "core-icons.mjs",
   "scripts": {
     "build": "node bin/build.js",

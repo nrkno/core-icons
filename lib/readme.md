@@ -20,8 +20,8 @@ npm install @nrk/core-icons --save  # Use from NPM
 
 ## Scaling
 
-Since logos does not have consistent dimensions, `@nrk/core-icons` provides scaling based on `font-size`.
-Scale the icons/logos by using font sizes divisible with `10` icons for sharpest rendering. Example: `font-size: 10px` = `15×15` icon, `font-size: 20px` = `30×30` icon, etc.
+Since logos do not have consistent dimensions, `@nrk/core-icons` provides scaling based on `font-size`.
+Scale the icons/logos by using font sizes divisible with `10` for sharpest rendering. Example: `font-size: 10px` = `15×15` icon, `font-size: 20px` = `30×30` icon, etc.
 
 ✅ Do | 🚫 Don't
 :-- | :--

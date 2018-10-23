@@ -25,7 +25,7 @@ function generateJSON () {
 }
 
 function generateCJS () {
-  fs.writeFileSync('core-icons.cjs', `module.exports = {${icons.map(({ key, svg }) => `'${key}':'${svg}'`).join(',')}}`)
+  fs.writeFileSync('core-icons.js', `module.exports = {${icons.map(({ key, svg }) => `'${key}':'${svg}'`).join(',')}}`)
 }
 
 function generateMJS () {

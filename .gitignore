@@ -7,7 +7,7 @@ npm-debug*
 yarn-error*
 *.code-workspace
 *.tar
+core-icons.js
 core-icons.jsx
-core-icons.cjs
 core-icons.mjs
 core-icons.min.js
