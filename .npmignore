@@ -1,13 +1,9 @@
-.DS_Store
-.npm
-.vscode
-.idea
+.*
 node_modules/
 npm-debug*
 yarn-error*
 *.code-workspace
 *.tar
-*.svg
-*.css
-*.md
-docs/
+bin/
+lib/
+package-lock.json

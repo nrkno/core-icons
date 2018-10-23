@@ -20,7 +20,7 @@ npm install @nrk/core-icons --save
 
 ```js
 import coreIcons from '@nrk/core-icons'    // Vanilla JS
-import CoreIcon from '@nrk/core-icons/jsx' // ...or React/Preact compatible JSX
+import {nrkLogoNrk} from '@nrk/core-icons/core-icons.jsx' // ...or React/Preact compatible JSX
 ```
 
 ## Local development
