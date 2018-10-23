@@ -70,6 +70,6 @@ function generateSketch () {
 }
 
 function generateDocs () {
-  const docs = fs.readFileSync('lib/docs.md', 'utf8')
-  fs.writeFileSync('lib/docs.md', docs.replace(/\/major\/\d+/, `/major/${pkg.version.match(/\d+/)}`))
+  const docs = fs.readFileSync('lib/readme.md', 'utf8')
+  fs.writeFileSync('lib/readme.md', docs.replace(/\/major\/\d+/, `/major/${pkg.version.match(/\d+/)}`))
 }
