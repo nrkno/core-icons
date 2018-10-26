@@ -55,7 +55,7 @@ ${icons.map(({ body, jsx, w, h }) => `export function ${jsx} (attr) {
     .reduce(function(acc,key){acc[key]=attr[key];return acc}, {
       'aria-hidden': true,
       focusable: false,
-      viewbox: '0 0 ${w} ${h}',
+      viewBox: '0 0 ${w} ${h}',
       style: {width: '${w / 10}em', height: '${h / 10}em'},
       dangerouslySetInnerHTML: {__html: '${body}'}
     }))
@@ -69,7 +69,7 @@ module.exports = {${icons.map(({ body, jsx, w, h }) => `${jsx}: function (attr) 
     .reduce(function(acc,key){acc[key]=attr[key];return acc}, {
       'aria-hidden': true,
       focusable: false,
-      viewbox: '0 0 ${w} ${h}',
+      viewBox: '0 0 ${w} ${h}',
       style: {width: '${w / 10}em', height: '${h / 10}em'},
       dangerouslySetInnerHTML: {__html: '${body}'}
     }))
