@@ -19,6 +19,7 @@ generateIIFE()
 generateMJS()
 generateCJS()
 generateJSX()
+generateCJSJSX()
 
 function generateJSON () {
   fs.writeFileSync('lib/core-icons.json', JSON.stringify(icons.map(({ id }) => `${id}.svg`)))
@@ -59,6 +60,20 @@ ${icons.map(({ body, jsx, w, h }) => `export function ${jsx} (attr) {
       dangerouslySetInnerHTML: {__html: '${body}'}
     }))
 }`.replace(/\n|\s{2,}/g, '')).join('\n')}`)
+}
+
+function generateCJSJSX () {
+  fs.writeFileSync('core-icons-commonjs.jsx', `const React = require('react')
+module.exports = {${icons.map(({ body, jsx, w, h }) => `${jsx}: function (attr) {
+  return React.createElement('svg', Object.keys(attr=attr||{})
+    .reduce(function(acc,key){acc[key]=attr[key];return acc}, {
+      'aria-hidden': true,
+      focusable: false,
+      viewbox: '0 0 ${w} ${h}',
+      style: {width: '${w / 10}em', height: '${h / 10}em'},
+      dangerouslySetInnerHTML: {__html: '${body}'}
+    }))
+}`.replace(/\n|\s{2,}/g, '')).join(',')}}`)
 }
 
 function generateSketch () {
