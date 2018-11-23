@@ -75,13 +75,12 @@ Modern versions of assistive technologies will announce SVG content, but there i
   <div class="nrk-xs-12of12 nrk-md-4of12" style="padding-right:15px">
     <div class="doc-demo">
       <span role="img" aria-label="Terningkast seks">
-        <span class="nrk-sr">Terningkast seks</span>
-        <svg aria-hidden="true" style="width:1.5em;height:1.5em;vertical-align:middle"><use xlink:href="#nrk-dice-6--active" /></svg>
+        <svg aria-hidden="true" style="width:1.5em;height:1.5em;vertical-align:middle"><use xlink:href="#nrk-dice-6--active"></use></svg>
       </span>
       Fantastisk!
     </div>
     <h3>Non-clickable icon</h3>
-    Hide the icon from screen readers with <code>aria-hidden="true"</code>, and add screen reader content to a wrapper with <code>role="img" aria-label="…"</code>, as well as inside a <code>.nrk-sr</code>.
+    Hide the icon from screen readers with <code>aria-hidden="true"</code>, and add screen reader content to a wrapper with <code>role="img" aria-label="…"</code>.
   </div>
 </div>
 
