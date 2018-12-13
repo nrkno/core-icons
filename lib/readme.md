@@ -32,27 +32,35 @@ Scale the icons/logos by using font sizes divisible with `10` for sharpest rende
 ## Icons
 
 <!--demo
-<input type="text" class="nrk-sr" aria-hidden="true" id="docs-copy">
-<label>
-  <span class="nrk-sr">Filter icons</span>
-  <input type="text" name="search" placeholder="Type to search" class="nrk-input" autocomplete="off">
-</label>
-<label class="nrk-button">
-  <span>Choose color</span>
-  <input type="color" name="color" class="nrk-sr" value="#000000">
-</label>
-<div class="docs-icons nrk-grid" style="padding:0 7vw;margin:0 -7vw;transition:.2s"></div>
+<style>
+  .doc-grid { overflow: hidden }
+  .doc-grid > * { box-sizing: border-box; display: inline-block; vertical-align: top; width: 33%; min-width: 300px; padding: 15px 15px 15px 0 }
+  .docs-icons > * { width: 16.6%; min-width: 120px }
+  .docs-icons > h3 { width: 100%; min-width: none }
+  .docs-icons a, .docs-icons button { -webkit-appearance: none; font: inherit; color: inherit; border: 0; padding: 0; margin: 0; text-decoration: underline }
+  .doc-hidden { position: fixed; left: -300px; opacity: 0 }
+  .doc-input { font: inherit; color: inherit; margin-bottom: 2px; padding: 5px 9px; border: 1px solid #ccc; border-radius: 3px }
+</style>
+<div class="doc-config doc-grid">
+  <input type="text" aria-hidden="true" tabindex="-1" id="docs-copy" class="doc-hidden">
+  <input type="text" class="doc-input" name="search" placeholder="Type to search" autocomplete="off" aria-label="Filter icons">
+  <label class="doc-input">
+    <span style="cursor:pointer">Choose color</span>
+    <input type="color" name="color" value="#000000" class="doc-hidden">
+  </label>
+</div>
+<div class="docs-icons doc-grid" style="padding:0 7vw;margin:0 -7vw;transition:.2s"></div>
 <script src="pdfkit-and-blob-stream.js"></script>
 <script src="core-icons.min.js"></script>
-<script src="docs.js"></script>
+<script src="readme.js"></script>
 demo-->
 
 ## Accessibility
 
 Modern versions of assistive technologies will announce SVG content, but there is still a lot of differences between browsers. To avoid confusion, use the following conventions:
 
-<div class="nrk-grid">
-  <div class="nrk-xs-12of12 nrk-md-4of12" style="padding-right:15px">
+<div class="doc-grid">
+  <div>
     <div class="doc-demo">
       <a href="https://nrk.no/">
         Gå til nrk.no
@@ -62,7 +70,7 @@ Modern versions of assistive technologies will announce SVG content, but there i
     <h3>Icon used as decoration</h3>
     Use the <code>aria-hidden="true"</code> attribute to hide the icon from screen readers while keeping it visually perceivable.
   </div>
-  <div class="nrk-xs-12of12 nrk-md-4of12" style="padding-right:15px">
+  <div>
     <div class="doc-demo">
       <a aria-label="Gå til nrk.no" href="https://nrk.no/">
         <svg aria-hidden="true" width="3.5em" height="1em"><use xlink:href="#nrk-logo-nrk" /></svg>
@@ -71,7 +79,7 @@ Modern versions of assistive technologies will announce SVG content, but there i
     <h3>Clickable icon</h3>
     Add screen reader content to the clickable element (<code>button</code> or <code>a</code>) with <code>aria-label="…"</code>, and hide the icon from screen readers with <code>aria-hidden="true"</code>
   </div>
-  <div class="nrk-xs-12of12 nrk-md-4of12" style="padding-right:15px">
+  <div>
     <div class="doc-demo">
       <span role="img" aria-label="Terningkast seks">
         <svg aria-hidden="true" style="width:1.5em;height:1.5em;vertical-align:middle"><use xlink:href="#nrk-dice-6--active"></use></svg>
