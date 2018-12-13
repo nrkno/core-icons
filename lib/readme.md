@@ -1,8 +1,7 @@
 # Core Icons
 
-## Icon and logo kit providing a consistent and predictable user experience across platforms and NRK services
+> Icon and logo kit providing a consistent and predictable user experience across platforms and NRK services
 
----
 
 ## Installation
 [Download the full kit](https://github.com/nrkno/core-icons/archive/master.zip) for sketching, [individual SVGs](#icons) for Android, [PDFs](#icons)
@@ -16,7 +15,6 @@ npm install @nrk/core-icons --save  # Use from NPM
 <script async src="https://static.nrk.no/core-icons/major/5/core-icons.min.js"></script>
 ```
 
----
 
 ## Scaling
 
@@ -30,14 +28,16 @@ Scale the icons/logos by using font sizes divisible with `10` for sharpest rende
 
 <small>Note: correct width/height in `em` for each icon is automatically provided by `@nrk/core-icons`</small>
 
----
 
 ## Icons
 
-<label class="nrk-button">
+<!--demo
+<input type="text" class="nrk-sr" aria-hidden="true" id="docs-copy">
+<label>
   <span class="nrk-sr">Filter icons</span>
-  <input type="text" name="search" placeholder="Type to search" class="nrk-unset">
-</label><label class="nrk-button">
+  <input type="text" name="search" placeholder="Type to search" class="nrk-input" autocomplete="off">
+</label>
+<label class="nrk-button">
   <span>Choose color</span>
   <input type="color" name="color" class="nrk-sr" value="#000000">
 </label>
@@ -45,8 +45,7 @@ Scale the icons/logos by using font sizes divisible with `10` for sharpest rende
 <script src="pdfkit-and-blob-stream.js"></script>
 <script src="core-icons.min.js"></script>
 <script src="docs.js"></script>
-
----
+demo-->
 
 ## Accessibility
 
@@ -84,7 +83,6 @@ Modern versions of assistive technologies will announce SVG content, but there i
   </div>
 </div>
 
----
 
 ## Javascript API
 
@@ -96,7 +94,6 @@ import {nrkLogoNrk} from '@nrk/core-icons'
 nrkLogoNrk // Is a HTML string of <svg>…</svg>
 ```
 
----
 
 ## React API
 *NB: requires tree shaking*. `@nrk/core-icons` provides a React/Preact API:
