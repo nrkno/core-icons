@@ -1,27 +1,9 @@
 # @nrk/core-icons
-Core icons for web services and native apps.
+> Icons for web services and native apps.
 
 ## Installation
 
-### Install via static.nrk.no (preferred)
-Use the latest version:
-```html
-<script src="https://static.nrk.no/core-icons/latest/core-icons.min.js"></script>
-```
-Or choose a specific version:
-```html
-<script src="https://static.nrk.no/core-icons/X.X.X/core-icons.min.js"></script>
-```
-
-### Install via `npm`
-```bash
-npm install @nrk/core-icons --save
-```
-
-```js
-import coreIcons from '@nrk/core-icons'    // Vanilla JS
-import {nrkLogoNrk} from '@nrk/core-icons/core-icons.jsx' // ...or React/Preact compatible JSX
-```
+For installation and usage read the [documentation](https://static.nrk.no/core-icons/latest/).
 
 ## Local development
 First clone `@nrk/core-icons` and install its dependencies:
