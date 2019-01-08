@@ -7,6 +7,7 @@
   "license": "MIT",
   "main": "core-icons.js",
   "module": "core-icons.mjs",
+  "typings": "core-icons.d.ts",
   "scripts": {
     "build": "node bin/build.js",
     "lint": "standard",

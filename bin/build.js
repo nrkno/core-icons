@@ -16,13 +16,19 @@ generateSketch()
 generateDocs()
 generateJSON()
 generateIIFE()
+generateDTS()
 generateMJS()
 generateCJS()
 generateJSX()
+generateJSXDTS()
 generateCJSJSX()
 
 function generateJSON () {
   fs.writeFileSync('lib/core-icons.json', JSON.stringify(icons.map(({ id }) => `${id}.svg`)))
+}
+
+function generateDTS () {
+  fs.writeFileSync('core-icons.d.ts', icons.map(({ key, svg }) => `export declare const ${key}: string`).join('\n'))
 }
 
 function generateCJS () {
@@ -60,6 +66,10 @@ ${icons.map(({ body, jsx, w, h }) => `export function ${jsx} (attr) {
       dangerouslySetInnerHTML: {__html: '${body}'}
     }))
 }`.replace(/\n|\s{2,}/g, '')).join('\n')}`)
+}
+
+function generateJSXDTS () {
+  fs.writeFileSync('core-icons.jsx.d.ts', icons.map(({ jsx }) => `export declare const ${jsx}: React.FunctionComponent<React.SVGProps<SVGElement>>`).join('\n'))
 }
 
 function generateCJSJSX () {
