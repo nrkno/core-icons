@@ -28,7 +28,7 @@ function generateJSON () {
 }
 
 function generateDTS () {
-  fs.writeFileSync('core-icons.d.ts', icons.map(({ key, svg }) => `export declare const ${key}: string`).join('\n'))
+  fs.writeFileSync('core-icons.d.ts', icons.map(({ key }) => `export declare const ${key}: string`).join('\n'))
 }
 
 function generateCJS () {
