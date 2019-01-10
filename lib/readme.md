@@ -7,11 +7,17 @@
 [Download the full kit](https://github.com/nrkno/core-icons/archive/master.zip) for sketching, [individual SVGs](#icons) for Android, [PDFs](#icons)
 for iOS. As [SVG symbols](https://css-tricks.com/svg-symbol-good-choice-icons/) can not can load cross domain, or from external file and in IE (9,10,11), `@nrk/core-icons` provides a cacheable, cross-domain [Javascript API](#javascript-api) and [React API](#react-api). All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
 
+### Using NPM
+
 ```bash
 npm install @nrk/core-icons --save  # Use from NPM
 ```
+
+### Using static
+
+Recommended only for prototyping.
+
 ```html
-<!-- Use from static.nrk.no: insert just before </body> -->
 <script async src="https://static.nrk.no/core-icons/major/5/core-icons.min.js"></script>
 ```
 
