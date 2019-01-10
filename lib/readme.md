@@ -10,7 +10,7 @@ for iOS. As [SVG symbols](https://css-tricks.com/svg-symbol-good-choice-icons/) 
 ### Using NPM
 
 ```bash
-npm install @nrk/core-icons --save  # Use from NPM
+npm install @nrk/core-icons
 ```
 
 ### Using static
