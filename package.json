@@ -10,7 +10,6 @@
   "typings": "core-icons.d.ts",
   "scripts": {
     "build": "node bin/build.js",
-    "lint": "standard",
     "publish:patch": "npm version patch -m 'Release patch %s' && npm run push",
     "publish:minor": "npm version minor -m 'Release minor %s' && npm run push",
     "publish:major": "npm version major -m 'Release major %s' && npm run push",
@@ -20,8 +19,7 @@
   },
   "devDependencies": {
     "http-server": "0.11.1",
-    "react": "16.7.0",
-    "standard": "12.0.1"
+    "react": "16.7.0"
   },
   "repository": {
     "type": "git",
