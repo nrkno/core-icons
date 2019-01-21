@@ -13,6 +13,15 @@ for iOS. As [SVG symbols](https://css-tricks.com/svg-symbol-good-choice-icons/) 
 npm install @nrk/core-icons
 ```
 
+All icons are exposed individually as exported constants (enabling [tree shaking](https://medium.com/@netxm/what-is-tree-shaking-de7c6be5cadd)):
+
+```js
+import { nrkLogoNrk } from '@nrk/core-icons'      // Vanilla JS, String
+import { NrkLogoNrk } from '@nrk/core-icons/jsx'  // React, ReactElement
+
+<NrkLogoNrk />                          // Render a NRK logo
+<NrkLogoNrk style={{color: 'red'}} />   // Additional props will be used for attributes
+```
 ### Using static
 
 Recommended only for prototyping.
@@ -43,7 +52,7 @@ Scale the icons/logos by using font sizes divisible with `10` for sharpest rende
   .doc-grid > * { box-sizing: border-box; display: inline-block; vertical-align: top; width: 33%; min-width: 300px; padding: 15px 15px 15px 0 }
   .docs-icons > * { width: 16.6%; min-width: 120px }
   .docs-icons > h3 { width: 100%; min-width: none }
-  .docs-icons a, .docs-icons button { -webkit-appearance: none; font: inherit; color: inherit; border: 0; padding: 0; margin: 0; text-decoration: underline }
+  .docs-icons a, .docs-icons button { -webkit-appearance: none; font: inherit; background: none; color: inherit; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
   .doc-hidden { position: fixed; left: -300px; opacity: 0 }
   .doc-input { font: inherit; color: inherit; margin-bottom: 2px; padding: 5px 9px; border: 1px solid #ccc; border-radius: 3px }
 </style>
@@ -98,23 +107,3 @@ Modern versions of assistive technologies will announce SVG content, but there i
 </div>
 
 
-## Javascript API
-
-*NB: requires tree shaking*. `@nrk/core-icons` exposes icons as individually exported constants (enabling [tree shaking](https://medium.com/@netxm/what-is-tree-shaking-de7c6be5cadd)) when included as a NPM module:
-
-```js
-import {nrkLogoNrk} from '@nrk/core-icons'
-
-nrkLogoNrk // Is a HTML string of <svg>…</svg>
-```
-
-
-## React API
-*NB: requires tree shaking*. `@nrk/core-icons` provides a React/Preact API:
-
-```js
-import {NrkLogoNrk} from '@nrk/core-icons/core-icons.jsx'
-
-<NrkLogoNrk />                          // Render a NRK logo
-<NrkLogoNrk style={{color: 'red'}} />   // Additional props will be used for attributes
-```
