@@ -88,12 +88,26 @@ function buildJSXDTS (icons) {
 }
 
 function buildSketch () {
-  return fs.readFile('lib/core-icons.rss', 'utf8').then((rss) => {
-    const date = new Date(fs.statSync('lib/core-icons.sketch').mtime)
-    return fs.writeFile('lib/core-icons.rss', rss
-      .replace(/(<pubDate>)[^<]+/, `$1${date.toUTCString()}`) // Add publish date to sketch
-      .replace(/(sparkle:version=")[^"]+/, `$1${date.getTime()}`)) // Use mtime as version
-  })
+  const fullName = 'Core Icons'
+  const fileName = 'core-icons'
+  const date = new Date(fs.statSync('lib/core-icons.sketch').mtime)
+  return fs.writeFile('lib/core-icons.rss', `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>${fullName}</title>
+    <description>${fullName}</description>
+    <image>
+      <url></url>
+      <title>${fullName}</title>
+    </image>
+    <generator>Sketch</generator>
+    <item>
+      <title>${fullName}</title>
+      <pubDate>${date.toUTCString()}</pubDate>
+      <enclosure url="https://static.nrk.no/${fileName}/latest/${fileName}.sketch" type="application/octet-stream" sparkle:version="${date.getTime()}"/>
+    </item>
+  </channel>
+</rss>`)
 }
 
 function buildDocs () {

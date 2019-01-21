@@ -27,7 +27,7 @@ import { NrkLogoNrk } from '@nrk/core-icons/jsx'  // React, ReactElement
 Recommended only for prototyping.
 
 ```html
-<script async src="https://static.nrk.no/core-icons/major/5/core-icons.min.js"></script>
+<script async src="https://static.nrk.no/core-icons/major/6/core-icons.min.js"></script>
 ```
 
 
