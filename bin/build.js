@@ -84,7 +84,7 @@ ${icons.map(({ body, jsx, w, h }) => `export function ${jsx} (attr) {
 }
 
 function buildJSXDTS (icons) {
-  return fs.writeFile('core-icons.jsx.d.ts', icons.map(({ jsx }) => `export declare const ${jsx}: React.FunctionComponent<React.SVGProps<SVGElement>>`).join('\n'))
+  return fs.writeFile('jsx/core-icons.d.ts', icons.map(({ jsx }) => `export declare const ${jsx}: React.FunctionComponent<React.SVGProps<SVGElement>>`).join('\n'))
 }
 
 function buildSketch () {
