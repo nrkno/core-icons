@@ -2,12 +2,12 @@ const pkg = require('../package.json')
 const fs = require('fs')
 const util = require('util')
 
-fs.readdir = util.promisify(fs.readdir)
-fs.readFile = util.promisify(fs.readFile)
-fs.writeFile = util.promisify(fs.writeFile)
+const readdir = util.promisify(fs.readdir)
+const readFile = util.promisify(fs.readFile)
+const writeFile = util.promisify(fs.writeFile)
 
 function buildIcons () {
-  return fs.readdir('lib').then((files) => {
+  return readdir('lib').then((files) => {
     return files.map((file) => {
       if (file.slice(-4) !== '.svg') return // Skip non-icons
       const id = file.slice(0, -4)
@@ -23,19 +23,19 @@ function buildIcons () {
 }
 
 function buildJSON (icons) {
-  return fs.writeFile('lib/core-icons.json', JSON.stringify(icons.map(({ id }) => `${id}.svg`)))
+  return writeFile('lib/core-icons.json', JSON.stringify(icons.map(({ id }) => `${id}.svg`)))
 }
 
 function buildDTS (icons) {
-  return fs.writeFile('core-icons.d.ts', icons.map(({ key }) => `export declare const ${key}: string`).join('\n'))
+  return writeFile('core-icons.d.ts', icons.map(({ key }) => `export declare const ${key}: string`).join('\n'))
 }
 
 function buildCJS (icons) {
-  return fs.writeFile('core-icons.js', `module.exports = {${icons.map(({ key, svg }) => `'${key}':'${svg}'`).join(',')}}`)
+  return writeFile('core-icons.js', `module.exports = {${icons.map(({ key, svg }) => `'${key}':'${svg}'`).join(',')}}`)
 }
 
 function buildMJS (icons) {
-  return fs.writeFile('core-icons.mjs', icons.map(({ key, svg }) => `export const ${key} = '${svg}'`).join('\n'))
+  return writeFile('core-icons.mjs', icons.map(({ key, svg }) => `export const ${key} = '${svg}'`).join('\n'))
 }
 
 function buildIIFE (icons) {
@@ -50,13 +50,13 @@ function buildIIFE (icons) {
   document.head.appendChild(div.firstElementChild)
 }\n`
   return Promise.all([
-    fs.writeFile('lib/core-icons.min.js', script),
-    fs.writeFile('lib/core-icons.js', script)
+    writeFile('lib/core-icons.min.js', script),
+    writeFile('lib/core-icons.js', script)
   ])
 }
 
 function buildJSX (icons) {
-  return fs.writeFile('jsx/core-icons.js', `const React = require('react')
+  return writeFile('jsx/core-icons.js', `const React = require('react')
 module.exports = {${icons.map(({ body, jsx, w, h }) => `${jsx}: function (attr) {
   return React.createElement('svg', Object.keys(attr=attr||{})
     .reduce(function(acc,key){acc[key]=attr[key];return acc}, {
@@ -70,7 +70,7 @@ module.exports = {${icons.map(({ body, jsx, w, h }) => `${jsx}: function (attr) 
 }
 
 function buildJSXMJS (icons) {
-  return fs.writeFile('jsx/core-icons.mjs', `import React from 'react'
+  return writeFile('jsx/core-icons.mjs', `import React from 'react'
 ${icons.map(({ body, jsx, w, h }) => `export function ${jsx} (attr) {
   return React.createElement('svg', Object.keys(attr=attr||{})
     .reduce(function(acc,key){acc[key]=attr[key];return acc}, {
@@ -84,14 +84,14 @@ ${icons.map(({ body, jsx, w, h }) => `export function ${jsx} (attr) {
 }
 
 function buildJSXDTS (icons) {
-  return fs.writeFile('jsx/core-icons.d.ts', icons.map(({ jsx }) => `export declare const ${jsx}: React.FunctionComponent<React.SVGProps<SVGElement>>`).join('\n'))
+  return writeFile('jsx/core-icons.d.ts', icons.map(({ jsx }) => `export declare const ${jsx}: React.FunctionComponent<React.SVGProps<SVGElement>>`).join('\n'))
 }
 
 function buildSketch () {
   const fullName = 'Core Icons'
   const fileName = 'core-icons'
   const date = new Date(fs.statSync('lib/core-icons.sketch').mtime)
-  return fs.writeFile('lib/core-icons.rss', `<?xml version="1.0" encoding="UTF-8"?>
+  return writeFile('lib/core-icons.rss', `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
   <channel>
     <title>${fullName}</title>
@@ -111,8 +111,8 @@ function buildSketch () {
 }
 
 function buildDocs () {
-  return fs.readFile('lib/readme.md', 'utf8').then((docs) => {
-    return fs.writeFile('lib/readme.md', docs.replace(/\/major\/\d+/, `/major/${pkg.version.match(/\d+/)}`))
+  return readFile('lib/readme.md', 'utf8').then((docs) => {
+    return writeFile('lib/readme.md', docs.replace(/\/major\/\d+/, `/major/${pkg.version.match(/\d+/)}`))
   })
 }
 
