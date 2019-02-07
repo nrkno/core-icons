@@ -7,7 +7,7 @@ https://static.nrk.no/core-icons/latest/
 
 ## Installation
 
-[Download the Sketch library](sketch://add-library?url=https%3A%2F%2Fstatic.nrk.no%2Fcore-icons%2Flatest%2Fcore-icons.rss) for sketching, [individual SVGs](#icons) for Android, [PDFs](#icons) for iOS. All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
+[Download the Sketch library](sketch://add-library?url=https%3A%2F%2Fstatic.nrk.no%2Fcore-icons%2Flatest%2Fcore-icons.rss) for sketching, [individual SVGs](https://static.nrk.no/core-icons/latest/index.html#icons) for Android, [PDFs](https://static.nrk.no/core-icons/latest/index.html#icons) for iOS. All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
 
 ### Using NPM
 
