@@ -1,6 +1,7 @@
 const pkg = require('../package.json')
 const fs = require('fs')
 const util = require('util')
+const path = require('path')
 
 const readdir = util.promisify(fs.readdir)
 const readFile = util.promisify(fs.readFile)
@@ -111,9 +112,13 @@ function buildSketch () {
 }
 
 function buildDocs () {
-  return readFile('lib/readme.md', 'utf8').then((docs) => {
-    return writeFile('lib/readme.md', docs.replace(/\/major\/\d+/, `/major/${pkg.version.match(/\d+/)}`))
-  })
+  return Promise.all(
+    ['readme.md', path.join('lib', 'readme.md')].map((path) => {
+      return readFile(path, 'utf-8').then((readme) => {
+        return writeFile(path, readme.replace(/\/major\/\d+/, `/major/${pkg.version.match(/\d+/)}`))
+      })
+    })
+  )
 }
 
 buildIcons().then((icons) => Promise.all([

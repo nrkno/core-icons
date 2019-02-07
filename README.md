@@ -1,9 +1,37 @@
 # @nrk/core-icons
-> Icons for web services and native apps.
+> Icon and logo kit providing a consistent and predictable user experience across platforms and NRK services
+
+## Documentation
+
+https://static.nrk.no/core-icons/latest/
 
 ## Installation
 
-For installation and usage read the [documentation](https://static.nrk.no/core-icons/latest/).
+[Download the Sketch library](sketch://add-library?url=https%3A%2F%2Fstatic.nrk.no%2Fcore-icons%2Flatest%2Fcore-icons.rss) for sketching, [individual SVGs](#icons) for Android, [PDFs](#icons) for iOS. All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
+
+### Using NPM
+
+```bash
+npm install @nrk/core-icons
+```
+
+All icons are exposed individually as exported constants (enabling [tree shaking](https://medium.com/@netxm/what-is-tree-shaking-de7c6be5cadd)):
+
+```js
+import { nrkLogoNrk } from '@nrk/core-icons'      // Vanilla JS, String
+import { NrkLogoNrk } from '@nrk/core-icons/jsx'  // React, ReactElement
+
+<NrkLogoNrk />                          // Render a NRK logo
+<NrkLogoNrk style={{color: 'red'}} />   // Additional props will be used for attributes
+```
+
+### Using static
+
+Recommended only for prototyping.
+
+```html
+<script async src="https://static.nrk.no/core-icons/major/6/core-icons.min.js"></script>
+```
 
 ## Local development
 First clone `@nrk/core-icons` and install its dependencies:

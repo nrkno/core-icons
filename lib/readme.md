@@ -2,8 +2,8 @@
 
 > Icon and logo kit providing a consistent and predictable user experience across platforms and NRK services
 
-
 ## Installation
+
 [Download the Sketch library](sketch://add-library?url=https%3A%2F%2Fstatic.nrk.no%2Fcore-icons%2Flatest%2Fcore-icons.rss) for sketching, [individual SVGs](#icons) for Android, [PDFs](#icons) for iOS. All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
 
 ### Using NPM
@@ -28,7 +28,6 @@ Recommended only for prototyping.
 ```html
 <script async src="https://static.nrk.no/core-icons/major/6/core-icons.min.js"></script>
 ```
-
 
 ## Scaling
 
