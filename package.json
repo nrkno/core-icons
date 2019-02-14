@@ -3,7 +3,7 @@
   "homepage": "https://static.nrk.no/core-icons/latest/",
   "description": "The official icons for NRK.",
   "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
-  "version": "6.0.2",
+  "version": "6.0.3",
   "license": "MIT",
   "main": "core-icons.js",
   "module": "core-icons.mjs",
