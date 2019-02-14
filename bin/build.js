@@ -67,7 +67,7 @@ module.exports = {${icons.map(({ body, jsx, w, h }) => `${jsx}: function (attr) 
       style: {width: '${w / 10}em', height: '${h / 10}em'},
       dangerouslySetInnerHTML: {__html: '${body}'}
     }))
-}`.replace(/\n|\s{2,}/g, '')).join(',')}}`)
+}`.replace(/\n/g, '').replace(/\s{2,}/g, ' ')).join(',')}}`)
 }
 
 function buildJSXMJS (icons) {
@@ -81,7 +81,7 @@ ${icons.map(({ body, jsx, w, h }) => `export function ${jsx} (attr) {
       style: {width: '${w / 10}em', height: '${h / 10}em'},
       dangerouslySetInnerHTML: {__html: '${body}'}
     }))
-}`.replace(/\n|\s{2,}/g, '')).join('\n')}`)
+}`.replace(/\n/g, '').replace(/\s{2,}/g, ' ')).join('\n')}`)
 }
 
 function buildJSXDTS (icons) {
