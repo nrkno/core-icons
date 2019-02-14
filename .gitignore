@@ -9,6 +9,6 @@ yarn-error*
 *.tar
 *.d.ts
 *.rss
-*.js
+lib/*.js
 /core-icons*
 /jsx/core-icons*
