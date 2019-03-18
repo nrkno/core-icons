@@ -8,7 +8,6 @@ yarn-error*
 *.code-workspace
 *.tar
 *.d.ts
-*.rss
 lib/core-icons*.js
 /core-icons*
 /jsx/core-icons*
