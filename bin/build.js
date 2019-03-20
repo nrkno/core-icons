@@ -1,4 +1,4 @@
-const svgToJS = require('@nrk/svg-to-js')
+const svgtojs = require('@nrk/svg-to-js')
 const pkg = require('../package.json')
 const fs = require('fs')
 
@@ -33,7 +33,7 @@ function buildDocs () {
   })
 }
 
-const icons = svgToJS({
+const icons = svgtojs({
   input: 'lib/',
   banner: `@nrk/core-icons v${pkg.version}`,
   scale: 10,
