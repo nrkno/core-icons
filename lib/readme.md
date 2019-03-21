@@ -81,7 +81,7 @@ Modern versions of assistive technologies will announce SVG content, but there i
         <svg aria-hidden="true" width="30" height="15"><use xlink:href="#nrk-arrow-right-long" /></svg>
       </a>
     </div>
-    <h3>Icon used as decoration</h3>
+    <h3 class="docs-heading--3">Icon used as decoration</h3>
     Use the <code>aria-hidden="true"</code> attribute to hide the icon from screen readers while keeping it visually perceivable.
   </div>
   <div>
@@ -90,7 +90,7 @@ Modern versions of assistive technologies will announce SVG content, but there i
         <svg aria-hidden="true" width="3.5em" height="1em"><use xlink:href="#nrk-logo-nrk" /></svg>
       </a>
     </div>
-    <h3>Clickable icon</h3>
+    <h3 class="docs-heading--3">Clickable icon</h3>
     Add screen reader content to the clickable element (<code>button</code> or <code>a</code>) with <code>aria-label="…"</code>, and hide the icon from screen readers with <code>aria-hidden="true"</code>
   </div>
   <div>
@@ -100,9 +100,7 @@ Modern versions of assistive technologies will announce SVG content, but there i
       </span>
       Fantastisk!
     </div>
-    <h3>Non-clickable icon</h3>
+    <h3 class="docs-heading--3">Non-clickable icon</h3>
     Hide the icon from screen readers with <code>aria-hidden="true"</code>, and add screen reader content to a wrapper with <code>role="img" aria-label="…"</code>.
   </div>
 </div>
-
-
