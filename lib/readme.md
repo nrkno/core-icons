@@ -43,6 +43,14 @@ Scale the icons/logos by using font sizes divisible with `10` for sharpest rende
 
 <small>Note: correct width/height in `em` for each icon is automatically provided by `@nrk/core-icons`</small>
 
+## Color
+
+Setting SVGs to inherit `currentColor` (the text color) helps you ensure sufficient contrast between background and foreground. This is automatically done if you are using [Core CSS](https://static.nrk.no/core-css/latest/), but can also be achieved by setting `svg { fill: currentColor }`
+
+✅ Do | 🚫 Don't
+:-- | :--
+`svg { fill: currentColor }` | `svg { fill: red }`
+
 
 ## Icons
 
@@ -50,6 +58,7 @@ Scale the icons/logos by using font sizes divisible with `10` for sharpest rende
 <style>
   .doc-grid { overflow: hidden }
   .doc-grid > * { box-sizing: border-box; display: inline-block; vertical-align: top; width: 33%; min-width: 300px; padding: 15px 15px 15px 0 }
+  .docs-icons svg { fill: currentColor } /* Fix color inheritance */
   .docs-icons > * { width: 16.6%; min-width: 120px }
   .docs-icons > h3 { width: 100%; min-width: none; margin: 0 0 .5em; }
   .docs-icons a, .docs-icons button { -webkit-appearance: none; font: inherit; background: none; color: inherit; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
