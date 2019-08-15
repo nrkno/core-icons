@@ -21,8 +21,10 @@ All icons are exposed individually as exported constants (enabling [tree shaking
 import { nrkLogoNrk } from '@nrk/core-icons'      // Vanilla JS, String
 import { NrkLogoNrk } from '@nrk/core-icons/jsx'  // React, ReactElement
 
-<NrkLogoNrk />                          // Render a NRK logo
-<NrkLogoNrk style={{color: 'red'}} />   // Additional props will be used for attributes
+<NrkLogoNrk />                                    // Example render a NRK logo with React
+<span style={{ color: 'red', fontSize: 20 }}>     // Style is inherited from parent element
+  <NrkLogoNrk />
+</span>
 ```
 
 ### Using static
