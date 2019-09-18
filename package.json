@@ -21,7 +21,7 @@
   "devDependencies": {
     "@nrk/svg-to-js": "2.1.1",
     "http-server": "0.11.1",
-    "standard": "14.1.0"
+    "standard": "^14.3.0"
   },
   "repository": {
     "type": "git",

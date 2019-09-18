@@ -1,3 +1,1 @@
-<svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-  <path fill="currentColor" d="M1 3.2v7.6c0 .11.09.2.2.2h12.6a.2.2 0 0 0 .2-.2V3.2a.2.2 0 0 0-.2-.2H1.2a.2.2 0 0 0-.2.2zm-1 0C0 2.55.53 2 1.2 2h12.6c.66 0 1.2.54 1.2 1.2v7.6c0 .66-.53 1.2-1.2 1.2H1.2A1.2 1.2 0 0 1 0 10.8V3.2z M7 11.5v2h1v-2z M4.5 14h6a.5.5 0 1 0 0-1h-6a.5.5 0 1 0 0 1z"/>
-</svg>
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1 3h22v16H1V3zm2 2v12h18V5H3zm13 18H8v-2h8v2zM8 8.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
