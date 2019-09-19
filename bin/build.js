@@ -36,7 +36,7 @@ function buildDocs () {
 const icons = svgtojs({
   input: 'lib/',
   banner: `@nrk/core-icons v${pkg.version}`,
-  scale: 10,
+  scale: 16,
 
   cjs: 'core-icons.js',
   esm: 'core-icons.mjs',
