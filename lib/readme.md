@@ -19,7 +19,7 @@ import { nrkLogoNrk } from '@nrk/core-icons'      // Vanilla JS, String
 import { NrkLogoNrk } from '@nrk/core-icons/jsx'  // React, ReactElement
 
 <NrkLogoNrk />                                    // Example render a NRK logo with React
-<span style={{ color: 'red', fontSize: 20 }}>     // Style is inherited from parent element
+<span style={{ color: 'red', fontSize: 16 }}>     // Style is inherited from parent element
   <NrkLogoNrk />
 </span>
 ```
@@ -34,11 +34,11 @@ Recommended only for prototyping.
 ## Scaling
 
 Since logos do not have consistent dimensions, `@nrk/core-icons` provides scaling based on `font-size`.
-Scale the icons/logos by using font sizes divisible with `10` for sharpest rendering. Example: `font-size: 10px` = `15×15` icon, `font-size: 20px` = `30×30` icon, etc.
+Scale the icons/logos by using font sizes divisible with `16` for sharpest rendering. Example: `font-size: 16px` = `24×24` icon, `font-size: 32px` = `48×48` icon, etc.
 
 ✅ Do | 🚫 Don't
 :-- | :--
-`.parent { font-size: 10px }` | `.parent svg { width: 30px; height: 30px }`
+`.parent { font-size: 16px }` | `.parent svg { width: 30px; height: 30px }`
 <div>`<div class="parent"><svg style="width:1.5em;height:1.5em">…`</div> | `<div class="parent"><svg style="width:30px;height:30px">…`
 
 <small>Note: correct width/height in `em` for each icon is automatically provided by `@nrk/core-icons`</small>
