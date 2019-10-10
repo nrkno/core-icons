@@ -9,7 +9,7 @@
   "module": "core-icons.mjs",
   "typings": "core-icons.d.ts",
   "scripts": {
-    "build": "node bin/build.js",
+    "build": "node -r esm bin/build.js",
     "publish:patch": "npm version patch -m 'Release patch %s'",
     "publish:minor": "npm version minor -m 'Release minor %s'",
     "publish:major": "npm version major -m 'Release major %s'",
@@ -20,8 +20,13 @@
   },
   "devDependencies": {
     "@nrk/svg-to-js": "2.1.1",
+    "archiver": "^3.1.1",
+    "esm": "^3.2.25",
     "http-server": "0.11.1",
-    "standard": "^14.3.0"
+    "parse-svg": "0.0.0",
+    "pdfkit": "^0.10.0",
+    "standard": "^14.3.0",
+    "svgson": "^4.0.0"
   },
   "repository": {
     "type": "git",

@@ -45,6 +45,8 @@ Scale the icons/logos by using font sizes divisible with `16` for sharpest rende
 
 ## Icons
 
+Search for your icons in the search field below or download zip files containing all icons in the left menu.
+
 <!--demo
 <style>
   .doc-grid { overflow: hidden }
@@ -53,19 +55,14 @@ Scale the icons/logos by using font sizes divisible with `16` for sharpest rende
   .docs-icons > h3 { width: 100%; min-width: none; margin: 0 0 .5em; }
   .docs-icons a, .docs-icons button { -webkit-appearance: none; font: inherit; background: none; color: inherit; border: 0; padding: 2px 0; text-decoration: underline; cursor: pointer; }
   .doc-hidden { position: fixed; left: -300px; opacity: 0 }
-  .doc-input { font: inherit; color: inherit; margin-bottom: 2px; padding: 5px 9px; border: 1px solid #ccc; border-radius: 3px }
+  .doc-input { font: @inherit; color: inherit; margin-bottom: 2px; padding: 5px 9px; border: 1px solid #ccc; border-radius: 3px }
   .doc-config { margin-bottom: 2em; }
 </style>
 <div class="doc-config doc-grid">
   <input type="text" aria-hidden="true" tabindex="-1" id="docs-copy" class="doc-hidden">
   <input type="text" class="doc-input" name="search" placeholder="Type to search" autocomplete="off" aria-label="Filter icons">
-  <label class="doc-input">
-    <span style="cursor:pointer">Choose color</span>
-    <input type="color" name="color" value="#000000" class="doc-hidden">
-  </label>
 </div>
 <div class="docs-icons doc-grid" style="padding:0 7vw;margin:0 -7vw;transition:.2s"></div>
-<script src="pdfkit-and-blob-stream.js"></script>
 <script src="core-icons.min.js"></script>
 <script src="readme.js"></script>
 demo-->
