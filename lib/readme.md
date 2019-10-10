@@ -4,7 +4,7 @@
 
 ## Installation
 
-[Download the Sketch library](sketch://add-library?url=https%3A%2F%2Fstatic.nrk.no%2Fcore-icons%2Flatest%2Fcore-icons.rss) for sketching, [individual SVGs](#icons) for Android, [PDFs](#icons) for iOS. All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
+[Download the Sketch library](sketch://add-library?url=https%3A%2F%2Fstatic.nrk.no%2Fcore-icons%2Flatest%2Fcore-icons.rss) for sketching, [SVGs](#icons) for Android, [PDFs](#icons) for iOS. All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
 
 ### Using NPM
 
@@ -41,9 +41,11 @@ Scale the icons/logos by using font sizes divisible with `16` for sharpest rende
 `.parent { font-size: 16px }` | `.parent svg { width: 30px; height: 30px }`
 <div>`<div class="parent"><svg style="width:1.5em;height:1.5em">…`</div> | `<div class="parent"><svg style="width:30px;height:30px">…`
 
-<small>Note: correct width/height in `em` for each icon is automatically provided by `@nrk/core-icons`</small>
+Note: correct width/height in `em` for each icon is automatically provided by `@nrk/core-icons`
 
 ## Icons
+
+Search for your icons in the search field below or download a ZIP file containing all icons in the left menu.
 
 <!--demo
 <style>
@@ -59,13 +61,8 @@ Scale the icons/logos by using font sizes divisible with `16` for sharpest rende
 <div class="doc-config doc-grid">
   <input type="text" aria-hidden="true" tabindex="-1" id="docs-copy" class="doc-hidden">
   <input type="text" class="doc-input" name="search" placeholder="Type to search" autocomplete="off" aria-label="Filter icons">
-  <label class="doc-input">
-    <span style="cursor:pointer">Choose color</span>
-    <input type="color" name="color" value="#000000" class="doc-hidden">
-  </label>
 </div>
 <div class="docs-icons doc-grid" style="padding:0 7vw;margin:0 -7vw;transition:.2s"></div>
-<script src="pdfkit-and-blob-stream.js"></script>
 <script src="core-icons.min.js"></script>
 <script src="readme.js"></script>
 demo-->
