@@ -55,7 +55,7 @@ Search for your icons in the search field below or download zip files containing
   .docs-icons > h3 { width: 100%; min-width: none; margin: 0 0 .5em; }
   .docs-icons a, .docs-icons button { -webkit-appearance: none; font: inherit; background: none; color: inherit; border: 0; padding: 2px 0; text-decoration: underline; cursor: pointer; }
   .doc-hidden { position: fixed; left: -300px; opacity: 0 }
-  .doc-input { font: @inherit; color: inherit; margin-bottom: 2px; padding: 5px 9px; border: 1px solid #ccc; border-radius: 3px }
+  .doc-input { font: inherit; color: inherit; margin-bottom: 2px; padding: 5px 9px; border: 1px solid #ccc; border-radius: 3px }
   .doc-config { margin-bottom: 2em; }
 </style>
 <div class="doc-config doc-grid">
