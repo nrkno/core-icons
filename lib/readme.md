@@ -2,6 +2,30 @@
 
 > Icon and logo kit providing a consistent and predictable user experience across platforms and NRK services
 
+## Overview
+
+Search for your icons in the search field below or download a ZIP file containing all icons in the left menu.
+
+<!--demo
+<style>
+  .doc-grid { overflow: hidden }
+  .doc-grid > * { box-sizing: border-box; display: inline-block; vertical-align: top; width: 33%; min-width: 300px; padding: 15px 15px 15px 0 }
+  .docs-icons > * { width: 16.6%; min-width: 120px }
+  .docs-icons > h3 { width: 100%; min-width: none; margin: 0 0 .5em; }
+  .docs-icons a, .docs-icons button { -webkit-appearance: none; font: inherit; background: none; color: inherit; border: 0; padding: 2px 0; text-decoration: underline; cursor: pointer; }
+  .doc-hidden { position: fixed; left: -300px; opacity: 0 }
+  .doc-input { font: inherit; color: inherit; margin-bottom: 2px; padding: 5px 9px; border: 1px solid #ccc; border-radius: 3px }
+  .doc-config { margin-bottom: 2em; }
+</style>
+<div class="doc-config doc-grid">
+  <input type="text" aria-hidden="true" tabindex="-1" id="docs-copy" class="doc-hidden">
+  <input type="text" class="doc-input" name="search" placeholder="Type to search" autocomplete="off" aria-label="Filter icons">
+</div>
+<div class="docs-icons doc-grid" style="padding:0 7vw;margin:0 -7vw;transition:.2s"></div>
+<script src="core-icons.min.js"></script>
+<script src="readme.js"></script>
+demo-->
+
 ## Installation
 
 [Download the Sketch library](sketch://add-library?url=https%3A%2F%2Fstatic.nrk.no%2Fcore-icons%2Flatest%2Fcore-icons.rss) for sketching, [SVGs](#icons) for Android, [PDFs](#icons) for iOS. All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
@@ -42,30 +66,6 @@ Scale the icons/logos by using font sizes divisible with `16` for sharpest rende
 <div>`<div class="parent"><svg style="width:1.5em;height:1.5em">…`</div> | `<div class="parent"><svg style="width:30px;height:30px">…`
 
 Note: correct width/height in `em` for each icon is automatically provided by `@nrk/core-icons`
-
-## Icons
-
-Search for your icons in the search field below or download a ZIP file containing all icons in the left menu.
-
-<!--demo
-<style>
-  .doc-grid { overflow: hidden }
-  .doc-grid > * { box-sizing: border-box; display: inline-block; vertical-align: top; width: 33%; min-width: 300px; padding: 15px 15px 15px 0 }
-  .docs-icons > * { width: 16.6%; min-width: 120px }
-  .docs-icons > h3 { width: 100%; min-width: none; margin: 0 0 .5em; }
-  .docs-icons a, .docs-icons button { -webkit-appearance: none; font: inherit; background: none; color: inherit; border: 0; padding: 2px 0; text-decoration: underline; cursor: pointer; }
-  .doc-hidden { position: fixed; left: -300px; opacity: 0 }
-  .doc-input { font: inherit; color: inherit; margin-bottom: 2px; padding: 5px 9px; border: 1px solid #ccc; border-radius: 3px }
-  .doc-config { margin-bottom: 2em; }
-</style>
-<div class="doc-config doc-grid">
-  <input type="text" aria-hidden="true" tabindex="-1" id="docs-copy" class="doc-hidden">
-  <input type="text" class="doc-input" name="search" placeholder="Type to search" autocomplete="off" aria-label="Filter icons">
-</div>
-<div class="docs-icons doc-grid" style="padding:0 7vw;margin:0 -7vw;transition:.2s"></div>
-<script src="core-icons.min.js"></script>
-<script src="readme.js"></script>
-demo-->
 
 ## Accessibility
 
