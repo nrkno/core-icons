@@ -2,27 +2,35 @@
 
 > Icon and logo kit providing a consistent and predictable user experience across platforms and NRK services
 
+<!--demo
+<script src="core-icons.min.js"></script>
+demo-->
+
 ## Overview
 
 Search for your icons in the search field below or download a ZIP file containing all icons in the left menu.
 
 <!--demo
 <style>
-  .doc-grid { overflow: hidden }
-  .doc-grid > * { box-sizing: border-box; display: inline-block; vertical-align: top; width: 33%; min-width: 300px; padding: 15px 15px 15px 0 }
-  .docs-icons > * { width: 16.6%; min-width: 120px }
-  .docs-icons > h3 { width: 100%; min-width: none; margin: 0 0 .5em; }
-  .docs-icons a, .docs-icons button { -webkit-appearance: none; font: inherit; background: none; color: inherit; border: 0; padding: 2px 0; text-decoration: underline; cursor: pointer; }
-  .doc-hidden { position: fixed; left: -300px; opacity: 0 }
-  .doc-input { font: inherit; color: inherit; margin-bottom: 2px; padding: 5px 9px; border: 1px solid #ccc; border-radius: 3px }
-  .doc-config { margin-bottom: 2em; }
+.doc-grid { overflow: hidden }
+.doc-grid > * { box-sizing: border-box; display: inline-block; vertical-align: top; width: 33%; min-width: 300px; padding: 15px 15px 15px 0 }
+.docs-icons { overflow: hidden; padding: 0 7vw; margin: 0 -7vw; transition:.2s }
+.docs-icons > * { cursor: pointer; box-sizing: border-box; display: inline-block; vertical-align: top; width: 20%; min-width: 180px }
+.docs-icons > h3 { width: 100%; font-weight: 700; font-size: 12px; text-transform: uppercase; min-width: none; margin: 2em 0 .5em }
+.docs-icons > h3:first-child { margin-top: 0 }
+.docs-icons > div:hover { color: gray; }
+.docs-icons svg { margin-right: 9px; vertical-align: middle }
+.docs-pops { position: absolute; padding: 5px 0; transition: .2s .1s }
+.docs-pops a,
+.docs-pops button { -webkit-appearance: none; display: inline-block; font: inherit; font-weight: 400; background: #000; color: #fff !important; border: 0; border-radius: 4px; margin: 1px; padding: 2px 5px; text-decoration: none; cursor: pointer; transition: .2s }
+.docs-pops a:hover,
+.docs-pops button:hover { background: gray; }
+.docs-icons :not(:hover) .docs-pops { visibility: hidden; opacity: 0; transform: translateY(-5px); transition-delay: 0 }
+.docs-input { font: inherit; color: inherit; padding: 5px 9px; border: 1px solid #ccc; border-radius: 3px; margin-bottom: 2em; }
 </style>
-<div class="doc-config doc-grid">
-  <input type="text" aria-hidden="true" tabindex="-1" id="docs-copy" class="doc-hidden">
-  <input type="text" class="doc-input" name="search" placeholder="Type to search" autocomplete="off" aria-label="Filter icons">
-</div>
-<div class="docs-icons doc-grid" style="padding:0 7vw;margin:0 -7vw;transition:.2s"></div>
-<script src="core-icons.min.js"></script>
+<input type="text" aria-hidden="true" tabindex="-1" id="docs-copy" style="position:fixed;left:-300px;opacity:0">
+<input type="text" class="docs-input" name="search" placeholder="Type to search" autocomplete="off" aria-label="Filter icons">
+<div class="docs-icons"></div>
 <script src="readme.js"></script>
 demo-->
 
