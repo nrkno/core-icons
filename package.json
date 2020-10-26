@@ -25,7 +25,7 @@
     "http-server": "^0.12.0",
     "parse-svg": "^0.0.0",
     "pdfkit": "^0.11.0",
-    "standard": "^14.3.1",
+    "standard": "^15.0.0",
     "svgson": "^4.0.0"
   },
   "repository": {
