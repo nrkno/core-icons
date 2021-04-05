@@ -26,7 +26,7 @@
     "parse-svg": "^0.0.0",
     "pdfkit": "^0.11.0",
     "standard": "^14.3.1",
-    "svgson": "^4.0.0"
+    "svgson": "^5.2.1"
   },
   "repository": {
     "type": "git",
