@@ -21,7 +21,7 @@ function build () {
     esmx: 'jsx/core-icons.mjs',
     dtsx: 'jsx/core-icons.d.ts'
   })
-  
+
   fs.writeFileSync('lib/core-icons.rss', rss())
   fs.writeFileSync('lib/core-icons.min.js', icons.iife)
   fs.writeFileSync('lib/core-icons.js', icons.iife)
@@ -60,8 +60,8 @@ function svgtopdf (el, options, pdf) {
       const style = {}
 
       // Style
-      pdf.fillColor(style.fill = color(node.attributes['fill'] || options.fill || options.color))
-      pdf.strokeColor(style.stroke = color(node.attributes['stroke'] || options.stroke || 'none'))
+      pdf.fillColor(style.fill = color(node.attributes.fill || options.fill || options.color))
+      pdf.strokeColor(style.stroke = color(node.attributes.stroke || options.stroke || 'none'))
       pdf.lineWidth(style.lineWidth = Number(node.attributes['stroke-width']) || options.lineWidth || 1)
       pdf.lineJoin(style.lineJoin = node.attributes['stroke-linejoin'] || options.lineJoin || 'miter')
       pdf.lineCap(style.lineCap = node.attributes['stroke-linecap'] || options.lineCap || 'butt')
@@ -69,12 +69,12 @@ function svgtopdf (el, options, pdf) {
       // Draw
       switch (node.name) {
         case 'g': svgtopdf(node, style, pdf); break
-        case 'path': pdf.path(node.attributes['d']); break
+        case 'path': pdf.path(node.attributes.d); break
         case 'line': pdf.moveTo(float('x1'), float('y1')).lineTo(float('x2'), float('y2')); break
         case 'rect': pdf.roundedRect(float('x'), float('y'), float('width'), float('height'), float('rx') || float('ry')); break
         case 'ellipse': pdf.ellipse(float('cx'), float('cy'), float('rx'), float('ry') || float('rx')); break
         case 'circle': pdf.circle(float('cx'), float('cy'), float('r')); break
-        case 'polygon': pdf.polygon(node.attributes['points']); break
+        case 'polygon': pdf.polygon(node.attributes.points); break
         default: console.log('Unsupported shape: ' + node.nodeName)
       }
 
@@ -112,4 +112,4 @@ function rss () {
 }
 
 build()
-console.log('Build successful');
+console.log('Build successful')
