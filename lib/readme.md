@@ -44,23 +44,44 @@ demo-->
 npm install @nrk/core-icons
 ```
 
-All icons are exposed individually as exported constants (enabling [tree shaking](https://medium.com/@netxm/what-is-tree-shaking-de7c6be5cadd)):
-
-```js
-import { nrkLogoNrk } from '@nrk/core-icons'      // Vanilla JS, String
-import { NrkLogoNrk } from '@nrk/core-icons/jsx'  // React, ReactElement
-
-<NrkLogoNrk />                                    // Example render a NRK logo with React
-<span style={{ color: 'red', fontSize: 16 }}>     // Style is inherited from parent element
-  <NrkLogoNrk />
-</span>
-```
 ### Using static
 
 Recommended only for prototyping.
 
 ```html
-<script async src="https://static.nrk.no/core-icons/major/9/core-icons.min.js"></script>
+<script async src="https://static.nrk.no/core-icons/latest/core-icons.min.js"></script>
+```
+
+## Usage
+
+All icons are exposed individually as exported constants (enabling [tree shaking](https://medium.com/@netxm/what-is-tree-shaking-de7c6be5cadd)):
+
+```jsx
+import { nrkLogoNrk } from '@nrk/core-icons'      // Plain JS, SVG-element as String
+import { NrkLogoNrk } from '@nrk/core-icons/jsx'  // React, ReactElement
+
+<NrkLogoNrk />                                    // Example render the NRK logo with React
+<span style={{ color: 'red', fontSize: 16 }}>     // Style is inherited from parent element
+  <NrkLogoNrk />
+</span>
+```
+
+### Overriding props for React elements
+
+The React/jsx exports can take props (of type `React.SVGProps`, exhaustive list can be found in [definitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react/index.d.ts#L2486)) to set or override existing values, just like a regular React functional component.
+
+Please note that overriding default values should be kept to a minimum, to maintain consistency for users.
+
+```jsx
+// Make sure to import React component
+import { NrkLogoNrk } from '@nrk/core-icons/jsx'
+// JSX markup
+(...)
+<NrkLogoNrk style={{ 'fill': 'red' }} />
+(...)
+
+// Renders HTML:
+<svg aria-hidden="true" width="1.429em" height="1.429em" viewBox="0 0 20 20" style="fill: red;">(...)</svg>
 ```
 
 ## Scaling
