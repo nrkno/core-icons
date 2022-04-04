@@ -22,8 +22,8 @@
     "@nrk/svg-to-js": "2.2.0",
     "archiver": "5.3.0",
     "esm": "3.2.25",
-    "http-server": "13.0.2",
-    "pdfkit": "0.12.3",
+    "http-server": "14.1.0",
+    "pdfkit": "0.13.0",
     "standard": "16.0.4",
     "svgson": "5.2.1"
   },
