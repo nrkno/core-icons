@@ -75,7 +75,7 @@ function svgtopdf (el, options, pdf) {
         case 'ellipse': pdf.ellipse(float('cx'), float('cy'), float('rx'), float('ry') || float('rx')); break
         case 'circle': pdf.circle(float('cx'), float('cy'), float('r')); break
         case 'polygon': pdf.polygon(node.attributes.points); break
-        default: console.log('Unsupported shape: ' + node.nodeName)
+        default: console.log(`Unsupported shape: ${node.name}`)
       }
 
       // Paint
