@@ -22,7 +22,6 @@ function build () {
     dtsx: 'jsx/core-icons.d.ts'
   })
 
-  fs.writeFileSync('lib/core-icons.rss', rss())
   fs.writeFileSync('lib/core-icons.min.js', icons.iife)
   fs.writeFileSync('lib/core-icons.js', icons.iife)
 
@@ -84,31 +83,6 @@ function svgtopdf (el, options, pdf) {
       else if (style.fill) pdf.fill(fillr)
     }
   }
-}
-
-function rss () {
-  const fullName = 'Core Icons'
-  const fileName = 'core-icons'
-  const date = new Date(fs.statSync('lib/core-icons.sketch').mtime)
-  return `
-    <?xml version="1.0" encoding="UTF-8"?>
-      <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
-        <channel>
-          <title>${fullName}</title>
-          <description>${fullName}</description>
-          <image>
-            <url></url>
-            <title>${fullName}</title>
-          </image>
-          <generator>Sketch</generator>
-          <item>
-            <title>${fullName}</title>
-            <pubDate>${date.toUTCString()}</pubDate>
-            <enclosure url="https://static.nrk.no/${fileName}/latest/${fileName}.sketch" type="application/octet-stream" sparkle:version="${date.getTime()}"/>
-          </item>
-        </channel>
-      </rss>
-  `
 }
 
 build()
