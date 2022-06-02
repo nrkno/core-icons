@@ -36,7 +36,7 @@ demo-->
 
 ## Installation
 
-[Download the Sketch library](sketch://add-library?url=https%3A%2F%2Fstatic.nrk.no%2Fcore-icons%2Flatest%2Fcore-icons.rss) for sketching, [SVGs](#icons) for Android, [PDFs](#icons) for iOS. All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
+[Use the Figma components](https://www.figma.com/file/KXGJ6Qcdf8JAyRCoKV55If/NRK-Core-Icons) for sketching, [SVGs](#icons) for Android, [PDFs](#icons) for iOS. All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
 
 ### Using NPM
 
