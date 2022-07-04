@@ -19,10 +19,10 @@
     "static-publish": "npm run build && static-publish --directory=lib --account=nrk-core --latest --major"
   },
   "devDependencies": {
-    "@nrk/svg-to-js": "2.3.0",
+    "@nrk/svg-to-js": "3.0.0",
     "archiver": "5.3.1",
     "esm": "3.2.25",
-    "http-server": "14.1.0",
+    "http-server": "14.1.1",
     "pdfkit": "0.13.0",
     "standard": "17.0.0",
     "svgson": "5.2.1"
