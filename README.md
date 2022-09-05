@@ -32,7 +32,7 @@ import { NrkLogoNrk } from '@nrk/core-icons/jsx'  // React, ReactElement
 Recommended only for prototyping.
 
 ```html
-<script async src="https://static.nrk.no/core-icons/major/10/core-icons.min.js"></script>
+<script async src="https://static.nrk.no/core-icons/major/11/core-icons.min.js"></script>
 ```
 
 ## Local development
