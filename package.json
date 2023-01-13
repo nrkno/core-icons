@@ -10,18 +10,22 @@
   "typings": "core-icons.d.ts",
   "scripts": {
     "build": "node -r esm bin/build.js",
+    "build:watch": "chokidar \"./lib/**/*\" -c \"npm run build\" --initial",
     "publish:patch": "npm version patch -m 'Release patch %s'",
     "publish:minor": "npm version minor -m 'Release minor %s'",
     "publish:major": "npm version major -m 'Release major %s'",
     "lint": "standard",
     "postversion": "npm run build && git push && git push --tags && npm publish",
-    "start": "npm run build && http-server lib -p 10001 -o -c-1",
-    "static-publish": "npm run build && static-publish --directory=lib --account=nrk-core --latest --major"
+    "start": "npm run build:watch && http-server ./static -p 10001 -o -a localhost -c-1",
+    "static-publish": "npm run build && static-publish --directory=static --account=nrk-core --latest --major"
   },
   "devDependencies": {
     "@nrk/svg-to-js": "3.0.0",
+    "@types/fs-extra": "11.0.0",
     "archiver": "5.3.1",
+    "chokidar-cli": "3.0.0",
     "esm": "3.2.25",
+    "fs-extra": "11.1.0",
     "http-server": "14.1.1",
     "pdfkit": "0.13.0",
     "standard": "17.0.0",
