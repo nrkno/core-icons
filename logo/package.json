@@ -1,0 +1,5 @@
+{
+  "main": "core-icons-logos.js",
+  "module": "core-icons-logos.mjs",
+  "types": "core-icons-logos.d.ts"
+}
