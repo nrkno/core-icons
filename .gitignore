@@ -15,3 +15,5 @@ lib/core-icons*.js
 *.rss
 *.pdf
 *.zip
+static/
+build_tmp/
