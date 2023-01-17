@@ -1,54 +1,133 @@
+import path from 'path'
 import PDFDocument from 'pdfkit'
 import * as svgson from 'svgson'
 import archiver from 'archiver'
-import svgtojs from '@nrk/svg-to-js'
-import pkg from '../package.json'
-import fs from 'fs'
+import fse from 'fs-extra'
+import { version } from '../package.json'
+import svgToJS from '@nrk/svg-to-js'
 
-function build () {
-  const svgFiles = fs.readdirSync('lib').filter((file) => file.endsWith('.svg'))
-  const docFiles = ['readme.md', 'lib/readme.md']
-  const svgZipper = archiver('zip')
-  const pdfZipper = archiver('zip')
-  const icons = svgtojs({
-    input: 'lib/',
-    banner: `@nrk/core-icons v${pkg.version}`,
-    scale: 16,
-    cjs: 'core-icons.js',
-    esm: 'core-icons.mjs',
-    dts: 'core-icons.d.ts',
-    cjsx: 'jsx/core-icons.js',
-    esmx: 'jsx/core-icons.mjs',
-    dtsx: 'jsx/core-icons.d.ts'
+const srcFolder = 'lib'
+const logoFolder = path.join(srcFolder, 'logo')
+const iconFolder = path.join(srcFolder, 'icon')
+const staticFolder = 'static'
+const logoStaticFolder = path.join(staticFolder, 'logo')
+const iconStaticFolder = path.join(staticFolder, 'icon')
+const tmpFolder = 'build_tmp'
+const npmLogoFolder = 'logo'
+const npmJsxFolder = 'jsx'
+const npmJsxLogoFolder = path.join(npmJsxFolder, 'logo')
+
+function clean () {
+  fse.removeSync(staticFolder)
+  fse.removeSync(tmpFolder)
+  fse.mkdirsSync(logoStaticFolder)
+  fse.mkdirsSync(iconStaticFolder)
+  fse.mkdirsSync(tmpFolder)
+  // Remove npm files
+  // TODO: clean up alljs, mjs, d.ts -files built to root, jsx/, logo/ and jsx/logo
+}
+
+function copyDocs () {
+  // TODO: rework to something like this
+  // const docFiles = ['readme.md', 'lib/readme.md']
+  // for (const file of docFiles) {
+  //   const readme = String(fse.readFileSync(file))
+  //   fse.writeFileSync(file, readme.replace(/\/major\/\d+/, `/major/${pkg.version.match(/\d+/)}`))
+  // }
+
+  fse.copyFileSync(`${srcFolder}/index.html`, `${staticFolder}/index.html`)
+  fse.copyFileSync(`${srcFolder}/readme.js`, `${staticFolder}/readme.js`)
+  fse.copyFileSync(`${srcFolder}/readme.md`, `${staticFolder}/readme.md`)
+}
+
+function buildIcons () {
+  // Copy svg from lib to static folder
+  fse.copySync(iconFolder, iconStaticFolder)
+  fse.copySync(logoFolder, logoStaticFolder)
+
+  // Generate pdf from svg in static/
+  const iconFiles = fse.readdirSync(iconStaticFolder)
+  for (const file of iconFiles) {
+    svgtopdf(path.join(iconStaticFolder, file))
+  }
+  const logoFiles = fse.readdirSync(logoStaticFolder)
+  for (const file of logoFiles) {
+    svgtopdf(path.join(logoStaticFolder, file))
+  }
+
+  // Generate zip archives for svg
+  createZipArchive(iconStaticFolder, '*.svg', staticFolder, 'core-icons-svg')
+  createZipArchive(logoStaticFolder, '*.svg', staticFolder, 'core-icons-logos-svg')
+
+  // Generate archives for pdf
+  createZipArchive(iconStaticFolder, '*.pdf', staticFolder, 'core-icons-pdf')
+  createZipArchive(logoStaticFolder, '*.pdf', staticFolder, 'core-icons-logos-pdf')
+
+  const icons = svgToJS({
+    input: iconStaticFolder,
+    banner: `@nrk/core-icons icons v${version}`,
+    scale: 16
   })
+  const logos = svgToJS({
+    input: logoStaticFolder,
+    banner: `@nrk/core-icons logos v${version}`,
+    scale: 16
+  })
+  // Generate iife for just icons
+  fse.writeFileSync(`${staticFolder}/core-icons-iife-icons.js`, icons.iife)
+  // Generate iife for just logos
+  fse.writeFileSync(`${staticFolder}/core-icons-iife-logo.js`, logos.iife)
+  // Generate iife for icons and logos
+  // Copy all sources to tempFolder
+  fse.copySync(iconFolder, tmpFolder)
+  fse.copySync(logoFolder, tmpFolder)
+  const combined = svgToJS({
+    input: tmpFolder,
+    banner: `@nrk/core-icons v${version}`,
+    scale: 16
+  })
+  fse.writeFileSync(`${staticFolder}/core-icons-iife.js`, combined.iife)
+  // Remove tempfolder
+  fse.removeSync(tmpFolder)
 
-  fs.writeFileSync('lib/core-icons.min.js', icons.iife)
-  fs.writeFileSync('lib/core-icons.js', icons.iife)
+  // Generate js and mjs with types for icons and logos
+  // TODO: look over this part?
+  fse.writeFileSync('core-icons.js', icons.cjs)
+  fse.writeFileSync('core-icons.mjs', icons.esm)
+  fse.writeFileSync('core-icons.d.ts', icons.dts)
+  fse.writeFileSync(`${npmLogoFolder}/core-icons-logos.js`, logos.cjs)
+  fse.writeFileSync(`${npmLogoFolder}/core-icons-logos.mjs`, logos.esm)
+  fse.writeFileSync(`${npmLogoFolder}/core-icons-logos.d.ts`, logos.dts)
 
-  for (const file of svgFiles) {
-    svgtopdf(`lib/${file}`)
-  }
-  for (const file of docFiles) {
-    const readme = String(fs.readFileSync(file))
-    fs.writeFileSync(file, readme.replace(/\/major\/\d+/, `/major/${pkg.version.match(/\d+/)}`))
-  }
+  // Generate js and mjs with types for icons and logos for React
+  // TODO: -and look over this part?
+  fse.writeFileSync(`${npmJsxFolder}/core-icons.js`, icons.cjs)
+  fse.writeFileSync(`${npmJsxFolder}/core-icons.mjs`, icons.esm)
+  fse.writeFileSync(`${npmJsxFolder}/core-icons.d.ts`, icons.dts)
+  fse.writeFileSync(`${npmJsxLogoFolder}/core-icons-logos.js`, logos.cjs)
+  fse.writeFileSync(`${npmJsxLogoFolder}/core-icons-logos.mjs`, logos.esm)
+  fse.writeFileSync(`${npmJsxLogoFolder}/core-icons-logos.d.ts`, logos.dts)
+}
 
-  svgZipper.pipe(fs.createWriteStream('lib/core-icons-svg.zip'))
-  svgZipper.glob('lib/*.svg')
+function createZipArchive (srcFolder, globPattern, destPath, archiveName) {
+  console.log(`Create svg and pdf archives for source ${srcFolder}`)
+  const svgZipper = archiver('zip')
+  svgZipper.pipe(fse.createWriteStream(`${destPath}/${archiveName}.zip`))
+  svgZipper.glob(globPattern, {
+    cwd: srcFolder
+  })
   svgZipper.finalize()
-  pdfZipper.pipe(fs.createWriteStream('lib/core-icons-pdf.zip'))
-  pdfZipper.glob('lib/*.pdf')
-  pdfZipper.finalize()
+  console.log(`Successfully created ${destPath}/${archiveName}.zip`)
 }
 
 function svgtopdf (el, options, pdf) {
   if (typeof el === 'string') {
-    const svg = svgson.parseSync(fs.readFileSync(el, 'utf-8'))
+    const svg = svgson.parseSync(fse.readFileSync(el, 'utf-8'))
     const [, , width, height] = svg.attributes.viewBox.split(' ').map(Number)
     const scale = 24 / Math.min(width, height)
     const pdfdoc = new PDFDocument({ size: [width * scale, height * scale] })
     pdfdoc.scale(scale)
-    pdfdoc.pipe(fs.createWriteStream(el.replace('svg', 'pdf')))
+    pdfdoc.pipe(fse.createWriteStream(el.replace('svg', 'pdf')))
     svgtopdf(svg, { fill: '#000' }, pdfdoc)
     pdfdoc.end()
   } else {
@@ -83,6 +162,11 @@ function svgtopdf (el, options, pdf) {
       else if (style.fill) pdf.fill(fillr)
     }
   }
+}
+function build () {
+  clean()
+  buildIcons()
+  copyDocs()
 }
 
 build()
