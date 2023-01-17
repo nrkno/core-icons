@@ -8,6 +8,10 @@
   "main": "core-icons.js",
   "module": "core-icons.mjs",
   "typings": "core-icons.d.ts",
+  "files": [
+    "jsx",
+    "logo"
+  ],
   "scripts": {
     "build": "node -r esm bin/build.js",
     "build:watch": "chokidar \"./lib/**/*\" -c \"npm run build\" --initial",
@@ -16,7 +20,7 @@
     "publish:major": "npm version major -m 'Release major %s'",
     "lint": "standard",
     "postversion": "npm run build && git push && git push --tags && npm publish",
-    "start": "npm run build:watch && http-server ./static -p 10001 -o -a localhost -c-1",
+    "start": "npm run build:watch & http-server ./static -o -p 10001 -a localhost -c-1",
     "static-publish": "npm run build && static-publish --directory=static --account=nrk-core --latest --major"
   },
   "devDependencies": {
