@@ -4,7 +4,7 @@
   "description": "The official icons for NRK.",
   "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
   "version": "11.2.0",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE.txt",
   "main": "core-icons.js",
   "module": "core-icons.mjs",
   "typings": "core-icons.d.ts",
