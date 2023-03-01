@@ -12,6 +12,7 @@ lib/core-icons*.js
 /core-icons*
 /jsx/**/core-icons*
 /logo/**/core-icons*
+/expressive/**/core-icons*
 *.rss
 *.pdf
 *.zip
