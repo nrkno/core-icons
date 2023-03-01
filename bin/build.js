@@ -127,7 +127,7 @@ function buildMasterIife (groupNames) {
     banner: `@nrk/core-icons all v${version}`,
     scale: 16
   })
-  fse.writeFileSync(`${staticFolder}/core-icons-all-iife.js`, combined.iife)
+  fse.writeFileSync(`${staticFolder}/core-icons-iife-all.js`, combined.iife)
   // Remove tempfolder
   fse.removeSync(tmpFolder)
 }
