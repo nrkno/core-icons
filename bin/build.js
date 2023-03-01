@@ -7,24 +7,53 @@ import { version } from '../package.json'
 import svgToJS from '@nrk/svg-to-js'
 
 const srcFolder = 'lib'
-const logoFolder = path.join(srcFolder, 'logo')
-const iconFolder = path.join(srcFolder, 'icon')
 const staticFolder = 'static'
-const logoStaticFolder = path.join(staticFolder, 'logo')
-const iconStaticFolder = path.join(staticFolder, 'icon')
 const tmpFolder = 'build_tmp'
-const npmLogoFolder = 'logo'
 const npmJsxFolder = 'jsx'
-const npmJsxLogoFolder = path.join(npmJsxFolder, 'logo')
 
-function clean () {
+/**
+ * @param {string} groupName
+ * @returns {string} bundle name for group
+ */
+function getBundleName (groupName) {
+  return groupName === 'icon' ? 'core-icons' : `core-icons-${groupName}`
+}
+/**
+ * @param {string} groupName
+ * @returns {path} npm path for group
+ */
+function getNpmPath (groupName) {
+  return groupName === 'icon' ? '' : groupName
+}
+
+/**
+ * @param {String[]} groupNames folder groups to clear out
+ */
+function clean (groupNames) {
+  // Clear static folder
   fse.removeSync(staticFolder)
+  // Clear tmp folder
   fse.removeSync(tmpFolder)
-  fse.mkdirsSync(logoStaticFolder)
-  fse.mkdirsSync(iconStaticFolder)
   fse.mkdirsSync(tmpFolder)
-  // Remove npm files
-  // TODO: clean up alljs, mjs, d.ts -files built to root, jsx/, logo/ and jsx/logo
+  // Clear groups
+  for (const groupName of groupNames) {
+    const bundleName = getBundleName(groupName)
+    const npmPath = getNpmPath(groupName)
+    const staticGroupFolder = path.join(staticFolder, groupName)
+
+    // Remove old npm content
+    fse.removeSync(path.join(npmPath, `${bundleName}.js`))
+    fse.removeSync(path.join(npmPath, `${bundleName}.mjs`))
+    fse.removeSync(path.join(npmPath, `${bundleName}.d.ts`))
+    // Remove old npm jsx content
+    fse.removeSync(path.join(npmJsxFolder, npmPath, `${bundleName}.js`))
+    fse.removeSync(path.join(npmJsxFolder, npmPath, `${bundleName}.mjs`))
+    fse.removeSync(path.join(npmJsxFolder, npmPath, `${bundleName}.d.ts`))
+
+    // Create folder for group in staticFolder
+    fse.mkdirsSync(staticGroupFolder)
+    fse.mkdirsSync(path.join(npmJsxFolder, npmPath))
+  }
 }
 
 function copyDocs () {
@@ -40,73 +69,67 @@ function copyDocs () {
   fse.copyFileSync(`${srcFolder}/readme.md`, `${staticFolder}/readme.md`)
 }
 
-function buildIcons () {
-  // Copy svg from lib to static folder
-  fse.copySync(iconFolder, iconStaticFolder)
-  fse.copySync(logoFolder, logoStaticFolder)
+function buildIcons (groupName) {
+  const src = path.join(srcFolder, groupName)
+  const staticDest = path.join(staticFolder, groupName)
+  const bundleName = getBundleName(groupName)
+  // Copy from src to dest
+  fse.copySync(src, staticDest)
 
-  // Generate pdf from svg in static/
-  const iconFiles = fse.readdirSync(iconStaticFolder)
-  for (const file of iconFiles) {
-    svgtopdf(path.join(iconStaticFolder, file))
-  }
-  const logoFiles = fse.readdirSync(logoStaticFolder)
-  for (const file of logoFiles) {
-    svgtopdf(path.join(logoStaticFolder, file))
+  // Make pdfs
+  const svgFiles = fse.readdirSync(staticDest)
+  for (const file of svgFiles) {
+    svgtopdf(path.join(staticDest, file))
   }
 
   // Generate zip archives for svg
-  createZipArchive(iconStaticFolder, '*.svg', staticFolder, 'core-icons-svg')
-  createZipArchive(logoStaticFolder, '*.svg', staticFolder, 'core-icons-logos-svg')
+  createZipArchive(staticDest, '*.svg', staticFolder, `${bundleName}-svg`)
+  // Generate zip archives for pdf
+  createZipArchive(staticDest, '*.pdf', staticFolder, `${bundleName}-pdf`)
 
-  // Generate archives for pdf
-  createZipArchive(iconStaticFolder, '*.pdf', staticFolder, 'core-icons-pdf')
-  createZipArchive(logoStaticFolder, '*.pdf', staticFolder, 'core-icons-logos-pdf')
-
+  // svgToJs
   const icons = svgToJS({
-    input: iconStaticFolder,
-    banner: `@nrk/core-icons icons v${version}`,
+    input: staticDest,
+    banner: `@nrk/core-icons ${groupName} v${version}`,
     scale: 16
   })
-  const logos = svgToJS({
-    input: logoStaticFolder,
-    banner: `@nrk/core-icons logos v${version}`,
-    scale: 16
-  })
-  // Generate iife for just icons
-  fse.writeFileSync(`${staticFolder}/core-icons-iife-icons.js`, icons.iife)
-  // Generate iife for just logos
-  fse.writeFileSync(`${staticFolder}/core-icons-iife-logo.js`, logos.iife)
-  // Generate iife for icons and logos
-  // Copy all sources to tempFolder
-  fse.copySync(iconFolder, tmpFolder)
-  fse.copySync(logoFolder, tmpFolder)
-  const combined = svgToJS({
-    input: tmpFolder,
-    banner: `@nrk/core-icons v${version}`,
-    scale: 16
-  })
-  fse.writeFileSync(`${staticFolder}/core-icons-iife.js`, combined.iife)
-  // Remove tempfolder
-  fse.removeSync(tmpFolder)
+  // Generate iife
+  fse.writeFileSync(
+    `${staticFolder}/core-icons-iife-${groupName}.js`,
+    icons.iife
+  )
+  // Determine npmPath
+  const npmPath = getNpmPath(groupName)
 
   // Generate js and mjs with types for icons and logos
-  // TODO: look over this part?
-  fse.writeFileSync('core-icons.js', icons.cjs)
-  fse.writeFileSync('core-icons.mjs', icons.esm)
-  fse.writeFileSync('core-icons.d.ts', icons.dts)
-  fse.writeFileSync(`${npmLogoFolder}/core-icons-logos.js`, logos.cjs)
-  fse.writeFileSync(`${npmLogoFolder}/core-icons-logos.mjs`, logos.esm)
-  fse.writeFileSync(`${npmLogoFolder}/core-icons-logos.d.ts`, logos.dts)
+  fse.writeFileSync(path.join(npmPath, `${bundleName}.js`), icons.cjs)
+  fse.writeFileSync(path.join(npmPath, `${bundleName}.mjs`), icons.esm)
+  fse.writeFileSync(path.join(npmPath, `${bundleName}.d.ts`), icons.dts)
 
-  // Generate js and mjs with types for icons and logos for React
-  // TODO: -and look over this part?
-  fse.writeFileSync(`${npmJsxFolder}/core-icons.js`, icons.cjs)
-  fse.writeFileSync(`${npmJsxFolder}/core-icons.mjs`, icons.esm)
-  fse.writeFileSync(`${npmJsxFolder}/core-icons.d.ts`, icons.dts)
-  fse.writeFileSync(`${npmJsxLogoFolder}/core-icons-logos.js`, logos.cjs)
-  fse.writeFileSync(`${npmJsxLogoFolder}/core-icons-logos.mjs`, logos.esm)
-  fse.writeFileSync(`${npmJsxLogoFolder}/core-icons-logos.d.ts`, logos.dts)
+  // Generate jsx and mjsx with types for icons and logos
+  fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.js`), icons.cjsx)
+  fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.mjs`), icons.esmx)
+  fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.d.ts`), icons.dtsx)
+}
+
+/**
+ * Generate iife for all icons
+ * @param {String[]} groupNames groups to include
+ */
+function buildMasterIife (groupNames) {
+  // Copy all sources to tempFolder
+  for (const groupName of groupNames) {
+    fse.copySync(path.join(srcFolder, groupName), tmpFolder)
+  }
+
+  const combined = svgToJS({
+    input: tmpFolder,
+    banner: `@nrk/core-icons all v${version}`,
+    scale: 16
+  })
+  fse.writeFileSync(`${staticFolder}/core-icons-all-iife.js`, combined.iife)
+  // Remove tempfolder
+  fse.removeSync(tmpFolder)
 }
 
 function createZipArchive (srcFolder, globPattern, destPath, archiveName) {
@@ -163,9 +186,13 @@ function svgtopdf (el, options, pdf) {
     }
   }
 }
+
 function build () {
-  clean()
-  buildIcons()
+  clean(['icon', 'logo', 'expressive'])
+  buildIcons('icon')
+  buildIcons('logo')
+  buildIcons('expressive')
+  buildMasterIife(['icon', 'logo', 'expressive'])
   copyDocs()
 }
 
