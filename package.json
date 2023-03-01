@@ -7,7 +7,7 @@
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "core-icons.js",
   "module": "core-icons.mjs",
-  "typings": "core-icons.d.ts",
+  "types": "core-icons.d.ts",
   "files": [
     "jsx",
     "logo"
