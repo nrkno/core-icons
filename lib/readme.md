@@ -3,12 +3,37 @@
 > Icon and logo kit providing a consistent and predictable user experience across platforms and NRK services
 
 <!--demo
-<script src="core-icons.min.js"></script>
+<script src="core-icons-all-iife.js"></script>
 demo-->
 
 ## Overview
 
-Search for your icons in the search field below or download a ZIP file containing all icons in the left menu.
+As of version 12 core-icons is organized in separate submodules to accomodate expressive variants.
+
+### Icons
+
+Contains all icons except the below stated variant(s) and logoes
+
+- All icons have `nrk-` prefix
+- For some icons an additional group name preceding icon name is included for categorization (e.g. `nrk-arrow-right`)
+
+### Expressive
+
+Contains expressive variants of a subset of the baseline icons
+
+- Expressive icons have `nrk-expressive-` prefix
+
+### Logo
+
+Contains all logoes for Norsk rikskringkasting (NRK)
+
+- Logoes have `nrk-logo-` prefix
+
+## Browse all icons
+
+Search among all icons, including variants, and logos using the search field below or download the appropriate ZIP archive containing the icons you need in the left menu.
+
+The [installation](#installation) section has instructions for use through npm or cdn.
 
 <!--demo
 <style>
@@ -44,12 +69,24 @@ demo-->
 npm install @nrk/core-icons
 ```
 
-### Using static
+### Using static cdn
 
-Recommended only for prototyping.
+For stability, please link to the appropriate major version
 
 ```html
-<script async src="https://static.nrk.no/core-icons/latest/core-icons.min.js"></script>
+<script
+  async
+  src="https://static.nrk.no/core-icons/major/12/core-icons-all-iife.js"
+></script>
+```
+
+Linking to `/latest/` is recommended only for prototyping.
+
+```html
+<script
+  async
+  src="https://static.nrk.no/core-icons/latest/core-icons-all-iife.js"
+></script>
 ```
 
 ## Usage
@@ -89,10 +126,10 @@ import { NrkLogoNrk } from '@nrk/core-icons/jsx'
 Since logos do not have consistent dimensions, `@nrk/core-icons` provides scaling based on `font-size`.
 Scale the icons/logos by using font sizes divisible with `16` for sharpest rendering. Example: `font-size: 16px` = `24×24` icon, `font-size: 32px` = `48×48` icon, etc.
 
-✅ Do | 🚫 Don't
-:-- | :--
-`.parent { font-size: 16px }` | `.parent svg { width: 30px; height: 30px }`
-`<div class="parent"><svg style="width:1.5em;height:1.5em">…` | `<div class="parent"><svg style="width:30px;height:30px">…`
+| ✅ Do                                                         | 🚫 Don't                                                    |
+| :------------------------------------------------------------ | :---------------------------------------------------------- |
+| `.parent { font-size: 16px }`                                 | `.parent svg { width: 30px; height: 30px }`                 |
+| `<div class="parent"><svg style="width:1.5em;height:1.5em">…` | `<div class="parent"><svg style="width:30px;height:30px">…` |
 
 Note: correct width/height in `em` for each icon is automatically provided by `@nrk/core-icons`
 
