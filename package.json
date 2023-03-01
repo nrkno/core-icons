@@ -10,8 +10,44 @@
   "types": "core-icons.d.ts",
   "files": [
     "jsx",
-    "logo"
+    "logo",
+    "expressive",
+    "./core-icons.js",
+    "./core-icons.mjs",
+    "./core-icons.d.ts"
   ],
+  "exports": {
+    ".": {
+      "require": "./core-icons.js",
+      "import": "./core-icons.mjs",
+      "types": "./core-icons.d.ts"
+    },
+    "./logo": {
+      "require": "./logo/core-icons-logos.js",
+      "import": "./logo/core-icons-logos.mjs",
+      "types": "./logo/core-icons-logos.d.ts"
+    },
+    "./expressive": {
+      "require": "./expressive/core-icons-expressive.js",
+      "import": "./expressive/core-icons-expressive.mjs",
+      "types": "./expressive/core-icons-expressive.d.ts"
+    },
+    "./jsx": {
+      "require": "./jsx/core-icons.js",
+      "import": "./jsx/core-icons.mjs",
+      "types": "./jsx/core-icons.d.ts"
+    },
+    "./jsx/logo": {
+      "require": "./jsx/logo/core-icons-logos.js",
+      "import": "./jsx/logo/core-icons-logos.mjs",
+      "types": "./jsx/logo/core-icons-logos.d.ts"
+    },
+    "./jsx/expressive": {
+      "require": "./jsx/expressive/core-icons-expressive.js",
+      "import": "./jsx/expressive/core-icons-expressive.mjs",
+      "types": "./jsx/expressive/core-icons-expressive.d.ts"
+    }
+  },
   "scripts": {
     "build": "node -r esm bin/build.js",
     "build:watch": "chokidar \"./lib/**/*\" -c \"npm run build\" --initial",
