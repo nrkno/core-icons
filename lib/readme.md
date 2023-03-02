@@ -3,18 +3,18 @@
 > Icon and logo kit providing a consistent and predictable user experience across platforms and NRK services
 
 <!--demo
-<script src="core-icons-all-iife.js"></script>
+<script src="core-icons-iife-all.js"></script>
 demo-->
 
 ## Overview
 
-As of version 12 core-icons is organized in separate submodules to accomodate expressive variants.
+Core-icons is organized in submodules to accomodate variants:
 
 ### Icons
 
-Contains all icons except the below stated variant(s) and logoes
+Contains all icons
 
-- All icons have `nrk-` prefix
+- All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
 - For some icons an additional group name preceding icon name is included for categorization (e.g. `nrk-arrow-right`)
 
 ### Expressive
@@ -61,7 +61,7 @@ demo-->
 
 ## Installation
 
-[Use the Figma components](https://www.figma.com/file/KXGJ6Qcdf8JAyRCoKV55If/NRK-Core-Icons) for sketching, [SVGs](#icons) for Android, [PDFs](#icons) for iOS. All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
+[Use the Figma components](https://www.figma.com/file/KXGJ6Qcdf8JAyRCoKV55If/NRK-Core-Icons) for sketching. Download links for archives with SVGs (e.g. for Android) and PDFs (e.g. for iOS) are available in the left column.
 
 ### Using NPM
 
@@ -94,11 +94,18 @@ Linking to `/latest/` is recommended only for prototyping.
 All icons are exposed individually as exported constants (enabling [tree shaking](https://medium.com/@netxm/what-is-tree-shaking-de7c6be5cadd)):
 
 ```jsx
-import { nrkLogoNrk } from '@nrk/core-icons'      // Plain JS, SVG-element as String
-import { NrkLogoNrk } from '@nrk/core-icons/jsx'  // React, ReactElement
+// Using icons
+import { nrkMediaPlay } from '@nrk/core-icons'      // Plain JS, SVG-element as String
+import { nrkMediaPlay } from '@nrk/core-icons/jsx'  // React, ReactElement
+// Using expressive icon variants
+import { nrkExpressiveMediaPlay } from '@nrk/core-icons/expressive'      // Plain JS, SVG-element as String
+import { NrkExpressiveMediaPlay } from '@nrk/core-icons/jsx/expressive'      // React, ReactElement
+// Using logoes
+import { NrkLogoNrk } from '@nrk/core-icons/jsx/logo'  // React, ReactElement
+import { nrkLogoNrk } from '@nrk/core-icons/logo'      // Plain JS, SVG-element as String
 
 <NrkLogoNrk />                                    // Example render the NRK logo with React
-<span style={{ color: 'red', fontSize: 16 }}>     // Style is inherited from parent element
+<span style={{ color: 'red', fontSize: '1em' }}>     // Style is inherited from parent element
   <NrkLogoNrk />
 </span>
 ```
@@ -111,7 +118,7 @@ Please note that overriding default values should be kept to a minimum, to maint
 
 ```jsx
 // Make sure to import React component
-import { NrkLogoNrk } from '@nrk/core-icons/jsx'
+import { NrkLogoNrk } from '@nrk/core-icons/jsx/logo'
 // JSX markup
 (...)
 <NrkLogoNrk style={{ 'fill': 'red' }} />
