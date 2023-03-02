@@ -23,9 +23,9 @@
       "types": "./core-icons.d.ts"
     },
     "./logo": {
-      "require": "./logo/core-icons-logos.js",
-      "import": "./logo/core-icons-logos.mjs",
-      "types": "./logo/core-icons-logos.d.ts"
+      "require": "./logo/core-icons-logo.js",
+      "import": "./logo/core-icons-logo.mjs",
+      "types": "./logo/core-icons-logo.d.ts"
     },
     "./expressive": {
       "require": "./expressive/core-icons-expressive.js",
@@ -38,9 +38,9 @@
       "types": "./jsx/core-icons.d.ts"
     },
     "./jsx/logo": {
-      "require": "./jsx/logo/core-icons-logos.js",
-      "import": "./jsx/logo/core-icons-logos.mjs",
-      "types": "./jsx/logo/core-icons-logos.d.ts"
+      "require": "./jsx/logo/core-icons-logo.js",
+      "import": "./jsx/logo/core-icons-logo.mjs",
+      "types": "./jsx/logo/core-icons-logo.d.ts"
     },
     "./jsx/expressive": {
       "require": "./jsx/expressive/core-icons-expressive.js",
