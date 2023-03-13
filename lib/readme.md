@@ -3,7 +3,7 @@
 > Icon and logo kit providing a consistent and predictable user experience across platforms and NRK services
 
 <!--demo
-<script src="core-icons-iife-all.js"></script>
+<script src="core-icons.min.js"></script>
 demo-->
 
 ## Overview
@@ -71,12 +71,19 @@ npm install @nrk/core-icons
 
 ### Using static cdn
 
+We host the following scripts for use in the browser on our cdn
+
+- [core-icons-iife-icon.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-icon.js) Contains all base icons
+- [core-icons-iife-logo.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-logo.js) Contains all NRK brand logoes
+- [core-icons-iife-expressive.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-expressive.js) Contains all expressive icon variations
+- [core-icons.min.js](https://static.nrk.no/core-icons/major/12/core-icons.min.js) Contains all the above groups
+
 For stability, please link to the appropriate major version
 
 ```html
 <script
   async
-  src="https://static.nrk.no/core-icons/major/12/core-icons-all-iife.js"
+  src="https://static.nrk.no/core-icons/major/12/core-icons-iife-icon.js"
 ></script>
 ```
 
@@ -85,29 +92,42 @@ Linking to `/latest/` is recommended only for prototyping.
 ```html
 <script
   async
-  src="https://static.nrk.no/core-icons/latest/core-icons-all-iife.js"
+  src="https://static.nrk.no/core-icons/latest/core-icons.min.js"
 ></script>
 ```
 
 ## Usage
+
+### npm
 
 All icons are exposed individually as exported constants (enabling [tree shaking](https://medium.com/@netxm/what-is-tree-shaking-de7c6be5cadd)):
 
 ```jsx
 // Using icons
 import { nrkMediaPlay } from '@nrk/core-icons'      // Plain JS, SVG-element as String
-import { nrkMediaPlay } from '@nrk/core-icons/jsx'  // React, ReactElement
+import { NrkMediaPlay } from '@nrk/core-icons/jsx'  // React, ReactElement
 // Using expressive icon variants
 import { nrkExpressiveMediaPlay } from '@nrk/core-icons/expressive'      // Plain JS, SVG-element as String
 import { NrkExpressiveMediaPlay } from '@nrk/core-icons/jsx/expressive'      // React, ReactElement
 // Using logoes
-import { NrkLogoNrk } from '@nrk/core-icons/jsx/logo'  // React, ReactElement
 import { nrkLogoNrk } from '@nrk/core-icons/logo'      // Plain JS, SVG-element as String
+import { NrkLogoNrk } from '@nrk/core-icons/jsx/logo'  // React, ReactElement
 
 <NrkLogoNrk />                                    // Example render the NRK logo with React
 <span style={{ color: 'red', fontSize: '1em' }}>     // Style is inherited from parent element
   <NrkLogoNrk />
 </span>
+```
+
+### CDN (content delivery network)
+
+When using one of the iife-functions directly from the static.nrk.no-cdn, all icons are placed in the HTML `<head>` and can be linked using SVG `<use>` with the icon name as `xlink:href`.
+The "Copy HTML" button in the [icon-browser](#browse-all-icons) adds an svg-tag with appropriate size and aria-attributes nesting a `<use>` tag linking to the icon in question.
+
+```html
+<svg style="width:1.5em;height:1.5em" focusable="false" aria-hidden="true">
+  <use xlink:href="#nrk-360"></use>
+</svg>
 ```
 
 ### Overriding props for React elements

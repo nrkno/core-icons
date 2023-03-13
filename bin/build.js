@@ -124,10 +124,10 @@ function buildMasterIife (groupNames) {
 
   const combined = svgToJS({
     input: tmpFolder,
-    banner: `@nrk/core-icons all v${version}`,
+    banner: `@nrk/core-icons icon, logo and expressive v${version}`,
     scale: 16
   })
-  fse.writeFileSync(`${staticFolder}/core-icons-iife-all.js`, combined.iife)
+  fse.writeFileSync(`${staticFolder}/core-icons.min.js`, combined.iife)
   // Remove tempfolder
   fse.removeSync(tmpFolder)
 }
