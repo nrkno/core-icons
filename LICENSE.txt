@@ -1,10 +1,20 @@
 Norsk rikskringkasting (https://nrk.no)
 
+@nrk/core-icons has three distinct types of content: Code, logos and icons.
+
+Code refers to all files that are not image assets. Image assets includes file
+types such as SVG, PNG and PDF.
+
+Logos refers to image assets that include trademarks, such as NRK. These asset
+names are prefixed with `nrk-logo-` or `nrk-super-`.
+
+Icons refers to all image assets other than logos.
+
 --------------------------------------------------------------------------------
 
 # Code: MIT License (https://opensource.org/licenses/MIT)
 
-In @nrk/core-icons, the MIT license applies to all non-icon files.
+In @nrk/core-icons, the MIT license applies to all code files.
 
 MIT License
 
