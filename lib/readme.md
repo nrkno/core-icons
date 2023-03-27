@@ -151,10 +151,10 @@ Scale the icons/logos by using font sizes divisible with `16` for sharpest rende
 
 | ✅ Do                                                         | 🚫 Don't                                                    |
 | :------------------------------------------------------------ | :---------------------------------------------------------- |
-| `.parent { font-size: 16px }`                                 | `.parent svg { width: 30px; height: 30px }`                 |
+| `.parent { font-size: 2rem }`                                 | `.parent svg { width: 30px; height: 30px }`                 |
 | `<div class="parent"><svg style="width:1.5em;height:1.5em">…` | `<div class="parent"><svg style="width:30px;height:30px">…` |
 
-Note: correct width/height in `em` for each icon is automatically provided by `@nrk/core-icons`
+Note: correct width/height in `em` for each icon is automatically provided by `@nrk/core-icons`. For browser/iife scripts, you can get the correct HTML markup from the `Copy HTML` button in the hover-menu for each [icon](#browse-icons) or [logo](#browse-logos) in their respective preview-sections above.
 
 ## Accessibility
 
