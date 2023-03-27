@@ -56,17 +56,32 @@ function clean (groupNames) {
   }
 }
 
-function copyDocs () {
-  // TODO: rework to something like this
-  // const docFiles = ['readme.md', 'lib/readme.md']
-  // for (const file of docFiles) {
-  //   const readme = String(fse.readFileSync(file))
-  //   fse.writeFileSync(file, readme.replace(/\/major\/\d+/, `/major/${pkg.version.match(/\d+/)}`))
-  // }
+function updateDocs () {
+  // Update reference to major version in links to static e.g. https://static.nrk.no/major/12/core-icons-iife.js
+  const file = 'lib/readme.md'
+  const majorPattern = /\/major\/\d+/g
+  const currentMajorVersion = `/major/${version.match(/\d+/)}`
 
+  const readme = String(fse.readFileSync(file))
+  const references = readme.match(majorPattern)
+
+  // Return early if no references
+  if (references == null) return
+  let isOutDated = false
+  for (const ref of references) {
+    if (ref !== currentMajorVersion) isOutDated = true
+  }
+  if (isOutDated) {
+    console.log(`Found outdated version reference in ${file}, updating with ${currentMajorVersion}`)
+    fse.writeFileSync(file, readme.replaceAll(majorPattern, currentMajorVersion))
+  }
+}
+
+function copyDocs () {
   fse.copyFileSync(`${srcFolder}/index.html`, `${staticFolder}/index.html`)
   fse.copyFileSync(`${srcFolder}/readme.js`, `${staticFolder}/readme.js`)
   fse.copyFileSync(`${srcFolder}/readme.md`, `${staticFolder}/readme.md`)
+  fse.copyFileSync(`${srcFolder}/readme.css`, `${staticFolder}/readme.css`)
 }
 
 function buildIcons (groupName) {
@@ -116,7 +131,7 @@ function buildIcons (groupName) {
  * Generate iife for all icons
  * @param {String[]} groupNames groups to include
  */
-function buildMasterIife (groupNames) {
+function buildMasterIife (groupNames, fileName, copyToRoot = false) {
   // Copy all sources to tempFolder
   for (const groupName of groupNames) {
     fse.copySync(path.join(srcFolder, groupName), tmpFolder)
@@ -124,10 +139,13 @@ function buildMasterIife (groupNames) {
 
   const combined = svgToJS({
     input: tmpFolder,
-    banner: `@nrk/core-icons icon, logo and expressive v${version}`,
+    banner: `@nrk/core-icons ${groupNames.join(', ')} v${version}`,
     scale: 16
   })
-  fse.writeFileSync(`${staticFolder}/core-icons.min.js`, combined.iife)
+  fse.writeFileSync(`${staticFolder}/${fileName}`, combined.iife)
+  if (copyToRoot) {
+    fse.copyFileSync(`${staticFolder}/${fileName}`, fileName)
+  }
   // Remove tempfolder
   fse.removeSync(tmpFolder)
 }
@@ -188,11 +206,14 @@ function svgtopdf (el, options, pdf) {
 }
 
 function build () {
-  clean(['icon', 'logo', 'expressive'])
+  clean(['icon', 'expressive', 'logo'])
   buildIcons('icon')
-  buildIcons('logo')
   buildIcons('expressive')
-  buildMasterIife(['icon', 'logo', 'expressive'])
+  buildIcons('logo')
+  buildMasterIife(['icon', 'expressive'], 'core-icons-iife.js', true)
+  // Generate iife file containing logos for legacy support in cdn
+  buildMasterIife(['icon', 'expressive', 'logo'], 'core-icons.min.js')
+  updateDocs()
   copyDocs()
 }
 

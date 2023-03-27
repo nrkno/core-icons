@@ -12,6 +12,7 @@
     "jsx",
     "logo",
     "expressive",
+    "./core-icons-iife.js",
     "./core-icons.js",
     "./core-icons.mjs",
     "./core-icons.d.ts"
@@ -20,7 +21,8 @@
     ".": {
       "require": "./core-icons.js",
       "import": "./core-icons.mjs",
-      "types": "./core-icons.d.ts"
+      "types": "./core-icons.d.ts",
+      "browser": "./core-icons-iife.js"
     },
     "./logo": {
       "require": "./logo/core-icons-logo.js",

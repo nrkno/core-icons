@@ -3,7 +3,11 @@
 > Icon and logo kit providing a consistent and predictable user experience across platforms and NRK services
 
 <!--demo
-<script src="core-icons.min.js"></script>
+<script src="core-icons-iife.js"></script>
+<script src="core-icons-iife-logo.js"></script>
+<link rel="stylesheet" href="readme.css">
+<input type="text" aria-hidden="true" tabindex="-1" id="docs-copy" style="position:fixed;left:-300px;opacity:0">
+<script src="readme.js"></script>
 demo-->
 
 ## Overview
@@ -25,38 +29,30 @@ Contains expressive variants of a subset of the baseline icons
 
 ### Logo
 
-Contains all logoes for Norsk rikskringkasting (NRK)
+Contains all logos for Norsk rikskringkasting (NRK)
 
-- Logoes have `nrk-logo-` prefix
+- Logos have `nrk-logo-` prefix
 
-## Browse all icons
+## Browse icons
 
-Search among all icons, including variants, and logos using the search field below or download the appropriate ZIP archive containing the icons you need in the left menu.
+Search among all icons, including variants using the search field below or download the appropriate ZIP archive containing the icons you need in the left menu.
 
 The [installation](#installation) section has instructions for use through npm or cdn.
 
 <!--demo
-<style>
-.doc-grid { overflow: hidden }
-.doc-grid > * { box-sizing: border-box; display: inline-block; vertical-align: top; width: 33%; min-width: 300px; padding: 15px 15px 15px 0 }
-.docs-icons { overflow: hidden; padding: 0 7vw; margin: 0 -7vw; transition:.2s }
-.docs-icons > * { cursor: pointer; box-sizing: border-box; display: inline-block; vertical-align: top; width: 20%; min-width: 180px }
-.docs-icons > h3 { width: 100%; font-weight: 700; font-size: 12px; text-transform: uppercase; min-width: none; margin: 2em 0 .5em }
-.docs-icons > h3:first-child { margin-top: 0 }
-.docs-icons > div:hover { color: gray; }
-.docs-icons svg { margin-right: 9px; vertical-align: middle }
-.docs-pops { position: absolute; padding: 5px 0; transition: .2s .1s }
-.docs-pops a,
-.docs-pops button { -webkit-appearance: none; display: inline-block; font: inherit; font-weight: 400; background: #000; color: #fff !important; border: 0; border-radius: 4px; margin: 1px; padding: 2px 5px; text-decoration: none; cursor: pointer; transition: .2s }
-.docs-pops a:hover,
-.docs-pops button:hover { background: gray; }
-.docs-icons :not(:hover) .docs-pops { visibility: hidden; opacity: 0; transform: translateY(-5px); transition-delay: 0 }
-.docs-input { font: inherit; color: inherit; padding: 5px 9px; border: 1px solid #ccc; border-radius: 3px; margin-bottom: 2em; }
-</style>
-<input type="text" aria-hidden="true" tabindex="-1" id="docs-copy" style="position:fixed;left:-300px;opacity:0">
-<input type="text" class="docs-input" name="search" placeholder="Type to search" autocomplete="off" aria-label="Filter icons">
+<input type="text" class="docs-input" name="search" placeholder="Type to filter icons" autocomplete="off" aria-label="Filter icons">
 <div class="docs-icons"></div>
-<script src="readme.js"></script>
+demo-->
+
+## Browse logos
+
+Search among all icons, including variants using the search field below or download the appropriate ZIP archive containing the icons you need in the left menu.
+
+The [installation](#installation) section has instructions for use through npm or cdn.
+
+<!--demo
+<input type="text" class="docs-input" name="search-logos" placeholder="Type to filter logos" autocomplete="off" aria-label="Filter logos">
+<div class="docs-logos"></div>
 demo-->
 
 ## Installation
@@ -73,17 +69,17 @@ npm install @nrk/core-icons
 
 We host the following scripts for use in the browser on our cdn
 
-- [core-icons-iife-icon.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-icon.js) Contains all base icons
-- [core-icons-iife-logo.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-logo.js) Contains all NRK brand logoes
-- [core-icons-iife-expressive.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-expressive.js) Contains all expressive icon variations
-- [core-icons.min.js](https://static.nrk.no/core-icons/major/12/core-icons.min.js) Contains all the above groups
+- [core-icons-iife-icon.js](https://static.nrk.no/core-icons/major/11/core-icons-iife-icon.js) Contains all base icons
+- [core-icons-iife-expressive.js](https://static.nrk.no/core-icons/major/11/core-icons-iife-expressive.js) Contains all expressive icon variations
+- [core-icons-iife.js](https://static.nrk.no/core-icons/major/11/core-icons-iife.js) Contains icons and icon variants
+- [core-icons-iife-logo.js](https://static.nrk.no/core-icons/major/11/core-icons-iife-logo.js) Contains all NRK brand logoes
 
 For stability, please link to the appropriate major version
 
 ```html
 <script
   async
-  src="https://static.nrk.no/core-icons/major/12/core-icons-iife-icon.js"
+  src="https://static.nrk.no/core-icons/major/11/core-icons-iife.js"
 ></script>
 ```
 
@@ -92,7 +88,7 @@ Linking to `/latest/` is recommended only for prototyping.
 ```html
 <script
   async
-  src="https://static.nrk.no/core-icons/latest/core-icons.min.js"
+  src="https://static.nrk.no/core-icons/latest/core-icons-iife.js"
 ></script>
 ```
 
