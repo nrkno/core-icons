@@ -157,6 +157,8 @@ function createZipArchive (srcFolder, globPattern, destPath, archiveName) {
   svgZipper.glob(globPattern, {
     cwd: srcFolder
   })
+  // Append license file to archive
+  svgZipper.append(fse.createReadStream(path.join(__dirname, '..', 'LICENSE.txt')), { name: 'LICENSE.txt' })
   svgZipper.finalize()
   console.log(`Successfully created ${destPath}/${archiveName}.zip`)
 }
