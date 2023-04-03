@@ -12,6 +12,25 @@ Icons refers to all image assets other than logos.
 
 --------------------------------------------------------------------------------
 
+# Logos:
+
+All use of these NRK trademarked assets require our prior specific permission
+and must be in compliance with NRKs design guidelines.
+
+For more information about NRK design guidelines and use of our trademarks,
+see https://info.nrk.no/design.
+
+--------------------------------------------------------------------------------
+
+# Icons
+
+CC BY 4.0 License (https://creativecommons.org/licenses/by/4.0/)
+
+Icon image assets are licensed under a Creative Commons
+Attribution 4.0 International License.
+
+--------------------------------------------------------------------------------
+
 # Code: MIT License (https://opensource.org/licenses/MIT)
 
 In @nrk/core-icons, the MIT license applies to all code files.
