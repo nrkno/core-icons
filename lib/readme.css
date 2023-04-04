@@ -79,11 +79,6 @@
   transform: translateY(-5px);
   transition-delay: 0;
 }
-.docs-input {
-  font: inherit;
-  color: inherit;
-  padding: 5px 9px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin-bottom: 2em;
+.docs-icons [data-icon] + [hidden] {
+  display: none;
 }

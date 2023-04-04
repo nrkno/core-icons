@@ -5,6 +5,7 @@
 <!--demo
 <script src="core-icons-iife.js"></script>
 <script src="core-icons-iife-logo.js"></script>
+<link rel="stylesheet" href="https://static.nrk.no/core-css/major/1/core-css.min.css">
 <link rel="stylesheet" href="readme.css">
 <input type="text" aria-hidden="true" tabindex="-1" id="docs-copy" style="position:fixed;left:-300px;opacity:0">
 <script src="readme.js"></script>
@@ -40,7 +41,11 @@ Search among all icons, including variants using the search field below or downl
 The [installation](#installation) section has instructions for use through npm or cdn.
 
 <!--demo
-<input type="text" class="docs-input" name="search" placeholder="Type to filter icons" autocomplete="off" aria-label="Filter icons">
+<label class="nrk-xs-12of12 nrk-lg-4of12">
+  Filter icons
+  <input type="text" class="nrk-input" name="search" placeholder="Type to filter icons" autocomplete="off" >
+</label>
+<label><input class="nrk-switch" type="checkbox" onChange="toggleVariants()" checked> Show icon variants</label>
 <div class="docs-icons"></div>
 demo-->
 
@@ -51,7 +56,10 @@ Search among all icons, including variants using the search field below or downl
 The [installation](#installation) section has instructions for use through npm or cdn.
 
 <!--demo
-<input type="text" class="docs-input" name="search-logos" placeholder="Type to filter logos" autocomplete="off" aria-label="Filter logos">
+<label class="nrk-xs-12of12 nrk-lg-4of12">
+  Filter logos
+  <input type="text" class="nrk-input" name="search-logos" placeholder="Type to filter logos" autocomplete="off" >
+</label>
 <div class="docs-logos"></div>
 demo-->
 
