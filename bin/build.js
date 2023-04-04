@@ -57,10 +57,10 @@ function clean (groupNames) {
 }
 
 function updateDocs () {
-  // Update reference to major version in links to static e.g. https://static.nrk.no/major/12/core-icons-iife.js
+  // Update reference to major version in links to static e.g. https://static.nrk.no/core-icons/major/12/core-icons-iife.js
   const file = 'lib/readme.md'
-  const majorPattern = /\/major\/\d+/g
-  const currentMajorVersion = `/major/${version.match(/\d+/)}`
+  const majorPattern = /\/core-icons\/major\/\d+/g
+  const currentMajorVersion = `/core-icons/major/${version.match(/\d+/)}`
 
   const readme = String(fse.readFileSync(file))
   const references = readme.match(majorPattern)
