@@ -82,3 +82,6 @@
 .docs-icons [data-icon] + [hidden] {
   display: none;
 }
+.nrk-input {
+  background-color: inherit;
+}
