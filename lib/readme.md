@@ -26,13 +26,13 @@ Contains all icons
 
 Contains expressive variants of a subset of the baseline icons
 
-- Expressive icons have `nrk-expressive-` prefix
+- Expressive icons are suffixed with `-expressive-` e.g. `nrk-tilgjengelighet-expressive`
 
 ### Logo
 
 Contains all logos for Norsk rikskringkasting (NRK)
 
-- Logos have `nrk-logo-` prefix
+- Logos have `nrk-logo-` prefix e.g. `nrk-logo-nrk`
 
 ## Browse icons
 
@@ -111,8 +111,8 @@ All icons are exposed individually as exported constants (enabling [tree shaking
 import { nrkMediaPlay } from '@nrk/core-icons'      // Plain JS, SVG-element as String
 import { NrkMediaPlay } from '@nrk/core-icons/jsx'  // React, ReactElement
 // Using expressive icon variants
-import { nrkExpressiveMediaPlay } from '@nrk/core-icons/expressive'      // Plain JS, SVG-element as String
-import { NrkExpressiveMediaPlay } from '@nrk/core-icons/jsx/expressive'      // React, ReactElement
+import { nrkMediaPlayExpressive } from '@nrk/core-icons/expressive'      // Plain JS, SVG-element as String
+import { NrkMediaPlayExpressive } from '@nrk/core-icons/jsx/expressive'      // React, ReactElement
 // Using logoes
 import { nrkLogoNrk } from '@nrk/core-icons/logo'      // Plain JS, SVG-element as String
 import { NrkLogoNrk } from '@nrk/core-icons/jsx/logo'  // React, ReactElement
