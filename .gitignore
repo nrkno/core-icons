@@ -10,7 +10,11 @@ yarn-error*
 *.d.ts
 lib/core-icons*.js
 /core-icons*
-/jsx/core-icons*
+/jsx/**/core-icons*
+/logo/**/core-icons*
+/expressive/**/core-icons*
 *.rss
 *.pdf
 *.zip
+static/
+build_tmp/

@@ -3,40 +3,69 @@
 > Icon and logo kit providing a consistent and predictable user experience across platforms and NRK services
 
 <!--demo
-<script src="core-icons.min.js"></script>
+<script src="core-icons-iife.js"></script>
+<script src="core-icons-iife-logo.js"></script>
+<link rel="stylesheet" href="https://static.nrk.no/core-css/major/1/core-css.min.css">
+<link rel="stylesheet" href="readme.css">
+<input type="text" aria-hidden="true" tabindex="-1" id="docs-copy" style="position:fixed;left:-300px;opacity:0">
+<script src="readme.js"></script>
 demo-->
 
 ## Overview
 
-Search for your icons in the search field below or download a ZIP file containing all icons in the left menu.
+Core-icons is organized in submodules to accomodate variants:
+
+### Icons
+
+Contains all icons
+
+- All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
+- For some icons an additional group name preceding icon name is included for categorization (e.g. `nrk-arrow-right`)
+
+### Expressive
+
+Contains expressive variants of a subset of the baseline icons
+
+- Expressive icons have `nrk-expressive-` prefix
+
+### Logo
+
+Contains all logos for Norsk rikskringkasting (NRK)
+
+- Logos have `nrk-logo-` prefix
+
+## Browse icons
+
+Search among all icons, including variants using the search field below or download the appropriate ZIP archive containing the icons you need in the left menu.
+
+The [installation](#installation) section has instructions for use through npm or cdn.
 
 <!--demo
-<style>
-.doc-grid { overflow: hidden }
-.doc-grid > * { box-sizing: border-box; display: inline-block; vertical-align: top; width: 33%; min-width: 300px; padding: 15px 15px 15px 0 }
-.docs-icons { overflow: hidden; padding: 0 7vw; margin: 0 -7vw; transition:.2s }
-.docs-icons > * { cursor: pointer; box-sizing: border-box; display: inline-block; vertical-align: top; width: 20%; min-width: 180px }
-.docs-icons > h3 { width: 100%; font-weight: 700; font-size: 12px; text-transform: uppercase; min-width: none; margin: 2em 0 .5em }
-.docs-icons > h3:first-child { margin-top: 0 }
-.docs-icons > div:hover { color: gray; }
-.docs-icons svg { margin-right: 9px; vertical-align: middle }
-.docs-pops { position: absolute; padding: 5px 0; transition: .2s .1s }
-.docs-pops a,
-.docs-pops button { -webkit-appearance: none; display: inline-block; font: inherit; font-weight: 400; background: #000; color: #fff !important; border: 0; border-radius: 4px; margin: 1px; padding: 2px 5px; text-decoration: none; cursor: pointer; transition: .2s }
-.docs-pops a:hover,
-.docs-pops button:hover { background: gray; }
-.docs-icons :not(:hover) .docs-pops { visibility: hidden; opacity: 0; transform: translateY(-5px); transition-delay: 0 }
-.docs-input { font: inherit; color: inherit; padding: 5px 9px; border: 1px solid #ccc; border-radius: 3px; margin-bottom: 2em; }
-</style>
-<input type="text" aria-hidden="true" tabindex="-1" id="docs-copy" style="position:fixed;left:-300px;opacity:0">
-<input type="text" class="docs-input" name="search" placeholder="Type to search" autocomplete="off" aria-label="Filter icons">
+<label class="nrk-xs-12of12 nrk-lg-4of12">
+  Filter icons
+  <input type="text" class="nrk-input" name="search" placeholder="Type to filter icons" autocomplete="off" >
+</label>
+<label><input class="nrk-switch" type="checkbox" onChange="toggleVariants()" checked> Show icon variants</label>
 <div class="docs-icons"></div>
-<script src="readme.js"></script>
+demo-->
+
+## Browse logos
+
+Search among all icons, including variants using the search field below or download the appropriate ZIP archive containing the icons you need in the left menu.
+
+The [installation](#installation) section has instructions for use through npm or cdn.
+
+<!--demo
+<label class="nrk-xs-12of12 nrk-lg-4of12">
+  Filter logos
+  <input type="text" class="nrk-input" name="search-logos" placeholder="Type to filter logos" autocomplete="off" >
+</label>
+<div class="docs-logos"></div>
 demo-->
 
 ## Installation
 
-[Use the Figma components](https://www.figma.com/file/KXGJ6Qcdf8JAyRCoKV55If/NRK-Core-Icons) for sketching, [SVGs](#icons) for Android, [PDFs](#icons) for iOS. All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
+[Use the Figma components](https://www.figma.com/file/KXGJ6Qcdf8JAyRCoKV55If/NRK-Core-Icons) for sketching. Download links for archives with SVGs (e.g. for Android) and PDFs (e.g. for iOS) are available in the left column.
 
 ### Using NPM
 
@@ -44,26 +73,65 @@ demo-->
 npm install @nrk/core-icons
 ```
 
-### Using static
+### Using static cdn
 
-Recommended only for prototyping.
+We host the following scripts for use in the browser on our cdn
+
+- [core-icons-iife-icon.js](https://static.nrk.no/core-icons/major/11/core-icons-iife-icon.js) Contains all base icons
+- [core-icons-iife-expressive.js](https://static.nrk.no/core-icons/major/11/core-icons-iife-expressive.js) Contains all expressive icon variations
+- [core-icons-iife.js](https://static.nrk.no/core-icons/major/11/core-icons-iife.js) Contains icons and icon variants
+- [core-icons-iife-logo.js](https://static.nrk.no/core-icons/major/11/core-icons-iife-logo.js) Contains all NRK brand logoes
+
+For stability, please link to the appropriate major version
 
 ```html
-<script async src="https://static.nrk.no/core-icons/latest/core-icons.min.js"></script>
+<script
+  async
+  src="https://static.nrk.no/core-icons/major/11/core-icons-iife.js"
+></script>
+```
+
+Linking to `/latest/` is recommended only for prototyping.
+
+```html
+<script
+  async
+  src="https://static.nrk.no/core-icons/latest/core-icons-iife.js"
+></script>
 ```
 
 ## Usage
 
+### npm
+
 All icons are exposed individually as exported constants (enabling [tree shaking](https://medium.com/@netxm/what-is-tree-shaking-de7c6be5cadd)):
 
 ```jsx
-import { nrkLogoNrk } from '@nrk/core-icons'      // Plain JS, SVG-element as String
-import { NrkLogoNrk } from '@nrk/core-icons/jsx'  // React, ReactElement
+// Using icons
+import { nrkMediaPlay } from '@nrk/core-icons'      // Plain JS, SVG-element as String
+import { NrkMediaPlay } from '@nrk/core-icons/jsx'  // React, ReactElement
+// Using expressive icon variants
+import { nrkExpressiveMediaPlay } from '@nrk/core-icons/expressive'      // Plain JS, SVG-element as String
+import { NrkExpressiveMediaPlay } from '@nrk/core-icons/jsx/expressive'      // React, ReactElement
+// Using logoes
+import { nrkLogoNrk } from '@nrk/core-icons/logo'      // Plain JS, SVG-element as String
+import { NrkLogoNrk } from '@nrk/core-icons/jsx/logo'  // React, ReactElement
 
 <NrkLogoNrk />                                    // Example render the NRK logo with React
-<span style={{ color: 'red', fontSize: 16 }}>     // Style is inherited from parent element
+<span style={{ color: 'red', fontSize: '1em' }}>     // Style is inherited from parent element
   <NrkLogoNrk />
 </span>
+```
+
+### CDN (content delivery network)
+
+When using one of the iife-functions directly from the static.nrk.no-cdn, all icons are placed in the HTML `<head>` and can be linked using SVG `<use>` with the icon name as `xlink:href`.
+The "Copy HTML" button in the [icon-browser](#browse-all-icons) adds an svg-tag with appropriate size and aria-attributes nesting a `<use>` tag linking to the icon in question.
+
+```html
+<svg style="width:1.5em;height:1.5em" focusable="false" aria-hidden="true">
+  <use xlink:href="#nrk-360"></use>
+</svg>
 ```
 
 ### Overriding props for React elements
@@ -74,7 +142,7 @@ Please note that overriding default values should be kept to a minimum, to maint
 
 ```jsx
 // Make sure to import React component
-import { NrkLogoNrk } from '@nrk/core-icons/jsx'
+import { NrkLogoNrk } from '@nrk/core-icons/jsx/logo'
 // JSX markup
 (...)
 <NrkLogoNrk style={{ 'fill': 'red' }} />
@@ -89,12 +157,12 @@ import { NrkLogoNrk } from '@nrk/core-icons/jsx'
 Since logos do not have consistent dimensions, `@nrk/core-icons` provides scaling based on `font-size`.
 Scale the icons/logos by using font sizes divisible with `16` for sharpest rendering. Example: `font-size: 16px` = `24×24` icon, `font-size: 32px` = `48×48` icon, etc.
 
-✅ Do | 🚫 Don't
-:-- | :--
-`.parent { font-size: 16px }` | `.parent svg { width: 30px; height: 30px }`
-`<div class="parent"><svg style="width:1.5em;height:1.5em">…` | `<div class="parent"><svg style="width:30px;height:30px">…`
+| ✅ Do                                                         | 🚫 Don't                                                    |
+| :------------------------------------------------------------ | :---------------------------------------------------------- |
+| `.parent { font-size: 2rem }`                                 | `.parent svg { width: 30px; height: 30px }`                 |
+| `<div class="parent"><svg style="width:1.5em;height:1.5em">…` | `<div class="parent"><svg style="width:30px;height:30px">…` |
 
-Note: correct width/height in `em` for each icon is automatically provided by `@nrk/core-icons`
+Note: correct width/height in `em` for each icon is automatically provided by `@nrk/core-icons`. For browser/iife scripts, you can get the correct HTML markup from the `Copy HTML` button in the hover-menu for each [icon](#browse-icons) or [logo](#browse-logos) in their respective preview-sections above.
 
 ## Accessibility
 

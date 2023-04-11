@@ -22,7 +22,6 @@ npm start # Your browser will open documentation with hot reloading
 After having applied changes, remember to build before commiting and pushing your changes upstream.
 
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-)
 
 ```bash
 git checkout -b feature/my-changes
