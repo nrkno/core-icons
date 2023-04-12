@@ -20,19 +20,19 @@ Core-icons is organized in submodules to accomodate variants:
 Contains all icons
 
 - All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
-- For some icons an additional group name preceding icon name is included for categorization (e.g. `nrk-arrow-right`)
+- For some icons an additional group name preceding icon name is included for categorization like `nrk-arrow-right`
 
 ### Expressive
 
 Contains expressive variants of a subset of the baseline icons
 
-- Expressive icons are suffixed with `-expressive-` e.g. `nrk-tilgjengelighet-expressive`
+- Expressive icons are suffixed with `-expressive-` like `nrk-tilgjengelighet-expressive`
 
 ### Logo
 
 Contains all logos for Norsk rikskringkasting (NRK)
 
-- Logos have `nrk-logo-` prefix e.g. `nrk-logo-nrk`
+- Logos have `nrk-logo-` prefix like `nrk-logo-nrk`
 
 ## Browse icons
 
@@ -65,7 +65,7 @@ demo-->
 
 ## Installation
 
-[Use the Figma components](https://www.figma.com/file/KXGJ6Qcdf8JAyRCoKV55If/NRK-Core-Icons) for sketching. Download links for archives with SVGs (e.g. for Android) and PDFs (e.g. for iOS) are available in the left column.
+[Use the Figma components](https://www.figma.com/file/KXGJ6Qcdf8JAyRCoKV55If/NRK-Core-Icons) for sketching. Download links for archives with SVG and PDF file-types are available in the left column.
 
 ### Using NPM
 
