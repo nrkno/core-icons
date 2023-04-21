@@ -208,10 +208,11 @@ function svgtopdf (el, options, pdf) {
 }
 
 function build () {
-  clean(['icon', 'expressive', 'logo'])
+  clean(['icon', 'expressive', 'logo', 'preview'])
   buildIcons('icon')
   buildIcons('expressive')
   buildIcons('logo')
+  buildIcons('preview')
   buildMasterIife(['icon', 'expressive'], 'core-icons-iife.js', true)
   // Generate iife file containing logos for legacy support in cdn
   buildMasterIife(['icon', 'expressive', 'logo'], 'core-icons.min.js')

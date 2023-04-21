@@ -34,6 +34,11 @@
       "import": "./expressive/core-icons-expressive.mjs",
       "types": "./expressive/core-icons-expressive.d.ts"
     },
+    "./preview": {
+      "require": "./preview/core-icons-preview.js",
+      "import": "./preview/core-icons-preview.mjs",
+      "types": "./preview/core-icons-preview.d.ts"
+    },
     "./jsx": {
       "require": "./jsx/core-icons.js",
       "import": "./jsx/core-icons.mjs",
@@ -48,6 +53,11 @@
       "require": "./jsx/expressive/core-icons-expressive.js",
       "import": "./jsx/expressive/core-icons-expressive.mjs",
       "types": "./jsx/expressive/core-icons-expressive.d.ts"
+    },
+    "./jsx/preview": {
+      "require": "./jsx/preview/core-icons-preview.js",
+      "import": "./jsx/preview/core-icons-preview.mjs",
+      "types": "./jsx/preview/core-icons-preview.d.ts"
     }
   },
   "scripts": {
