@@ -10,6 +10,13 @@ module.exports = {
         overrides: {
           // Disable removeViewBox
           removeViewBox: false
+          // Increase floatPrecision for higher fidelity when processing large logos (default is 3)
+          // cleanupNumericValues: {
+          //   floatPrecision: 4
+          // },
+          // convertPathData: {
+          //   floatPrecision: 4
+          // }
         }
       }
     },
