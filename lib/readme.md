@@ -5,6 +5,7 @@
 <!--demo
 <script src="core-icons-iife.js"></script>
 <script src="core-icons-iife-logo.js"></script>
+<script src="core-icons-iife-preview.js"></script>
 <link rel="stylesheet" href="https://static.nrk.no/core-css/major/1/core-css.min.css">
 <link rel="stylesheet" href="readme.css">
 <input type="text" aria-hidden="true" tabindex="-1" id="docs-copy" style="position:fixed;left:-300px;opacity:0">
@@ -34,6 +35,14 @@ Contains all logos for Norsk rikskringkasting (NRK)
 
 - Logos have `nrk-logo-` prefix like `nrk-logo-nrk`
 
+### Preview
+
+Contains preview-versions of icons or logos for testing purposes. These resources should **not** be used in a production context
+
+- All preview files have `-preview` added to the apropriate logo or icon prefix like `nrk-logo-preview-nrk`
+- Any file in the preview context may be removed or altered in minor or patch releases
+- When ready, a preview resource will be added to the apropriate context (icon/logo/expressive) and will be mentioned in the [release-notes](https://github.com/nrkno/core-icons/releases)
+
 ## Browse icons
 
 Search among all icons, including variants using the search field below or download the appropriate ZIP archive containing the icons you need in the left menu.
@@ -51,7 +60,7 @@ demo-->
 
 ## Browse logos
 
-Search among all icons, including variants using the search field below or download the appropriate ZIP archive containing the icons you need in the left menu.
+Search among all logos using the search field below or download the appropriate ZIP archive in the left menu.
 
 The [installation](#installation) section has instructions for use through npm or cdn.
 
@@ -61,6 +70,20 @@ The [installation](#installation) section has instructions for use through npm o
   <input type="text" class="nrk-input" name="search-logos" placeholder="Type to filter logos" autocomplete="off" >
 </label>
 <div class="docs-logos"></div>
+demo-->
+
+## Browse previews
+
+Search among all preview resources using the search field below. ZIP archives are linked here for [zip](core-icons-preview-svg.zip) and [pdf](core-icons-preview-pdf.zip) versions.
+
+The [installation](#installation) section has instructions for use through npm or cdn.
+
+<!--demo
+<label class="nrk-xs-12of12 nrk-lg-4of12">
+  Filter previews
+  <input type="text" class="nrk-input" name="search-previews" placeholder="Type to filter previews" autocomplete="off" >
+</label>
+<div class="docs-previews"></div>
 demo-->
 
 ## Installation
