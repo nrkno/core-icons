@@ -50,6 +50,8 @@ function clean (groupNames) {
     fse.removeSync(path.join(npmJsxFolder, npmPath, `${bundleName}.mjs`))
     fse.removeSync(path.join(npmJsxFolder, npmPath, `${bundleName}.d.ts`))
 
+    // Ensure npm folders exist (for icons it's '' which is falsy)
+    if (npmPath) fse.mkdirsSync(npmPath)
     // Create folder for group in staticFolder
     fse.mkdirsSync(staticGroupFolder)
     fse.mkdirsSync(path.join(npmJsxFolder, npmPath))
