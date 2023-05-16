@@ -94,7 +94,11 @@ function buildIcons (groupName) {
   // Make pdfs
   const svgFiles = fse.readdirSync(staticDest)
   for (const file of svgFiles) {
-    svgtopdf(path.join(staticDest, file))
+    try {
+      svgtopdf(path.join(staticDest, file))
+    } catch (error) {
+      console.error(`Something went wrong while parsing file ${file} through svgomg resulting in error: ${error}`)
+    }
   }
 
   // Generate zip archives for svg
@@ -208,10 +212,11 @@ function svgtopdf (el, options, pdf) {
 }
 
 function build () {
-  clean(['icon', 'expressive', 'logo'])
+  clean(['icon', 'expressive', 'logo', 'preview'])
   buildIcons('icon')
   buildIcons('expressive')
   buildIcons('logo')
+  buildIcons('preview')
   buildMasterIife(['icon', 'expressive'], 'core-icons-iife.js', true)
   // Generate iife file containing logos for legacy support in cdn
   buildMasterIife(['icon', 'expressive', 'logo'], 'core-icons.min.js')

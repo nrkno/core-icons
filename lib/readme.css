@@ -10,14 +10,16 @@
   padding: 15px 15px 15px 0;
 }
 .docs-icons,
-.docs-logos {
+.docs-logos,
+.docs-previews {
   overflow: hidden;
   padding: 0 7vw;
   margin: 0 -7vw;
   transition: 0.2s;
 }
 .docs-icons > *,
-.docs-logos > * {
+.docs-logos > *,
+.docs-previews > * {
   cursor: pointer;
   box-sizing: border-box;
   display: inline-block;
@@ -26,7 +28,8 @@
   min-width: 180px;
 }
 .docs-icons > h3,
-.docs-logos > h3 {
+.docs-logos > h3,
+.docs-previews > h3 {
   width: 100%;
   font-weight: 700;
   font-size: 12px;
@@ -35,15 +38,18 @@
   margin: 2em 0 0.5em;
 }
 .docs-icons > h3:first-child,
-.docs-logos > h3:first-child {
+.docs-logos > h3:first-child,
+.docs-previews > h3:first-child {
   margin-top: 0;
 }
 .docs-icons > div:hover,
-.docs-logos > div:hover {
+.docs-logos > div:hover,
+.docs-previews > div:hover {
   color: gray;
 }
 .docs-icons svg,
-.docs-logos svg {
+.docs-logos svg,
+.docs-previews svg {
   margin-right: 9px;
   vertical-align: middle;
 }
@@ -73,7 +79,8 @@
   background: gray;
 }
 .docs-icons :not(:hover) .docs-pops,
-.docs-logos :not(:hover) .docs-pops {
+.docs-logos :not(:hover) .docs-pops,
+.docs-previews :not(:hover) .docs-pops {
   visibility: hidden;
   opacity: 0;
   transform: translateY(-5px);

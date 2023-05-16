@@ -5,6 +5,7 @@
 <!--demo
 <script src="core-icons-iife.js"></script>
 <script src="core-icons-iife-logo.js"></script>
+<script src="core-icons-iife-preview.js"></script>
 <link rel="stylesheet" href="https://static.nrk.no/core-css/major/1/core-css.min.css">
 <link rel="stylesheet" href="readme.css">
 <input type="text" aria-hidden="true" tabindex="-1" id="docs-copy" style="position:fixed;left:-300px;opacity:0">
@@ -34,6 +35,14 @@ Contains all logos for Norsk rikskringkasting (NRK)
 
 - Logos have `nrk-logo-` prefix like `nrk-logo-nrk`
 
+### Preview
+
+Contains preview-versions of icons or logos for testing purposes. These resources should **not** be used in a production context
+
+- All preview files have `-preview` added to the apropriate logo or icon prefix like `nrk-logo-preview-nrk`
+- Any file in the preview context may be removed or altered in minor or patch releases
+- When ready, a preview resource will be added to the apropriate context (icon/logo/expressive) and will be mentioned in the [release-notes](https://github.com/nrkno/core-icons/releases)
+
 ## Browse icons
 
 Search among all icons, including variants using the search field below or download the appropriate ZIP archive containing the icons you need in the left menu.
@@ -51,7 +60,7 @@ demo-->
 
 ## Browse logos
 
-Search among all icons, including variants using the search field below or download the appropriate ZIP archive containing the icons you need in the left menu.
+Search among all logos using the search field below or download the appropriate ZIP archive in the left menu.
 
 The [installation](#installation) section has instructions for use through npm or cdn.
 
@@ -61,6 +70,20 @@ The [installation](#installation) section has instructions for use through npm o
   <input type="text" class="nrk-input" name="search-logos" placeholder="Type to filter logos" autocomplete="off" >
 </label>
 <div class="docs-logos"></div>
+demo-->
+
+## Browse previews
+
+Search among all preview resources using the search field below. ZIP archives are linked here for [zip](core-icons-preview-svg.zip) and [pdf](core-icons-preview-pdf.zip) versions.
+
+The [installation](#installation) section has instructions for use through npm or cdn.
+
+<!--demo
+<label class="nrk-xs-12of12 nrk-lg-4of12">
+  Filter previews
+  <input type="text" class="nrk-input" name="search-previews" placeholder="Type to filter previews" autocomplete="off" >
+</label>
+<div class="docs-previews"></div>
 demo-->
 
 ## Installation
@@ -80,7 +103,8 @@ We host the following scripts for use in the browser on our cdn
 - [core-icons-iife-icon.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-icon.js) Contains all base icons
 - [core-icons-iife-expressive.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-expressive.js) Contains all expressive icon variations
 - [core-icons-iife.js](https://static.nrk.no/core-icons/major/12/core-icons-iife.js) Contains icons and icon variants
-- [core-icons-iife-logo.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-logo.js) Contains all NRK brand logoes
+- [core-icons-iife-logo.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-logo.js) Contains all NRK brand logos
+- [core-icons-iife-preview.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-preview.js) Contains all NRK brand previews
 
 For stability, please link to the appropriate major version
 
@@ -113,9 +137,13 @@ import { NrkMediaPlay } from '@nrk/core-icons/jsx'  // React, ReactElement
 // Using expressive icon variants
 import { nrkMediaPlayExpressive } from '@nrk/core-icons/expressive'      // Plain JS, SVG-element as String
 import { NrkMediaPlayExpressive } from '@nrk/core-icons/jsx/expressive'      // React, ReactElement
-// Using logoes
+// Using logos
 import { nrkLogoNrk } from '@nrk/core-icons/logo'      // Plain JS, SVG-element as String
 import { NrkLogoNrk } from '@nrk/core-icons/jsx/logo'  // React, ReactElement
+// Using preview icons
+import { nrkLogoPreviewNrk } from '@nrk/core-icons/preview'      // Plain JS, SVG-element as String
+import { NrkLogoPreviewNrk } from '@nrk/core-icons/jsx/preview'  // React, ReactElement
+
 
 <NrkLogoNrk />                                    // Example render the NRK logo with React
 <span style={{ color: 'red', fontSize: '1em' }}>     // Style is inherited from parent element

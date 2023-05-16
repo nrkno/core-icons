@@ -34,6 +34,11 @@
       "import": "./expressive/core-icons-expressive.mjs",
       "types": "./expressive/core-icons-expressive.d.ts"
     },
+    "./preview": {
+      "require": "./preview/core-icons-preview.js",
+      "import": "./preview/core-icons-preview.mjs",
+      "types": "./preview/core-icons-preview.d.ts"
+    },
     "./jsx": {
       "require": "./jsx/core-icons.js",
       "import": "./jsx/core-icons.mjs",
@@ -48,6 +53,11 @@
       "require": "./jsx/expressive/core-icons-expressive.js",
       "import": "./jsx/expressive/core-icons-expressive.mjs",
       "types": "./jsx/expressive/core-icons-expressive.d.ts"
+    },
+    "./jsx/preview": {
+      "require": "./jsx/preview/core-icons-preview.js",
+      "import": "./jsx/preview/core-icons-preview.mjs",
+      "types": "./jsx/preview/core-icons-preview.d.ts"
     }
   },
   "scripts": {
@@ -58,7 +68,7 @@
     "publish:major": "npm version major -m 'Release major %s'",
     "lint": "standard",
     "postversion": "npm run build && git push && git push --tags && npm publish",
-    "start": "npm run build:watch & http-server ./static -o -p 10001 -a localhost -c-1",
+    "start": "npm run build:watch & http-server ./static -o -p 10001 -c-1",
     "static-publish": "npm run build && static-publish --directory=static --account=nrk-core --latest --major"
   },
   "devDependencies": {
@@ -71,6 +81,7 @@
     "http-server": "14.1.1",
     "pdfkit": "0.13.0",
     "standard": "17.0.0",
+    "svgo": "3.0.2",
     "svgson": "5.2.1"
   },
   "repository": {
