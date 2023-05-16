@@ -103,7 +103,8 @@ We host the following scripts for use in the browser on our cdn
 - [core-icons-iife-icon.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-icon.js) Contains all base icons
 - [core-icons-iife-expressive.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-expressive.js) Contains all expressive icon variations
 - [core-icons-iife.js](https://static.nrk.no/core-icons/major/12/core-icons-iife.js) Contains icons and icon variants
-- [core-icons-iife-logo.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-logo.js) Contains all NRK brand logoes
+- [core-icons-iife-logo.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-logo.js) Contains all NRK brand logos
+- [core-icons-iife-preview.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-preview.js) Contains all NRK brand previews
 
 For stability, please link to the appropriate major version
 
@@ -136,9 +137,13 @@ import { NrkMediaPlay } from '@nrk/core-icons/jsx'  // React, ReactElement
 // Using expressive icon variants
 import { nrkMediaPlayExpressive } from '@nrk/core-icons/expressive'      // Plain JS, SVG-element as String
 import { NrkMediaPlayExpressive } from '@nrk/core-icons/jsx/expressive'      // React, ReactElement
-// Using logoes
+// Using logos
 import { nrkLogoNrk } from '@nrk/core-icons/logo'      // Plain JS, SVG-element as String
 import { NrkLogoNrk } from '@nrk/core-icons/jsx/logo'  // React, ReactElement
+// Using preview icons
+import { nrkLogoPreviewNrk } from '@nrk/core-icons/preview'      // Plain JS, SVG-element as String
+import { NrkLogoPreviewNrk } from '@nrk/core-icons/jsx/preview'  // React, ReactElement
+
 
 <NrkLogoNrk />                                    // Example render the NRK logo with React
 <span style={{ color: 'red', fontSize: '1em' }}>     // Style is inherited from parent element
