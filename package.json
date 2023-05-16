@@ -12,6 +12,7 @@
     "jsx",
     "logo",
     "expressive",
+    "preview",
     "./core-icons-iife.js",
     "./core-icons.js",
     "./core-icons.mjs",
