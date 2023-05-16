@@ -68,7 +68,7 @@
     "publish:major": "npm version major -m 'Release major %s'",
     "lint": "standard",
     "postversion": "npm run build && git push && git push --tags && npm publish",
-    "start": "npm run build:watch & http-server ./static -o -p 10001 -a localhost -c-1",
+    "start": "npm run build:watch & http-server ./static -o -p 10001 -c-1",
     "static-publish": "npm run build && static-publish --directory=static --account=nrk-core --latest --major"
   },
   "devDependencies": {
