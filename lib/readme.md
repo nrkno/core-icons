@@ -43,6 +43,33 @@ Contains preview-versions of icons or logos for testing purposes. These resource
 - Any file in the preview context may be removed or altered in minor or patch releases
 - When ready, a preview resource will be added to the apropriate context (icon/logo/expressive) and will be mentioned in the [release-notes](https://github.com/nrkno/core-icons/releases)
 
+## License
+
+Core Icons has three distinct types of content: Code, logos and icons.
+
+### Code
+
+Code refers to all files that are not image assets. Image assets includes file types such as SVG, PNG and PDF.
+
+Code files are distributed under the MIT License (https://opensource.org/licenses/MIT).
+
+### Logos
+
+Logos refers to image assets that include trademarks, such as NRK. These asset names are prefixed with `nrk-logo-` or `nrk-super-`.
+
+All use of these NRK trademarked assets require our prior specific permission and must be in compliance with NRKs design guidelines.
+For more information about NRK design guidelines and use of our trademarks, see https://info.nrk.no/design.
+
+### Icons
+
+Icons refers to all image assets other than logos.
+
+Icon image assets are licensed under a Creative Commons Attribution 4.0 International License. (https://creativecommons.org/licenses/by/4.0/).
+
+### Previews
+
+Preview icons follow the above naming conventions, and should be treated as part of the appropriate content type
+
 ## Browse icons
 
 Search among all icons, including variants using the search field below or download the appropriate ZIP archive containing the icons you need in the left menu.
