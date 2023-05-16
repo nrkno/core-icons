@@ -1,0 +1,5 @@
+{
+  "main": "core-icons-preview.js",
+  "module": "core-icons-preview.mjs",
+  "types": "core-icons-preview.d.ts"
+}
