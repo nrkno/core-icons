@@ -1,0 +1,17 @@
+name: Generate android vectors
+on:
+  push
+    
+# For the weird condition when using createBranchAndPullRequest, see here: https://github.com/actions/runner/issues/1483#issuecomment-1279933184
+    
+jobs:
+  check-nrk-sans-styles:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const script = require('../scripts/generate-android-vectors.js')
+            script(github, context, exec)
