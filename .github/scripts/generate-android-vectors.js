@@ -23,6 +23,8 @@ async function app(github, context, exec) {
 }
 
 function convertSvgToXml() {
+    sanitizeDrawableDir(ANDROID_DRAWABLE_FOLDER)
+
     for (const directory of CORE_ICON_DIRECTORIES) {
         const files = fs.readdirSync(directory)
 
@@ -38,6 +40,14 @@ function convertSvgToXml() {
             svg2vectordrawable.convertFile(svgFile, xmlFile, svg2vectordrawableOptions)
         }
     }
+}
+
+function sanitizeDrawableDir(directory) {
+    const generatedDir = path.resolve(directory);
+    if (fs.existsSync(generatedDir)) {
+        fs.rmSync(generatedDir, { recursive: true });
+    }
+    fs.mkdirSync(generatedDir);
 }
 
 module.exports = async (github, context, exec) => {
