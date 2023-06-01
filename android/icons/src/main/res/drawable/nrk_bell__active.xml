@@ -6,5 +6,5 @@
     <path
         android:fillColor="#FF000000"
         android:fillType="evenOdd"
-        android:pathData="M13 1h-2v1.05C7.86 2.4 5 4.38 5 8v8.5L3 18l0 2H21v-2l-2-1.5V8c0-3.62-2.86-5.6-6-5.95V1z m1 20h-4c0 1.1 0.9 2 2 2s2-0.9 2-2z"/>
+        android:pathData="M13 1h-2v1.0548C7.8632 2.4004 5 4.3821 5 8v8.5L3 18l0 2H21v-2l-2-1.5V8c0-3.6179-2.8632-5.5996-6-5.9452V1z m1 20h-4c0 1.1046 0.8954 2 2 2s2-0.8954 2-2z"/>
 </vector>

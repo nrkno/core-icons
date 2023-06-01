@@ -6,7 +6,7 @@
     <path
         android:fillColor="#FF000000"
         android:fillType="evenOdd"
-        android:pathData="M12 17.54l1.16 0.83L17 21.11V3H7v18.11l3.84-2.74L12 17.54z m-7 4.73l1.89 1.38L7 23.57 12 20l5 3.57 0.11 0.08L19 22.27V1H5v21.27z"/>
+        android:pathData="M12 17.5422l1.1625 0.8303L17 21.1136V3H7v18.1136l3.8375-2.7411L12 17.5422z m-7 4.7287l1.8941 1.3762L7 23.5714 12 20l5 3.5714 0.1084 0.0775L19 22.2745V1H5v21.2709z"/>
     <path
         android:fillColor="#FF000000"
         android:fillType="evenOdd"
