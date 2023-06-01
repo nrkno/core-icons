@@ -12,7 +12,7 @@ const CORE_ICON_DIRECTORIES = [
 const ANDROID_DRAWABLE_FOLDER = "android/icons/src/main/res/drawable"
 
 const svg2vectordrawableOptions = {
-    floatPrecision: 2,
+    floatPrecision: 4,
     strict: false,
     fillBlack: false,
     xmlTag: false
