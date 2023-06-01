@@ -22,4 +22,6 @@ jobs:
             script(github, context, exec)
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
+          commit_message: "Convert updated SVG files to Android vector files"
+          file_pattern: "android/"
           skip_dirty_check: false
