@@ -25,6 +25,7 @@ async function app(github, context, exec) {
 function convertSvgToXml() {
     sanitizeDrawableDir(ANDROID_DRAWABLE_FOLDER)
 
+    var allFiles = []
     for (const directory of CORE_ICON_DIRECTORIES) {
         const files = fs.readdirSync(directory)
 
@@ -32,7 +33,17 @@ function convertSvgToXml() {
             const xmlFileName = file.replace(".svg", ".xml").replaceAll("-", "_").toLowerCase()
             if (!/^([a-z0-9\_])+\.xml$/.test(xmlFileName)) {
                 console.error(`Invalid file name: "${file}"! (output xml name: "${xmlFileName})`)
+
+                continue
             }
+
+            if(allFiles.includes(xmlFileName)) {
+                console.error(`Found duplicate file name: "${file}"`)
+
+                continue
+            }
+
+            allFiles.push(xmlFileName)
 
             const svgFile = path.join(directory, file)
             const xmlFile = path.join(ANDROID_DRAWABLE_FOLDER, xmlFileName)
