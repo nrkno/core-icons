@@ -1,6 +1,6 @@
 const fs = require("fs")
 const path = require("path")
-
+const process = require("process")
 const svg2vectordrawable = require('svg2vectordrawable/src/svg-file-to-vectordrawable-file')
 
 const CORE_ICON_DIRECTORIES = [
@@ -26,6 +26,7 @@ function convertSvgToXml() {
     sanitizeDrawableDir(ANDROID_DRAWABLE_FOLDER)
 
     var allFiles = []
+    var hasErrors = false
     for (const directory of CORE_ICON_DIRECTORIES) {
         const files = fs.readdirSync(directory)
 
@@ -33,12 +34,14 @@ function convertSvgToXml() {
             const xmlFileName = file.replace(".svg", ".xml").replaceAll("-", "_").toLowerCase()
             if (!/^([a-z0-9\_])+\.xml$/.test(xmlFileName)) {
                 console.error(`Invalid file name: "${file}"! (output xml name: "${xmlFileName})`)
+                hasErrors = true
 
                 continue
             }
 
-            if(allFiles.includes(xmlFileName)) {
+            if (allFiles.includes(xmlFileName)) {
                 console.error(`Found duplicate file name: "${file}"`)
+                hasErrors = true
 
                 continue
             }
@@ -50,6 +53,10 @@ function convertSvgToXml() {
 
             svg2vectordrawable.convertFile(svgFile, xmlFile, svg2vectordrawableOptions)
         }
+    }
+
+    if (hasErrors) {
+        process.exit(1)
     }
 }
 
