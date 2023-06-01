@@ -88,5 +88,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nrkno/core-icons.git"
+  },
+  "dependencies": {
+    "svg2vectordrawable": "^2.9.1"
   }
 }
