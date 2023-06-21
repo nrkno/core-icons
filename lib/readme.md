@@ -1,5 +1,10 @@
 # Core Icons
 
+[![npm package][npm-badge]][npm]
+
+[npm-badge]: https://img.shields.io/npm/v/@nrk/core-icons.svg?style=flat-square
+[npm]: https://www.npmjs.org/package/@nrk/core-icons
+
 > Icon and logo kit providing a consistent and predictable user experience across platforms and NRK services
 
 <!--demo
