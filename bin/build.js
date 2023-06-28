@@ -86,6 +86,27 @@ function copyDocs () {
   fse.copyFileSync(`${srcFolder}/readme.css`, `${staticFolder}/readme.css`)
 }
 
+/**
+ * Will create a pdf version from any .svg-files in srcPath
+ * @param {path} srcPath path containing .svg -files
+ */
+function convertSvgsToPdf (srcPath) {
+  const filesArr = fse.readdirSync(srcPath)
+  for (const file of filesArr) {
+    const fileName = path.join(srcPath, file)
+    try {
+      if (!file.endsWith('.svg') && fse.lstatSync(fileName).isDirectory()) {
+        console.info(`${file} is a directory, recursively convertSvgToPdf`)
+        convertSvgsToPdf(fileName)
+      } else {
+        svgtopdf(fileName)
+      }
+    } catch (error) {
+      console.error(`Something went wrong while parsing file ${fileName} through svgomg resulting in error: ${error}`)
+    }
+  }
+}
+
 function buildIcons (groupName) {
   const src = path.join(srcFolder, groupName)
   const staticDest = path.join(staticFolder, groupName)
@@ -94,19 +115,12 @@ function buildIcons (groupName) {
   fse.copySync(src, staticDest)
 
   // Make pdfs
-  const svgFiles = fse.readdirSync(staticDest)
-  for (const file of svgFiles) {
-    try {
-      svgtopdf(path.join(staticDest, file))
-    } catch (error) {
-      console.error(`Something went wrong while parsing file ${file} through svgomg resulting in error: ${error}`)
-    }
-  }
+  convertSvgsToPdf(staticDest)
 
   // Generate zip archives for svg
-  createZipArchive(staticDest, '*.svg', staticFolder, `${bundleName}-svg`)
+  createZipArchive(staticDest, '**/*.svg', staticFolder, `${bundleName}-svg`)
   // Generate zip archives for pdf
-  createZipArchive(staticDest, '*.pdf', staticFolder, `${bundleName}-pdf`)
+  createZipArchive(staticDest, '**/*.pdf', staticFolder, `${bundleName}-pdf`)
 
   // svgToJs
   const icons = svgToJS({
@@ -131,6 +145,42 @@ function buildIcons (groupName) {
   fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.js`), icons.cjsx)
   fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.mjs`), icons.esmx)
   fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.d.ts`), icons.dtsx)
+
+  // Generate js/jsx artefacts for logo/large -files
+  if (groupName === 'logo') {
+    const staticLargeDest = path.join(staticDest, 'large')
+    try {
+      if (fse.lstatSync(staticLargeDest).isDirectory()) {
+        const largeIcons = svgToJS({
+          input: staticLargeDest,
+          banner: `@nrk/core-icons ${groupName} v${version}`,
+          scale: 16
+        })
+        const npmLargePath = path.join(npmPath, 'large')
+        const largeBundleName = `${bundleName}-large`
+        // Remove old npm content
+        fse.removeSync(path.join(npmLargePath, `${largeBundleName}.js`))
+        fse.removeSync(path.join(npmLargePath, `${largeBundleName}.mjs`))
+        fse.removeSync(path.join(npmLargePath, `${largeBundleName}.d.ts`))
+        // Remove old npm jsx content
+        fse.removeSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.js`))
+        fse.removeSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.mjs`))
+        fse.removeSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.d.ts`))
+
+        // Generate js and mjs with types for icons and logos
+        fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.js`), largeIcons.cjs)
+        fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.mjs`), largeIcons.esm)
+        fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.d.ts`), largeIcons.dts)
+
+        // Generate jsx and mjsx with types for icons and logos
+        fse.writeFileSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.js`), largeIcons.cjsx)
+        fse.writeFileSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.mjs`), largeIcons.esmx)
+        fse.writeFileSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.d.ts`), largeIcons.dtsx)
+      }
+    } catch (error) {
+      console.error(`Failed to generate large js files for ${groupName} with error `, error)
+    }
+  }
 }
 
 /**
@@ -157,7 +207,7 @@ function buildMasterIife (groupNames, fileName, copyToRoot = false) {
 }
 
 function createZipArchive (srcFolder, globPattern, destPath, archiveName) {
-  console.log(`Create svg and pdf archives for source ${srcFolder}`)
+  console.log(`Create archive for source ${srcFolder}`)
   const svgZipper = archiver('zip')
   svgZipper.pipe(fse.createWriteStream(`${destPath}/${archiveName}.zip`))
   svgZipper.glob(globPattern, {
