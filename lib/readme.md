@@ -172,6 +172,9 @@ import { NrkMediaPlayExpressive } from '@nrk/core-icons/jsx/expressive'      // 
 // Using logos
 import { nrkLogoNrk } from '@nrk/core-icons/logo'      // Plain JS, SVG-element as String
 import { NrkLogoNrk } from '@nrk/core-icons/jsx/logo'  // React, ReactElement
+// Using logos without optical adjustment (only for large renders)
+import { nrkLogoLargeNrk } from '@nrk/core-icons/logo/large' // Plain JS, SVG-element as String
+import { NrkLogoLargeNrk } from '@nrk/core-icons/jsx/logo/large'  // React, ReactElement
 // Using preview icons
 import { nrkLogoPreviewNrk } from '@nrk/core-icons/preview'      // Plain JS, SVG-element as String
 import { NrkLogoPreviewNrk } from '@nrk/core-icons/jsx/preview'  // React, ReactElement
