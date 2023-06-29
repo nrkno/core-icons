@@ -1,0 +1,5 @@
+{
+  "main": "core-icons-logo-large.js",
+  "module": "core-icons-logo-large.mjs",
+  "types": "core-icons-logo-large.d.ts"
+}

@@ -30,6 +30,11 @@
       "import": "./logo/core-icons-logo.mjs",
       "types": "./logo/core-icons-logo.d.ts"
     },
+    "./logo/large": {
+      "require": "./logo/large/core-icons-logo-large.js",
+      "import": "./logo/large/core-icons-logo-large.mjs",
+      "types": "./logo/large/core-icons-logo-large.d.ts"
+    },
     "./expressive": {
       "require": "./expressive/core-icons-expressive.js",
       "import": "./expressive/core-icons-expressive.mjs",
@@ -49,6 +54,11 @@
       "require": "./jsx/logo/core-icons-logo.js",
       "import": "./jsx/logo/core-icons-logo.mjs",
       "types": "./jsx/logo/core-icons-logo.d.ts"
+    },
+    "./jsx/logo/large": {
+      "require": "./jsx/logo/large/core-icons-logo-large.js",
+      "import": "./jsx/logo/large/core-icons-logo-large.mjs",
+      "types": "./jsx/logo/large/core-icons-logo-large.d.ts"
     },
     "./jsx/expressive": {
       "require": "./jsx/expressive/core-icons-expressive.js",
