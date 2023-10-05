@@ -132,18 +132,18 @@ npm install @nrk/core-icons
 
 We host the following scripts for use in the browser on our cdn
 
-- [core-icons-iife-icon.js](https://static.nrk.no/core-icons/major/13/core-icons-iife-icon.js) Contains all base icons
-- [core-icons-iife-expressive.js](https://static.nrk.no/core-icons/major/13/core-icons-iife-expressive.js) Contains all expressive icon variations
-- [core-icons-iife.js](https://static.nrk.no/core-icons/major/13/core-icons-iife.js) Contains icons and icon variants
-- [core-icons-iife-logo.js](https://static.nrk.no/core-icons/major/13/core-icons-iife-logo.js) Contains all NRK brand logos
-- [core-icons-iife-preview.js](https://static.nrk.no/core-icons/major/13/core-icons-iife-preview.js) Contains all NRK brand previews
+- [core-icons-iife-icon.js](https://static.nrk.no/core-icons/major/14/core-icons-iife-icon.js) Contains all base icons
+- [core-icons-iife-expressive.js](https://static.nrk.no/core-icons/major/14/core-icons-iife-expressive.js) Contains all expressive icon variations
+- [core-icons-iife.js](https://static.nrk.no/core-icons/major/14/core-icons-iife.js) Contains icons and icon variants
+- [core-icons-iife-logo.js](https://static.nrk.no/core-icons/major/14/core-icons-iife-logo.js) Contains all NRK brand logos
+- [core-icons-iife-preview.js](https://static.nrk.no/core-icons/major/14/core-icons-iife-preview.js) Contains all NRK brand previews
 
 For stability, please link to the appropriate major version
 
 ```html
 <script
   async
-  src="https://static.nrk.no/core-icons/major/13/core-icons-iife.js"
+  src="https://static.nrk.no/core-icons/major/14/core-icons-iife.js"
 ></script>
 ```
 
