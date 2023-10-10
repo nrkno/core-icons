@@ -45,12 +45,10 @@ function clean (groupNames) {
     fse.removeSync(path.join(npmPath, `${bundleName}.js`))
     fse.removeSync(path.join(npmPath, `${bundleName}.mjs`))
     fse.removeSync(path.join(npmPath, `${bundleName}.d.ts`))
-    fse.removeSync(path.join(npmPath, `${bundleName}.d.mts`))
     // Remove old npm jsx content
     fse.removeSync(path.join(npmJsxFolder, npmPath, `${bundleName}.js`))
     fse.removeSync(path.join(npmJsxFolder, npmPath, `${bundleName}.mjs`))
     fse.removeSync(path.join(npmJsxFolder, npmPath, `${bundleName}.d.ts`))
-    fse.removeSync(path.join(npmJsxFolder, npmPath, `${bundleName}.d.mts`))
 
     // Ensure npm folders exist (for icons it's '' which is falsy)
     if (npmPath) fse.mkdirsSync(npmPath)
@@ -142,13 +140,11 @@ function buildIcons (groupName) {
   fse.writeFileSync(path.join(npmPath, `${bundleName}.js`), icons.cjs)
   fse.writeFileSync(path.join(npmPath, `${bundleName}.mjs`), icons.esm)
   fse.writeFileSync(path.join(npmPath, `${bundleName}.d.ts`), icons.dts)
-  fse.writeFileSync(path.join(npmPath, `${bundleName}.d.mts`), icons.dts)
 
   // Generate jsx and mjsx with types for icons and logos
   fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.js`), icons.cjsx)
   fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.mjs`), icons.esmx)
   fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.d.ts`), icons.dtsx)
-  fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.d.mts`), icons.dtsx)
 
   // Generate js/jsx artefacts for logo/large -files
   if (groupName === 'logo') {
@@ -166,24 +162,20 @@ function buildIcons (groupName) {
         fse.removeSync(path.join(npmLargePath, `${largeBundleName}.js`))
         fse.removeSync(path.join(npmLargePath, `${largeBundleName}.mjs`))
         fse.removeSync(path.join(npmLargePath, `${largeBundleName}.d.ts`))
-        fse.removeSync(path.join(npmLargePath, `${largeBundleName}.d.mts`))
         // Remove old npm jsx content
         fse.removeSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.js`))
         fse.removeSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.mjs`))
         fse.removeSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.d.ts`))
-        fse.removeSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.d.mts`))
 
         // Generate js and mjs with types for icons and logos
         fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.js`), largeIcons.cjs)
         fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.mjs`), largeIcons.esm)
         fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.d.ts`), largeIcons.dts)
-        fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.d.mts`), largeIcons.dts)
 
         // Generate jsx and mjsx with types for icons and logos
         fse.writeFileSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.js`), largeIcons.cjsx)
         fse.writeFileSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.mjs`), largeIcons.esmx)
         fse.writeFileSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.d.ts`), largeIcons.dtsx)
-        fse.writeFileSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.d.mts`), largeIcons.dtsx)
       }
     } catch (error) {
       console.error(`Failed to generate large js files for ${groupName} with error `, error)
