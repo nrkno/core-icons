@@ -16,13 +16,19 @@
     "./core-icons-iife.js",
     "./core-icons.js",
     "./core-icons.mjs",
-    "./core-icons.d.ts"
+    "./core-icons.d.ts",
+    "./core-icons.d.mts"
   ],
   "exports": {
     ".": {
-      "require": "./core-icons.js",
-      "import": "./core-icons.mjs",
-      "types": "./core-icons.d.ts",
+      "import": {
+        "types": "./core-icons.d.mts",
+        "default": "./core-icons.mjs"
+      },
+      "require": {
+        "types": "./core-icons.d.ts",
+        "default": "./core-icons.js"
+      },
       "browser": "./core-icons-iife.js"
     },
     "./logo": {
