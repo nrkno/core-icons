@@ -13,7 +13,5 @@ jobs:
       - run: npm ci
       # Build to verify
       - run: npm run build
-      # Dry-run a publish to log package contents
-      - run: npm publish --dry-run
       # Verify built artefacts
       - run: npm run preversion
