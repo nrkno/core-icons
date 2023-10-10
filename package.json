@@ -78,7 +78,7 @@
     "publish:minor": "npm version minor -m 'Release minor %s'",
     "publish:major": "npm version major -m 'Release major %s'",
     "lint": "standard",
-    "test": "node test/core-icons.test.mjs",
+    "test": "node test/core-icons.test.mjs && node test/core-icons.test.js",
     "preversion": "testpack",
     "postversion": "npm run build && git push && git push --tags && npm publish",
     "start": "npm run build:watch & http-server ./static -o -p 10001 -c-1",
