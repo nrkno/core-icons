@@ -14,4 +14,4 @@ jobs:
       # Build to verify
       - run: npm run build
       # Verify built artefacts
-      - run: npm run preversion
+      - run: npm run test

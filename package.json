@@ -78,8 +78,9 @@
     "publish:minor": "npm version minor -m 'Release minor %s'",
     "publish:major": "npm version major -m 'Release major %s'",
     "lint": "standard",
-    "test": "node test/core-icons.test.mjs && node test/core-icons.test.js && node test/core-icons-jsx.test.mjs && node test/core-icons-jsx.test.js",
-    "preversion": "attw --pack --ignore-rules false-cjs && testpack --install react --delete-on-fail",
+    "test": "attw --pack --ignore-rules false-cjs && testpack --install react --test-script testpack-script --delete-on-fail",
+    "testpack-script": "node test/core-icons.test.mjs && node test/core-icons.test.js && node test/core-icons-jsx.test.mjs && node test/core-icons-jsx.test.js",
+    "preversion": "npm run test",
     "postversion": "npm run build && git push && git push --tags && npm publish",
     "start": "npm run build:watch & http-server ./static -o -p 10001 -c-1",
     "static-publish": "npm run build && static-publish --directory=static --account=nrk-core --latest --major"
