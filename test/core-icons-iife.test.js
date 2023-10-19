@@ -21,7 +21,6 @@ const { window } = new JSDOM(
   { runScripts: 'dangerously' }
 )
 
-// const iconsDef = window.document.querySelector('head>svg')
 const iconsDef = window.document.querySelector('head>svg')
 
 console.info(
