@@ -86,7 +86,7 @@
     "static-publish": "npm run build && static-publish --directory=static --account=nrk-core --latest --major"
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "0.13.3",
+    "@arethetypeswrong/cli": "0.13.8",
     "@nrk/svg-to-js": "3.0.1",
     "@types/fs-extra": "11.0.4",
     "archiver": "6.0.1",
