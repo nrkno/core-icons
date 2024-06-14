@@ -6,8 +6,10 @@ const svg2vectordrawable = require('svg2vectordrawable/src/svg-file-to-vectordra
 const CORE_ICON_DIRECTORIES = [
     "lib/expressive",
     "lib/icon",
-    "lib/logo",
-    "lib/preview"
+    // TODO are these needed? Especially preview?
+    //  There's also a directory called lib/logo/large which has to be handled somehow now
+    //"lib/logo",
+    //"lib/preview"
 ]
 const ANDROID_DRAWABLE_FOLDER = "android/icons/src/main/res/drawable"
 const ANDROID_ICONS_FOLDER = "android/icons/src/main/kotlin/no/nrk/core/icons"
