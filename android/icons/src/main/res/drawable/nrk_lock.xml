@@ -4,7 +4,8 @@
     android:viewportWidth="24"
     android:viewportHeight="24">
     <path
-        android:fillColor="#FF000000"
+        android:pathData="M12 4a4 4 0 0 0-4 4v1H6V8a6 6 0 1 1 12 0v1h-2V8a4 4 0 0 0-4-4ZM13 19v-4h-2v4h2Z"/>
+    <path
         android:fillType="evenOdd"
-        android:pathData="M12 2C9.7909 2 8 3.7909 8 6H6c0-3.3137 2.6863-6 6-6 3.3137 0 6 2.6863 6 6v2h-2V6c0-2.2091-1.7909-4-4-4z m9 21V10H3v13h18zM5 21v-9h14v9H5z m8-2v-5h-2v5h2z"/>
+        android:pathData="M21 11v12H3V11h18ZM5 13v8h14v-8H5Z"/>
 </vector>

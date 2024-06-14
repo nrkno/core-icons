@@ -1,5 +1,10 @@
 # Core Icons
 
+[![npm package][npm-badge]][npm]
+
+[npm-badge]: https://img.shields.io/npm/v/@nrk/core-icons.svg?style=flat-square
+[npm]: https://www.npmjs.org/package/@nrk/core-icons
+
 > Icon and logo kit providing a consistent and predictable user experience across platforms and NRK services
 
 <!--demo
@@ -127,18 +132,18 @@ npm install @nrk/core-icons
 
 We host the following scripts for use in the browser on our cdn
 
-- [core-icons-iife-icon.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-icon.js) Contains all base icons
-- [core-icons-iife-expressive.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-expressive.js) Contains all expressive icon variations
-- [core-icons-iife.js](https://static.nrk.no/core-icons/major/12/core-icons-iife.js) Contains icons and icon variants
-- [core-icons-iife-logo.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-logo.js) Contains all NRK brand logos
-- [core-icons-iife-preview.js](https://static.nrk.no/core-icons/major/12/core-icons-iife-preview.js) Contains all NRK brand previews
+- [core-icons-iife-icon.js](https://static.nrk.no/core-icons/major/14/core-icons-iife-icon.js) Contains all base icons
+- [core-icons-iife-expressive.js](https://static.nrk.no/core-icons/major/14/core-icons-iife-expressive.js) Contains all expressive icon variations
+- [core-icons-iife.js](https://static.nrk.no/core-icons/major/14/core-icons-iife.js) Contains icons and icon variants
+- [core-icons-iife-logo.js](https://static.nrk.no/core-icons/major/14/core-icons-iife-logo.js) Contains all NRK brand logos
+- [core-icons-iife-preview.js](https://static.nrk.no/core-icons/major/14/core-icons-iife-preview.js) Contains all NRK brand previews
 
 For stability, please link to the appropriate major version
 
 ```html
 <script
   async
-  src="https://static.nrk.no/core-icons/major/12/core-icons-iife.js"
+  src="https://static.nrk.no/core-icons/major/14/core-icons-iife.js"
 ></script>
 ```
 
@@ -167,6 +172,9 @@ import { NrkMediaPlayExpressive } from '@nrk/core-icons/jsx/expressive'      // 
 // Using logos
 import { nrkLogoNrk } from '@nrk/core-icons/logo'      // Plain JS, SVG-element as String
 import { NrkLogoNrk } from '@nrk/core-icons/jsx/logo'  // React, ReactElement
+// Using logos without optical adjustment (only for large renders)
+import { nrkLogoLargeNrk } from '@nrk/core-icons/logo/large' // Plain JS, SVG-element as String
+import { NrkLogoLargeNrk } from '@nrk/core-icons/jsx/logo/large'  // React, ReactElement
 // Using preview icons
 import { nrkLogoPreviewNrk } from '@nrk/core-icons/preview'      // Plain JS, SVG-element as String
 import { NrkLogoPreviewNrk } from '@nrk/core-icons/jsx/preview'  // React, ReactElement

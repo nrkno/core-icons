@@ -3,7 +3,7 @@
   "homepage": "https://static.nrk.no/core-icons/latest/",
   "description": "The official icons for NRK.",
   "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
-  "version": "12.2.1",
+  "version": "14.1.0",
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "core-icons.js",
   "module": "core-icons.mjs",
@@ -20,45 +20,55 @@
   ],
   "exports": {
     ".": {
+      "types": "./core-icons.d.ts",
       "require": "./core-icons.js",
       "import": "./core-icons.mjs",
-      "types": "./core-icons.d.ts",
       "browser": "./core-icons-iife.js"
     },
     "./logo": {
+      "types": "./logo/core-icons-logo.d.ts",
       "require": "./logo/core-icons-logo.js",
-      "import": "./logo/core-icons-logo.mjs",
-      "types": "./logo/core-icons-logo.d.ts"
+      "import": "./logo/core-icons-logo.mjs"
+    },
+    "./logo/large": {
+      "types": "./logo/large/core-icons-logo-large.d.ts",
+      "require": "./logo/large/core-icons-logo-large.js",
+      "import": "./logo/large/core-icons-logo-large.mjs"
     },
     "./expressive": {
+      "types": "./expressive/core-icons-expressive.d.ts",
       "require": "./expressive/core-icons-expressive.js",
-      "import": "./expressive/core-icons-expressive.mjs",
-      "types": "./expressive/core-icons-expressive.d.ts"
+      "import": "./expressive/core-icons-expressive.mjs"
     },
     "./preview": {
+      "types": "./preview/core-icons-preview.d.ts",
       "require": "./preview/core-icons-preview.js",
-      "import": "./preview/core-icons-preview.mjs",
-      "types": "./preview/core-icons-preview.d.ts"
+      "import": "./preview/core-icons-preview.mjs"
     },
     "./jsx": {
+      "types": "./jsx/core-icons.d.ts",
       "require": "./jsx/core-icons.js",
-      "import": "./jsx/core-icons.mjs",
-      "types": "./jsx/core-icons.d.ts"
+      "import": "./jsx/core-icons.mjs"
     },
     "./jsx/logo": {
+      "types": "./jsx/logo/core-icons-logo.d.ts",
       "require": "./jsx/logo/core-icons-logo.js",
-      "import": "./jsx/logo/core-icons-logo.mjs",
-      "types": "./jsx/logo/core-icons-logo.d.ts"
+      "import": "./jsx/logo/core-icons-logo.mjs"
+    },
+    "./jsx/logo/large": {
+      "types": "./jsx/logo/large/core-icons-logo-large.d.ts",
+      "require": "./jsx/logo/large/core-icons-logo-large.js",
+      "import": "./jsx/logo/large/core-icons-logo-large.mjs"
     },
     "./jsx/expressive": {
+      "types": "./jsx/expressive/core-icons-expressive.d.ts",
       "require": "./jsx/expressive/core-icons-expressive.js",
-      "import": "./jsx/expressive/core-icons-expressive.mjs",
-      "types": "./jsx/expressive/core-icons-expressive.d.ts"
+      "import": "./jsx/expressive/core-icons-expressive.mjs"
     },
     "./jsx/preview": {
+      "types": "./jsx/preview/core-icons-preview.d.ts",
       "require": "./jsx/preview/core-icons-preview.js",
-      "import": "./jsx/preview/core-icons-preview.mjs",
-      "types": "./jsx/preview/core-icons-preview.d.ts"
+      "import": "./jsx/preview/core-icons-preview.mjs"
     }
   },
   "scripts": {
@@ -68,22 +78,28 @@
     "publish:minor": "npm version minor -m 'Release minor %s'",
     "publish:major": "npm version major -m 'Release major %s'",
     "lint": "standard",
+    "test": "attw --pack --ignore-rules false-cjs && testpack --install react,jsdom --test-script testpack-script --delete-on-fail",
+    "testpack-script": "node test/core-icons.test.mjs && node test/core-icons.test.js && node test/core-icons-jsx.test.mjs && node test/core-icons-jsx.test.js && node --conditions=development test/core-icons-iife.test.js",
+    "preversion": "npm run test",
     "postversion": "npm run build && git push && git push --tags && npm publish",
     "start": "npm run build:watch & http-server ./static -o -p 10001 -c-1",
     "static-publish": "npm run build && static-publish --directory=static --account=nrk-core --latest --major"
   },
   "devDependencies": {
-    "@nrk/svg-to-js": "3.0.0",
-    "@types/fs-extra": "11.0.1",
-    "archiver": "5.3.1",
+    "@arethetypeswrong/cli": "0.15.2",
+    "@nrk/svg-to-js": "3.0.1",
+    "@types/fs-extra": "11.0.4",
+    "archiver": "6.0.1",
     "chokidar-cli": "3.0.0",
     "esm": "3.2.25",
-    "fs-extra": "11.1.1",
+    "fs-extra": "11.2.0",
     "http-server": "14.1.1",
-    "pdfkit": "0.13.0",
-    "standard": "17.0.0",
-    "svgo": "3.0.2",
-    "svgson": "5.2.1"
+    "jsdom": "24.0.0",
+    "pdfkit": "0.15.0",
+    "standard": "17.1.0",
+    "svgo": "3.2.0",
+    "svgson": "5.3.1",
+    "testpack-cli": "1.1.4"
   },
   "repository": {
     "type": "git",

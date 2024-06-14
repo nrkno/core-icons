@@ -26,7 +26,7 @@ Please upload this file as an attachment or link/name the upstream branch contai
 - [ ] It has fill-rule of `fill="currentColor"`
 - [ ] It has no fill-rules with explicit color values like `fill="#f0f0f0"`
 - [ ] It has been trimmed using a minifier like [SVGOMG](https://jakearchibald.github.io/svgomg/). (Lowest precision without visual degradation)
-- [ ] It has viewbox of `viewbox="0 0 24 24"` (except logos)
+- [ ] It has viewbox of `viewBox="0 0 24 24"` (except logos)
 - [ ] It has no explicit width/height
 
 **Additional context**
