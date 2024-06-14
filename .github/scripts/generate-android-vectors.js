@@ -17,7 +17,12 @@ const ANDROID_ICONS_FOLDER = "android/icons/src/main/kotlin/no/nrk/core/icons"
 const svg2vectordrawableOptions = {
     floatPrecision: 4,
     strict: false,
-    fillBlack: false,
+    // TODO some icons just have no color now. setting fillBlack true at least makes them black, but we probably want #FFF0F0F0 instead
+    // Docs say that you can do "tint: '#FFF0F0F0" but that doesn't seem to do anything
+    // The SVGs have "fill=currentColor", and the library has this check if (!/^url\(#.*\)$/.test(elem.attr('fill').value))
+    // I think if the SVGs have an actual hex color here it will work
+    // Otherwise we might have to manually loop over the generated files and override the color, which is a bit stupid
+    fillBlack: true,
     xmlTag: false
 }
 

@@ -4,8 +4,10 @@
     android:viewportWidth="24"
     android:viewportHeight="24">
     <path
+        android:fillColor="#FF000000"
         android:pathData="M18 4a1 1 0 0 0-1 1v3h-3a1 1 0 1 0 0 2h3v3a1 1 0 1 0 2 0v-3h3a1 1 0 1 0 0-2h-3V5a1 1 0 0 0-1-1Z"/>
     <path
+        android:fillColor="#FF000000"
         android:fillAlpha=".3"
         android:pathData="M1 6a1 1 0 0 1 1-1h8a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1Zm0 6a1 1 0 0 1 1-1h8a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1Zm20 6a1 1 0 0 0-1-1H2a1 1 0 1 0 0 2h18a1 1 0 0 0 1-1Z"/>
 </vector>

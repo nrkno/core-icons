@@ -4,9 +4,11 @@
     android:viewportWidth="24"
     android:viewportHeight="24">
     <path
+        android:fillColor="#FF000000"
         android:fillType="evenOdd"
         android:pathData="M23 15.5a3.5 3.5 0 0 0-3.5-3.5h-10a3.5 3.5 0 1 0 0 7H17l1.753 2.63a0.832 0.832 0 1 0 1.385-0.924L19 19h0.5a3.5 3.5 0 0 0 3.5-3.5Z"/>
     <path
+        android:fillColor="#FF000000"
         android:fillAlpha=".5"
         android:fillType="evenOdd"
         android:pathData="M4.5 9a3.5 3.5 0 1 1 0-7h10a3.5 3.5 0 1 1 0 7H8l-1.753 2.63a0.832 0.832 0 1 1-1.385-0.924L6 9H4.5Zm0-2a1.5 1.5 0 1 1 0-3h10a1.5 1.5 0 0 1 0 3h-10Z"/>
