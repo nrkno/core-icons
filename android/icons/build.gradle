@@ -1,15 +1,35 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
+}
+
+def getGitHash() {
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'rev-parse', '--short', 'HEAD'
+        standardOutput = stdout
+    }
+    return stdout.toString().trim()
+}
+
+def runId = System.getenv("GITHUB_RUN_NUMBER") ?: "0"
+def versionNumber = "1.0.${runId}-${getGitHash()}" as String
+
+tasks.getByName("publishToMavenLocal").doLast {
+    println("Locally published version: $versionNumber")
+}
+tasks.getByName("publish").doLast {
+    println("Maven published version: $versionNumber")
 }
 
 android {
     namespace 'no.nrk.core.icons'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
-        minSdk 23
-        targetSdk 33
+        minSdk 21
+        targetSdk 34
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -22,16 +42,38 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.10.1'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId 'no.nrk.core'
+            artifactId 'icons'
+            version = versionNumber
+
+            afterEvaluate {
+                from components.release
+            }
+
+            repositories {
+                maven {
+                    name = "GitHubPackages"
+                    url = "https://maven.pkg.github.com/nrkno/core-icons"
+                    credentials {
+                        username System.getenv("GITHUB_ACTOR")
+                        password System.getenv("GITHUB_TOKEN")
+                    }
+                }
+            }
+        }
+    }
 }
