@@ -11,16 +11,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Switch
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
 class MainActivity : AppCompatActivity() {
@@ -64,20 +60,4 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-}
-
-// It's unlikely that this changes on most screens, so it's probably a bit more efficient to use staticCompositionLocalOf here, right?
-val LocalUseExpressiveIcons = staticCompositionLocalOf<Boolean> {
-    error("LocalUseExpressiveIcons not found")
-}
-
-@Composable
-fun NrkIcon.asPainter(): Painter {
-    return painterResource(
-        id = if (LocalUseExpressiveIcons.current) {
-            expressive
-        } else {
-            normal
-        }
-    )
 }
