@@ -105,7 +105,7 @@ object NrkIcons {
 
 	val NrkBellActive = NrkIcon(
 		normal = R.drawable.nrk_bell__active,
-		expressive = null
+		expressive = R.drawable.nrk_bell_expressive__active
 	)
 
 	val NrkBookmark = NrkIcon(
@@ -115,7 +115,7 @@ object NrkIcons {
 
 	val NrkBookmarkActive = NrkIcon(
 		normal = R.drawable.nrk_bookmark__active,
-		expressive = null
+		expressive = R.drawable.nrk_bookmark_expressive__active
 	)
 
 	val NrkBroadcast = NrkIcon(
@@ -145,7 +145,7 @@ object NrkIcons {
 
 	val NrkCategoryActive = NrkIcon(
 		normal = R.drawable.nrk_category__active,
-		expressive = null
+		expressive = R.drawable.nrk_category_expressive__active
 	)
 
 	val NrkCheck = NrkIcon(
@@ -160,7 +160,7 @@ object NrkIcons {
 
 	val NrkCheckboxActive = NrkIcon(
 		normal = R.drawable.nrk_checkbox__active,
-		expressive = null
+		expressive = R.drawable.nrk_checkbox_expressive__active
 	)
 
 	val NrkCheckRadioUnchecked = NrkIcon(
@@ -170,7 +170,7 @@ object NrkIcons {
 
 	val NrkCheckActive = NrkIcon(
 		normal = R.drawable.nrk_check__active,
-		expressive = null
+		expressive = R.drawable.nrk_check_expressive__active
 	)
 
 	val NrkChevronDown = NrkIcon(
@@ -205,7 +205,7 @@ object NrkIcons {
 
 	val NrkCloseActive = NrkIcon(
 		normal = R.drawable.nrk_close__active,
-		expressive = null
+		expressive = R.drawable.nrk_close_expressive__active
 	)
 
 	val NrkComment = NrkIcon(
@@ -305,7 +305,7 @@ object NrkIcons {
 
 	val NrkEllipsisActive = NrkIcon(
 		normal = R.drawable.nrk_ellipsis__active,
-		expressive = null
+		expressive = R.drawable.nrk_ellipsis_expressive__active
 	)
 
 	val NrkFullscreen = NrkIcon(
@@ -315,7 +315,7 @@ object NrkIcons {
 
 	val NrkFullscreenActive = NrkIcon(
 		normal = R.drawable.nrk_fullscreen__active,
-		expressive = null
+		expressive = R.drawable.nrk_fullscreen_expressive__active
 	)
 
 	val NrkGallery = NrkIcon(
@@ -335,12 +335,12 @@ object NrkIcons {
 
 	val NrkGeopointActive = NrkIcon(
 		normal = R.drawable.nrk_geopoint__active,
-		expressive = null
+		expressive = R.drawable.nrk_geopoint_expressive__active
 	)
 
 	val NrkGeoActive = NrkIcon(
 		normal = R.drawable.nrk_geo__active,
-		expressive = null
+		expressive = R.drawable.nrk_geo_expressive__active
 	)
 
 	val NrkGlobe = NrkIcon(
@@ -430,7 +430,7 @@ object NrkIcons {
 
 	val NrkHeartActive = NrkIcon(
 		normal = R.drawable.nrk_heart__active,
-		expressive = null
+		expressive = R.drawable.nrk_heart_expressive__active
 	)
 
 	val NrkHelp = NrkIcon(
@@ -445,7 +445,7 @@ object NrkIcons {
 
 	val NrkHomeActive = NrkIcon(
 		normal = R.drawable.nrk_home__active,
-		expressive = null
+		expressive = R.drawable.nrk_home_expressive__active
 	)
 
 	val NrkInfo = NrkIcon(
@@ -460,7 +460,7 @@ object NrkIcons {
 
 	val NrkLatestNewsActive = NrkIcon(
 		normal = R.drawable.nrk_latest_news__active,
-		expressive = null
+		expressive = R.drawable.nrk_latest_news_expressive__active
 	)
 
 	val NrkLink = NrkIcon(
@@ -475,7 +475,7 @@ object NrkIcons {
 
 	val NrkListActive = NrkIcon(
 		normal = R.drawable.nrk_list__active,
-		expressive = null
+		expressive = R.drawable.nrk_list_expressive__active
 	)
 
 	val NrkLock = NrkIcon(
@@ -485,7 +485,7 @@ object NrkIcons {
 
 	val NrkLockActive = NrkIcon(
 		normal = R.drawable.nrk_lock__active,
-		expressive = null
+		expressive = R.drawable.nrk_lock_expressive__active
 	)
 
 	val NrkLogout = NrkIcon(
@@ -500,7 +500,7 @@ object NrkIcons {
 
 	val NrkLongreadActive = NrkIcon(
 		normal = R.drawable.nrk_longread__active,
-		expressive = null
+		expressive = R.drawable.nrk_longread_expressive__active
 	)
 
 	val NrkLyn = NrkIcon(
@@ -555,7 +555,7 @@ object NrkIcons {
 
 	val NrkMediaAirplayActive = NrkIcon(
 		normal = R.drawable.nrk_media_airplay__active,
-		expressive = null
+		expressive = R.drawable.nrk_media_airplay_expressive__active
 	)
 
 	val NrkMediaBeamNote = NrkIcon(
@@ -585,7 +585,7 @@ object NrkIcons {
 
 	val NrkMediaChromecastActive = NrkIcon(
 		normal = R.drawable.nrk_media_chromecast__active,
-		expressive = null
+		expressive = R.drawable.nrk_media_chromecast_expressive__active
 	)
 
 	val NrkMediaCompleted = NrkIcon(
@@ -605,7 +605,7 @@ object NrkIcons {
 
 	val NrkMediaDirektetvActive = NrkIcon(
 		normal = R.drawable.nrk_media_direktetv__active,
-		expressive = null
+		expressive = R.drawable.nrk_media_direktetv_expressive__active
 	)
 
 	val NrkMediaDirekteAnimatedActive = NrkIcon(
@@ -690,7 +690,7 @@ object NrkIcons {
 
 	val NrkMediaPictureInPictureActive = NrkIcon(
 		normal = R.drawable.nrk_media_picture_in_picture__active,
-		expressive = null
+		expressive = R.drawable.nrk_media_picture_in_picture_expressive__active
 	)
 
 	val NrkMediaPlay = NrkIcon(
@@ -745,7 +745,7 @@ object NrkIcons {
 
 	val NrkMediaProgramguideActive = NrkIcon(
 		normal = R.drawable.nrk_media_programguide__active,
-		expressive = null
+		expressive = R.drawable.nrk_media_programguide_expressive__active
 	)
 
 	val NrkMediaQuaver = NrkIcon(
@@ -760,7 +760,7 @@ object NrkIcons {
 
 	val NrkMediaQuaverActive = NrkIcon(
 		normal = R.drawable.nrk_media_quaver__active,
-		expressive = null
+		expressive = R.drawable.nrk_media_quaver_expressive__active
 	)
 
 	val NrkMediaRwd = NrkIcon(
@@ -825,7 +825,7 @@ object NrkIcons {
 
 	val NrkMediaSubtitlesActive = NrkIcon(
 		normal = R.drawable.nrk_media_subtitles__active,
-		expressive = null
+		expressive = R.drawable.nrk_media_subtitles_expressive__active
 	)
 
 	val NrkMediaSubtitlesUnavailable = NrkIcon(
@@ -840,7 +840,7 @@ object NrkIcons {
 
 	val NrkMediaTheaterActive = NrkIcon(
 		normal = R.drawable.nrk_media_theater__active,
-		expressive = null
+		expressive = R.drawable.nrk_media_theater_expressive__active
 	)
 
 	val NrkMediaTilgjengelighetGeoblocked = NrkIcon(
@@ -900,7 +900,7 @@ object NrkIcons {
 
 	val NrkMoreActive = NrkIcon(
 		normal = R.drawable.nrk_more__active,
-		expressive = null
+		expressive = R.drawable.nrk_more_expressive__active
 	)
 
 	val NrkNewChat = NrkIcon(
@@ -985,7 +985,7 @@ object NrkIcons {
 
 	val NrkSearchActive = NrkIcon(
 		normal = R.drawable.nrk_search__active,
-		expressive = null
+		expressive = R.drawable.nrk_search_expressive__active
 	)
 
 	val NrkSettings = NrkIcon(
@@ -995,7 +995,7 @@ object NrkIcons {
 
 	val NrkSettingsActive = NrkIcon(
 		normal = R.drawable.nrk_settings__active,
-		expressive = null
+		expressive = R.drawable.nrk_settings_expressive__active
 	)
 
 	val NrkSleep = NrkIcon(
@@ -1055,7 +1055,7 @@ object NrkIcons {
 
 	val NrkSomeTommelnedActive = NrkIcon(
 		normal = R.drawable.nrk_some_tommelned__active,
-		expressive = null
+		expressive = R.drawable.nrk_some_tommelned_expressive__active
 	)
 
 	val NrkSomeTommelopp = NrkIcon(
@@ -1065,7 +1065,7 @@ object NrkIcons {
 
 	val NrkSomeTommeloppActive = NrkIcon(
 		normal = R.drawable.nrk_some_tommelopp__active,
-		expressive = null
+		expressive = R.drawable.nrk_some_tommelopp_expressive__active
 	)
 
 	val NrkSomeTwitter = NrkIcon(
@@ -1090,7 +1090,7 @@ object NrkIcons {
 
 	val NrkStarActive = NrkIcon(
 		normal = R.drawable.nrk_star__active,
-		expressive = null
+		expressive = R.drawable.nrk_star_expressive__active
 	)
 
 	val NrkSuperEmojiPoopAngry = NrkIcon(
@@ -1130,7 +1130,7 @@ object NrkIcons {
 
 	val NrkTrashActive = NrkIcon(
 		normal = R.drawable.nrk_trash__active,
-		expressive = null
+		expressive = R.drawable.nrk_trash_expressive__active
 	)
 
 	val NrkUnlock = NrkIcon(
@@ -1140,7 +1140,7 @@ object NrkIcons {
 
 	val NrkUnlockActive = NrkIcon(
 		normal = R.drawable.nrk_unlock__active,
-		expressive = null
+		expressive = R.drawable.nrk_unlock_expressive__active
 	)
 
 	val NrkUpload = NrkIcon(
@@ -1155,7 +1155,7 @@ object NrkIcons {
 
 	val NrkUserLoggedinActive = NrkIcon(
 		normal = R.drawable.nrk_user_loggedin__active,
-		expressive = null
+		expressive = R.drawable.nrk_user_loggedin_expressive__active
 	)
 
 	val NrkUserNotloggedin = NrkIcon(
@@ -1165,7 +1165,7 @@ object NrkIcons {
 
 	val NrkUserNotloggedinActive = NrkIcon(
 		normal = R.drawable.nrk_user_notloggedin__active,
-		expressive = null
+		expressive = R.drawable.nrk_user_notloggedin_expressive__active
 	)
 
 	val NrkWarning = NrkIcon(

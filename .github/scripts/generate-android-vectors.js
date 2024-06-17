@@ -128,7 +128,15 @@ function generateKotlinValues() {
         let expressiveR = null
 
         // Probably a more efficient way to do this, but I don't think it really matters
-        const expressiveVariant = generatedDrawables.find((element) => element == rawNormalIconName + "_expressive.xml")
+        const expressiveVariant = generatedDrawables.find((element) => {
+            const isActiveVariant = drawable.match("__active")
+
+            if (isActiveVariant) {
+                return element == rawNormalIconName.replace("__active", "") + "_expressive__active.xml"
+            } else {
+                return element == rawNormalIconName + "_expressive.xml"
+            }
+        })
 
         if (expressiveVariant != null) {
             expressiveR = "R.drawable." + expressiveVariant.replace(".xml", "")
