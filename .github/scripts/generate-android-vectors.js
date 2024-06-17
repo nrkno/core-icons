@@ -72,8 +72,6 @@ async function convertSvgToXml() {
 }
 
 function generateKotlinValues() {
-    // Read the files generated above and look for those that have "_expressive" in them and generate Kotlin values from them
-    // This assumes that an icon called "horse_expressive.xml" will always have a counterpart named "horse.xml"
     const generatedDrawables = fs.readdirSync(ANDROID_DRAWABLE_FOLDER)
 
     const lines = []
