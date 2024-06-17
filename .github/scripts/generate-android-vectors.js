@@ -97,13 +97,13 @@ function generateKotlinValues() {
 
     lines.push("data class NrkIcon(")
     lines.push("\tval normal: Int,")
-    lines.push("\tval expressive: Int")
+    lines.push("\tval expressive: Int?")
     lines.push(") {")
     lines.push("\t@Composable")
     lines.push("\tfun asPainter(): Painter {")
     lines.push("\t\treturn painterResource(")
     lines.push("\t\t\tid = if (LocalUseExpressiveIcons.current) {")
-    lines.push("\t\t\t\texpressive")
+    lines.push("\t\t\t\texpressive ?: normal")
     lines.push("\t\t\t} else {")
     lines.push("\t\t\t\tnormal")
     lines.push("\t\t\t}")
@@ -115,21 +115,30 @@ function generateKotlinValues() {
     lines.push("object NrkIcons {")
 
     for (const drawable of generatedDrawables) {
-        const isExpressive = drawable.endsWith("_expressive.xml")
+        const isExpressive = drawable.match("_expressive")
 
+        // Expressive variants are added along with the normal ones
         if (isExpressive) {
-            const expressiveRawName = drawable.replace(".xml", "")
-            const iconName = expressiveRawName.replace("_expressive", "")
-
-            const expressiveR = "R.drawable." + expressiveRawName
-            const nonExpressiveR = "R.drawable." + expressiveRawName.replace("_expressive", "")
-
-            lines.push("\tval " + convertFromSnakeOrKebabCaseToPascalCase(iconName) + " = NrkIcon(")
-            lines.push("\t\tnormal = " + nonExpressiveR + ",")
-            lines.push("\t\texpressive = " + expressiveR)
-            lines.push("\t)")
-            lines.push("")
+            continue
         }
+
+        const rawNormalIconName = drawable.replace(".xml", "")
+
+        const normalR = "R.drawable." + rawNormalIconName
+        let expressiveR = null
+
+        // Probably a more efficient way to do this, but I don't think it really matters
+        const expressiveVariant = generatedDrawables.find((element) => element == rawNormalIconName + "_expressive.xml")
+
+        if (expressiveVariant != null) {
+            expressiveR = "R.drawable." + expressiveVariant.replace(".xml", "")
+        }
+
+        lines.push("\tval " + convertFromSnakeOrKebabCaseToPascalCase(rawNormalIconName) + " = NrkIcon(")
+        lines.push("\t\tnormal = " + normalR + ",")
+        lines.push("\t\texpressive = " + expressiveR)
+        lines.push("\t)")
+        lines.push("")
     }
 
     // Remove the last newline
