@@ -17,11 +17,10 @@ const ANDROID_ICONS_FOLDER = "android/icons/src/main/kotlin/no/nrk/core/icons"
 const svg2vectordrawableOptions = {
     floatPrecision: 4,
     strict: false,
-    // TODO some icons just have no color now. setting fillBlack true at least makes them black, but we probably want #FFF0F0F0 instead
+    // The SVGs have "fill=currentColor", and the library has this check if (!/^url\(#.*\)$/.test(elem.attr('fill').value)) so it
+    // is ignored (and wouldn't know what currentColor is anyways). The SVGs would need an actual HEX color for the library to fill it in
+    // So instead just fill them black and override the black color again later. A bit stupid, but oh well
     // Docs say that you can do "tint: '#FFF0F0F0" but that doesn't seem to do anything
-    // The SVGs have "fill=currentColor", and the library has this check if (!/^url\(#.*\)$/.test(elem.attr('fill').value))
-    // I think if the SVGs have an actual hex color here it will work
-    // Otherwise we might have to manually loop over the generated files and override the color, which is a bit stupid
     fillBlack: true,
     xmlTag: false
 }
@@ -61,6 +60,10 @@ async function convertSvgToXml() {
             const xmlFile = path.join(ANDROID_DRAWABLE_FOLDER, xmlFileName)
 
             await svg2vectordrawable.convertFile(svgFile, xmlFile, svg2vectordrawableOptions)
+
+            // Override the fillBlack=true with the NRK white color we actually want the icons to have
+            const colorAdjustedXmlFile = fs.readFileSync(xmlFile, { encoding: 'utf8'}).replaceAll("android:fillColor=\"#FF000000\"", "android:fillColor=\"#FFF0F0F0\"")
+            fs.writeFileSync(xmlFile, colorAdjustedXmlFile)
         }
     }
 
@@ -130,6 +133,7 @@ function generateKotlinValues() {
             const isActiveVariant = drawable.match("__active")
 
             if (isActiveVariant) {
+                // Active expressive variants are named "horse_expressive__active", if "_expressive" was always the postfix we could just handle it like non-active ones
                 return element == rawNormalIconName.replace("__active", "") + "_expressive__active.xml"
             } else {
                 return element == rawNormalIconName + "_expressive.xml"
