@@ -62,3 +62,44 @@ nvm config is saved in `.nvmrc`, set appropriate node version using:
 ```shell
 nvm use
 ```
+
+## Android
+
+An Android package is generated that includes all icons through the `NrkIcons` object, including expressive variants
+
+The latest version is found under the [Publish Android job](https://github.com/nrkno/core-icons/actions/workflows/publish-android.yml) under the `Publish Android` part (look for `Maven published version: <version>`). Add the library as a depdenceny with `implementation "no.nrk.core:icons:<version>"` (or if more convenient in a core module with `api("no.nrk.core:icons:<version>")`)
+
+### Usage
+
+This library makes it easy to use expressive variants of the icons. See also the [demo app](/android/app/src/main/kotlin/no/nrk/core/icons/MainActivity.kt).
+
+For Compose provide `LocalUseExpressiveIcons` at a convenient place, such as in a base theme, and use the icons as shown and it will automatically change between normal and expressive variants:
+
+```
+Icon(
+    painter = NrkIcons.NrkMediaPlay.asPainter(),
+    contentDescription = ""
+)
+```
+
+For Views you must add some sort of extension method to retrieve the icon as a drawable:
+```
+fun NrkIcon.asDrawable(context: Context): Drawable? {
+    val useExpressiveIcon = true // Some condition
+
+    return ContextCompat.getDrawable(
+        context,
+        if (useExpressiveIcon) {
+            expressive ?: normal
+        } else {
+            normal
+        }
+    )
+}
+```
+
+### Local development
+
+To test the script that generates the drawables and Kotlin locally code run `node .github\scripts\generate-android-vectors.js`
+
+Use `gradlew publishToMavenLocal` to publish a version locally on your machine to test in other projects
