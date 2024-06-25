@@ -1,6 +1,8 @@
 name: Generate android vectors
 on:
-  push
+  push:
+    branches:
+      master
     
 # For the weird condition when using createBranchAndPullRequest, see here: https://github.com/actions/runner/issues/1483#issuecomment-1279933184
     
