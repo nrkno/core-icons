@@ -156,6 +156,22 @@ Linking to `/latest/` is recommended only for prototyping.
 ></script>
 ```
 
+### Using Android
+
+An Android library is published on Github packages
+
+The latest version is found under the [Publish Android job](https://github.com/nrkno/core-icons/actions/workflows/publish-android.yml) under the `Publish Android` part (look for `Maven published version: <version>`). Add the library as a depdenceny with `implementation "no.nrk.core:icons:<version>"` (or if more convenient in a core module with `api("no.nrk.core:icons:<version>")`)
+
+To find the package add a maven block to your `build.gradle` file:
+
+```
+repositories {
+    maven {
+        url = uri("https://maven.pkg.github.com/nrkno/*")
+    }
+}
+```
+
 ## Usage
 
 ### npm
@@ -214,6 +230,40 @@ import { NrkLogoNrk } from '@nrk/core-icons/jsx/logo'
 // Renders HTML:
 <svg aria-hidden="true" width="1.429em" height="1.429em" viewBox="0 0 20 20" style="fill: red;">(...)</svg>
 ```
+
+### Android
+
+Icons are exposed through the `NrkIcons` object for use in Kotlin code, but can also be referenced as drawables in XML or through `no.nrk.core.icons.R.drawable`. Prefer usage of `NrkIcons` for easier swapping between normal and expressive variants.
+
+The simplest way to use the library is with Jetpack Compose. A `LocalUseExpressiveIcons` composition local must be provided at a convenient place, such as in a base theme. When this composition local changes the icons will automatically update to either expressive or the normal variant.
+
+```kotlin
+// Provide a value based on some sort of condition
+CompositionLocalProvider(LocalUseExpressiveIcons provides true) {
+    Icon(
+        painter = NrkIcons.NrkMediaPlay.asPainter(),
+        contentDescription = ""
+    )
+}
+```
+
+The library does not provide helpers for Views as the library doesn't know when expressive variants should be used. For use in Views you can create an extension method such as:
+
+```kotlin
+fun NrkIcon.asDrawable(context: Context): Drawable? {
+    val useExpressiveIcon = true // Some condition
+
+    return ContextCompat.getDrawable(
+        context,
+        if (useExpressiveIcon) {
+            expressive ?: normal
+        } else {
+            normal
+        }
+    )
+}
+```
+
 
 ## Scaling
 
