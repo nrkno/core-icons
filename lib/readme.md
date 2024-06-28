@@ -160,7 +160,8 @@ Linking to `/latest/` is recommended only for prototyping.
 
 An Android library is published on Github packages
 
-The latest version is found under the [Publish Android job](https://github.com/nrkno/core-icons/actions/workflows/publish-android.yml) under the `Publish Android` part (look for `Maven published version: <version>`). Add the library as a depdenceny with `implementation "no.nrk.core:icons:<version>"` (or if more convenient in a core module with `api("no.nrk.core:icons:<version>")`)
+See [Github packages](https://github.com/nrkno/core-icons/packages) for the latest version.
+Add the library as a depdenceny with `implementation "no.nrk.core:icons:<version>"` (or if more convenient in a core module with `api("no.nrk.core:icons:<version>")`)
 
 To find the package add a maven block to your `build.gradle` file:
 
