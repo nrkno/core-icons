@@ -65,51 +65,7 @@ nvm use
 
 ## Android
 
-An Android package is generated that includes all icons through the `NrkIcons` object, including expressive variants
-
-The latest version is found under the [Publish Android job](https://github.com/nrkno/core-icons/actions/workflows/publish-android.yml) under the `Publish Android` part (look for `Maven published version: <version>`). Add the library as a depdenceny with `implementation "no.nrk.core:icons:<version>"` (or if more convenient in a core module with `api("no.nrk.core:icons:<version>")`)
-
-To find the package add a maven block to your `build.gradle` file:
-
-```
-repositories {
-    maven {
-        url = uri("https://maven.pkg.github.com/nrkno/*")
-    }
-}
-```
-
-### Usage
-
-This library makes it easy to use NRK icons, as well as providing utility to switch between expressive and regular icon variants. See also the [demo app](/android/app/src/main/kotlin/no/nrk/core/icons/MainActivity.kt).
-
-For Compose provide `LocalUseExpressiveIcons` at a convenient place, such as in a base theme, and use the icons as shown and it will automatically change between normal and expressive variants:
-
-```kotlin
-// Provide a value based on some sort of condition
-CompositionLocalProvider(LocalUseExpressiveIcons provides true) {
-    Icon(
-        painter = NrkIcons.NrkMediaPlay.asPainter(),
-        contentDescription = ""
-    )
-}
-```
-
-For Views you must add some sort of extension method to retrieve the icon as a drawable:
-```kotlin
-fun NrkIcon.asDrawable(context: Context): Drawable? {
-    val useExpressiveIcon = true // Some condition
-
-    return ContextCompat.getDrawable(
-        context,
-        if (useExpressiveIcon) {
-            expressive ?: normal
-        } else {
-            normal
-        }
-    )
-}
-```
+See the [installation guide](https://static.nrk.no/core-icons/latest/index.html#using-android) and [usage guide](https://static.nrk.no/core-icons/latest/index.html#android).
 
 ### Local development
 
