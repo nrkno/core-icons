@@ -62,3 +62,13 @@ nvm config is saved in `.nvmrc`, set appropriate node version using:
 ```shell
 nvm use
 ```
+
+## Android
+
+See the [installation guide](https://static.nrk.no/core-icons/latest/index.html#using-android) and [usage guide](https://static.nrk.no/core-icons/latest/index.html#android).
+
+### Local development
+
+To test the script that generates the drawables and Kotlin code locally run `node .github\scripts\generate-android-vectors.js`
+
+Use `gradlew publishToMavenLocal` to publish a version locally on your machine to test in other projects

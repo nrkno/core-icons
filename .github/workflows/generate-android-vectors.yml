@@ -1,0 +1,35 @@
+name: Generate android vectors
+on:
+  push:
+    branches:
+      master
+  workflow_dispatch:
+    
+# For the weird condition when using createBranchAndPullRequest, see here: https://github.com/actions/runner/issues/1483#issuecomment-1279933184
+    
+jobs:
+  generate-android-vectors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm install svg2vectordrawable
+      - uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const script = require('./.github/scripts/generate-android-vectors.js')
+            script(github, context, exec)
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Convert updated SVG files to Android vector files"
+          file_pattern: "android/"
+          skip_dirty_check: false
+      - name: Publish Android
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./gradlew publish
+        working-directory: android
