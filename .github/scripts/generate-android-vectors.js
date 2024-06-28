@@ -48,7 +48,7 @@ async function convertSvgToXml() {
             }
 
             if (allFiles.includes(xmlFileName)) {
-                console.error(`Found duplicate file name: "${file}"`)
+                console.error(`Found duplicate file name: "${file}", xmlFileName="${xmlFile}"`)
                 hasErrors = true
 
                 continue
