@@ -28,6 +28,8 @@ jobs:
           commit_message: "Convert updated SVG files to Android vector files"
           file_pattern: "android/"
           skip_dirty_check: false
+      - name: chmod gradle
+        run: chmod +x android/gradlew
       - name: Publish Android
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
