@@ -3,6 +3,7 @@ on:
   push:
     branches:
       master
+  workflow_dispatch:
     
 # For the weird condition when using createBranchAndPullRequest, see here: https://github.com/actions/runner/issues/1483#issuecomment-1279933184
     
