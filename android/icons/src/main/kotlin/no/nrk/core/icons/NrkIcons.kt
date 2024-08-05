@@ -378,6 +378,11 @@ object NrkIcons {
 		expressive = R.drawable.nrk_hardware_microphone_expressive
 	)
 
+	val NrkHardwareMicrophoneActive = NrkIcon(
+		normal = R.drawable.nrk_hardware_microphone__active,
+		expressive = R.drawable.nrk_hardware_microphone_expressive__active
+	)
+
 	val NrkHardwareMobile = NrkIcon(
 		normal = R.drawable.nrk_hardware_mobile,
 		expressive = null
