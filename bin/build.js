@@ -123,10 +123,16 @@ function buildIcons (groupName) {
   createZipArchive(staticDest, '**/*.pdf', staticFolder, `${bundleName}-pdf`)
 
   // svgToJs
+  const customOutputs = [
+    {
+      parser: ({ camelCase, svg }) => `export declare const ${camelCase}: '${svg}'`,
+    },
+  ]
   const icons = svgToJS({
     input: staticDest,
     banner: `@nrk/core-icons ${groupName} v${version}`,
-    scale: 16
+    scale: 16,
+    customOutputs
   })
   // Generate iife
   fse.writeFileSync(
@@ -139,7 +145,7 @@ function buildIcons (groupName) {
   // Generate js and mjs with types for icons and logos
   fse.writeFileSync(path.join(npmPath, `${bundleName}.js`), icons.cjs)
   fse.writeFileSync(path.join(npmPath, `${bundleName}.mjs`), icons.esm)
-  fse.writeFileSync(path.join(npmPath, `${bundleName}.d.ts`), icons.dts)
+  fse.writeFileSync(path.join(npmPath, `${bundleName}.d.ts`), icons.custom_1)
 
   // Generate jsx and mjsx with types for icons and logos
   fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.js`), icons.cjsx)
@@ -154,7 +160,8 @@ function buildIcons (groupName) {
         const largeIcons = svgToJS({
           input: staticLargeDest,
           banner: `@nrk/core-icons ${groupName} v${version}`,
-          scale: 16
+          scale: 16,
+          customOutputs
         })
         const npmLargePath = path.join(npmPath, 'large')
         const largeBundleName = `${bundleName}-large`
@@ -170,7 +177,7 @@ function buildIcons (groupName) {
         // Generate js and mjs with types for icons and logos
         fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.js`), largeIcons.cjs)
         fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.mjs`), largeIcons.esm)
-        fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.d.ts`), largeIcons.dts)
+        fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.d.ts`), largeIcons.custom_1)
 
         // Generate jsx and mjsx with types for icons and logos
         fse.writeFileSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.js`), largeIcons.cjsx)
