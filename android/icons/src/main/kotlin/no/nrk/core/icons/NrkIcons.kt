@@ -963,6 +963,11 @@ object NrkIcons {
 		expressive = null
 	)
 
+	val NrkRadioActive = NrkIcon(
+		normal = R.drawable.nrk_radio__active,
+		expressive = R.drawable.nrk_radio_expressive__active
+	)
+
 	val NrkRefresh = NrkIcon(
 		normal = R.drawable.nrk_refresh,
 		expressive = R.drawable.nrk_refresh_expressive
