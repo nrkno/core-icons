@@ -123,14 +123,14 @@ object NrkIcons {
 		expressive = R.drawable.nrk_broadcast_expressive
 	)
 
-	val NrkBulletedList = NrkIcon(
-		normal = R.drawable.nrk_bulleted_list,
-		expressive = R.drawable.nrk_bulleted_list_expressive
-	)
-
 	val NrkBulletSquare = NrkIcon(
 		normal = R.drawable.nrk_bullet_square,
 		expressive = R.drawable.nrk_bullet_square_expressive
+	)
+
+	val NrkBulletedList = NrkIcon(
+		normal = R.drawable.nrk_bulleted_list,
+		expressive = R.drawable.nrk_bulleted_list_expressive
 	)
 
 	val NrkCalendar = NrkIcon(
@@ -153,6 +153,16 @@ object NrkIcons {
 		expressive = R.drawable.nrk_check_expressive
 	)
 
+	val NrkCheckActive = NrkIcon(
+		normal = R.drawable.nrk_check__active,
+		expressive = R.drawable.nrk_check_expressive__active
+	)
+
+	val NrkCheckRadioUnchecked = NrkIcon(
+		normal = R.drawable.nrk_check_radio__unchecked,
+		expressive = null
+	)
+
 	val NrkCheckbox = NrkIcon(
 		normal = R.drawable.nrk_checkbox,
 		expressive = R.drawable.nrk_checkbox_expressive
@@ -161,16 +171,6 @@ object NrkIcons {
 	val NrkCheckboxActive = NrkIcon(
 		normal = R.drawable.nrk_checkbox__active,
 		expressive = R.drawable.nrk_checkbox_expressive__active
-	)
-
-	val NrkCheckRadioUnchecked = NrkIcon(
-		normal = R.drawable.nrk_check_radio__unchecked,
-		expressive = null
-	)
-
-	val NrkCheckActive = NrkIcon(
-		normal = R.drawable.nrk_check__active,
-		expressive = R.drawable.nrk_check_expressive__active
 	)
 
 	val NrkChevronDown = NrkIcon(
@@ -328,6 +328,11 @@ object NrkIcons {
 		expressive = R.drawable.nrk_geo_expressive
 	)
 
+	val NrkGeoActive = NrkIcon(
+		normal = R.drawable.nrk_geo__active,
+		expressive = R.drawable.nrk_geo_expressive__active
+	)
+
 	val NrkGeopoint = NrkIcon(
 		normal = R.drawable.nrk_geopoint,
 		expressive = R.drawable.nrk_geopoint_expressive
@@ -336,11 +341,6 @@ object NrkIcons {
 	val NrkGeopointActive = NrkIcon(
 		normal = R.drawable.nrk_geopoint__active,
 		expressive = R.drawable.nrk_geopoint_expressive__active
-	)
-
-	val NrkGeoActive = NrkIcon(
-		normal = R.drawable.nrk_geo__active,
-		expressive = R.drawable.nrk_geo_expressive__active
 	)
 
 	val NrkGlobe = NrkIcon(
@@ -603,14 +603,9 @@ object NrkIcons {
 		expressive = null
 	)
 
-	val NrkMediaDirektetv = NrkIcon(
-		normal = R.drawable.nrk_media_direktetv,
-		expressive = R.drawable.nrk_media_direktetv_expressive
-	)
-
-	val NrkMediaDirektetvActive = NrkIcon(
-		normal = R.drawable.nrk_media_direktetv__active,
-		expressive = R.drawable.nrk_media_direktetv_expressive__active
+	val NrkMediaDirekteActive = NrkIcon(
+		normal = R.drawable.nrk_media_direkte__active,
+		expressive = null
 	)
 
 	val NrkMediaDirekteAnimatedActive = NrkIcon(
@@ -628,9 +623,14 @@ object NrkIcons {
 		expressive = null
 	)
 
-	val NrkMediaDirekteActive = NrkIcon(
-		normal = R.drawable.nrk_media_direkte__active,
-		expressive = null
+	val NrkMediaDirektetv = NrkIcon(
+		normal = R.drawable.nrk_media_direktetv,
+		expressive = R.drawable.nrk_media_direktetv_expressive
+	)
+
+	val NrkMediaDirektetvActive = NrkIcon(
+		normal = R.drawable.nrk_media_direktetv__active,
+		expressive = R.drawable.nrk_media_direktetv_expressive__active
 	)
 
 	val NrkMediaFfw = NrkIcon(
@@ -703,6 +703,11 @@ object NrkIcons {
 		expressive = R.drawable.nrk_media_play_expressive
 	)
 
+	val NrkMediaPlayFail = NrkIcon(
+		normal = R.drawable.nrk_media_play__fail,
+		expressive = R.drawable.nrk_media_play_expressive__fail
+	)
+
 	val NrkMediaPlaylist = NrkIcon(
 		normal = R.drawable.nrk_media_playlist,
 		expressive = R.drawable.nrk_media_playlist_expressive
@@ -711,11 +716,6 @@ object NrkIcons {
 	val NrkMediaPlaylistAdd = NrkIcon(
 		normal = R.drawable.nrk_media_playlist_add,
 		expressive = R.drawable.nrk_media_playlist_add_expressive
-	)
-
-	val NrkMediaPlaylistAdded = NrkIcon(
-		normal = R.drawable.nrk_media_playlist_added,
-		expressive = R.drawable.nrk_media_playlist_added_expressive
 	)
 
 	val NrkMediaPlaylistAddLater = NrkIcon(
@@ -728,14 +728,14 @@ object NrkIcons {
 		expressive = R.drawable.nrk_media_playlist_add_next_expressive
 	)
 
+	val NrkMediaPlaylistAdded = NrkIcon(
+		normal = R.drawable.nrk_media_playlist_added,
+		expressive = R.drawable.nrk_media_playlist_added_expressive
+	)
+
 	val NrkMediaPlaylistRemove = NrkIcon(
 		normal = R.drawable.nrk_media_playlist_remove,
 		expressive = R.drawable.nrk_media_playlist_remove_expressive
-	)
-
-	val NrkMediaPlayFail = NrkIcon(
-		normal = R.drawable.nrk_media_play__fail,
-		expressive = R.drawable.nrk_media_play_expressive__fail
 	)
 
 	val NrkMediaPrevious = NrkIcon(
@@ -758,14 +758,14 @@ object NrkIcons {
 		expressive = R.drawable.nrk_media_quaver_expressive
 	)
 
-	val NrkMediaQuaverOff = NrkIcon(
-		normal = R.drawable.nrk_media_quaver_off,
-		expressive = R.drawable.nrk_media_quaver_off_expressive
-	)
-
 	val NrkMediaQuaverActive = NrkIcon(
 		normal = R.drawable.nrk_media_quaver__active,
 		expressive = R.drawable.nrk_media_quaver_expressive__active
+	)
+
+	val NrkMediaQuaverOff = NrkIcon(
+		normal = R.drawable.nrk_media_quaver_off,
+		expressive = R.drawable.nrk_media_quaver_off_expressive
 	)
 
 	val NrkMediaRwd = NrkIcon(
@@ -798,11 +798,6 @@ object NrkIcons {
 		expressive = null
 	)
 
-	val NrkMediaSpeed1x = NrkIcon(
-		normal = R.drawable.nrk_media_speed_1x,
-		expressive = null
-	)
-
 	val NrkMediaSpeed125x = NrkIcon(
 		normal = R.drawable.nrk_media_speed_1_25x,
 		expressive = null
@@ -810,6 +805,11 @@ object NrkIcons {
 
 	val NrkMediaSpeed15x = NrkIcon(
 		normal = R.drawable.nrk_media_speed_1_5x,
+		expressive = null
+	)
+
+	val NrkMediaSpeed1x = NrkIcon(
+		normal = R.drawable.nrk_media_speed_1x,
 		expressive = null
 	)
 
