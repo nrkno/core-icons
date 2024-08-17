@@ -130,11 +130,14 @@ function generateKotlinValues() {
 
         // Probably a more efficient way to do this, but I don't think it really matters
         const expressiveVariant = generatedDrawables.find((element) => {
-            const isActiveVariant = drawable.match("__active")
+            // Icon variants such as "nrk-bell--active", "nrk-media-play-expressive--fail", or " nrk-media-volume-expressive--1"
+            // Variants end with "--variant", with "-expressive" being infront of the variant type. For those we need to insert "_expressive" into the name
+            // instead of just adding it at the end like
+            const indexOfVariantStart = drawable.indexOf("__")
 
-            if (isActiveVariant) {
-                // Active expressive variants are named "horse_expressive__active", if "_expressive" was always the postfix we could just handle it like non-active ones
-                return element == rawNormalIconName.replace("__active", "") + "_expressive__active.xml"
+            if (indexOfVariantStart != -1) {
+                // From "nrk_media_playe__fail" to "nrk_media_playe_expressive__fail"
+                return element == rawNormalIconName.substring(0, indexOfVariantStart) + "_expressive" + rawNormalIconName.substring(indexOfVariantStart) + ".xml"
             } else {
                 return element == rawNormalIconName + "_expressive.xml"
             }
