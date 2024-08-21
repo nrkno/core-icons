@@ -575,17 +575,17 @@ object NrkIcons {
 
 	val NrkMediaChromecast1 = NrkIcon(
 		normal = R.drawable.nrk_media_chromecast__1,
-		expressive = null
+		expressive = R.drawable.nrk_media_chromecast_expressive__1
 	)
 
 	val NrkMediaChromecast2 = NrkIcon(
 		normal = R.drawable.nrk_media_chromecast__2,
-		expressive = null
+		expressive = R.drawable.nrk_media_chromecast_expressive__2
 	)
 
 	val NrkMediaChromecast3 = NrkIcon(
 		normal = R.drawable.nrk_media_chromecast__3,
-		expressive = null
+		expressive = R.drawable.nrk_media_chromecast_expressive__3
 	)
 
 	val NrkMediaChromecastActive = NrkIcon(
@@ -705,7 +705,7 @@ object NrkIcons {
 
 	val NrkMediaPlayFail = NrkIcon(
 		normal = R.drawable.nrk_media_play__fail,
-		expressive = null
+		expressive = R.drawable.nrk_media_play_expressive__fail
 	)
 
 	val NrkMediaPlaylist = NrkIcon(
@@ -835,7 +835,7 @@ object NrkIcons {
 
 	val NrkMediaSubtitlesUnavailable = NrkIcon(
 		normal = R.drawable.nrk_media_subtitles__unavailable,
-		expressive = null
+		expressive = R.drawable.nrk_media_subtitles_expressive__unavailable
 	)
 
 	val NrkMediaTheater = NrkIcon(
@@ -870,22 +870,22 @@ object NrkIcons {
 
 	val NrkMediaVolume1 = NrkIcon(
 		normal = R.drawable.nrk_media_volume__1,
-		expressive = null
+		expressive = R.drawable.nrk_media_volume_expressive__1
 	)
 
 	val NrkMediaVolume2 = NrkIcon(
 		normal = R.drawable.nrk_media_volume__2,
-		expressive = null
+		expressive = R.drawable.nrk_media_volume_expressive__2
 	)
 
 	val NrkMediaVolume3 = NrkIcon(
 		normal = R.drawable.nrk_media_volume__3,
-		expressive = null
+		expressive = R.drawable.nrk_media_volume_expressive__3
 	)
 
 	val NrkMediaVolumeMuted = NrkIcon(
 		normal = R.drawable.nrk_media_volume__muted,
-		expressive = null
+		expressive = R.drawable.nrk_media_volume_expressive__muted
 	)
 
 	val NrkMening = NrkIcon(
@@ -961,6 +961,11 @@ object NrkIcons {
 	val NrkQuiz = NrkIcon(
 		normal = R.drawable.nrk_quiz,
 		expressive = null
+	)
+
+	val NrkRadioActive = NrkIcon(
+		normal = R.drawable.nrk_radio__active,
+		expressive = R.drawable.nrk_radio_expressive__active
 	)
 
 	val NrkRefresh = NrkIcon(

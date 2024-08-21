@@ -3,7 +3,7 @@
   "homepage": "https://static.nrk.no/core-icons/latest/",
   "description": "The official icons for NRK.",
   "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
-  "version": "14.1.0",
+  "version": "14.2.0",
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "core-icons.js",
   "module": "core-icons.mjs",
@@ -86,7 +86,7 @@
     "static-publish": "npm run build && static-publish --directory=static --account=nrk-core --latest --major"
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "0.15.2",
+    "@arethetypeswrong/cli": "0.15.4",
     "@nrk/svg-to-js": "3.1.0",
     "@types/fs-extra": "11.0.4",
     "archiver": "6.0.1",
