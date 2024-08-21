@@ -139,7 +139,7 @@ function buildIcons (groupName) {
   // Generate js and mjs with types for icons and logos
   fse.writeFileSync(path.join(npmPath, `${bundleName}.js`), icons.cjs)
   fse.writeFileSync(path.join(npmPath, `${bundleName}.mjs`), icons.esm)
-  fse.writeFileSync(path.join(npmPath, `${bundleName}.d.ts`), icons.dts)
+  fse.writeFileSync(path.join(npmPath, `${bundleName}.d.ts`), icons.dtsLiteral)
 
   // Generate jsx and mjsx with types for icons and logos
   fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.js`), icons.cjsx)
@@ -170,7 +170,7 @@ function buildIcons (groupName) {
         // Generate js and mjs with types for icons and logos
         fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.js`), largeIcons.cjs)
         fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.mjs`), largeIcons.esm)
-        fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.d.ts`), largeIcons.dts)
+        fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.d.ts`), largeIcons.dtsLiteral)
 
         // Generate jsx and mjsx with types for icons and logos
         fse.writeFileSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.js`), largeIcons.cjsx)
