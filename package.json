@@ -16,7 +16,8 @@
     "./core-icons-iife.js",
     "./core-icons.js",
     "./core-icons.mjs",
-    "./core-icons.d.ts"
+    "./core-icons.d.ts",
+    "./core-icons.d.mts"
   ],
   "exports": {
     ".": {
@@ -26,7 +27,7 @@
       },
       "import": {
         "default": "./core-icons.mjs",
-        "types": "./core-icons.d.ts"
+        "types": "./core-icons.d.mts"
       },
       "browser": "./core-icons-iife.js"
     },
@@ -37,7 +38,7 @@
       },
       "import": {
         "default": "./logo/core-icons-logo.mjs",
-        "types": "./logo/core-icons-logo.d.ts"
+        "types": "./logo/core-icons-logo.d.mts"
       }
     },
     "./logo/large": {
@@ -47,7 +48,7 @@
       },
       "import": {
         "default": "./logo/large/core-icons-logo-large.mjs",
-        "types": "./logo/large/core-icons-logo-large.d.ts"
+        "types": "./logo/large/core-icons-logo-large.d.mts"
       }
     },
     "./expressive": {
@@ -57,7 +58,7 @@
       },
       "import": {
         "default": "./expressive/core-icons-expressive.mjs",
-        "types": "./expressive/core-icons-expressive.d.ts"
+        "types": "./expressive/core-icons-expressive.d.mts"
       }
     },
     "./preview": {
@@ -67,7 +68,7 @@
       },
       "import": {
         "default": "./preview/core-icons-preview.mjs",
-        "types": "./preview/core-icons-preview.d.ts"
+        "types": "./preview/core-icons-preview.d.mts"
       }
     },
     "./jsx": {
@@ -77,7 +78,7 @@
       },
       "import": {
         "default": "./jsx/core-icons.mjs",
-        "types": "./jsx/core-icons.d.ts"
+        "types": "./jsx/core-icons.d.mts"
       }
     },
     "./jsx/logo": {
@@ -87,7 +88,7 @@
       },
       "import": {
         "default": "./jsx/logo/core-icons-logo.mjs",
-        "types": "./jsx/logo/core-icons-logo.d.ts"
+        "types": "./jsx/logo/core-icons-logo.d.mts"
       }
     },
     "./jsx/logo/large": {
@@ -97,7 +98,7 @@
       },
       "import": {
         "default": "./jsx/logo/large/core-icons-logo-large.mjs",
-        "types": "./jsx/logo/large/core-icons-logo-large.d.ts"
+        "types": "./jsx/logo/large/core-icons-logo-large.d.mts"
       }
     },
     "./jsx/expressive": {
@@ -107,7 +108,7 @@
       },
       "import": {
         "default": "./jsx/expressive/core-icons-expressive.mjs",
-        "types": "./jsx/expressive/core-icons-expressive.d.ts"
+        "types": "./jsx/expressive/core-icons-expressive.d.mts"
       }
     },
     "./jsx/preview": {
@@ -117,7 +118,7 @@
       },
       "import": {
         "default": "./jsx/preview/core-icons-preview.mjs",
-        "types": "./jsx/preview/core-icons-preview.d.ts"
+        "types": "./jsx/preview/core-icons-preview.d.mts"
       }
     }
   },
