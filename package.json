@@ -16,59 +16,110 @@
     "./core-icons-iife.js",
     "./core-icons.js",
     "./core-icons.mjs",
-    "./core-icons.d.ts"
+    "./core-icons.d.ts",
+    "./core-icons.d.mts"
   ],
   "exports": {
     ".": {
-      "types": "./core-icons.d.ts",
-      "require": "./core-icons.js",
-      "import": "./core-icons.mjs",
+      "require": {
+        "default": "./core-icons.js",
+        "types": "./core-icons.d.ts"
+      },
+      "import": {
+        "default": "./core-icons.mjs",
+        "types": "./core-icons.d.ts"
+      },
       "browser": "./core-icons-iife.js"
     },
     "./logo": {
-      "types": "./logo/core-icons-logo.d.ts",
-      "require": "./logo/core-icons-logo.js",
-      "import": "./logo/core-icons-logo.mjs"
+      "require": {
+        "default": "./logo/core-icons-logo.js",
+        "types": "./logo/core-icons-logo.d.ts"
+      },
+      "import": {
+        "default": "./logo/core-icons-logo.mjs",
+        "types": "./logo/core-icons-logo.d.ts"
+      }
     },
     "./logo/large": {
-      "types": "./logo/large/core-icons-logo-large.d.ts",
-      "require": "./logo/large/core-icons-logo-large.js",
-      "import": "./logo/large/core-icons-logo-large.mjs"
+      "require": {
+        "default": "./logo/large/core-icons-logo-large.js",
+        "types": "./logo/large/core-icons-logo-large.d.ts"
+      },
+      "import": {
+        "default": "./logo/large/core-icons-logo-large.mjs",
+        "types": "./logo/large/core-icons-logo-large.d.ts"
+      }
     },
     "./expressive": {
-      "types": "./expressive/core-icons-expressive.d.ts",
-      "require": "./expressive/core-icons-expressive.js",
-      "import": "./expressive/core-icons-expressive.mjs"
+      "require": {
+        "default": "./expressive/core-icons-expressive.js",
+        "types": "./expressive/core-icons-expressive.d.ts"
+      },
+      "import": {
+        "default": "./expressive/core-icons-expressive.mjs",
+        "types": "./expressive/core-icons-expressive.d.ts"
+      }
     },
     "./preview": {
-      "types": "./preview/core-icons-preview.d.ts",
-      "require": "./preview/core-icons-preview.js",
-      "import": "./preview/core-icons-preview.mjs"
+      "require": {
+        "default": "./preview/core-icons-preview.js",
+        "types": "./preview/core-icons-preview.d.ts"
+      },
+      "import": {
+        "default": "./preview/core-icons-preview.mjs",
+        "types": "./preview/core-icons-preview.d.ts"
+      }
     },
     "./jsx": {
-      "types": "./jsx/core-icons.d.ts",
-      "require": "./jsx/core-icons.js",
-      "import": "./jsx/core-icons.mjs"
+      "require": {
+        "default": "./jsx/core-icons.js",
+        "types": "./jsx/core-icons.d.ts"
+      },
+      "import": {
+        "default": "./jsx/core-icons.mjs",
+        "types": "./jsx/core-icons.d.ts"
+      }
     },
     "./jsx/logo": {
-      "types": "./jsx/logo/core-icons-logo.d.ts",
-      "require": "./jsx/logo/core-icons-logo.js",
-      "import": "./jsx/logo/core-icons-logo.mjs"
+      "require": {
+        "default": "./jsx/logo/core-icons-logo.js",
+        "types": "./jsx/logo/core-icons-logo.d.ts"
+      },
+      "import": {
+        "default": "./jsx/logo/core-icons-logo.mjs",
+        "types": "./jsx/logo/core-icons-logo.d.ts"
+      }
     },
     "./jsx/logo/large": {
-      "types": "./jsx/logo/large/core-icons-logo-large.d.ts",
-      "require": "./jsx/logo/large/core-icons-logo-large.js",
-      "import": "./jsx/logo/large/core-icons-logo-large.mjs"
+      "require": {
+        "default": "./jsx/logo/large/core-icons-logo-large.js",
+        "types": "./jsx/logo/large/core-icons-logo-large.d.ts"
+      },
+      "import": {
+        "default": "./jsx/logo/large/core-icons-logo-large.mjs",
+        "types": "./jsx/logo/large/core-icons-logo-large.d.ts"
+      }
     },
     "./jsx/expressive": {
-      "types": "./jsx/expressive/core-icons-expressive.d.ts",
-      "require": "./jsx/expressive/core-icons-expressive.js",
-      "import": "./jsx/expressive/core-icons-expressive.mjs"
+      "require": {
+        "default": "./jsx/expressive/core-icons-expressive.js",
+        "types": "./jsx/expressive/core-icons-expressive.d.ts"
+      },
+      "import": {
+        "default": "./jsx/expressive/core-icons-expressive.mjs",
+        "types": "./jsx/expressive/core-icons-expressive.d.ts"
+      }
     },
     "./jsx/preview": {
-      "types": "./jsx/preview/core-icons-preview.d.ts",
-      "require": "./jsx/preview/core-icons-preview.js",
-      "import": "./jsx/preview/core-icons-preview.mjs"
+      "require": {
+        "default": "./jsx/preview/core-icons-preview.js",
+        "types": "./jsx/preview/core-icons-preview.d.ts"
+      },
+      "import": {
+        "default": "./jsx/preview/core-icons-preview.mjs",
+        "types": "./jsx/preview/core-icons-preview.d.ts"
+      }
     }
   },
   "scripts": {
@@ -83,10 +134,11 @@
     "preversion": "npm run test",
     "postversion": "npm run build && git push && git push --tags && npm publish",
     "start": "npm run build:watch & http-server ./static -o -p 10001 -c-1",
-    "static-publish": "npm run build && static-publish --directory=static --account=nrk-core --latest --major"
+    "static-publish": "npm run build && static-publish --directory=static --account=nrk-core --latest --major",
+    "check-exports": "attw --pack ."
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "0.15.4",
+    "@arethetypeswrong/cli": "^0.15.4",
     "@nrk/svg-to-js": "3.1.0",
     "@types/fs-extra": "11.0.4",
     "archiver": "6.0.1",
