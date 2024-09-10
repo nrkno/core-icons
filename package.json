@@ -16,8 +16,7 @@
     "./core-icons-iife.js",
     "./core-icons.js",
     "./core-icons.mjs",
-    "./core-icons.d.ts",
-    "./core-icons.d.mts"
+    "./core-icons.d.ts"
   ],
   "exports": {
     ".": {
