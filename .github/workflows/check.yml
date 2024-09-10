@@ -23,3 +23,5 @@ jobs:
       - run: npm run build
       # Verify built artefacts
       - run: npm run test
+      # Check that the exported types resolves correctly
+      - run: npm run check-exports
