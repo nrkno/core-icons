@@ -141,19 +141,13 @@ We host the following scripts for use in the browser on our cdn
 For stability, please link to the appropriate major version
 
 ```html
-<script
-  async
-  src="https://static.nrk.no/core-icons/major/14/core-icons-iife.js"
-></script>
+<script async src="https://static.nrk.no/core-icons/major/14/core-icons-iife.js"></script>
 ```
 
 Linking to `/latest/` is recommended only for prototyping.
 
 ```html
-<script
-  async
-  src="https://static.nrk.no/core-icons/latest/core-icons-iife.js"
-></script>
+<script async src="https://static.nrk.no/core-icons/latest/core-icons-iife.js"></script>
 ```
 
 ### Using Android
@@ -265,7 +259,6 @@ fun NrkIcon.asDrawable(context: Context): Drawable? {
 }
 ```
 
-
 ## Scaling
 
 Since logos do not have consistent dimensions, `@nrk/core-icons` provides scaling based on `font-size`.
@@ -277,6 +270,11 @@ Scale the icons/logos by using font sizes divisible with `16` for sharpest rende
 | `<div class="parent"><svg style="width:1.5em;height:1.5em">…` | `<div class="parent"><svg style="width:30px;height:30px">…` |
 
 Note: correct width/height in `em` for each icon is automatically provided by `@nrk/core-icons`. For browser/iife scripts, you can get the correct HTML markup from the `Copy HTML` button in the hover-menu for each [icon](#browse-icons) or [logo](#browse-logos) in their respective preview-sections above.
+
+## Icons in text
+
+To use core-icons mixed in with text in `inline` mode, ensure that the icon is sized such that it's dimensions are equal to the `line-height`. You can then use `vertical-align` (`top`/`bottom`) works nicely to align the icon with the text.
+If there are any visual adjustments needed for the icon to be visually aligned the proper way, please file an [issue](https://github.com/nrkno/core-icons/issues/new) with the icon-name and a screenshot of the issue.
 
 ## Accessibility
 
