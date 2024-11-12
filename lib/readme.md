@@ -295,7 +295,7 @@ Modern versions of assistive technologies will announce SVG content, but there i
   </div>
   <div>
     <div class="doc-demo">
-      <button class="nrk-unset" aria-label="Rediger">
+      <button type="button" class="nrk-unset" aria-label="Rediger">
         <svg aria-hidden="true" width="3.5em" height="1em"><use xlink:href="#nrk-edit" /></svg>
       </button>
     </div>
