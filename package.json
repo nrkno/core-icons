@@ -95,7 +95,7 @@
     "fs-extra": "11.2.0",
     "http-server": "14.1.1",
     "jsdom": "24.0.0",
-    "pdfkit": "0.15.0",
+    "pdfkit": "0.15.1",
     "standard": "17.1.0",
     "svgo": "3.3.2",
     "svgson": "5.3.1",
