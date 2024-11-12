@@ -3,8 +3,9 @@ import PDFDocument from 'pdfkit'
 import * as svgson from 'svgson'
 import archiver from 'archiver'
 import fse from 'fs-extra'
-import { version } from '../package.json'
 import svgToJS from '@nrk/svg-to-js'
+
+const { version } = JSON.parse(fse.readFileSync(path.resolve('package.json')))
 
 const srcFolder = 'lib'
 const staticFolder = 'static'
@@ -15,21 +16,21 @@ const npmJsxFolder = 'jsx'
  * @param {string} groupName
  * @returns {string} bundle name for group
  */
-function getBundleName (groupName) {
+function getBundleName(groupName) {
   return groupName === 'icon' ? 'core-icons' : `core-icons-${groupName}`
 }
 /**
  * @param {string} groupName
  * @returns {path} npm path for group
  */
-function getNpmPath (groupName) {
+function getNpmPath(groupName) {
   return groupName === 'icon' ? '' : groupName
 }
 
 /**
  * @param {String[]} groupNames folder groups to clear out
  */
-function clean (groupNames) {
+function clean(groupNames) {
   // Clear static folder
   fse.removeSync(staticFolder)
   // Clear tmp folder
@@ -58,7 +59,7 @@ function clean (groupNames) {
   }
 }
 
-function updateDocs () {
+function updateDocs() {
   // Update reference to major version in links to static e.g. https://static.nrk.no/core-icons/major/12/core-icons-iife.js
   const file = 'lib/readme.md'
   const majorPattern = /\/core-icons\/major\/\d+/g
@@ -79,7 +80,7 @@ function updateDocs () {
   }
 }
 
-function copyDocs () {
+function copyDocs() {
   fse.copyFileSync(`${srcFolder}/index.html`, `${staticFolder}/index.html`)
   fse.copyFileSync(`${srcFolder}/readme.js`, `${staticFolder}/readme.js`)
   fse.copyFileSync(`${srcFolder}/readme.md`, `${staticFolder}/readme.md`)
@@ -90,7 +91,7 @@ function copyDocs () {
  * Will create a pdf version from any .svg-files in srcPath
  * @param {path} srcPath path containing .svg -files
  */
-function convertSvgsToPdf (srcPath) {
+function convertSvgsToPdf(srcPath) {
   const filesArr = fse.readdirSync(srcPath)
   for (const file of filesArr) {
     const fileName = path.join(srcPath, file)
@@ -102,12 +103,14 @@ function convertSvgsToPdf (srcPath) {
         svgtopdf(fileName)
       }
     } catch (error) {
-      console.error(`Something went wrong while parsing file ${fileName} through svgomg resulting in error: ${error}`)
+      console.error(
+        `Something went wrong while parsing file ${fileName} through svgomg resulting in error: ${error}`
+      )
     }
   }
 }
 
-function buildIcons (groupName) {
+function buildIcons(groupName) {
   const src = path.join(srcFolder, groupName)
   const staticDest = path.join(staticFolder, groupName)
   const bundleName = getBundleName(groupName)
@@ -126,13 +129,10 @@ function buildIcons (groupName) {
   const icons = svgToJS({
     input: staticDest,
     banner: `@nrk/core-icons ${groupName} v${version}`,
-    scale: 16
+    scale: 16,
   })
   // Generate iife
-  fse.writeFileSync(
-    `${staticFolder}/core-icons-iife-${groupName}.js`,
-    icons.iife
-  )
+  fse.writeFileSync(`${staticFolder}/core-icons-iife-${groupName}.js`, icons.iife)
   // Determine npmPath
   const npmPath = getNpmPath(groupName)
 
@@ -154,7 +154,7 @@ function buildIcons (groupName) {
         const largeIcons = svgToJS({
           input: staticLargeDest,
           banner: `@nrk/core-icons ${groupName} v${version}`,
-          scale: 16
+          scale: 16,
         })
         const npmLargePath = path.join(npmPath, 'large')
         const largeBundleName = `${bundleName}-large`
@@ -173,9 +173,18 @@ function buildIcons (groupName) {
         fse.writeFileSync(path.join(npmLargePath, `${largeBundleName}.d.ts`), largeIcons.dtsLiteral)
 
         // Generate jsx and mjsx with types for icons and logos
-        fse.writeFileSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.js`), largeIcons.cjsx)
-        fse.writeFileSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.mjs`), largeIcons.esmx)
-        fse.writeFileSync(path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.d.ts`), largeIcons.dtsx)
+        fse.writeFileSync(
+          path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.js`),
+          largeIcons.cjsx
+        )
+        fse.writeFileSync(
+          path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.mjs`),
+          largeIcons.esmx
+        )
+        fse.writeFileSync(
+          path.join(npmJsxFolder, npmLargePath, `${largeBundleName}.d.ts`),
+          largeIcons.dtsx
+        )
       }
     } catch (error) {
       console.error(`Failed to generate large js files for ${groupName} with error `, error)
@@ -187,7 +196,7 @@ function buildIcons (groupName) {
  * Generate iife for all icons
  * @param {String[]} groupNames groups to include
  */
-function buildMasterIife (groupNames, fileName, copyToRoot = false) {
+function buildMasterIife(groupNames, fileName, copyToRoot = false) {
   // Copy all sources to tempFolder
   for (const groupName of groupNames) {
     fse.copySync(path.join(srcFolder, groupName), tmpFolder)
@@ -196,7 +205,7 @@ function buildMasterIife (groupNames, fileName, copyToRoot = false) {
   const combined = svgToJS({
     input: tmpFolder,
     banner: `@nrk/core-icons ${groupNames.join(', ')} v${version}`,
-    scale: 16
+    scale: 16,
   })
   fse.writeFileSync(`${staticFolder}/${fileName}`, combined.iife)
   if (copyToRoot) {
@@ -206,20 +215,22 @@ function buildMasterIife (groupNames, fileName, copyToRoot = false) {
   fse.removeSync(tmpFolder)
 }
 
-function createZipArchive (srcFolder, globPattern, destPath, archiveName) {
+function createZipArchive(srcFolder, globPattern, destPath, archiveName) {
   console.log(`Create archive for source ${srcFolder}`)
   const svgZipper = archiver('zip')
   svgZipper.pipe(fse.createWriteStream(`${destPath}/${archiveName}.zip`))
   svgZipper.glob(globPattern, {
-    cwd: srcFolder
+    cwd: srcFolder,
   })
   // Append license file to archive
-  svgZipper.append(fse.createReadStream(path.join(__dirname, '..', 'LICENSE.txt')), { name: 'LICENSE.txt' })
+  svgZipper.append(fse.createReadStream(path.resolve('LICENSE.txt')), {
+    name: 'LICENSE.txt',
+  })
   svgZipper.finalize()
   console.log(`Successfully created ${destPath}/${archiveName}.zip`)
 }
 
-function svgtopdf (el, options, pdf) {
+function svgtopdf(el, options, pdf) {
   if (typeof el === 'string') {
     const svg = svgson.parseSync(fse.readFileSync(el, 'utf-8'))
     const [, , width, height] = svg.attributes.viewBox.split(' ').map(Number)
@@ -232,27 +243,55 @@ function svgtopdf (el, options, pdf) {
   } else {
     for (const node of el.children) {
       const fillr = (node.attributes['fill-rule'] || 'nonzero').replace(/-*(zero|odd)$/, '-$1')
-      const color = (val) => String(val).replace(/currentColor/i, options.color).replace(/none/i, '')
+      const color = (val) =>
+        String(val)
+          .replace(/currentColor/i, options.color)
+          .replace(/none/i, '')
       const float = (key) => Number(node.attributes[key]) || 0
       const style = {}
 
       // Style
-      pdf.fillColor(style.fill = color(node.attributes.fill || options.fill || options.color))
-      pdf.strokeColor(style.stroke = color(node.attributes.stroke || options.stroke || 'none'))
-      pdf.lineWidth(style.lineWidth = Number(node.attributes['stroke-width']) || options.lineWidth || 1)
-      pdf.lineJoin(style.lineJoin = node.attributes['stroke-linejoin'] || options.lineJoin || 'miter')
-      pdf.lineCap(style.lineCap = node.attributes['stroke-linecap'] || options.lineCap || 'butt')
+      pdf.fillColor((style.fill = color(node.attributes.fill || options.fill || options.color)))
+      pdf.strokeColor((style.stroke = color(node.attributes.stroke || options.stroke || 'none')))
+      pdf.lineWidth(
+        (style.lineWidth = Number(node.attributes['stroke-width']) || options.lineWidth || 1)
+      )
+      pdf.lineJoin(
+        (style.lineJoin = node.attributes['stroke-linejoin'] || options.lineJoin || 'miter')
+      )
+      pdf.lineCap((style.lineCap = node.attributes['stroke-linecap'] || options.lineCap || 'butt'))
 
       // Draw
       switch (node.name) {
-        case 'g': svgtopdf(node, style, pdf); break
-        case 'path': pdf.path(node.attributes.d); break
-        case 'line': pdf.moveTo(float('x1'), float('y1')).lineTo(float('x2'), float('y2')); break
-        case 'rect': pdf.roundedRect(float('x'), float('y'), float('width'), float('height'), float('rx') || float('ry')); break
-        case 'ellipse': pdf.ellipse(float('cx'), float('cy'), float('rx'), float('ry') || float('rx')); break
-        case 'circle': pdf.circle(float('cx'), float('cy'), float('r')); break
-        case 'polygon': pdf.polygon(node.attributes.points); break
-        default: console.log(`Unsupported shape: ${node.name}`)
+        case 'g':
+          svgtopdf(node, style, pdf)
+          break
+        case 'path':
+          pdf.path(node.attributes.d)
+          break
+        case 'line':
+          pdf.moveTo(float('x1'), float('y1')).lineTo(float('x2'), float('y2'))
+          break
+        case 'rect':
+          pdf.roundedRect(
+            float('x'),
+            float('y'),
+            float('width'),
+            float('height'),
+            float('rx') || float('ry')
+          )
+          break
+        case 'ellipse':
+          pdf.ellipse(float('cx'), float('cy'), float('rx'), float('ry') || float('rx'))
+          break
+        case 'circle':
+          pdf.circle(float('cx'), float('cy'), float('r'))
+          break
+        case 'polygon':
+          pdf.polygon(node.attributes.points)
+          break
+        default:
+          console.log(`Unsupported shape: ${node.name}`)
       }
 
       // Paint
@@ -263,7 +302,7 @@ function svgtopdf (el, options, pdf) {
   }
 }
 
-function build () {
+function build() {
   clean(['icon', 'expressive', 'logo', 'preview'])
   buildIcons('icon')
   buildIcons('expressive')
