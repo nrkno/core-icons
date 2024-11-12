@@ -72,7 +72,7 @@
     }
   },
   "scripts": {
-    "build": "node -r esm bin/build.js",
+    "build": "node bin/build.mjs",
     "build:watch": "chokidar \"./lib/**/*\" -c \"npm run build\" --initial",
     "publish:patch": "npm version patch -m 'Release patch %s'",
     "publish:minor": "npm version minor -m 'Release minor %s'",
