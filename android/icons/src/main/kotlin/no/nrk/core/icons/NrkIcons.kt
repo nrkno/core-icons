@@ -933,6 +933,11 @@ object NrkIcons {
 		expressive = R.drawable.nrk_offline_expressive
 	)
 
+	val NrkOnline = NrkIcon(
+		normal = R.drawable.nrk_online,
+		expressive = R.drawable.nrk_online_expressive
+	)
+
 	val NrkOpenInNew = NrkIcon(
 		normal = R.drawable.nrk_open_in_new,
 		expressive = R.drawable.nrk_open_in_new_expressive
