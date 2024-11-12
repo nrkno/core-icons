@@ -295,9 +295,9 @@ Modern versions of assistive technologies will announce SVG content, but there i
   </div>
   <div>
     <div class="doc-demo">
-      <a aria-label="Gå til nrk.no" href="https://nrk.no/">
-        <svg aria-hidden="true" width="3.5em" height="1em"><use xlink:href="#nrk-logo-nrk" /></svg>
-      </a>
+      <button class="nrk-unset" aria-label="Rediger">
+        <svg aria-hidden="true" width="3.5em" height="1em"><use xlink:href="#nrk-edit" /></svg>
+      </button>
     </div>
     <h3 class="docs-heading--3">Clickable icon</h3>
     Add screen reader content to the clickable element (<code>button</code> or <code>a</code>) with <code>aria-label="…"</code>, and hide the icon from screen readers with <code>aria-hidden="true"</code>
@@ -311,5 +311,14 @@ Modern versions of assistive technologies will announce SVG content, but there i
     </div>
     <h3 class="docs-heading--3">Non-clickable icon</h3>
     Hide the icon from screen readers with <code>aria-hidden="true"</code>, and add screen reader content to a wrapper with <code>role="img" aria-label="…"</code>.
+  </div>
+  <div>
+    <div class="doc-demo">
+      <a title="Gå til forsiden" href="https://www.nrk.no/">
+        <svg aria-label="NRK" role="img" width="3.5em" height="1em"><use xlink:href="#nrk-logo-nrk" /></svg>
+      </a>
+    </div>
+    <h3 class="docs-heading--3">Home link</h3>
+    Add <code>title="Gå til forsiden"</code> to the wrapper link, and add <code>aria-label="Publikumsproduktets navn" role="img"</code> to the svg.
   </div>
 </div>
