@@ -19,3 +19,4 @@ lib/core-icons*.js
 *.zip
 static/
 build_tmp/
+.tmp/
