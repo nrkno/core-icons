@@ -110,6 +110,21 @@ function convertSvgsToPdf(srcPath) {
   }
 }
 
+const deprecatedIcons = svgToJS({
+  input: path.join(srcFolder, 'deprecated'),
+  scale: 16,
+})
+
+function addDeprecatedDeclaration(fileContent, moduleType) {
+  const deprecatedIconsArray = deprecatedIcons[moduleType].split('\n')
+  return fileContent
+    .split('\n')
+    .map((line) => {
+      return !deprecatedIconsArray.includes(line) ? line : `/** @deprecated */ \n${line}`
+    })
+    .join('\n')
+}
+
 function buildIcons(groupName) {
   const src = path.join(srcFolder, groupName)
   const staticDest = path.join(staticFolder, groupName)
@@ -131,6 +146,7 @@ function buildIcons(groupName) {
     banner: `@nrk/core-icons ${groupName} v${version}`,
     scale: 16,
   })
+
   // Generate iife
   fse.writeFileSync(`${staticFolder}/core-icons-iife-${groupName}.js`, icons.iife)
   // Determine npmPath
@@ -138,13 +154,25 @@ function buildIcons(groupName) {
 
   // Generate js and mjs with types for icons and logos
   fse.writeFileSync(path.join(npmPath, `${bundleName}.js`), icons.cjs)
-  fse.writeFileSync(path.join(npmPath, `${bundleName}.mjs`), icons.esm)
-  fse.writeFileSync(path.join(npmPath, `${bundleName}.d.ts`), icons.dtsLiteral)
+  fse.writeFileSync(
+    path.join(npmPath, `${bundleName}.mjs`),
+    addDeprecatedDeclaration(icons.esm, 'esm')
+  )
+  fse.writeFileSync(
+    path.join(npmPath, `${bundleName}.d.ts`),
+    addDeprecatedDeclaration(icons.dtsLiteral, 'dtsLiteral')
+  )
 
   // Generate jsx and mjsx with types for icons and logos
   fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.js`), icons.cjsx)
-  fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.mjs`), icons.esmx)
-  fse.writeFileSync(path.join(npmJsxFolder, npmPath, `${bundleName}.d.ts`), icons.dtsx)
+  fse.writeFileSync(
+    path.join(npmJsxFolder, npmPath, `${bundleName}.mjs`),
+    addDeprecatedDeclaration(icons.esmx, 'esmx')
+  )
+  fse.writeFileSync(
+    path.join(npmJsxFolder, npmPath, `${bundleName}.d.ts`),
+    addDeprecatedDeclaration(icons.dtsx, 'dtsx')
+  )
 
   // Generate js/jsx artefacts for logo/large -files
   if (groupName === 'logo') {
