@@ -1163,6 +1163,11 @@ object NrkIcons {
 		expressive = R.drawable.nrk_upload_expressive
 	)
 
+	val NrkUserAvatar = NrkIcon(
+		normal = R.drawable.nrk_user_avatar,
+		expressive = R.drawable.nrk_user_avatar_expressive
+	)
+
 	val NrkUserLoggedin = NrkIcon(
 		normal = R.drawable.nrk_user_loggedin,
 		expressive = R.drawable.nrk_user_loggedin_expressive
