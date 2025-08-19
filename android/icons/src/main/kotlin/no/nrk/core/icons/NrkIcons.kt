@@ -308,6 +308,11 @@ object NrkIcons {
 		expressive = R.drawable.nrk_ellipsis_expressive__active
 	)
 
+	val NrkFlagNorwegian = NrkIcon(
+		normal = R.drawable.nrk_flag_norwegian,
+		expressive = R.drawable.nrk_flag_norwegian_expressive
+	)
+
 	val NrkFullscreen = NrkIcon(
 		normal = R.drawable.nrk_fullscreen,
 		expressive = R.drawable.nrk_fullscreen_expressive
@@ -483,6 +488,16 @@ object NrkIcons {
 		expressive = R.drawable.nrk_list_expressive__active
 	)
 
+	val NrkLiveActivity = NrkIcon(
+		normal = R.drawable.nrk_live_activity,
+		expressive = null
+	)
+
+	val NrkLiveActivityActive = NrkIcon(
+		normal = R.drawable.nrk_live_activity__active,
+		expressive = null
+	)
+
 	val NrkLock = NrkIcon(
 		normal = R.drawable.nrk_lock,
 		expressive = R.drawable.nrk_lock_expressive
@@ -568,6 +583,11 @@ object NrkIcons {
 		expressive = R.drawable.nrk_media_beam_note_expressive
 	)
 
+	val NrkMediaBluetooth = NrkIcon(
+		normal = R.drawable.nrk_media_bluetooth,
+		expressive = R.drawable.nrk_media_bluetooth_expressive
+	)
+
 	val NrkMediaChromecast = NrkIcon(
 		normal = R.drawable.nrk_media_chromecast,
 		expressive = R.drawable.nrk_media_chromecast_expressive
@@ -596,16 +616,6 @@ object NrkIcons {
 	val NrkMediaCompleted = NrkIcon(
 		normal = R.drawable.nrk_media_completed,
 		expressive = R.drawable.nrk_media_completed_expressive
-	)
-
-	val NrkMediaDirekte = NrkIcon(
-		normal = R.drawable.nrk_media_direkte,
-		expressive = null
-	)
-
-	val NrkMediaDirekteActive = NrkIcon(
-		normal = R.drawable.nrk_media_direkte__active,
-		expressive = null
 	)
 
 	val NrkMediaDirekteAnimatedActive = NrkIcon(
@@ -866,6 +876,11 @@ object NrkIcons {
 	val NrkMediaTilgjengelighetSnartutilgjengelig = NrkIcon(
 		normal = R.drawable.nrk_media_tilgjengelighet_snartutilgjengelig,
 		expressive = R.drawable.nrk_media_tilgjengelighet_snartutilgjengelig_expressive
+	)
+
+	val NrkMediaVideo = NrkIcon(
+		normal = R.drawable.nrk_media_video,
+		expressive = R.drawable.nrk_media_video_expressive
 	)
 
 	val NrkMediaVolume1 = NrkIcon(
