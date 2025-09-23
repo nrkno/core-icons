@@ -448,6 +448,11 @@ object NrkIcons {
 		expressive = R.drawable.nrk_help_expressive
 	)
 
+	val NrkHide = NrkIcon(
+		normal = R.drawable.nrk_hide,
+		expressive = R.drawable.nrk_hide_expressive
+	)
+
 	val NrkHome = NrkIcon(
 		normal = R.drawable.nrk_home,
 		expressive = R.drawable.nrk_home_expressive
@@ -1026,6 +1031,11 @@ object NrkIcons {
 	val NrkSettingsActive = NrkIcon(
 		normal = R.drawable.nrk_settings__active,
 		expressive = R.drawable.nrk_settings_expressive__active
+	)
+
+	val NrkShow = NrkIcon(
+		normal = R.drawable.nrk_show,
+		expressive = R.drawable.nrk_show_expressive
 	)
 
 	val NrkSleep = NrkIcon(
