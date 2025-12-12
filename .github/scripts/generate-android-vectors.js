@@ -6,9 +6,9 @@ const svg2vectordrawable = require('svg2vectordrawable/src/svg-file-to-vectordra
 const CORE_ICON_DIRECTORIES = [
     "lib/expressive",
     "lib/icon",
+    "lib/logo"
     // TODO are these needed? Especially preview?
     //  There's also a directory called lib/logo/large which has to be handled somehow now
-    //"lib/logo",
     //"lib/preview"
 ]
 const ANDROID_DRAWABLE_FOLDER = "android/icons/src/main/res/drawable"
@@ -39,9 +39,18 @@ async function convertSvgToXml() {
         const files = fs.readdirSync(directory)
 
         for (const file of files) {
+            const fullPath = path.join(directory, file)
+            const stats = fs.statSync(fullPath)
+
+            // TODO maybe we should handle subdirectories somehow, not really needed now so I'm not adding it either
+            if (stats.isDirectory()) {
+                console.log(`Skipping "${file}" because it is a directory`)
+                continue
+            }
+
             const xmlFileName = file.replace(".svg", ".xml").replaceAll("-", "_").toLowerCase()
             if (!/^([a-z0-9\_])+\.xml$/.test(xmlFileName)) {
-                console.error(`Invalid file name: "${file}"! (output xml name: "${xmlFileName})`)
+                console.error(`Invalid file name: "${file}"! (output xml name: "${xmlFileName})"`)
                 hasErrors = true
 
                 continue
