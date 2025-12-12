@@ -513,6 +513,1426 @@ object NrkIcons {
 		expressive = R.drawable.nrk_lock_expressive__active
 	)
 
+	val NrkLogoMgp = NrkIcon(
+		normal = R.drawable.nrk_logo_mgp,
+		expressive = null
+	)
+
+	val NrkLogoNrk = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk,
+		expressive = null
+	)
+
+	val NrkLogoNrk1 = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_1,
+		expressive = null
+	)
+
+	val NrkLogoNrk1OnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_1_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrk1OnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_1_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrk1WithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_1_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrk2 = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_2,
+		expressive = null
+	)
+
+	val NrkLogoNrk2OnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_2_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrk2OnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_2_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrk2WithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_2_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrk3 = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_3,
+		expressive = null
+	)
+
+	val NrkLogoNrk3OnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_3_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrk3OnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_3_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrk3WithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_3_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkBuskerud = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_buskerud,
+		expressive = null
+	)
+
+	val NrkLogoNrkBuskerudOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_buskerud_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkBuskerudOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_buskerud_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkBuskerudTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_buskerud_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkBuskerudTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_buskerud_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkBuskerudTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_buskerud_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkBuskerudWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_buskerud_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkFinnmark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_finnmark,
+		expressive = null
+	)
+
+	val NrkLogoNrkFinnmarkOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_finnmark_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkFinnmarkOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_finnmark_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkFinnmarkTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_finnmark_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkFinnmarkTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_finnmark_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkFinnmarkTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_finnmark_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkFinnmarkWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_finnmark_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkFolkemusikk = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_folkemusikk,
+		expressive = null
+	)
+
+	val NrkLogoNrkFolkemusikkOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_folkemusikk_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkFolkemusikkOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_folkemusikk_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkFolkemusikkTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_folkemusikk_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkFolkemusikkTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_folkemusikk_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkFolkemusikkTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_folkemusikk_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkFolkemusikkWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_folkemusikk_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkInnlandet = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_innlandet,
+		expressive = null
+	)
+
+	val NrkLogoNrkInnlandetOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_innlandet_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkInnlandetOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_innlandet_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkInnlandetTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_innlandet_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkInnlandetTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_innlandet_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkInnlandetTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_innlandet_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkInnlandetWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_innlandet_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkJazz = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_jazz,
+		expressive = null
+	)
+
+	val NrkLogoNrkJazzOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_jazz_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkJazzOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_jazz_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkJazzTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_jazz_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkJazzTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_jazz_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkJazzTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_jazz_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkJazzWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_jazz_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkKlassisk = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_klassisk,
+		expressive = null
+	)
+
+	val NrkLogoNrkKlassiskOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_klassisk_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkKlassiskOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_klassisk_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkKlassiskTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_klassisk_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkKlassiskTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_klassisk_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkKlassiskTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_klassisk_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkKlassiskWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_klassisk_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkKringkastingsorkestret = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_kringkastingsorkestret,
+		expressive = null
+	)
+
+	val NrkLogoNrkKringkastingsorkestretOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_kringkastingsorkestret_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkKringkastingsorkestretOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_kringkastingsorkestret_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkKringkastingsorkestretTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_kringkastingsorkestret_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkKringkastingsorkestretTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_kringkastingsorkestret_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkKringkastingsorkestretTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_kringkastingsorkestret_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkKringkastingsorkestretWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_kringkastingsorkestret_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkMoreOgRomsdal = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_more_og_romsdal,
+		expressive = null
+	)
+
+	val NrkLogoNrkMoreOgRomsdalOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_more_og_romsdal_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkMoreOgRomsdalOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_more_og_romsdal_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkMoreOgRomsdalTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_more_og_romsdal_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkMoreOgRomsdalTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_more_og_romsdal_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkMoreOgRomsdalTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_more_og_romsdal_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkMoreOgRomsdalWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_more_og_romsdal_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkMp3 = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_mp3,
+		expressive = null
+	)
+
+	val NrkLogoNrkMp3OnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_mp3_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkMp3OnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_mp3_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkMp3TitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_mp3_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkMp3TitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_mp3_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkMp3TitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_mp3_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkMp3WithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_mp3_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkNordland = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nordland,
+		expressive = null
+	)
+
+	val NrkLogoNrkNordlandOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nordland_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkNordlandOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nordland_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkNordlandTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nordland_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkNordlandTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nordland_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkNordlandTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nordland_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkNordlandWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nordland_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkNyheter = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nyheter,
+		expressive = null
+	)
+
+	val NrkLogoNrkNyheterOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nyheter_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkNyheterOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nyheter_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkNyheterSymbol = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nyheter_symbol,
+		expressive = null
+	)
+
+	val NrkLogoNrkNyheterSymbolBlackwhite = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nyheter_symbol__blackwhite,
+		expressive = null
+	)
+
+	val NrkLogoNrkNyheterSymbolColor = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nyheter_symbol__color,
+		expressive = null
+	)
+
+	val NrkLogoNrkNyheterTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nyheter_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkNyheterTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nyheter_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkNyheterTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nyheter_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkNyheterWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_nyheter_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkP1 = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p1,
+		expressive = null
+	)
+
+	val NrkLogoNrkP13 = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p13,
+		expressive = null
+	)
+
+	val NrkLogoNrkP13OnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p13_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP13OnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p13_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP13Radioresepsjonen = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p13_radioresepsjonen,
+		expressive = null
+	)
+
+	val NrkLogoNrkP13TitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p13_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkP13TitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p13_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP13TitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p13_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP13WithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p13_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkP1OnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p1_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP1OnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p1_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP1Pluss = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p1_pluss,
+		expressive = null
+	)
+
+	val NrkLogoNrkP1PlussOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p1_pluss_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP1PlussOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p1_pluss_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP1PlussTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p1_pluss_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkP1PlussTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p1_pluss_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP1PlussTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p1_pluss_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP1PlussWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p1_pluss_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkP1TitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p1_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkP1TitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p1_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP1TitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p1_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP1WithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p1_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkP2 = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p2,
+		expressive = null
+	)
+
+	val NrkLogoNrkP2OnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p2_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP2OnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p2_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP2TitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p2_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkP2TitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p2_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP2TitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p2_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP2WithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p2_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3 = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3Musikk = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_musikk,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3MusikkOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_musikk_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3MusikkOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_musikk_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3MusikkTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_musikk_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3MusikkTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_musikk_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3MusikkTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_musikk_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3MusikkWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_musikk_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3NationalRapShow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_national_rap_show,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3OnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3OnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3TitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3TitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3TitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3Urort = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_urort,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3UrortOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_urort_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3UrortOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_urort_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3UrortTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_urort_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3UrortTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_urort_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3UrortTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_urort_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3UrortWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_urort_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3WithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3X = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_x,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3XOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_x_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3XOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_x_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3XTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_x_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3XTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_x_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3XTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_x_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkP3XWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_p3_x_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkRadio = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_radio,
+		expressive = null
+	)
+
+	val NrkLogoNrkRadioOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_radio_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkRadioOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_radio_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkRadioTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_radio_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkRadioTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_radio_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkRadioTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_radio_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkRadioWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_radio_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkRogaland = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_rogaland,
+		expressive = null
+	)
+
+	val NrkLogoNrkRogalandOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_rogaland_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkRogalandOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_rogaland_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkRogalandTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_rogaland_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkRogalandTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_rogaland_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkRogalandTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_rogaland_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkRogalandWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_rogaland_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkSamiRadio = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sami_radio,
+		expressive = null
+	)
+
+	val NrkLogoNrkSamiRadioOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sami_radio_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkSamiRadioOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sami_radio_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkSamiRadioTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sami_radio_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkSamiRadioTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sami_radio_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkSamiRadioTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sami_radio_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkSamiRadioWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sami_radio_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkSapmi = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sapmi,
+		expressive = null
+	)
+
+	val NrkLogoNrkSapmiOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sapmi_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkSapmiOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sapmi_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkSapmiTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sapmi_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkSapmiTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sapmi_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkSapmiTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sapmi_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkSapmiWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sapmi_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkSorlandet = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sorlandet,
+		expressive = null
+	)
+
+	val NrkLogoNrkSorlandetOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sorlandet_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkSorlandetOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sorlandet_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkSorlandetTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sorlandet_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkSorlandetTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sorlandet_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkSorlandetTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sorlandet_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkSorlandetWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sorlandet_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkSport = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sport,
+		expressive = null
+	)
+
+	val NrkLogoNrkSportOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sport_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkSportOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sport_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkSportSymbol = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sport_symbol,
+		expressive = null
+	)
+
+	val NrkLogoNrkSportSymbolBlackwhite = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sport_symbol__blackwhite,
+		expressive = null
+	)
+
+	val NrkLogoNrkSportSymbolColor = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sport_symbol__color,
+		expressive = null
+	)
+
+	val NrkLogoNrkSportTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sport_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkSportTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sport_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkSportTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sport_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkSportWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_sport_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkStorOslo = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_stor_oslo,
+		expressive = null
+	)
+
+	val NrkLogoNrkStorOsloOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_stor_oslo_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkStorOsloOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_stor_oslo_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkStorOsloTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_stor_oslo_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkStorOsloTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_stor_oslo_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkStorOsloTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_stor_oslo_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkStorOsloWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_stor_oslo_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkSuper = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_super,
+		expressive = null
+	)
+
+	val NrkLogoNrkSuperOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_super_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkSuperOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_super_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkSuperSentrert = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_super_sentrert,
+		expressive = null
+	)
+
+	val NrkLogoNrkSuperSymbol = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_super_symbol,
+		expressive = null
+	)
+
+	val NrkLogoNrkSuperTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_super_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkSuperTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_super_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkSuperTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_super_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkSuperWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_super_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkTegnspraak = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tegnspraak,
+		expressive = null
+	)
+
+	val NrkLogoNrkTegnspraakColorblack = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tegnspraak__colorblack,
+		expressive = null
+	)
+
+	val NrkLogoNrkTegnspraakColorgrey = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tegnspraak__colorgrey,
+		expressive = null
+	)
+
+	val NrkLogoNrkTegnspraakColorwhite = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tegnspraak__colorwhite,
+		expressive = null
+	)
+
+	val NrkLogoNrkTegnspraakOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tegnspraak_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkTegnspraakOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tegnspraak_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkTegnspraakSymbol = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tegnspraak_symbol,
+		expressive = null
+	)
+
+	val NrkLogoNrkTegnspraakSymbolOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tegnspraak_symbol_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkTegnspraakSymbolOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tegnspraak_symbol_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkTegnspraakSymbolWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tegnspraak_symbol_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkTegnspraakTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tegnspraak_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkTegnspraakTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tegnspraak_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkTegnspraakTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tegnspraak_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkTegnspraakWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tegnspraak_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkTrafikk = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_trafikk,
+		expressive = null
+	)
+
+	val NrkLogoNrkTrafikkOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_trafikk_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkTrafikkOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_trafikk_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkTrafikkTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_trafikk_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkTrafikkTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_trafikk_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkTrafikkTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_trafikk_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkTrafikkWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_trafikk_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkTroms = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_troms,
+		expressive = null
+	)
+
+	val NrkLogoNrkTromsOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_troms_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkTromsOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_troms_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkTromsTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_troms_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkTromsTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_troms_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkTromsTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_troms_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkTromsWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_troms_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkTrondelag = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_trondelag,
+		expressive = null
+	)
+
+	val NrkLogoNrkTrondelagOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_trondelag_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkTrondelagOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_trondelag_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkTrondelagTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_trondelag_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkTrondelagTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_trondelag_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkTrondelagTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_trondelag_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkTrondelagWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_trondelag_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkTv = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tv,
+		expressive = null
+	)
+
+	val NrkLogoNrkTvOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tv_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkTvOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tv_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkTvTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tv_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkTvTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tv_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkTvTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tv_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkTvWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_tv_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkVestfoldOgTelemark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_vestfold_og_telemark,
+		expressive = null
+	)
+
+	val NrkLogoNrkVestfoldOgTelemarkOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_vestfold_og_telemark_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkVestfoldOgTelemarkOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_vestfold_og_telemark_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkVestfoldOgTelemarkTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_vestfold_og_telemark_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkVestfoldOgTelemarkTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_vestfold_og_telemark_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkVestfoldOgTelemarkTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_vestfold_og_telemark_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkVestfoldOgTelemarkWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_vestfold_og_telemark_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkVestland = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_vestland,
+		expressive = null
+	)
+
+	val NrkLogoNrkVestlandOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_vestland_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkVestlandOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_vestland_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkVestlandTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_vestland_title_below,
+		expressive = null
+	)
+
+	val NrkLogoNrkVestlandTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_vestland_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkVestlandTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_vestland_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkVestlandWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_vestland_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoNrkYrRadio = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_yr_radio,
+		expressive = null
+	)
+
+	val NrkLogoNrkYrRadioOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_yr_radio_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoNrkYrRadioOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_yr_radio_on_light,
+		expressive = null
+	)
+
+	val NrkLogoNrkYrRadioWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_nrk_yr_radio_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoOstfold = NrkIcon(
+		normal = R.drawable.nrk_logo_ostfold,
+		expressive = null
+	)
+
+	val NrkLogoOstfoldOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_ostfold_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoOstfoldOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_ostfold_on_light,
+		expressive = null
+	)
+
+	val NrkLogoOstfoldTitleBelow = NrkIcon(
+		normal = R.drawable.nrk_logo_ostfold_title_below,
+		expressive = null
+	)
+
+	val NrkLogoOstfoldTitleBelowOnDark = NrkIcon(
+		normal = R.drawable.nrk_logo_ostfold_title_below_on_dark,
+		expressive = null
+	)
+
+	val NrkLogoOstfoldTitleBelowOnLight = NrkIcon(
+		normal = R.drawable.nrk_logo_ostfold_title_below_on_light,
+		expressive = null
+	)
+
+	val NrkLogoOstfoldWithBg = NrkIcon(
+		normal = R.drawable.nrk_logo_ostfold_with_bg,
+		expressive = null
+	)
+
+	val NrkLogoYr = NrkIcon(
+		normal = R.drawable.nrk_logo_yr,
+		expressive = null
+	)
+
+	val NrkLogoYrBlackwhite = NrkIcon(
+		normal = R.drawable.nrk_logo_yr__blackwhite,
+		expressive = null
+	)
+
+	val NrkLogoYrColor = NrkIcon(
+		normal = R.drawable.nrk_logo_yr__color,
+		expressive = null
+	)
+
 	val NrkLogout = NrkIcon(
 		normal = R.drawable.nrk_logout,
 		expressive = R.drawable.nrk_logout_expressive
