@@ -69,6 +69,13 @@ See the [installation guide](https://static.nrk.no/core-icons/latest/index.html#
 
 ### Local development
 
-To test the script that generates the drawables and Kotlin code locally run `node .github\scripts\generate-android-vectors.js`
+- `node .github\scripts\generate-android-vectors.js` runs the script that converts SVGs to Android XML drawables
+- `gradlew publishToMavenLocal` builds and publishes a new version locally on your machine that can be used in other projects
 
-Use `gradlew publishToMavenLocal` to publish a version locally on your machine to test in other projects
+### Icons with rendering artifacts
+
+If an icon has artifacts or other rendering bugs in a different project you should:
+- Ask a designer for an updated icon (see for instance [this PR](https://github.com/nrkno/core-icons/pull/394) which fixed two logos with rendering artifacts)
+- Add the icon the relevant folder locally
+- Run through the steps above to build a new version of the library locally and use this in your project. Do not test the new icon by manually importing it into your project which uses Android Studios SVG -> XML conversion. The issue might be partly with the way the library converts the SVG, the icon might look normal when manually importing it
+- If the new icon looks good open a PR with only the updated SVGs. Stash the XML drawable changes and let the Github action publish a new version of the library
