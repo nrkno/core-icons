@@ -114,6 +114,6 @@
     "svg2vectordrawable": "2.9.1"
   },
   "volta": {
-    "node": "24.8.0"
+    "node": "24.13.0"
   }
 }
