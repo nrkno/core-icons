@@ -1,119 +1,106 @@
 {
   "name": "@nrk/core-icons",
-  "homepage": "https://static.nrk.no/core-icons/latest/",
-  "description": "The official icons for NRK.",
-  "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
   "version": "18.3.0",
+  "description": "The official icons for NRK.",
+  "homepage": "https://static.nrk.no/core-icons/latest/",
   "license": "SEE LICENSE IN LICENSE.txt",
-  "main": "core-icons.js",
-  "module": "core-icons.mjs",
-  "types": "core-icons.d.ts",
-  "files": [
-    "jsx",
-    "logo",
-    "expressive",
-    "preview",
-    "./core-icons-iife.js",
-    "./core-icons.js",
-    "./core-icons.mjs",
-    "./core-icons.d.ts"
-  ],
-  "exports": {
-    ".": {
-      "types": "./core-icons.d.ts",
-      "require": "./core-icons.js",
-      "import": "./core-icons.mjs",
-      "browser": "./core-icons-iife.js"
-    },
-    "./logo": {
-      "types": "./logo/core-icons-logo.d.ts",
-      "require": "./logo/core-icons-logo.js",
-      "import": "./logo/core-icons-logo.mjs"
-    },
-    "./logo/large": {
-      "types": "./logo/large/core-icons-logo-large.d.ts",
-      "require": "./logo/large/core-icons-logo-large.js",
-      "import": "./logo/large/core-icons-logo-large.mjs"
-    },
-    "./expressive": {
-      "types": "./expressive/core-icons-expressive.d.ts",
-      "require": "./expressive/core-icons-expressive.js",
-      "import": "./expressive/core-icons-expressive.mjs"
-    },
-    "./preview": {
-      "types": "./preview/core-icons-preview.d.ts",
-      "require": "./preview/core-icons-preview.js",
-      "import": "./preview/core-icons-preview.mjs"
-    },
-    "./jsx": {
-      "types": "./jsx/core-icons.d.ts",
-      "require": "./jsx/core-icons.js",
-      "import": "./jsx/core-icons.mjs"
-    },
-    "./jsx/logo": {
-      "types": "./jsx/logo/core-icons-logo.d.ts",
-      "require": "./jsx/logo/core-icons-logo.js",
-      "import": "./jsx/logo/core-icons-logo.mjs"
-    },
-    "./jsx/logo/large": {
-      "types": "./jsx/logo/large/core-icons-logo-large.d.ts",
-      "require": "./jsx/logo/large/core-icons-logo-large.js",
-      "import": "./jsx/logo/large/core-icons-logo-large.mjs"
-    },
-    "./jsx/expressive": {
-      "types": "./jsx/expressive/core-icons-expressive.d.ts",
-      "require": "./jsx/expressive/core-icons-expressive.js",
-      "import": "./jsx/expressive/core-icons-expressive.mjs"
-    },
-    "./jsx/preview": {
-      "types": "./jsx/preview/core-icons-preview.d.ts",
-      "require": "./jsx/preview/core-icons-preview.js",
-      "import": "./jsx/preview/core-icons-preview.mjs"
-    }
-  },
-  "scripts": {
-    "build": "node bin/build.mjs",
-    "build:watch": "chokidar \"./lib/**/*\" -c \"npm run build\" --initial",
-    "publish:patch": "npm version patch -m 'Release patch %s'",
-    "publish:minor": "npm version minor -m 'Release minor %s'",
-    "publish:major": "npm version major -m 'Release major %s'",
-    "lint": "standard",
-    "test": "attw --pack --ignore-rules false-cjs && testpack --install react,jsdom --test-script testpack-script --delete-on-fail",
-    "testpack-script": "node test/core-icons.test.mjs && node test/core-icons.test.js && node test/core-icons-jsx.test.mjs && node test/core-icons-jsx.test.js && node --conditions=development test/core-icons-iife.test.js",
-    "preversion": "npm run test",
-    "postversion": "npm run build && git push && git push --tags && npm publish",
-    "start": "npm run build:watch & http-server ./static -o -p 10001 -c-1",
-    "static-publish": "npm run build && static-publish --directory=static --account=nrk-core --latest --major"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "printWidth": 100,
-    "trailingComma": "es5"
-  },
-  "devDependencies": {
-    "@arethetypeswrong/cli": "0.17.0",
-    "@nrk/svg-to-js": "3.1.0",
-    "@types/fs-extra": "11.0.4",
-    "archiver": "7.0.1",
-    "chokidar-cli": "3.0.0",
-    "fs-extra": "11.2.0",
-    "http-server": "14.1.1",
-    "jsdom": "25.0.1",
-    "pdfkit": "0.15.1",
-    "standard": "17.1.2",
-    "svgo": "3.3.2",
-    "svgson": "5.3.1",
-    "testpack-cli": "1.1.4"
-  },
+  "author": "NRK <opensource@nrk.no> (https://www.nrk.no/)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nrkno/core-icons.git"
   },
-  "dependencies": {
-    "svg2vectordrawable": "2.9.1"
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "imports": {
+    "#lib/*": "./lib/*",
+    "#cli/*": "./src/cli/*",
+    "#utils/*": "./src/utils/*",
+    "#src/*": "./src/*",
+    "#figma/*": "./src/figma/*"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/effective.d.ts",
+      "require": "./dist/effective.cjs",
+      "import": "./dist/effective.js"
+    },
+    "./logo": {
+      "types": "./dist/logo.d.ts",
+      "require": "./dist/logo.cjs",
+      "import": "./dist/logo.js"
+    },
+    "./logo/large": {
+      "types": "./dist/compat-logo-large.d.ts",
+      "require": "./dist/compat-logo-large.cjs",
+      "import": "./dist/compat-logo-large.js"
+    },
+    "./expressive": {
+      "types": "./dist/expressive.d.ts",
+      "require": "./dist/expressive.cjs",
+      "import": "./dist/expressive.js"
+    },
+    "./jsx": {
+      "types": "./dist/compat-jsx-effective.d.ts",
+      "require": "./dist/compat-jsx-effective.cjs",
+      "import": "./dist/compat-jsx-effective.js"
+    },
+    "./jsx/expressive": {
+      "types": "./dist/compat-jsx-expressive.d.ts",
+      "require": "./dist/compat-jsx-expressive.cjs",
+      "import": "./dist/compat-jsx-expressive.js"
+    },
+    "./jsx/logo": {
+      "types": "./dist/compat-jsx-logo.d.ts",
+      "require": "./dist/compat-jsx-logo.cjs",
+      "import": "./dist/compat-jsx-logo.js"
+    },
+    "./jsx/logo/large": {
+      "types": "./dist/compat-jsx-logo-large.d.ts",
+      "require": "./dist/compat-jsx-logo-large.cjs",
+      "import": "./dist/compat-jsx-logo-large.js"
+    }
+  },
+  "scripts": {
+    "build": "npm run build:lib && npm run build:docs",
+    "build:lib": "rolldown -c rolldown.config.ts",
+    "build:docs": "vite build docs",
+    "dev": "vite docs",
+    "lint": "npm run lint:oxlint",
+    "lint:oxlint": "oxlint",
+    "lint:publint": "publint",
+    "test": "vitest run",
+    "test:watch": "vitest --ui",
+    "preversion": "npm run test && npm run lint:publint",
+    "postversion": "npm run build && git push && git push --tags && npm publish",
+    "start": "vitepress dev docs"
+  },
+  "devDependencies": {
+    "@figma/rest-api-spec": "^0.38.0",
+    "@types/node": "^24.12.4",
+    "@types/semver": "^7.7.1",
+    "@vitest/ui": "^4.1.7",
+    "commander": "^14.0.3",
+    "jsdom": "29.1.1",
+    "libnpmversion": "^8.0.4",
+    "marked": "^18.0.5",
+    "ora": "^9.4.0",
+    "oxfmt": "^0.49.0",
+    "oxlint": "^1.65.0",
+    "publint": "^0.3.21",
+    "rolldown": "^1.0.3",
+    "rolldown-plugin-dts": "^0.25.2",
+    "semver": "^7.8.5",
+    "svgo": "4.0.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16",
+    "vitest": "^4.1.6"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "volta": {
-    "node": "24.13.0"
+    "node": "24.15.0"
   }
 }
