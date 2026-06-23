@@ -89,6 +89,13 @@
 .docs-icons [data-icon] + [hidden] {
   display: none;
 }
+
+.docs-icons:not(.expressive) [data-icon][data-variant='expressive'] {
+  display: none;
+}
+.docs-icons.expressive [data-icon][data-variant='effective'] {
+  display: none;
+}
 .nrk-input {
   background-color: inherit;
   color: inherit;
