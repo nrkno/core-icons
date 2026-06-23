@@ -1,6 +1,6 @@
 import { defineConfig, InputOption } from 'rolldown'
 import { dts } from 'rolldown-plugin-dts'
-import { version } from './package.json' with { type: 'json' }
+import { version } from '#package.json' with { type: 'json' }
 
 const banner = `/*! @nrk/core-icons v${version} */`
 const input: InputOption = [
