@@ -1,0 +1,10 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "@nrk/core-icons": "18.3.0"
+  },
+  "changesets": [
+    "bold-lights-obey"
+  ]
+}

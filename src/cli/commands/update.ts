@@ -4,24 +4,11 @@ import ora, { type Ora } from 'ora'
 import { createClient } from '#cli/figma/api.ts'
 import { parse } from '#cli/figma/parse.ts'
 import pkg from '#package.json' with { type: 'json' }
-import {
-  difference,
-  addOrUpdateUnreleasedEntry,
-  formatDiff,
-  versionIncrement,
-} from '#src/changes.ts'
+import { difference, formatDiff, versionIncrement } from '#src/changes.ts'
 import { generateAndroid } from '#src/generate/android.ts'
 import { generateTypescript } from '#src/generate/typescript.ts'
 import type { Icon, Logo, Manifest } from '#src/manifest.ts'
-import {
-  copyRecursive,
-  mkdirp,
-  readFile,
-  readManifest,
-  rmrf,
-  writeFile,
-  writeManifest,
-} from '#utils/fs.ts'
+import { copyRecursive, mkdirp, readManifest, rmrf, writeFile, writeManifest } from '#utils/fs.ts'
 import { dedent } from '#utils/string.ts'
 import { optimizeIcon, optimizeLogo } from '#utils/svg.ts'
 
