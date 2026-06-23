@@ -21,6 +21,19 @@ npm ci
 npm start # Your browser will open documentation with hot reloading
 ```
 
+## Figma sync
+
+### 1. Automatic configuration with `direnv` and `vault`
+
+1. Install and set up [`direnv`](https://direnv.net/docs/installation.html)
+1. Install and set up [HashiCorp `vault` cli](https://developer.hashicorp.com/vault/install)
+1. Run `cp .env.example .env` and set the variables. Vault paths should start with `secret/`
+1. Run `direnv allow` in the repository root
+
+### 2. Manual configuration
+
+1. Set the `export`ed variables from [.envrc](.envrc) in your environment.
+
 ## Building and committing
 
 After having applied changes, remember to build before commiting and pushing your changes upstream.
@@ -75,6 +88,7 @@ See the [installation guide](https://static.nrk.no/core-icons/latest/index.html#
 ### Icons with rendering artifacts
 
 If an icon has artifacts or other rendering bugs in a different project you should:
+
 - Ask a designer for an updated icon (see for instance [this PR](https://github.com/nrkno/core-icons/pull/394) which fixed two logos with rendering artifacts)
 - Add the icon the relevant folder locally
 - Run through the steps above to build a new version of the library locally and use this in your project. Do not test the new icon by manually importing it into your project which uses Android Studios SVG -> XML conversion. The issue might be partly with the way the library converts the SVG, the icon might look normal when manually importing it
