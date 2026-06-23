@@ -1,6 +1,5 @@
 import { inspect, styleText } from 'node:util'
 import { program } from 'commander'
-import { releaseCommand } from './commands/release.ts'
 import { updateCompatCommand } from './commands/update-compat.ts'
 import { updateCommand } from './commands/update.ts'
 
@@ -18,7 +17,6 @@ program
   })
   .addCommand(updateCommand)
   .addCommand(updateCompatCommand)
-  .addCommand(releaseCommand)
 
 try {
   program.parse()

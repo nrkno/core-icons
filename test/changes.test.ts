@@ -1,12 +1,6 @@
 import type { ExecSyncOptions } from 'node:child_process'
 import { describe, expect, test, vi } from 'vitest'
-import {
-  addOrUpdateUnreleasedEntry,
-  Diff,
-  difference,
-  versionChangeFromChangelog,
-  versionUnreleasedChanges,
-} from '#src/changelog.ts'
+import { type Diff, difference, formatDiff, versionIncrement } from '#src/changes.ts'
 import { Icon } from '#src/manifest.ts'
 import { dedent } from '#utils/string.ts'
 
@@ -165,51 +159,46 @@ describe('difference()', () => {
   })
 })
 
-describe('addOrUpdateUnreleasedEntry', () => {
-  test('adds unreleased entry if missing', async () => {
-    let changelog =
+describe('formatDiff', () => {
+  test('lists patch changes', () => {
+    const diff = [
+      {
+        op: 'update',
+        prev: { id: 'foo', kind: 'icon' } as Icon,
+        next: { id: 'foo', kind: 'icon' } as Icon,
+      },
+    ]
+
+    expect(formatDiff(diff)).toEqual(
       dedent`
-        ## v1.2.3
+        **Patch changes**
 
-        ### Major changes
-
-        - Deleted icon \`foo\`
-
-        ## foobar
-      ` + '\n'
-
-    const diff: Diff[] = [{ op: 'add', next: { id: 'foo', kind: 'icon' } as Icon }]
-    const updated = await addOrUpdateUnreleasedEntry(changelog, diff)
+        - Updated icon \`foo\`
+      `,
+    )
+  })
+  test('lists minor changes', () => {
+    const diff: Diff[] = [
+      { op: 'add', next: { id: 'foo', kind: 'icon' } as Icon },
+      {
+        op: 'deprecate',
+        next: { id: 'bar', kind: 'icon', deprecated: true } as Icon,
+        prev: { id: 'bar', kind: 'icon' } as Icon,
+      },
+    ]
+    const updated = formatDiff(diff)
 
     expect(updated).toEqual(
       dedent`
-        ## Unreleased changes
-
-        ### Minor changes
+        **Minor changes**
 
         - Added icon \`foo\`
-
-        ${changelog}
-      ` + '\n',
+        - Deprecated icon \`bar\`
+      `,
     )
   })
 
-  test('replaces existing unreleased entry', async () => {
-    let changelog =
-      dedent`
-        ## Unreleased changes
-
-        ### Major changes
-
-        - Deleted icon \`foo\`
-
-        ## v1.2.3
-
-        ### Patch changes
-
-        - Updated icon \`bar\`
-      ` + '\n'
-
+  test('lists major changes', () => {
     const diff: Diff[] = [
       { op: 'delete', prev: { id: 'foo', kind: 'icon' } as Icon },
       {
@@ -218,130 +207,51 @@ describe('addOrUpdateUnreleasedEntry', () => {
         prev: { kind: 'icon', id: 'bar' } as Icon,
       },
     ]
-    const updated = await addOrUpdateUnreleasedEntry(changelog, diff)
 
-    expect(updated).toEqual(
+    expect(formatDiff(diff)).toEqual(
       dedent`
-        ## Unreleased changes
-
-        ### Major changes
+        **Major changes**
 
         - Deleted icon \`foo\`
 
-        ### Minor changes
+        **Minor changes**
 
         - Deprecated icon \`bar\`
-
-        ## v1.2.3
-
-        ### Patch changes
-
-        - Updated icon \`bar\`
-      ` + '\n',
+      `,
     )
   })
-})
 
-describe('parse version change from changelog', () => {
-  test('returns null if no unreleased entry', () => {
-    const changelog =
+  test('lists all changes in order', () => {
+    const diff: Diff[] = [
+      { op: 'delete', prev: { id: 'foo', kind: 'icon' } as Icon },
+      {
+        op: 'deprecate',
+        next: { id: 'bar', kind: 'icon', deprecated: true } as Icon,
+        prev: { kind: 'icon', id: 'bar' } as Icon,
+      },
+      { op: 'add', next: { id: 'baz', kind: 'icon' } as Icon },
+      {
+        op: 'update',
+        prev: { id: 'qux', kind: 'icon' } as Icon,
+        next: { id: 'qux', kind: 'icon' } as Icon,
+      },
+    ]
+
+    expect(formatDiff(diff)).toEqual(
       dedent`
-        ## v1.2.3
-
-        ### Major changes
-
-        - Deleted icon \`foo\`
-      ` + '\n'
-
-    expect(versionChangeFromChangelog(changelog)).toBeNull()
-  })
-
-  test('parses diff from unreleased entry: major', () => {
-    const changelog = dedent`
-        ## Unreleased changes
-
-        ### Major changes
+        **Major changes**
 
         - Deleted icon \`foo\`
 
-        ### Minor changes
+        **Minor changes**
 
+        - Added icon \`baz\`
         - Deprecated icon \`bar\`
 
-        ### Patch changes
+        **Patch changes**
 
-        - Updated icon \`bar\`
-
-        ## v1.2.3
-
-        ### Patch changes
-
-        - Updated icon \`bar\`
-      `
-
-    expect(versionChangeFromChangelog(changelog)).toEqual('major')
-  })
-
-  test('parses diff from unreleased entry: minor', () => {
-    const changelog = dedent`
-        ## Unreleased changes
-
-        ### Minor changes
-
-        - Deprecated icon \`bar\`
-
-        ### Patch changes
-
-        - Updated icon \`bar\`
-
-        ## v1.2.3
-
-        ### Patch changes
-
-        - Updated icon \`bar\`
-      `
-
-    expect(versionChangeFromChangelog(changelog)).toEqual('minor')
-  })
-  test('parses diff from unreleased entry: patch', () => {
-    const changelog = dedent`
-        ## Unreleased changes
-
-        ### Patch changes
-
-        - Updated icon \`bar\`
-
-        ## v1.2.3
-
-        ### Patch changes
-
-        - Updated icon \`bar\`
-      `
-
-    expect(versionChangeFromChangelog(changelog)).toEqual('patch')
-  })
-})
-
-describe('versionUnreleasedChanges', () => {
-  test('Updates heading and removes diff comment', async () => {
-    const changelog =
-      dedent`
-        ## Unreleased changes
-
-        ### Major changes
-
-        - Deleted icon \`foo\`
-      ` + '\n'
-
-    const versioned = await versionUnreleasedChanges(changelog, 'v1.2.3')
-    expect(versioned).toEqual(
-      dedent`
-        ## v1.2.3
-
-        ### Major changes
-
-        - Deleted icon \`foo\`
-      ` + '\n',
+        - Updated icon \`qux\`
+      `,
     )
   })
 })

@@ -3,7 +3,13 @@ import { Command } from 'commander'
 import ora, { type Ora } from 'ora'
 import { createClient } from '#cli/figma/api.ts'
 import { parse } from '#cli/figma/parse.ts'
-import { difference, addOrUpdateUnreleasedEntry } from '#src/changelog.ts'
+import pkg from '#package.json' with { type: 'json' }
+import {
+  difference,
+  addOrUpdateUnreleasedEntry,
+  formatDiff,
+  versionIncrement,
+} from '#src/changes.ts'
 import { generateAndroid } from '#src/generate/android.ts'
 import { generateTypescript } from '#src/generate/typescript.ts'
 import type { Icon, Logo, Manifest } from '#src/manifest.ts'
@@ -16,6 +22,7 @@ import {
   writeFile,
   writeManifest,
 } from '#utils/fs.ts'
+import { dedent } from '#utils/string.ts'
 import { optimizeIcon, optimizeLogo } from '#utils/svg.ts'
 
 export const updateCommand = new Command('update')
@@ -171,12 +178,6 @@ async function updateAction(options: Options) {
   copyRecursive('.tmp/lib/logos', 'lib/logos')
   spinner.succeed()
 
-  spinner = ora('Calculating changes').start()
-  const diff = difference(prevManifest.assets, manifest.assets)
-  spinner.succeed()
-
-  writeManifest('lib/manifest.json', manifest)
-
   spinner = ora('Generating files: TypeScript').start()
   generateTypescript(manifest)
   spinner.succeed()
@@ -185,11 +186,24 @@ async function updateAction(options: Options) {
   await generateAndroid(manifest)
   spinner.succeed()
 
-  spinner = ora('Updating CHANGELOG.md').start()
-  const changelog = await addOrUpdateUnreleasedEntry(readFile('CHANGELOG.md'), diff)
+  spinner = ora('Calculating changes').start()
+  const diff = difference(prevManifest.assets, manifest.assets)
+  spinner.succeed()
 
-  writeFile('CHANGELOG.md', changelog)
+  spinner = ora('Creating changeset').start()
+  writeFile(
+    `.changeset/figma-sync-${pkg.version}.md`,
+    dedent`
+    ---
+    '${pkg.name}': ${versionIncrement(diff) ?? 'patch'}
+    ---
+    ${formatDiff(diff)}
+  `,
+  )
+  spinner.succeed()
 
+  spinner = ora('Writing manifest').start()
+  writeManifest('lib/manifest.json', manifest)
   spinner.succeed()
 }
 

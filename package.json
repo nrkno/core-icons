@@ -78,6 +78,7 @@
     "start": "vitepress dev docs"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.31.0",
     "@figma/rest-api-spec": "^0.38.0",
     "@types/node": "^24.12.4",
     "@types/semver": "^7.7.1",
