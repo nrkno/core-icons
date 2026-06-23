@@ -1,0 +1,15 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+>
+  <path
+    d="M15.815 17.938a1.5 1.5 0 0 1 2.096.327l2.035 2.788a1.5 1.5 0 0 1-2.423 1.77l-2.036-2.789a1.5 1.5 0 0 1 .328-2.096"
+  />
+
+  <path
+    fill-rule="evenodd"
+    d="M9.5 1a8.5 8.5 0 1 1 0 17 8.5 8.5 0 0 1 0-17m0 3a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11"
+    clip-rule="evenodd"
+  />
+</svg>
