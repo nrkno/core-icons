@@ -26,7 +26,7 @@ const previousExports = {
   jsxLogoLarge: new Set(compat.jsxLogoLarge),
 }
 
-export const updateCompatCommand = new Command('update-compat')
+export const syncCompatCommand = new Command('sync-compat')
   .description('Generate mappings for old icon names for backwards compatibility')
   .option(
     '-t, --access-token <token>',
@@ -36,9 +36,9 @@ export const updateCompatCommand = new Command('update-compat')
     '-k, --file-key <key>',
     'Override Figma file (or branch) key (defaults to environment variable FIGMA_FILE_KEY)',
   )
-  .action(updateCompatAction)
+  .action(syncCompatAction)
 
-async function updateCompatAction(options: Options) {
+async function syncCompatAction(options: Options) {
   const fileKey = options.fileKey ?? process.env.FIGMA_FILE_KEY
   if (!fileKey) {
     throw new Error(

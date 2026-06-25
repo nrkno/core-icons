@@ -1,7 +1,7 @@
 import { inspect, styleText } from 'node:util'
 import { program } from 'commander'
-import { updateCompatCommand } from './commands/update-compat.ts'
-import { updateCommand } from './commands/update.ts'
+import { syncCompatCommand } from './commands/sync-compat.ts'
+import { syncCommand } from './commands/sync.ts'
 
 program
   .name('core-icons')
@@ -15,8 +15,8 @@ program
     styleArgumentText: (str) => styleText('yellow', str),
     styleSubcommandText: (str) => styleText('blue', str),
   })
-  .addCommand(updateCommand)
-  .addCommand(updateCompatCommand)
+  .addCommand(syncCommand)
+  .addCommand(syncCompatCommand)
 
 try {
   program.parse()

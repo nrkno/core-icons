@@ -12,7 +12,7 @@ import { copyRecursive, mkdirp, readManifest, rmrf, writeFile, writeManifest } f
 import { dedent } from '#utils/string.ts'
 import { optimizeIcon, optimizeLogo } from '#utils/svg.ts'
 
-export const updateCommand = new Command('update')
+export const syncCommand = new Command('sync')
   .description('Export icons from Figma')
   .option(
     '-t, --access-token <token>',
@@ -23,7 +23,7 @@ export const updateCommand = new Command('update')
     'Override Figma file (or branch) key (defaults to environment variable FIGMA_FILE_KEY)',
   )
   .option('-f, --force', 'Force export even if icons are up to date', false)
-  .action(updateAction)
+  .action(syncAction)
 
 interface Options {
   accessToken?: string
@@ -31,7 +31,7 @@ interface Options {
   force: boolean
 }
 
-async function updateAction(options: Options) {
+async function syncAction(options: Options) {
   const fileKey = options.fileKey ?? process.env.FIGMA_FILE_KEY
   if (!fileKey) {
     throw new Error(
@@ -179,7 +179,7 @@ async function updateAction(options: Options) {
 
   spinner = ora('Creating changeset').start()
   writeFile(
-    `.changeset/figma-sync-${pkg.version}.md`,
+    `.changeset/figma-sync.md`,
     dedent`
     ---
     '${pkg.name}': ${versionIncrement(diff) ?? 'patch'}
