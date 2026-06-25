@@ -16,6 +16,9 @@
   "categories": {
     "correctness": "error"
   },
+  "options": {
+    "typeAware": true
+  },
   "rules": {
     "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "caughtErrorsIgnorePattern": "^_" }]
   },
