@@ -73,19 +73,15 @@
     "lint:publint": "publint",
     "test": "vitest run",
     "test:watch": "vitest --ui",
-    "preversion": "npm run test && npm run lint:publint",
-    "postversion": "npm run build && git push && git push --tags && npm publish",
-    "start": "vitepress dev docs"
+    "release": "npm run build && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
     "@figma/rest-api-spec": "^0.38.0",
     "@types/node": "^24.12.4",
-    "@types/semver": "^7.7.1",
     "@vitest/ui": "^4.1.7",
     "commander": "^14.0.3",
     "jsdom": "29.1.1",
-    "libnpmversion": "^8.0.4",
     "marked": "^18.0.5",
     "ora": "^9.4.0",
     "oxfmt": "^0.49.0",
@@ -93,7 +89,6 @@
     "publint": "^0.3.21",
     "rolldown": "^1.0.3",
     "rolldown-plugin-dts": "^0.25.2",
-    "semver": "^7.8.5",
     "svgo": "4.0.1",
     "typescript": "^6.0.3",
     "vite": "^8.0.16",
