@@ -2413,6 +2413,16 @@ object NrkIcons {
 		expressive = R.drawable.nrk_radio_expressive__active
 	)
 
+	val NrkRectangleLandscapeToPortrait = NrkIcon(
+		normal = R.drawable.nrk_rectangle_landscape_to_portrait,
+		expressive = R.drawable.nrk_rectangle_landscape_to_portrait_expressive
+	)
+
+	val NrkRectanglePortraitToLandscape = NrkIcon(
+		normal = R.drawable.nrk_rectangle_portrait_to_landscape,
+		expressive = R.drawable.nrk_rectangle_portrait_to_landscape_expressive
+	)
+
 	val NrkRefresh = NrkIcon(
 		normal = R.drawable.nrk_refresh,
 		expressive = R.drawable.nrk_refresh_expressive
