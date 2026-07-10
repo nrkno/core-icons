@@ -2548,6 +2548,16 @@ object NrkIcons {
 		expressive = null
 	)
 
+	val NrkSpeechBubbleQuote = NrkIcon(
+		normal = R.drawable.nrk_speech_bubble_quote,
+		expressive = R.drawable.nrk_speech_bubble_quote_expressive
+	)
+
+	val NrkSpeechBubbleQuoteActive = NrkIcon(
+		normal = R.drawable.nrk_speech_bubble_quote__active,
+		expressive = R.drawable.nrk_speech_bubble_quote_expressive__active
+	)
+
 	val NrkSpinner = NrkIcon(
 		normal = R.drawable.nrk_spinner,
 		expressive = R.drawable.nrk_spinner_expressive
