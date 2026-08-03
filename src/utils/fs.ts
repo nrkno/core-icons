@@ -7,6 +7,7 @@ import {
   statSync,
   writeFileSync,
   copyFileSync,
+  renameSync,
 } from 'node:fs'
 import { join, dirname } from 'node:path'
 import type { Manifest } from '#src/manifest.ts'
@@ -14,11 +15,10 @@ import { sortObjectKeys } from './object.ts'
 import { trimTrailingWhitespace } from './string.ts'
 
 export function copyRecursive(src: string, dest: string) {
-  if (!existsSync(src)) {
-    return []
-  }
-
   const files: string[] = []
+  if (!existsSync(src)) {
+    return files
+  }
 
   function walk(from: string, to: string) {
     if (statSync(from).isDirectory()) {
@@ -28,6 +28,29 @@ export function copyRecursive(src: string, dest: string) {
     } else {
       mkdirp(dirname(to))
       copyFileSync(from, to)
+      files.push(to)
+    }
+  }
+
+  walk(src, dest)
+
+  return files
+}
+
+export function moveRecursive(src: string, dest: string) {
+  const files: string[] = []
+  if (!existsSync(src)) {
+    return files
+  }
+
+  function walk(from: string, to: string) {
+    if (statSync(from).isDirectory()) {
+      readdirSync(from).forEach((file) => {
+        walk(join(from, file), join(to, file))
+      })
+    } else {
+      mkdirp(dirname(to))
+      renameSync(from, to)
       files.push(to)
     }
   }
