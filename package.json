@@ -73,7 +73,7 @@
     "lint:publint": "publint",
     "test": "vitest run",
     "test:watch": "vitest --ui",
-    "release": "npm run build && changeset publish"
+    "release": "npm run build && publint && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
