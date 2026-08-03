@@ -60,13 +60,13 @@ document.addEventListener('input', function (event) {
 /**
  * Copy to clipboard for CSS examples
  */
-function copyToClipBoard(button: HTMLButtonElement, textToCopy: string) {
+async function copyToClipBoard(button: HTMLButtonElement, textToCopy: string) {
   const buttonText = button.textContent
   const copy = document.getElementById('docs-copy') as HTMLInputElement
   copy.value = textToCopy
   copy.select()
   copy.setSelectionRange(0, 99999) // For mobile devices
-  navigator.clipboard.writeText(copy.value)
+  await navigator.clipboard.writeText(copy.value)
   button.textContent = 'Copied!'
   // Reset buttonText after an appropriate pause
   setTimeout(function () {
@@ -76,7 +76,7 @@ function copyToClipBoard(button: HTMLButtonElement, textToCopy: string) {
 
 function copyJS(button: HTMLButtonElement, pascal?: boolean) {
   const id = button.dataset.id!
-  copyToClipBoard(button, pascal ? toPascalCase(id) : toCamelCase(id))
+  void copyToClipBoard(button, pascal ? toPascalCase(id) : toCamelCase(id))
 }
 
 function copyCSS(button: HTMLButtonElement) {
@@ -85,7 +85,7 @@ function copyCSS(button: HTMLButtonElement) {
     .outerHTML.trim()
     .replace('<svg', '<svg xmlns="http://www.w3.org/2000/svg"')
   const cssString = `background: url('data:image/svg+xml,${escapeSVG(svg)}') no-repeat center / contain;`
-  copyToClipBoard(button, cssString)
+  void copyToClipBoard(button, cssString)
 }
 
 function escapeSVG(data: string) {
@@ -97,7 +97,7 @@ function escapeSVG(data: string) {
 
 function copyHTML(button: HTMLButtonElement) {
   const svg = document.getElementById(button.dataset.id!)!.outerHTML.trim()
-  copyToClipBoard(button, svg)
+  void copyToClipBoard(button, svg)
 }
 
 function toggleExpressive() {
