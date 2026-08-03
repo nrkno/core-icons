@@ -19,6 +19,9 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v7.0.0
+        # TODO delete `with.ref` to use default branch when `next` is merged
+        with:
+          ref: next
 
       - uses: ./.github/actions/setup
 
