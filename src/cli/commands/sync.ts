@@ -189,11 +189,12 @@ async function syncAction(options: Options) {
     writeFile(
       `.changeset/figma-sync.md`,
       dedent`
-    ---
-    '${pkg.name}': ${versionIncrement(diff) ?? 'patch'}
-    ---
-    ${formatDiff(diff)}
-  `,
+        ---
+        '${pkg.name}': ${versionIncrement(diff) ?? 'patch'}
+        ---
+
+        ${formatDiff(diff)}
+      `,
     )
     spinner.succeed()
 
