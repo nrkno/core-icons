@@ -159,8 +159,10 @@ async function syncAction(options: Options) {
     return
   }
 
-  rmrf('lib/icons')
-  rmrf('lib/logos')
+  if (options.force) {
+    rmrf('lib/icons')
+    rmrf('lib/logos')
+  }
   copyRecursive('.tmp/lib/icons', 'lib/icons')
   copyRecursive('.tmp/lib/logos', 'lib/logos')
   spinner.succeed()
