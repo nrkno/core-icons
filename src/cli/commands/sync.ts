@@ -8,7 +8,15 @@ import { difference, formatDiff, versionIncrement } from '#src/changes.ts'
 import { generateAndroid } from '#src/generate/android.ts'
 import { generateTypescript } from '#src/generate/typescript.ts'
 import type { Icon, Logo, Manifest } from '#src/manifest.ts'
-import { copyRecursive, mkdirp, readManifest, rmrf, writeFile, writeManifest } from '#utils/fs.ts'
+import {
+  copyRecursive,
+  mkdirp,
+  moveRecursive,
+  readManifest,
+  rmrf,
+  writeFile,
+  writeManifest,
+} from '#utils/fs.ts'
 import { dedent } from '#utils/string.ts'
 import { optimizeIcon, optimizeLogo } from '#utils/svg.ts'
 
@@ -96,11 +104,9 @@ async function syncAction(options: Options) {
   spinner = ora('Parsing icons').start()
   const assets = parse(componentSets, components)
   manifest.assets = assets
-  const updatedAssets = options.force
-    ? assets
-    : assets.filter((asset) => asset.componentUpdatedAt > prevManifest.version)
-  const icons = updatedAssets.filter(({ kind }) => kind === 'icon') as Icon[]
-  const logos = updatedAssets.filter(({ kind }) => kind === 'logo') as Logo[]
+
+  const icons = assets.filter(({ kind }) => kind === 'icon') as Icon[]
+  const logos = assets.filter(({ kind }) => kind === 'logo') as Logo[]
   spinner.succeed(`Parsing icons: found ${icons.length} icons and ${logos.length} logos`)
 
   spinner = ora('Resolving image URLs for download').start()
@@ -145,7 +151,7 @@ async function syncAction(options: Options) {
   rmrf('.tmp')
   try {
     await Promise.all(
-      updatedAssets.map(async (icon) => {
+      assets.map(async (icon) => {
         const url = imageUrls.get(icon.componentNodeId)!
         const svg = await fetch(url).then((res) => res.text())
         const optimized = await (icon.kind === 'logo' ? optimizeLogo(svg) : optimizeIcon(svg))
@@ -159,41 +165,52 @@ async function syncAction(options: Options) {
     return
   }
 
-  if (options.force) {
-    rmrf('lib/icons')
-    rmrf('lib/logos')
-  }
-  copyRecursive('.tmp/lib/icons', 'lib/icons')
-  copyRecursive('.tmp/lib/logos', 'lib/logos')
-  spinner.succeed()
+  try {
+    moveRecursive('lib/icons', '.tmp/backup/icons')
+    moveRecursive('lib/logos', '.tmp/backup/logos')
 
-  spinner = ora('Generating files: TypeScript').start()
-  generateTypescript(manifest)
-  spinner.succeed()
+    copyRecursive('.tmp/lib/icons', 'lib/icons')
+    copyRecursive('.tmp/lib/logos', 'lib/logos')
+    spinner.succeed()
 
-  spinner = ora('Generating files: Android').start()
-  await generateAndroid(manifest)
-  spinner.succeed()
+    spinner = ora('Generating files: TypeScript').start()
+    generateTypescript(manifest)
+    spinner.succeed()
 
-  spinner = ora('Calculating changes').start()
-  const diff = difference(prevManifest.assets, manifest.assets)
-  spinner.succeed()
+    spinner = ora('Generating files: Android').start()
+    await generateAndroid(manifest)
+    spinner.succeed()
 
-  spinner = ora('Creating changeset').start()
-  writeFile(
-    `.changeset/figma-sync.md`,
-    dedent`
+    spinner = ora('Calculating changes').start()
+    const diff = difference(prevManifest.assets, manifest.assets)
+    spinner.succeed()
+
+    spinner = ora('Creating changeset').start()
+    writeFile(
+      `.changeset/figma-sync.md`,
+      dedent`
     ---
     '${pkg.name}': ${versionIncrement(diff) ?? 'patch'}
     ---
     ${formatDiff(diff)}
   `,
-  )
-  spinner.succeed()
+    )
+    spinner.succeed()
 
-  spinner = ora('Writing manifest').start()
-  writeManifest('lib/manifest.json', manifest)
-  spinner.succeed()
+    spinner = ora('Writing manifest').start()
+    writeManifest('lib/manifest.json', manifest)
+    spinner.succeed()
+
+    rmrf('.tmp/backup')
+  } catch (err) {
+    spinner.fail()
+    console.error(`Error during sync: ${(err as Error).message}`)
+    // rollback
+    rmrf('lib/icons')
+    rmrf('lib/logos')
+    moveRecursive('.tmp/backup/icons', 'lib/icons')
+    moveRecursive('.tmp/backup/logos', 'lib/logos')
+  }
 }
 
 function splitIntoChunks<T>(iterable: Iterable<T>, chunkSize: number): T[][] {
