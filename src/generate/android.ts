@@ -5,6 +5,7 @@ import { toAndroidVectorXml as toAndroidVector } from '#utils/svg.ts'
 
 const SRC_DIR = 'android/icons/src/main/kotlin/no/nrk/core/icons'
 const DRAWABLE_DIR = 'android/icons/src/main/res/drawable'
+
 export async function generateAndroid(manifest: Manifest) {
   const icons: Icon[] = manifest.assets.filter((d) => d.kind === 'icon')
 
