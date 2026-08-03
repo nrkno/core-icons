@@ -1,5 +1,9 @@
+import { writeFile } from 'fs/promises'
 import { execSync } from 'node:child_process'
-import type { Asset } from '#src/manifest.ts'
+import { readPreState } from '@changesets/pre'
+import csWriteChangeset from '@changesets/write'
+import pkg from '#package.json' with { type: 'json' }
+import type { Asset, Manifest } from '#src/manifest.ts'
 import { dedent } from '#utils/string.ts'
 
 export type Diff<T extends Asset = Asset> =
@@ -65,7 +69,36 @@ export function difference<T extends Asset = Asset>(a: T[], b: T[]): Diff<T>[] {
   return diffs
 }
 
-export function versionIncrement(diff: Diff[]): 'major' | 'minor' | 'patch' | null {
+export async function writeChangeset(prevManifest: Manifest, manifest: Manifest): Promise<void> {
+  const diff = difference(prevManifest.assets, manifest.assets)
+  if (diff.length === 0) {
+    return
+  }
+
+  // This has to be updated when changesets@3 is released, as prerelease will use a different file
+  // structure and pre.json format
+  const changesetId = await csWriteChangeset(
+    {
+      summary: formatDiff(diff),
+      releases: [
+        {
+          name: pkg.name,
+          type: versionIncrement(diff),
+        },
+      ],
+    },
+    process.cwd(),
+    { prettier: true },
+  )
+
+  const preState = await readPreState(process.cwd())
+  if (preState !== undefined) {
+    preState.changesets.push(changesetId)
+    await writeFile('.changeset/pre.json', JSON.stringify(preState, null, 2))
+  }
+}
+
+export function versionIncrement(diff: Diff[]): 'major' | 'minor' | 'patch' | 'none' {
   if (diff.some(isMajorChange)) {
     return 'major'
   }
@@ -75,7 +108,7 @@ export function versionIncrement(diff: Diff[]): 'major' | 'minor' | 'patch' | nu
   if (diff.some(isPatchChange)) {
     return 'patch'
   }
-  return null
+  return 'none'
 }
 
 export function formatDiff(diffs: Diff[]): string {
@@ -117,8 +150,6 @@ function formatSection(section: { title: string; items: Diff[] }): string {
             return `- Deprecated ${diff.next.kind} \`${diff.next.id}\``
           case 'update':
             return `- Updated ${diff.next.kind} \`${diff.next.id}\``
-          default:
-            throw new Error(`Unknown diff operation: ${op satisfies never}`)
         }
       })
       .join('\n')}

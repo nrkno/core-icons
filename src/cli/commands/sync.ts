@@ -3,8 +3,7 @@ import { Command } from 'commander'
 import ora, { type Ora } from 'ora'
 import { createClient } from '#cli/figma/api.ts'
 import { parse } from '#cli/figma/parse.ts'
-import pkg from '#package.json' with { type: 'json' }
-import { difference, formatDiff, versionIncrement } from '#src/changes.ts'
+import { writeChangeset } from '#src/changes.ts'
 import { generateAndroid } from '#src/generate/android.ts'
 import { generateTypescript } from '#src/generate/typescript.ts'
 import type { Icon, Logo, Manifest } from '#src/manifest.ts'
@@ -17,7 +16,6 @@ import {
   writeFile,
   writeManifest,
 } from '#utils/fs.ts'
-import { dedent } from '#utils/string.ts'
 import { optimizeIcon, optimizeLogo } from '#utils/svg.ts'
 
 export const syncCommand = new Command('sync')
@@ -161,8 +159,7 @@ async function syncAction(options: Options) {
     )
   } catch (err) {
     spinner.fail()
-    console.error(`Error downloading or optimizing SVGs: ${(err as Error).message}`)
-    return
+    throw err
   }
 
   try {
@@ -181,21 +178,8 @@ async function syncAction(options: Options) {
     await generateAndroid(manifest)
     spinner.succeed()
 
-    spinner = ora('Calculating changes').start()
-    const diff = difference(prevManifest.assets, manifest.assets)
-    spinner.succeed()
-
     spinner = ora('Creating changeset').start()
-    writeFile(
-      `.changeset/figma-sync.md`,
-      dedent`
-        ---
-        '${pkg.name}': ${versionIncrement(diff) ?? 'patch'}
-        ---
-
-        ${formatDiff(diff)}
-      `,
-    )
+    await writeChangeset(prevManifest, manifest)
     spinner.succeed()
 
     spinner = ora('Writing manifest').start()
