@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "next",
+  "initialVersions": {
+    "@nrk/core-icons": "18.5.0"
+  },
+  "changesets": []
+}
