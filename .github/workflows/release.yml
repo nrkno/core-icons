@@ -35,16 +35,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Deploy docs
-        if: ${{ steps.changesets.outputs.published == 'true' }}
-        run: |
-          npx @nrk/static-publish-cli -- \
-            --directory=static \
-            --latest \
-            --major
-        env:
-          STATIC_NETSTORAGE_API_ACCOUNT: ${{ secrets.STATIC_NETSTORAGE_API_ACCOUNT }}
-          STATIC_NETSTORAGE_API_KEY: ${{ secrets.STATIC_NETSTORAGE_API_KEY }}
+      # - name: Deploy docs
+      #   if: ${{ steps.changesets.outputs.published == 'true' }}
+      #   run: |
+      #     npx @nrk/static-publish-cli -- \
+      #       --directory=static \
+      #       --latest \
+      #       --major
+      #   env:
+      #     STATIC_NETSTORAGE_API_ACCOUNT: ${{ secrets.STATIC_NETSTORAGE_API_ACCOUNT }}
+      #     STATIC_NETSTORAGE_API_KEY: ${{ secrets.STATIC_NETSTORAGE_API_KEY }}
 
   release_android:
     name: Publish Android library
