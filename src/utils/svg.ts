@@ -185,8 +185,8 @@ async function pretty(input: string): Promise<string> {
 }
 
 function toEmUnits(value: number): string {
-  const format = new Intl.NumberFormat('en-US', { maximumFractionDigits: 3 }).format
-  return `${format(value / 16)}em`
+  const strValue = new Intl.NumberFormat('en-US', { maximumFractionDigits: 3 }).format(value / 16)
+  return `${strValue}em`
 }
 
 function isSVGElement(node: XastElement): node is XastElement & { name: 'svg' } {
