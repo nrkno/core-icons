@@ -1,6 +1,6 @@
 import type { ExecSyncOptions } from 'node:child_process'
 import { describe, expect, test, vi } from 'vitest'
-import { type Diff, difference, formatDiff, versionIncrement } from '#src/changes.ts'
+import { type Diff, difference, formatDiff } from '#src/changes.ts'
 import { Icon } from '#src/manifest.ts'
 import { dedent } from '#utils/string.ts'
 
