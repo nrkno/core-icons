@@ -51,7 +51,7 @@ function generateFromManifest(assets: Asset[]) {
   return `${output.join('\n')}\n`
 }
 
-export async function writeGenerated(path: string, code: string) {
+export function writeGenerated(path: string, code: string) {
   writeFile(
     path,
     dedent`
