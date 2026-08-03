@@ -30,7 +30,7 @@
     "${configDir}/scripts/**/*",
     "${configDir}/src/**/*",
     "${configDir}/test/**/*",
-    "${configDir}/vite.config.ts",
+    "${configDir}/vitest.config.ts",
     "${configDir}/rolldown.config.ts"
   ],
   "vueCompilerOptions": {
