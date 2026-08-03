@@ -1,6 +1,6 @@
 {
   "mode": "pre",
-  "tag": "beta",
+  "tag": "next",
   "initialVersions": {
     "@nrk/core-icons": "18.5.0"
   },
