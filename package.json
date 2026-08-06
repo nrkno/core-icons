@@ -27,6 +27,11 @@
       "require": "./dist/effective.cjs",
       "import": "./dist/effective.js"
     },
+    "./expressive": {
+      "types": "./dist/expressive.d.ts",
+      "require": "./dist/expressive.cjs",
+      "import": "./dist/expressive.js"
+    },
     "./logo": {
       "types": "./dist/logo.d.ts",
       "require": "./dist/logo.cjs",
@@ -36,11 +41,6 @@
       "types": "./dist/compat-logo-large.d.ts",
       "require": "./dist/compat-logo-large.cjs",
       "import": "./dist/compat-logo-large.js"
-    },
-    "./expressive": {
-      "types": "./dist/expressive.d.ts",
-      "require": "./dist/expressive.cjs",
-      "import": "./dist/expressive.js"
     },
     "./jsx": {
       "types": "./dist/compat-jsx-effective.d.ts",
