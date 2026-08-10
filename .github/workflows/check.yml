@@ -1,15 +1,12 @@
 name: Build and test package
+
 on:
   push:
     branches:
-      # TODO use default branch when `next` is merged
-      # - master
-      - next
+      - main
   pull_request:
     branches:
-      # TODO use default branch when `next` is merged
-      # - master
-      - next
+      - main
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

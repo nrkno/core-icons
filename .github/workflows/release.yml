@@ -3,9 +3,7 @@ name: Release
 on:
   push:
     branches:
-      # TODO use default branch when `next` is merged
-      # - master
-      - next
+      - main
 
 permissions:
   contents: write
