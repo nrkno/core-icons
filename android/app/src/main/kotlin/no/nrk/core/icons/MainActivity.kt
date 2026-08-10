@@ -39,19 +39,19 @@ class MainActivity : AppCompatActivity() {
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         Icon(
-                            painter = NrkIcons.NrkLogout.asPainter(),
+                            painter = NrkIcons.LogoutIcon.asPainter(),
                             contentDescription = null,
                             modifier = Modifier.size(96.dp)
                         )
 
                         Icon(
-                            painter = NrkIcons.NrkMediaPlay.asPainter(),
+                            painter = NrkIcons.PlayIcon.asPainter(),
                             contentDescription = null,
                             modifier = Modifier.size(96.dp)
                         )
 
                         Icon(
-                            painter = NrkIcons.NrkHeart.asPainter(),
+                            painter = NrkIcons.HeartIcon.asPainter(),
                             contentDescription = null,
                             modifier = Modifier.size(96.dp)
                         )

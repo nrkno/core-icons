@@ -1,0 +1,16 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+>
+  <path
+    d="M19.5 12a3.5 3.5 0 1 1 0 7H19l1.138 1.706a.832.832 0 0 1-1.385.924L17 19H9.5a3.5 3.5 0 1 1 0-7z"
+  />
+
+  <path
+    fill-rule="evenodd"
+    d="M14.5 2a3.5 3.5 0 1 1 0 7H8l-1.753 2.63a.832.832 0 0 1-1.385-.924L6 9H4.5a3.5 3.5 0 1 1 0-7zm-10 2a1.5 1.5 0 1 0 0 3h10a1.5 1.5 0 0 0 0-3z"
+    clip-rule="evenodd"
+    opacity=".5"
+  />
+</svg>

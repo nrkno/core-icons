@@ -1,0 +1,52 @@
+name: Figma sync
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types:
+      - 'figma:LIBRARY_PUBLISH'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7.0.0
+        # TODO delete `with.ref` to use default branch when `next` is merged
+        with:
+          ref: next
+
+      - uses: ./.github/actions/setup
+
+      - name: Sync assets from Figma
+        run: ./bin/cli sync
+        env:
+          FIGMA_FILE_KEY: ${{ secrets.FIGMA_FILE_KEY }}
+          FIGMA_ACCESS_TOKEN: ${{ secrets.FIGMA_ACCESS_TOKEN }}
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Commit changes to `figma-sync` branch
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          branch: figma-sync
+          create_branch: true
+          commit_message: 'Sync assets from Figma'
+          skip_dirty_check: false
+
+      - name: Create pull request
+        run: |
+          gh pr create \
+            -B master \
+            -H figma-sync \
+            --title 'Sync assets from Figma'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

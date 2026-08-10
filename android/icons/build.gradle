@@ -5,17 +5,9 @@ plugins {
     id 'maven-publish'
 }
 
-def getGitHash() {
-    def stdout = new ByteArrayOutputStream()
-    exec {
-        commandLine 'git', 'rev-parse', '--short', 'HEAD'
-        standardOutput = stdout
-    }
-    return stdout.toString().trim()
-}
-
-def runId = System.getenv("GITHUB_RUN_NUMBER") ?: "0"
-def versionNumber = "1.0.${runId}-${getGitHash()}" as String
+def jsonFile = file("../../package.json")
+def packageJson = new groovy.json.JsonSlurper().parseText(jsonFile.text)
+def versionNumber = packageJson.version as String
 
 tasks.getByName("publishToMavenLocal").doLast {
     println("Locally published version: $versionNumber")

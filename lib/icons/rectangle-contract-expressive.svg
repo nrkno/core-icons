@@ -1,0 +1,16 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+>
+  <path
+    d="M3 12a1 1 0 0 1 1 1v6a1 1 0 0 0 1 1h2a1 1 0 0 1 0 2H5a3 3 0 0 1-3-3v-6a1 1 0 0 1 1-1M1.994 1.994a1 1 0 0 1 1.414 0L8 6.586V3a1 1 0 1 1 2 0v5a2 2 0 0 1-2 2H3a1 1 0 0 1 0-2h3.586L1.994 3.408a1 1 0 0 1 0-1.414M19 2a3 3 0 0 1 3 3v4a1 1 0 0 1-2 0V5a1 1 0 0 0-1-1h-6a1 1 0 0 1 0-2z"
+  />
+
+  <path
+    fill-rule="evenodd"
+    d="M19 12a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3v-4a3 3 0 0 1 3-3zm-6 2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z"
+    clip-rule="evenodd"
+    opacity=".5"
+  />
+</svg>

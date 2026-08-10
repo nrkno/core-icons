@@ -21,6 +21,19 @@ npm ci
 npm start # Your browser will open documentation with hot reloading
 ```
 
+## Figma sync
+
+### 1. Automatic configuration with `direnv` and `vault`
+
+1. Install and set up [`direnv`](https://direnv.net/docs/installation.html)
+1. Install and set up [HashiCorp `vault` cli](https://developer.hashicorp.com/vault/install)
+1. Run `cp .env.example .env` and set the variables. Vault paths should start with `secret/`
+1. Run `direnv allow` in the repository root
+
+### 2. Manual configuration
+
+1. Set the `export`ed variables from [.envrc](.envrc) in your environment.
+
 ## Building and committing
 
 After having applied changes, remember to build before commiting and pushing your changes upstream.
@@ -39,20 +52,6 @@ git push --set-upstream origin feature/my-changes
 # Assign a developer to review your code
 ```
 
-## Testing
-
-We use [Testpack-cli](https://github.com/qwertie/testpack) to ensure published exports work as intended. In short it does the following:
-
-- Runs `npm pack` and moves the generated archive to a sibling test folder `nrk-core-icons-testpack` (which is created if not present) to core-icons
-- npm-installs React in the testpack-folder
-- Copies the `test`-folder to the testpack-folder
-- Runs the `testpack-script` in the testpack-folder
-- Cleans up
-
-We use [arethetypeswring/cli](https://github.com/arethetypeswrong/arethetypeswrong.github.io/tree/main/packages/cli) to verify that our type declarations are available for consumers.
-
-- We purposefully ignore the [false-cjs](https://github.com/arethetypeswrong/arethetypeswrong.github.io/blob/main/docs/problems/FalseCJS.md)-rule as our types are generated from [@nrk/svg-to-js](https://github.com/nrkno/svg-to-js) which only gives us cjs types. We chose not to duplicate the `d.ts`-file to a `d.mts` to solve this error as it could lead to unexpected behavior for consumers.
-
 ## nvm
 
 Uses [Node Version Manager](https://github.com/nvm-sh/nvm/blob/master/README.md#intro) (nvm) to organize node version
@@ -69,12 +68,12 @@ See the [installation guide](https://static.nrk.no/core-icons/latest/index.html#
 
 ### Local development
 
-- `node .github\scripts\generate-android-vectors.js` runs the script that converts SVGs to Android XML drawables
 - `gradlew publishToMavenLocal` builds and publishes a new version locally on your machine that can be used in other projects
 
 ### Icons with rendering artifacts
 
 If an icon has artifacts or other rendering bugs in a different project you should:
+
 - Ask a designer for an updated icon (see for instance [this PR](https://github.com/nrkno/core-icons/pull/394) which fixed two logos with rendering artifacts)
 - Add the icon the relevant folder locally
 - Run through the steps above to build a new version of the library locally and use this in your project. Do not test the new icon by manually importing it into your project which uses Android Studios SVG -> XML conversion. The issue might be partly with the way the library converts the SVG, the icon might look normal when manually importing it

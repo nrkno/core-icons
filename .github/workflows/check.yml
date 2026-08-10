@@ -1,24 +1,32 @@
 name: Build and test package
 on:
   push:
-    branches: [master]
+    branches:
+      # TODO use default branch when `next` is merged
+      # - master
+      - next
   pull_request:
-    branches: [master]
+    branches:
+      # TODO use default branch when `next` is merged
+      # - master
+      - next
+
 concurrency:
-  group: ${{ github.ref }}
-  cancel-in-progress: ${{ github.ref != 'refs/heads/master' }}
+  group: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version-file: '.nvmrc'
-          registry-url: 'https://registry.npmjs.org'
-          cache: 'npm'
-      - run: npm ci
-      # Build to verify
-      - run: npm run build
-      # Verify built artefacts
-      - run: npm run test
+      - uses: actions/checkout@v7.0.0
+
+      - uses: ./.github/actions/setup
+
+      - name: Build project
+        run: npm run build
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Run tests
+        run: npm run test

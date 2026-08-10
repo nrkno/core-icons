@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "lib": ["esnext", "dom"],
+    "rootDir": "${configDir}",
+
+    "allowJs": false,
+    "strict": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": false,
+
+    "moduleResolution": "bundler",
+    "module": "esnext",
+    "target": "es2025",
+    "esModuleInterop": true,
+    "declaration": true,
+
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": false,
+    "typeRoots": ["${configDir}/node_modules", "${configDir}/node_modules/@types"],
+    "types": ["node", "vitest/importMeta", "vite/client"]
+  },
+  "include": [
+    "${configDir}/bin/**/*",
+    "${configDir}/docs/**/*",
+    "${configDir}/lib/**/*",
+    "${configDir}/scripts/**/*",
+    "${configDir}/src/**/*",
+    "${configDir}/test/**/*",
+    "${configDir}/vitest.config.ts",
+    "${configDir}/rolldown.config.ts"
+  ],
+  "vueCompilerOptions": {
+    "vitePressExtensions": [".md"]
+  }
+}
