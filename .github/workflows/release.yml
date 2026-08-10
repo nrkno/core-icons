@@ -7,8 +7,8 @@ on:
 
 permissions:
   contents: write
-  pages: write
   id-token: write
+  pull-requests: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   release_npm:
-    name: Publish npm library
+    name: Create release pull request or publish to npm
     runs-on: ubuntu-latest
     outputs:
       published: ${{ steps.changesets.outputs.published }}
@@ -28,7 +28,7 @@ jobs:
       - name: Run tests
         run: npm run test
 
-      - name: Create Release Pull Request or Publish to npm
+      - name: Create release pull request or publish to npm
         id: changesets
         uses: changesets/action@v1.9.0
         with:
