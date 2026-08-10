@@ -4,5 +4,7 @@
   "initialVersions": {
     "@nrk/core-icons": "18.5.0"
   },
-  "changesets": []
+  "changesets": [
+    "bold-lights-obey"
+  ]
 }
