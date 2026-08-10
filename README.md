@@ -52,20 +52,6 @@ git push --set-upstream origin feature/my-changes
 # Assign a developer to review your code
 ```
 
-## Testing
-
-We use [Testpack-cli](https://github.com/qwertie/testpack) to ensure published exports work as intended. In short it does the following:
-
-- Runs `npm pack` and moves the generated archive to a sibling test folder `nrk-core-icons-testpack` (which is created if not present) to core-icons
-- npm-installs React in the testpack-folder
-- Copies the `test`-folder to the testpack-folder
-- Runs the `testpack-script` in the testpack-folder
-- Cleans up
-
-We use [arethetypeswring/cli](https://github.com/arethetypeswrong/arethetypeswrong.github.io/tree/main/packages/cli) to verify that our type declarations are available for consumers.
-
-- We purposefully ignore the [false-cjs](https://github.com/arethetypeswrong/arethetypeswrong.github.io/blob/main/docs/problems/FalseCJS.md)-rule as our types are generated from [@nrk/svg-to-js](https://github.com/nrkno/svg-to-js) which only gives us cjs types. We chose not to duplicate the `d.ts`-file to a `d.mts` to solve this error as it could lead to unexpected behavior for consumers.
-
 ## nvm
 
 Uses [Node Version Manager](https://github.com/nvm-sh/nvm/blob/master/README.md#intro) (nvm) to organize node version
@@ -82,7 +68,6 @@ See the [installation guide](https://static.nrk.no/core-icons/latest/index.html#
 
 ### Local development
 
-- `node .github\scripts\generate-android-vectors.js` runs the script that converts SVGs to Android XML drawables
 - `gradlew publishToMavenLocal` builds and publishes a new version locally on your machine that can be used in other projects
 
 ### Icons with rendering artifacts
