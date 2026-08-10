@@ -970,3 +970,8 @@ export const NrkEllipsisExpressiveActive: React.FC<React.SVGProps<SVGSVGElement>
   const attributes: React.SVGProps<SVGSVGElement> = { 'aria-hidden': true, viewBox: '0 0 24 24', fill: 'currentColor', width: '1.5em', height: '1.5em', dangerouslySetInnerHTML: { __html: '<path fill-rule="evenodd" d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1m-6 9a2 2 0 1 0 0 4 2 2 0 0 0 0-4m6 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m6 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4" clip-rule="evenodd"/>' }, ...props };
   return React.createElement('svg', attributes);
 };
+/** @deprecated */
+export const NrkRadioExpressiveActive: React.FC<React.SVGProps<SVGSVGElement>> = (props: React.SVGProps<SVGSVGElement>,) => {
+  const attributes: React.SVGProps<SVGSVGElement> = { 'aria-hidden': true, viewBox: '0 0 24 24', fill: 'currentColor', width: '1.5em', height: '1.5em', dangerouslySetInnerHTML: { __html: '<path d="M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" /><path fill-rule="evenodd" d="M12 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm0 2a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" clip-rule="evenodd" />', }, ...props, };
+  return React.createElement('svg', attributes);
+}

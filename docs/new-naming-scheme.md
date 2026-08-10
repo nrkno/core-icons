@@ -225,6 +225,10 @@
 | `nrk-media-volume--muted` | `volume-x` | `nrkMediaVolumeMuted` | `volumeXIcon` | `NrkMediaVolumeMuted` | `VolumeXIcon` |
 | `nrk-some-embed` | `code` | `nrkSomeEmbed` | `codeIcon` | `NrkSomeEmbed` | `CodeIcon` |
 | `nrk-live-activity` | `clock-and-dot` | `nrkLiveActivity` | `clockAndDotIcon` | `NrkLiveActivity` | `ClockAndDotIcon` |
+| `nrk-rectangle-landscape-to-portrait` | `nrkRectangleLandscapeToPortrait` | `rectangleLandscapeToPortraitIcon` | `NrkRectangleLandscapeToPortrait` | `RectangleLandscapeToPortraitIcon` |
+| `nrk-rectangle-portrait-to-landscape` | `nrkRectanglePortraitToLandscape` | `rectanglePortraitToLandscapeIcon` | `NrkRectanglePortraitToLandscape` | `RectanglePortraitToLandscapeIcon` |
+| `nrk-speech-bubble-quote` | `nrkSpeechBubbleQuote` | `speechBubbleQuoteIcon` | `NrkSpeechBubbleQuote` | `SpeechBubbleQuoteIcon` |
+| `nrk-speech-bubble-quote--active` | `nrkSpeechBubbleQuoteActive` | `speechBubbleQuoteSolidIcon` | `NrkSpeechBubbleQuoteActive` | `SpeechBubbleQuoteSolidIcon` |
 
 ## `@nrk/core-icons/expressive`
 
@@ -421,6 +425,10 @@
 | `nrk-media-playlist-add-next-expressive` | `list-arrow-to-top-expressive` | `nrkMediaPlaylistAddNextExpressive` | `listArrowToTopExpressiveIcon` | `NrkMediaPlaylistAddNextExpressive` | `ListArrowToTopExpressiveIcon` |
 | `nrk-gallery-expressive` | `image-stack-expressive` | `nrkGalleryExpressive` | `imageStackExpressiveIcon` | `NrkGalleryExpressive` | `ImageStackExpressiveIcon` |
 | `nrk-some-embed-expressive` | `code-expressive` | `nrkSomeEmbedExpressive` | `codeExpressiveIcon` | `NrkSomeEmbedExpressive` | `CodeExpressiveIcon` |
+| `nrk-rectangle-landscape-to-portrait-expressive` | `nrkRectangleLandscapeToPortraitExpressive` | `rectangleLandscapeToPortraitExpressiveIcon` | `NrkRectangleLandscapeToPortraitExpressive` | `RectangleLandscapeToPortraitExpressiveIcon` |
+| `nrk-rectangle-portrait-to-landscape-expressive` | `nrkRectanglePortraitToLandscapeExpressive` | `rectanglePortraitToLandscapeExpressiveIcon` | `NrkRectanglePortraitToLandscapeExpressive` | `RectanglePortraitToLandscapeExpressiveIcon` |
+| `nrk-speech-bubble-quote-expressive` | `nrkSpeechBubbleQuoteExpressive` | `speechBubbleQuoteExpressiveIcon` | `NrkSpeechBubbleQuoteExpressive` | `SpeechBubbleQuoteExpressiveIcon` |
+| `nrk-speech-bubble-quote-expressive--active` | `nrkSpeechBubbleQuoteExpressiveActive` | `speechBubbleQuoteSolidExpressiveIcon` | `NrkSpeechBubbleQuoteExpressiveActive` | `SpeechBubbleQuoteSolidExpressiveIcon` |
 
 ## `@nrk/core-icons/logo`
 
