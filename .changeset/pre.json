@@ -5,6 +5,7 @@
     "@nrk/core-icons": "18.5.0"
   },
   "changesets": [
-    "bold-lights-obey"
+    "bold-lights-obey",
+    "thin-pigs-win"
   ]
 }

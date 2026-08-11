@@ -1,5 +1,11 @@
 # @nrk/core-icons
 
+## 19.0.0-next.1
+
+### Patch Changes
+
+- N/A
+
 ## 19.0.0-next.0
 
 ### Major Changes
