@@ -1,7 +1,6 @@
 import manifest from '#lib/manifest.json' with { type: 'json' }
-import type { Asset } from '#src/manifest.ts'
-import { toExportedName } from '#utils/string.ts'
-import { toCamelCase, toPascalCase } from '#utils/string.ts'
+import type { Asset, Kind } from '#src/manifest.ts'
+import { toExportedName, toPascalCase } from '#utils/string.ts'
 
 const pkgs = {
   effective: await import('#lib/effective.ts'),
@@ -25,10 +24,10 @@ function toHtml(asset: Asset, svg: string): string {
       ${svg.replace(/<svg/, `<svg id=${asset.id}`)}
       <span style="font-size: .9rem">${asset.id}</span>
       <div class="docs-pops" style="font-size: .9rem">
-        <button type="button" data-id="${asset.id}" onclick="copyHTML(this)">Copy HTML</button>
-        <button type="button" data-id="${asset.id}" onclick="copyCSS(this)">Copy CSS</button>
-        <button type="button" data-id="${asset.id}" onclick="copyJS(this)">Copy JS</button>
-        <button type="button" data-id="${asset.id}" onclick="copyJS(this, true)">Copy JSX</button>
+        <button type="button" data-kind="${asset.kind}" data-id="${asset.id}" onclick="copyHTML(this)">Copy HTML</button>
+        <button type="button" data-kind="${asset.kind}" data-id="${asset.id}" onclick="copyCSS(this)">Copy CSS</button>
+        <button type="button" data-kind="${asset.kind}" data-id="${asset.id}" onclick="copyJS(this)">Copy JS</button>
+        <button type="button" data-kind="${asset.kind}" data-id="${asset.id}" onclick="copyJS(this, true)">Copy JSX</button>
       </div>
     </div>
   `
@@ -76,7 +75,9 @@ async function copyToClipBoard(button: HTMLButtonElement, textToCopy: string) {
 
 function copyJS(button: HTMLButtonElement, pascal?: boolean) {
   const id = button.dataset.id!
-  void copyToClipBoard(button, pascal ? toPascalCase(id) : toCamelCase(id))
+  const kind = button.dataset.kind! as Kind
+  const exportedName = toExportedName(id, kind)
+  void copyToClipBoard(button, pascal ? toPascalCase(exportedName) : exportedName)
 }
 
 function copyCSS(button: HTMLButtonElement) {
