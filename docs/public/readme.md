@@ -13,30 +13,15 @@ Core-icons is organized in submodules to accomodate variants:
 
 ### Icons
 
-Contains all icons
-
-- All icons follow [BEM naming conventions](http://getbem.com/) and are prefixed with `nrk-` to play nice with existing code.
-- For some icons an additional group name preceding icon name is included for categorization like `nrk-arrow-right`
+Contains «effective» (default) variants. Icons are suffixed with `Icon`, i.e. `wifiIcon`.
 
 ### Expressive
 
-Contains expressive variants of a subset of the baseline icons
-
-- Expressive icons are suffixed with `-expressive-` like `nrk-tilgjengelighet-expressive`
+Contains «expressive» variants. Expressive icons are suffixed with `ExpressiveIcon`, i.e. `wifiExpressiveIcon`.
 
 ### Logo
 
-Contains all logos for Norsk rikskringkasting (NRK)
-
-- Logos have `nrk-logo-` prefix like `nrk-logo-nrk`
-
-### Preview
-
-Contains preview-versions of icons or logos for testing purposes. These resources should **not** be used in a production context
-
-- All preview files have `-preview` added to the apropriate logo or icon prefix like `nrk-logo-preview-nrk`
-- Any file in the preview context may be removed or altered in minor or patch releases
-- When ready, a preview resource will be added to the apropriate context (icon/logo/expressive) and will be mentioned in the [release-notes](https://github.com/nrkno/core-icons/releases)
+Contains all logos for Norsk rikskringkasting (NRK). Logos are suffixed with `Logo`, i.e. `nrkJazzLogo`.
 
 ## License
 
@@ -50,7 +35,7 @@ Code files are distributed under the MIT License (https://opensource.org/license
 
 ### Logos
 
-Logos refers to image assets that include trademarks, such as NRK. These asset names are prefixed with `nrk-logo-` or `nrk-super-`.
+Logos refers to image assets that include trademarks, such as NRK. These asset names are suffixed with `Logo`.
 
 All use of these NRK trademarked assets require our prior specific permission and must be in compliance with NRKs design guidelines.
 For more information about NRK design guidelines and use of our trademarks, see https://info.nrk.no/design.
@@ -60,10 +45,6 @@ For more information about NRK design guidelines and use of our trademarks, see 
 Icons refers to all image assets other than logos.
 
 Icon image assets are licensed under a Creative Commons Attribution 4.0 International License. (https://creativecommons.org/licenses/by/4.0/).
-
-### Previews
-
-Preview icons follow the above naming conventions, and should be treated as part of the appropriate content type
 
 ## Browse icons
 
@@ -117,13 +98,19 @@ We host the following scripts for use in the browser on our cdn
 For stability, please link to the appropriate major version
 
 ```html
-<script async src="https://static.nrk.no/core-icons/major/18/core-icons-iife.js"></script>
+<script
+  async
+  src="https://static.nrk.no/core-icons/major/18/core-icons-iife.js"
+></script>
 ```
 
 Linking to `/latest/` is recommended only for prototyping.
 
 ```html
-<script async src="https://static.nrk.no/core-icons/latest/core-icons-iife.js"></script>
+<script
+  async
+  src="https://static.nrk.no/core-icons/latest/core-icons-iife.js"
+></script>
 ```
 
 ### Using Android
