@@ -12,6 +12,7 @@ concurrency:
 
 jobs:
   sync:
+    name: Sync assets from Figma and create pull request
     runs-on: ubuntu-latest
     permissions:
       contents: write
