@@ -42,8 +42,9 @@ jobs:
       - name: Create pull request
         run: |
           gh pr create \
-            -B master \
-            -H figma-sync \
-            --title 'Sync assets from Figma'
+            --base main \
+            --head figma-sync \
+            --title 'Sync assets from Figma' \
+            --body 'This pull request contains the latest assets synced from Figma.'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
