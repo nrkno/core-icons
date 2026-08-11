@@ -37,6 +37,7 @@ jobs:
         with:
           branch: figma-sync
           create_branch: true
+          commit_user_name: 'Figma sync workflow'
           commit_message: 'Sync assets from Figma'
           push_options: '--force'
           skip_dirty_check: false
