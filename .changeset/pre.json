@@ -4,9 +4,5 @@
   "initialVersions": {
     "@nrk/core-icons": "18.5.0"
   },
-  "changesets": [
-    "bold-lights-obey",
-    "thin-pigs-win",
-    "whole-zebras-pull"
-  ]
+  "changesets": ["bold-lights-obey", "thin-pigs-win"]
 }
