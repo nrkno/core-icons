@@ -1,5 +1,14 @@
 # @nrk/core-icons
 
+## 19.0.0-next.2
+
+### Minor Changes
+
+- 5ec0195: **Minor changes**
+
+  - Added icon `sliders`
+  - Added icon `sliders-expressive`
+
 ## 19.0.0-next.1
 
 ### Patch Changes
