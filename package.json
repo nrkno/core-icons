@@ -77,7 +77,6 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.1",
-    "@changesets/pre": "^2.0.2",
     "@changesets/write": "^0.4.0",
     "@figma/rest-api-spec": "^0.41.0",
     "@types/node": "^24.12.4",

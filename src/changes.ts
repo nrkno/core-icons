@@ -1,6 +1,4 @@
-import { writeFile } from 'fs/promises'
 import { execSync } from 'node:child_process'
-import { readPreState } from '@changesets/pre'
 import csWriteChangeset from '@changesets/write'
 import pkg from '#package.json' with { type: 'json' }
 import type { Asset, Manifest } from '#src/manifest.ts'
@@ -75,9 +73,7 @@ export async function writeChangeset(prevManifest: Manifest, manifest: Manifest)
     return
   }
 
-  // This has to be updated when changesets@3 is released, as prerelease will use a different file
-  // structure and pre.json format
-  const changesetId = await csWriteChangeset(
+  await csWriteChangeset(
     {
       summary: formatDiff(diff),
       releases: [
@@ -90,12 +86,6 @@ export async function writeChangeset(prevManifest: Manifest, manifest: Manifest)
     process.cwd(),
     { prettier: true },
   )
-
-  const preState = await readPreState(process.cwd())
-  if (preState !== undefined) {
-    preState.changesets.push(changesetId)
-    await writeFile('.changeset/pre.json', JSON.stringify(preState, null, 2))
-  }
 }
 
 export function versionIncrement(diff: Diff[]): 'major' | 'minor' | 'patch' | 'none' {
