@@ -997,6 +997,11 @@ object NrkIcons {
     expressive = R.drawable.sign_language_expressive
   )
 
+  val SlidersIcon = NrkIcon(
+    normal = R.drawable.sliders,
+    expressive = R.drawable.sliders_expressive
+  )
+
   val SmartSpeakerIcon = NrkIcon(
     normal = R.drawable.smart_speaker,
     expressive = R.drawable.smart_speaker_expressive
