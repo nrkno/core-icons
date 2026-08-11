@@ -183,7 +183,7 @@
     {
       "componentId": "3a12a06d62317bfaefbc4bae0b8a9338785ae9a7",
       "componentNodeId": "3554:276",
-      "componentUpdatedAt": 1781594513343,
+      "componentUpdatedAt": 1784551591675,
       "file": "lib/icons/arrow-down.svg",
       "id": "arrow-down",
       "kind": "icon",
@@ -193,7 +193,7 @@
     {
       "componentId": "820dcc8ac49dd94fb411f3e989c12ad1ae3907a4",
       "componentNodeId": "3523:960",
-      "componentUpdatedAt": 1781594513629,
+      "componentUpdatedAt": 1784551591683,
       "file": "lib/icons/arrow-down-expressive.svg",
       "id": "arrow-down-expressive",
       "kind": "icon",
@@ -443,7 +443,7 @@
     {
       "componentId": "893819347433739d4c952e1fd6c9583d1ecdb7b4",
       "componentNodeId": "12:1179",
-      "componentUpdatedAt": 1781594538861,
+      "componentUpdatedAt": 1784551591691,
       "file": "lib/icons/arrows-expand.svg",
       "id": "arrows-expand",
       "kind": "icon",
@@ -453,7 +453,7 @@
     {
       "componentId": "cb96f03e73c8d68cfb1f101fd36719208b96899a",
       "componentNodeId": "3523:977",
-      "componentUpdatedAt": 1781594539138,
+      "componentUpdatedAt": 1784551591699,
       "file": "lib/icons/arrows-expand-expressive.svg",
       "id": "arrows-expand-expressive",
       "kind": "icon",
@@ -7961,6 +7961,26 @@
       "variant": "expressive"
     },
     {
+      "componentId": "1680cff7aefcfd04ddad41002c192798f88d208b",
+      "componentNodeId": "16100:10",
+      "componentUpdatedAt": 1784551591636,
+      "file": "lib/icons/sliders.svg",
+      "id": "sliders",
+      "kind": "icon",
+      "name": "sliders",
+      "variant": "effective"
+    },
+    {
+      "componentId": "2276cf6ee89c1318801871befb9370263d94c607",
+      "componentNodeId": "16100:12",
+      "componentUpdatedAt": 1784551591645,
+      "file": "lib/icons/sliders-expressive.svg",
+      "id": "sliders-expressive",
+      "kind": "icon",
+      "name": "sliders",
+      "variant": "expressive"
+    },
+    {
       "componentId": "6dbe64f3b0a53cb86c4f54d8df0b8ee63275491d",
       "componentNodeId": "6021:163",
       "componentUpdatedAt": 1781594612003,
@@ -8898,5 +8918,5 @@
       "variant": "effective"
     }
   ],
-  "version": 1781594714491
+  "version": 1784551591699
 }
