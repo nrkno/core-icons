@@ -1,4 +1,4 @@
-import type { Icon, Manifest } from '#src/manifest.ts'
+import type { Icon, Logo, Manifest } from '#src/manifest.ts'
 import { mkdirp, readFile, rmrf, writeFile } from '#utils/fs.ts'
 import { dedent, toPascalCase, toSnakeCase } from '#utils/string.ts'
 import { toAndroidVectorXml as toAndroidVector } from '#utils/svg.ts'
@@ -8,6 +8,7 @@ const DRAWABLE_DIR = 'android/icons/src/main/res/drawable'
 
 export async function generateAndroid(manifest: Manifest) {
   const icons: Icon[] = manifest.assets.filter((d) => d.kind === 'icon')
+  const logos: Logo[] = manifest.assets.filter((d) => d.kind === 'logo')
 
   rmrf(DRAWABLE_DIR)
   mkdirp(DRAWABLE_DIR)
@@ -63,6 +64,18 @@ export async function generateAndroid(manifest: Manifest) {
             `
           })
           .join('\n\n')}
+
+          ${logos
+            .map((logo) => {
+              const name = `${toPascalCase(logo.name)}Logo`
+              return dedent`
+                val ${name} = NrkIcon(
+                  normal = R.drawable.${toSnakeCase(logo.id)},
+                  expressive = null
+                )
+              `
+            })
+            .join('\n\n')}
       }
     `,
   )
