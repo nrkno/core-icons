@@ -71,10 +71,18 @@ describe('codemod', () => {
   })
 
   it('leaves removed icons untouched but warns', () => {
-    const result = transform("import { nrkSpinner, nrkBell } from '@nrk/core-icons'", map)
-    expect(result.code).toBe("import { nrkSpinner, bellIcon } from '@nrk/core-icons'")
+    const result = transform("import { nrkFlagNorwegian, nrkBell } from '@nrk/core-icons'", map)
+    expect(result.code).toBe("import { nrkFlagNorwegian, bellIcon } from '@nrk/core-icons'")
     expect(result.warnings).toHaveLength(1)
-    expect(result.warnings[0]).toContain('nrkSpinner')
+    expect(result.warnings[0]).toContain('nrkFlagNorwegian')
+  })
+
+  it('renames the spinner and progress icons to their v19.1.0 successors', () => {
+    const result = transform("import { nrkSpinner, nrkProgress } from '@nrk/core-icons'", map)
+    expect(result.code).toBe(
+      "import { circleHalfDottedIcon, circleThreeQuarterIcon } from '@nrk/core-icons'",
+    )
+    expect(result.warnings).toEqual([])
   })
 
   it('leaves JSX imports untouched but suggests the string export', () => {
