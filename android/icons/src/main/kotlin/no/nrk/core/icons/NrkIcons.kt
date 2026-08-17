@@ -277,6 +277,11 @@ object NrkIcons {
     expressive = R.drawable.chromecast_solid_expressive
   )
 
+  val CircleHalfDottedIcon = NrkIcon(
+    normal = R.drawable.circle_half_dotted,
+    expressive = R.drawable.circle_half_dotted_expressive
+  )
+
   val CircleInCircleIcon = NrkIcon(
     normal = R.drawable.circle_in_circle,
     expressive = null
@@ -285,6 +290,11 @@ object NrkIcons {
   val CircleInCircleSolidIcon = NrkIcon(
     normal = R.drawable.circle_in_circle_solid,
     expressive = null
+  )
+
+  val CircleThreeQuarterIcon = NrkIcon(
+    normal = R.drawable.circle_three_quarter,
+    expressive = R.drawable.circle_three_quarter_expressive
   )
 
   val ClockIcon = NrkIcon(
