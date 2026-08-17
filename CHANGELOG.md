@@ -1,5 +1,20 @@
 # @nrk/core-icons
 
+## 19.1.0
+
+### Minor Changes
+
+- 5af9d6f: **Minor changes**
+
+  - Added icon `circle-half-dotted`
+  - Added icon `circle-half-dotted-expressive`
+  - Added icon `circle-three-quarter`
+  - Added icon `circle-three-quarter-expressive`
+
+### Patch Changes
+
+- 8c586b5: Include logos in android library
+
 ## 19.0.0
 
 ### Major Changes
