@@ -1001,6 +1001,26 @@
       "variant": "expressive"
     },
     {
+      "componentId": "7ee4dd81a252e4ce46d9c80d75f9c9283ca310c1",
+      "componentNodeId": "16443:32",
+      "componentUpdatedAt": 1786953875982,
+      "file": "lib/icons/circle-half-dotted.svg",
+      "id": "circle-half-dotted",
+      "kind": "icon",
+      "name": "circle-half-dotted",
+      "variant": "effective"
+    },
+    {
+      "componentId": "8157b08c3493ad0b02cfff184ab0825467dbaad2",
+      "componentNodeId": "16443:35",
+      "componentUpdatedAt": 1786953875992,
+      "file": "lib/icons/circle-half-dotted-expressive.svg",
+      "id": "circle-half-dotted-expressive",
+      "kind": "icon",
+      "name": "circle-half-dotted",
+      "variant": "expressive"
+    },
+    {
       "componentId": "4693993cf8eddaba8720d6851d1885b1911d6c33",
       "componentNodeId": "5574:154",
       "componentUpdatedAt": 1781594562933,
@@ -1019,6 +1039,26 @@
       "kind": "icon",
       "name": "circle-in-circle-solid",
       "variant": "effective"
+    },
+    {
+      "componentId": "353384b76d818516959398931caf93e3844d3787",
+      "componentNodeId": "5574:110",
+      "componentUpdatedAt": 1786953876007,
+      "file": "lib/icons/circle-three-quarter.svg",
+      "id": "circle-three-quarter",
+      "kind": "icon",
+      "name": "circle-three-quarter",
+      "variant": "effective"
+    },
+    {
+      "componentId": "9690f16d78e95ead77454f174d2529a32dc7470a",
+      "componentNodeId": "6021:94",
+      "componentUpdatedAt": 1786953876012,
+      "file": "lib/icons/circle-three-quarter-expressive.svg",
+      "id": "circle-three-quarter-expressive",
+      "kind": "icon",
+      "name": "circle-three-quarter",
+      "variant": "expressive"
     },
     {
       "componentId": "fda9df374c010160abe12a8e8676aa52b84fd60d",
@@ -8918,5 +8958,5 @@
       "variant": "effective"
     }
   ],
-  "version": 1784551591699
+  "version": 1786953876012
 }
