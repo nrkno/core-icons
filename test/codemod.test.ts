@@ -85,6 +85,37 @@ describe('codemod', () => {
     expect(result.warnings[0]).toContain('@nrk/core-icons')
   })
 
+  it('rewrites type-only imports', () => {
+    const result = transform("import type { nrkSearch } from '@nrk/core-icons'", map)
+    expect(result.code).toBe("import type { magnifyingGlassIcon } from '@nrk/core-icons'")
+  })
+
+  it('preserves inline type specifiers', () => {
+    const result = transform("import { type nrkSearch, nrkBell } from '@nrk/core-icons'", map)
+    expect(result.code).toBe("import { type magnifyingGlassIcon, bellIcon } from '@nrk/core-icons'")
+  })
+
+  it('strips comments inside the clause without dropping specifiers', () => {
+    const result = transform(
+      "import { nrkSearch /* magnifier */, nrkBell } from '@nrk/core-icons'",
+      map,
+    )
+    expect(result.code).toBe("import { magnifyingGlassIcon, bellIcon } from '@nrk/core-icons'")
+  })
+
+  it('leaves statements with unsupported syntax untouched and warns', () => {
+    const code = 'import { "nrkSearch" as search } from \'@nrk/core-icons\''
+    const result = transform(code, map)
+    expect(result.changed).toBe(false)
+    expect(result.warnings[0]).toContain('migrate manually')
+  })
+
+  it('does not crash on namespace imports from jsx entry points', () => {
+    const result = transform("import * as icons from '@nrk/core-icons/jsx'", map)
+    expect(result.changed).toBe(false)
+    expect(result.warnings[0]).toContain('manually')
+  })
+
   it('warns on default and namespace imports', () => {
     const result = transform("import * as icons from '@nrk/core-icons'", map)
     expect(result.changed).toBe(false)

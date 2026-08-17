@@ -33,7 +33,7 @@ const SKIP_DIRS = new Set([
 ])
 
 const IMPORT_STATEMENT =
-  /(?<keyword>import|export)\s+(?<clause>[\w$]+|[\w$]+\s*,\s*\{[^}]*\}|\{[^}]*\}|\*\s+as\s+[\w$]+)\s+from\s*(?<quote>['"])(?<source>@nrk\/core-icons(?:\/[\w/-]+)?)\k<quote>/g
+  /(?<keyword>import|export)\s+(?<typekw>type\s+)?(?<clause>[\w$]+|[\w$]+\s*,\s*\{[^}]*\}|\{[^}]*\}|\*\s+as\s+[\w$]+)\s+from\s*(?<quote>['"])(?<source>@nrk\/core-icons(?:\/[\w/-]+)?)\k<quote>/g
 const REQUIRE_CALL = /(?:require\s*\(|import\s*\()\s*(['"])(@nrk\/core-icons(?:\/[\w/-]+)?)\1\s*\)/g
 
 /**
@@ -47,12 +47,21 @@ export function transform(code, map) {
   const bodyRenames = new Map()
 
   let next = code.replace(IMPORT_STATEMENT, (statement, ...args) => {
-    const { keyword, clause, quote, source } = args.at(-1)
+    const { keyword, typekw, clause, quote, source } = args.at(-1)
     const entry = map[source]
     if (!entry) return statement
 
+    const specifiers = parseSpecifiers(clause)
+    if (!specifiers) {
+      warnings.push(
+        `Import from \`${source}\` could not be rewritten automatically ` +
+          `(default/namespace import or unsupported syntax) — migrate manually.`,
+      )
+      return statement
+    }
+
     if (source.includes('/jsx')) {
-      for (const spec of parseSpecifiers(clause)) {
+      for (const spec of specifiers) {
         const rename = entry.renames[spec.name]
         if (rename) {
           warnings.push(
@@ -64,12 +73,6 @@ export function transform(code, map) {
           warnings.push(`\`${spec.name}\` from \`${source}\` is removed without a replacement.`)
         }
       }
-      return statement
-    }
-
-    const specifiers = parseSpecifiers(clause)
-    if (!specifiers) {
-      warnings.push(`Default or namespace import from \`${source}\` must be migrated manually.`)
       return statement
     }
 
@@ -97,12 +100,13 @@ export function transform(code, map) {
       }
     }
 
+    const prefix = `${keyword} ${typekw ? 'type ' : ''}`
     const statements = []
     if (kept.length) {
-      statements.push(`${keyword} { ${dedupe(kept).join(', ')} } from ${quote}${source}${quote}`)
+      statements.push(`${prefix}{ ${dedupe(kept).join(', ')} } from ${quote}${source}${quote}`)
     }
     for (const [target, specs] of moved) {
-      statements.push(`${keyword} { ${dedupe(specs).join(', ')} } from ${quote}${target}${quote}`)
+      statements.push(`${prefix}{ ${dedupe(specs).join(', ')} } from ${quote}${target}${quote}`)
     }
     return statements.join('\n')
   })
@@ -122,22 +126,28 @@ export function transform(code, map) {
 
 /**
  * Parses a named-import clause into specifiers. Returns null for clauses the
- * codemod does not rewrite (default and namespace imports).
+ * codemod does not rewrite (default and namespace imports, or syntax it does
+ * not understand — better to leave the statement untouched than drop a specifier).
+ * Comments inside the clause are stripped and not preserved in the output.
  */
 function parseSpecifiers(clause) {
   const braces = /^\{(?<inner>[^}]*)\}$/.exec(clause.trim())
   if (!braces) return null
-  return braces.groups.inner
+  const inner = braces.groups.inner.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/[^\n]*/g, '')
+  const specifiers = []
+  for (const part of inner
     .split(',')
-    .map((part) => part.trim())
-    .filter(Boolean)
-    .map((part) => {
-      const match = /^(?<type>type\s+)?(?<name>[\w$]+)(?:\s+as\s+(?<alias>[\w$]+))?$/.exec(part)
-      return match
-        ? { type: match.groups.type ?? '', name: match.groups.name, alias: match.groups.alias }
-        : null
+    .map((p) => p.trim())
+    .filter(Boolean)) {
+    const match = /^(?<type>type\s+)?(?<name>[\w$]+)(?:\s+as\s+(?<alias>[\w$]+))?$/.exec(part)
+    if (!match) return null
+    specifiers.push({
+      type: match.groups.type ?? '',
+      name: match.groups.name,
+      alias: match.groups.alias,
     })
-    .filter(Boolean)
+  }
+  return specifiers
 }
 
 function render(spec) {
