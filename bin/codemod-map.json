@@ -1,0 +1,4885 @@
+{
+  "@nrk/core-icons": {
+    "renames": {
+      "nrkCheckActive": {
+        "name": "checkmarkCircleCheckedSolidIcon"
+      },
+      "nrkMediaCompleted": {
+        "name": "checkmarkCircleCheckedSolidIcon"
+      },
+      "nrkHardwareMicrophoneActive": {
+        "name": "microphoneSolidIcon"
+      },
+      "nrkGeopoint": {
+        "name": "pinIcon"
+      },
+      "nrkBack": {
+        "name": "arrowUturnLeftIcon"
+      },
+      "nrkGeo": {
+        "name": "targetIcon"
+      },
+      "nrkOnline": {
+        "name": "wifiIcon"
+      },
+      "nrkMediaBeamNote": {
+        "name": "musicNotesIcon"
+      },
+      "nrkNote2": {
+        "name": "musicNotesIcon"
+      },
+      "nrkList": {
+        "name": "listIcon"
+      },
+      "nrkGlobe": {
+        "name": "globeIcon"
+      },
+      "nrkHide": {
+        "name": "eyeSlashIcon"
+      },
+      "nrkOffline": {
+        "name": "wifiSlashIcon"
+      },
+      "nrkCategory": {
+        "name": "squares2x2Icon"
+      },
+      "nrkMediaDirekteGolive": {
+        "name": "circleInCircleSolidIcon"
+      },
+      "nrkSettingsActive": {
+        "name": "settingsSolidIcon"
+      },
+      "nrkRefresh": {
+        "name": "arrowCircleClockwiseIcon"
+      },
+      "nrkMediaPictureInPicture": {
+        "name": "pictureInPictureEnterIcon"
+      },
+      "nrkHardwarePrinter": {
+        "name": "printerIcon"
+      },
+      "nrkArrowUp": {
+        "name": "arrowUpIcon"
+      },
+      "nrkUserNotloggedinActive": {
+        "name": "faceSmilingSolidIcon"
+      },
+      "nrkDice1Active": {
+        "name": "dice1SolidIcon"
+      },
+      "nrkMediaVideo": {
+        "name": "playRectangleIcon"
+      },
+      "nrkSomeTommelnedActive": {
+        "name": "thumbsDownSolidIcon"
+      },
+      "nrkMediaQuaverOff": {
+        "name": "musicNoteSlashIcon"
+      },
+      "nrkNote1Off": {
+        "name": "musicNoteSlashIcon"
+      },
+      "nrkMediaSpeed1_5x": {
+        "name": "multiplier1_5Icon"
+      },
+      "nrkMediaQuaver": {
+        "name": "musicNoteIcon"
+      },
+      "nrkNote1": {
+        "name": "musicNoteIcon"
+      },
+      "nrkMediaIndexQuaverTiny": {
+        "name": "musicNoteTinyIcon"
+      },
+      "nrkMediaChromecast": {
+        "name": "chromecastIcon"
+      },
+      "nrkMediaChromecast3": {
+        "name": "chromecast3Icon"
+      },
+      "nrkMediaAirplay": {
+        "name": "airplayIcon"
+      },
+      "nrkCategoryActive": {
+        "name": "squares2x2SolidIcon"
+      },
+      "nrkRotate": {
+        "name": "arrowsCircleCounterclockwiseIcon"
+      },
+      "nrkMediaFfw15sec": {
+        "name": "goForward15Icon"
+      },
+      "nrkDownload": {
+        "name": "downloadIcon"
+      },
+      "nrkEdit": {
+        "name": "pencilLineIcon"
+      },
+      "nrkTrash": {
+        "name": "trashcanIcon"
+      },
+      "nrkSuperEmojiPoopAngry": {
+        "name": "nrksuperPoopSadIcon"
+      },
+      "nrkSomeShareIos": {
+        "name": "squareAndArrowUpIcon"
+      },
+      "nrk360": {
+        "name": "arrowCirclePerspectiveCounterclockwiseIcon"
+      },
+      "nrkSomeShare": {
+        "name": "arrowTurnUpRightIcon"
+      },
+      "nrkMediaPrevious": {
+        "name": "backwardEndIcon"
+      },
+      "nrkMediaSubtitles": {
+        "name": "speechBubbleSubtitlesIcon"
+      },
+      "nrkLogout": {
+        "name": "logoutIcon"
+      },
+      "nrkMediaDirektetvActive": {
+        "name": "tvDotSolidIcon"
+      },
+      "nrkCheckboxActive": {
+        "name": "checkboxCheckedSolidIcon"
+      },
+      "nrkBellActive": {
+        "name": "bellSolidIcon"
+      },
+      "nrkLatestNews": {
+        "name": "dotRadiowavesIcon"
+      },
+      "nrkMediaChromecast1": {
+        "name": "chromecast1Icon"
+      },
+      "nrkGeoActive": {
+        "name": "targetSolidIcon"
+      },
+      "nrkMediaProgramguide": {
+        "name": "magazineIcon"
+      },
+      "nrkDice4": {
+        "name": "dice4Icon"
+      },
+      "nrkMediaPlaylistAdded": {
+        "name": "listCheckIcon"
+      },
+      "nrkMediaPlaylistRemove": {
+        "name": "listXmarkIcon"
+      },
+      "nrkCalendar": {
+        "name": "calendarIcon"
+      },
+      "nrkMediaPlaylistAdd": {
+        "name": "listPlusIcon"
+      },
+      "nrkHardwareRadio": {
+        "name": "radioIcon"
+      },
+      "nrkMediaBluetooth": {
+        "name": "bluetoothIcon"
+      },
+      "nrkHardwareComputer": {
+        "name": "monitorIcon"
+      },
+      "nrkArrowLeftLong": {
+        "name": "arrowLeftLongIcon"
+      },
+      "nrkMening": {
+        "name": "quoteIcon"
+      },
+      "nrkHardwareMobile": {
+        "name": "phoneIcon"
+      },
+      "nrkMediaChromecast2": {
+        "name": "chromecast2Icon"
+      },
+      "nrkHardwareSpeaker": {
+        "name": "speakerIcon"
+      },
+      "nrkHardwareCamera": {
+        "name": "cameraIcon"
+      },
+      "nrkSomeEmail": {
+        "name": "envelopeIcon"
+      },
+      "nrkLiveActivityActive": {
+        "name": "clockAndDotSolidIcon"
+      },
+      "nrkEllipsisActive": {
+        "name": "ellipsisCircleSolidIcon"
+      },
+      "nrkArrowDropdown": {
+        "name": "arrowheadDownIcon"
+      },
+      "nrkReload": {
+        "name": "arrowCircleCounterclockwiseIcon"
+      },
+      "nrkClock": {
+        "name": "clockIcon"
+      },
+      "nrkMediaStop": {
+        "name": "stopIcon"
+      },
+      "nrkMediaPlay": {
+        "name": "playIcon"
+      },
+      "nrkMediaMediaIncomplete": {
+        "name": "xmarkCircleCheckedIcon"
+      },
+      "nrkMediaTilgjengelighetGeoblocked": {
+        "name": "parasolIcon"
+      },
+      "nrkDice6": {
+        "name": "dice6Icon"
+      },
+      "nrkMediaTheater": {
+        "name": "rectangleExpandIcon"
+      },
+      "nrkComment": {
+        "name": "speechBubbleLineIcon"
+      },
+      "nrkSearchActive": {
+        "name": "magnifyingGlassStrongIcon"
+      },
+      "nrkTilgjengelighet": {
+        "name": "accessibilityIcon"
+      },
+      "nrkUserLoggedin": {
+        "name": "faceGrinningIcon"
+      },
+      "nrkHelp": {
+        "name": "questionMarkCircleIcon"
+      },
+      "nrkDialogue": {
+        "name": "speechBubblesIcon"
+      },
+      "nrkTrashActive": {
+        "name": "trashcanSolidIcon"
+      },
+      "nrkMediaPlaylist": {
+        "name": "listPlayIcon"
+      },
+      "nrkMediaPictureInPictureActive": {
+        "name": "pictureInPictureExitIcon"
+      },
+      "nrkInfo": {
+        "name": "infoCircleIcon"
+      },
+      "nrkDownloaded": {
+        "name": "mobileCheckIcon"
+      },
+      "nrkHardwareWatch": {
+        "name": "watchIcon"
+      },
+      "nrkMediaPause": {
+        "name": "pauseIcon"
+      },
+      "nrkMediaVolume3": {
+        "name": "volume3Icon"
+      },
+      "nrkMediaPlaylistAddLater": {
+        "name": "listArrowToBottomIcon"
+      },
+      "nrkFullscreen": {
+        "name": "arrowsExpandIcon"
+      },
+      "nrkMediaVolume2": {
+        "name": "volume2Icon"
+      },
+      "nrkNewChat": {
+        "name": "speechBubblePlusIcon"
+      },
+      "nrkMediaNy": {
+        "name": "tagNyIcon"
+      },
+      "nrkSettings": {
+        "name": "settingsIcon"
+      },
+      "nrkArrowLeft": {
+        "name": "arrowLeftIcon"
+      },
+      "nrkMediaSpeed2x": {
+        "name": "multiplier2Icon"
+      },
+      "nrkMediaSpeed1_25x": {
+        "name": "multiplier1_25Icon"
+      },
+      "nrkArrowRightLong": {
+        "name": "arrowRightLongIcon"
+      },
+      "nrkGeopointActive": {
+        "name": "pinSolidIcon"
+      },
+      "nrkMediaSpeed0_8x": {
+        "name": "multiplier0_8Icon"
+      },
+      "nrkUserNotloggedin": {
+        "name": "faceSmilingIcon"
+      },
+      "nrkReorder": {
+        "name": "arrowsUpDownIcon"
+      },
+      "nrkMediaJumpto": {
+        "name": "jumptoIcon"
+      },
+      "nrkArrowNested": {
+        "name": "arrowTurnRightDownIcon"
+      },
+      "nrkSomeTommelned": {
+        "name": "thumbsDownIcon"
+      },
+      "nrkEllipsis": {
+        "name": "ellipsisIcon"
+      },
+      "nrkMediaSpeed1x": {
+        "name": "multiplier1Icon"
+      },
+      "nrkArrowDown": {
+        "name": "arrowDownIcon"
+      },
+      "nrkUnlockActive": {
+        "name": "lockOpenSolidIcon"
+      },
+      "nrkMediaMediaComplete": {
+        "name": "checkmarkCircleCheckedIcon"
+      },
+      "nrkBookmark": {
+        "name": "bookmarkIcon"
+      },
+      "nrkMediaRwd30sec": {
+        "name": "goBackward30Icon"
+      },
+      "nrkHeart": {
+        "name": "heartIcon"
+      },
+      "nrkChevronUp": {
+        "name": "chevronUpIcon"
+      },
+      "nrkRadioActive": {
+        "name": "radioButtonCheckedIcon"
+      },
+      "nrkMediaRwd5sec": {
+        "name": "goBackward5Icon"
+      },
+      "nrkMediaFfw30sec": {
+        "name": "goForward30Icon"
+      },
+      "nrkSomeTommelopp": {
+        "name": "thumbsUpIcon"
+      },
+      "nrkUpload": {
+        "name": "uploadIcon"
+      },
+      "nrkCheckRadioUnchecked": {
+        "name": "radioButtonUncheckedIcon"
+      },
+      "nrkBroadcast": {
+        "name": "antennaIcon"
+      },
+      "nrkSearch": {
+        "name": "magnifyingGlassIcon"
+      },
+      "nrkMediaRwd": {
+        "name": "backwardIcon"
+      },
+      "nrkMore": {
+        "name": "ellipsisVerticalIcon"
+      },
+      "nrkUnlock": {
+        "name": "lockOpenIcon"
+      },
+      "nrkHeartActive": {
+        "name": "heartSolidIcon"
+      },
+      "nrkLink": {
+        "name": "linkIcon"
+      },
+      "nrkCloseActive": {
+        "name": "xmarkCircleCheckedSolidIcon"
+      },
+      "nrkOpenInNew": {
+        "name": "openExternalIcon"
+      },
+      "nrkMoreActive": {
+        "name": "ellipsisVerticalCircleSolidIcon"
+      },
+      "nrkMediaAirplayActive": {
+        "name": "airplaySolidIcon"
+      },
+      "nrkMediaFfw": {
+        "name": "forwardIcon"
+      },
+      "nrkMediaRwd15sec": {
+        "name": "goBackward15Icon"
+      },
+      "nrkCheck": {
+        "name": "checkmarkIcon"
+      },
+      "nrkChevronRight": {
+        "name": "chevronRightIcon"
+      },
+      "nrkClose": {
+        "name": "xmarkIcon"
+      },
+      "nrkCheckbox": {
+        "name": "checkboxUncheckedIcon"
+      },
+      "nrkBookmarkActive": {
+        "name": "bookmarkSolidIcon"
+      },
+      "nrkListActive": {
+        "name": "listStrongIcon"
+      },
+      "nrkUserLoggedinActive": {
+        "name": "faceGrinningSolidIcon"
+      },
+      "nrkHardwareMicrophone": {
+        "name": "microphoneIcon"
+      },
+      "nrkMediaDirektetv": {
+        "name": "tvDotIcon"
+      },
+      "nrkArticle": {
+        "name": "documentIcon"
+      },
+      "nrkHardwareTv": {
+        "name": "tvIcon"
+      },
+      "nrkMediaQuaverActive": {
+        "name": "musicNoteSolidIcon"
+      },
+      "nrkSleep": {
+        "name": "zzIcon"
+      },
+      "nrkMediaChromecastActive": {
+        "name": "chromecastSolidIcon"
+      },
+      "nrkPoll": {
+        "name": "barGraphIcon"
+      },
+      "nrkBulletedList": {
+        "name": "listBulletIcon"
+      },
+      "nrkQuiz": {
+        "name": "questionmarkIcon"
+      },
+      "nrkHardwareGame": {
+        "name": "gameControllerIcon"
+      },
+      "nrkChevronDown": {
+        "name": "chevronDownIcon"
+      },
+      "nrk404": {
+        "name": "shapesUnorderedIcon"
+      },
+      "nrkMedia404Notfound": {
+        "name": "shapesUnorderedIcon"
+      },
+      "nrkWarning": {
+        "name": "exclamationMarkTriangleIcon"
+      },
+      "nrkLock": {
+        "name": "lockClosedIcon"
+      },
+      "nrkHardwareHeadphones": {
+        "name": "headphonesIcon"
+      },
+      "nrkShow": {
+        "name": "eyeIcon"
+      },
+      "nrkLockActive": {
+        "name": "lockClosedSolidIcon"
+      },
+      "nrkMediaNext": {
+        "name": "forwardEndIcon"
+      },
+      "nrkHardwareSmartWatch": {
+        "name": "smartWatchIcon"
+      },
+      "nrkLatestNewsActive": {
+        "name": "dotRadiowavesCircleSolidIcon"
+      },
+      "nrkMediaSubtitlesActive": {
+        "name": "speechBubbleSubtitlesSolidIcon"
+      },
+      "nrkDuration": {
+        "name": "clockTimerIcon"
+      },
+      "nrkMediaTilgjengelighetKommer": {
+        "name": "clockTimerIcon"
+      },
+      "nrkUserAvatar": {
+        "name": "nrksuperAvatarIcon"
+      },
+      "nrkMediaVolume1": {
+        "name": "volume1Icon"
+      },
+      "nrkHardwareTablet": {
+        "name": "tabletIcon"
+      },
+      "nrkMediaTilgjengelighetIkkelengertilgjengelig": {
+        "name": "sunHorizonIcon"
+      },
+      "nrkLyn": {
+        "name": "lightningBoltSolidIcon"
+      },
+      "nrkMediaSubtitlesUnavailable": {
+        "name": "speechBubbleInactiveIcon"
+      },
+      "nrkMediaPlaylistAddNext": {
+        "name": "listArrowToTopIcon"
+      },
+      "nrkSomeTommeloppActive": {
+        "name": "thumbsUpSolidIcon"
+      },
+      "nrkDice1": {
+        "name": "dice1Icon"
+      },
+      "nrkArrowRight": {
+        "name": "arrowRightIcon"
+      },
+      "nrkFullscreenActive": {
+        "name": "arrowsContractIcon"
+      },
+      "nrkMediaTilgjengelighetSnartutilgjengelig": {
+        "name": "hourglassIcon"
+      },
+      "nrkDice3Active": {
+        "name": "dice3SolidIcon"
+      },
+      "nrkTilgjengelighetSynstolking": {
+        "name": "audioDescriptionIcon"
+      },
+      "nrkLongreadActive": {
+        "name": "glassesSolidIcon"
+      },
+      "nrkMediaSoundwave": {
+        "name": "soundwaveIcon"
+      },
+      "nrkMediaTheaterActive": {
+        "name": "rectangleContractIcon"
+      },
+      "nrkMediaFfw5sec": {
+        "name": "goForward5Icon"
+      },
+      "nrkDice5": {
+        "name": "dice5Icon"
+      },
+      "nrkTilgjengelighetHorbarhet": {
+        "name": "earIcon"
+      },
+      "nrkMediaPlayFail": {
+        "name": "playSlashIcon"
+      },
+      "nrkPlus": {
+        "name": "plusIcon"
+      },
+      "nrkMediaProgramguideActive": {
+        "name": "magazineSolidIcon"
+      },
+      "nrkDice6Active": {
+        "name": "dice6SolidIcon"
+      },
+      "nrkMediaDirekteNotlive": {
+        "name": "circleInCircleIcon"
+      },
+      "nrkChevronLeft": {
+        "name": "chevronLeftIcon"
+      },
+      "nrkDice3": {
+        "name": "dice3Icon"
+      },
+      "nrkPerson": {
+        "name": "personIcon"
+      },
+      "nrkGallery": {
+        "name": "imageStackIcon"
+      },
+      "nrkHardwareLaptop": {
+        "name": "laptopIcon"
+      },
+      "nrkTilgjengelighetLydtekst": {
+        "name": "spokenSubtitlesIcon"
+      },
+      "nrkHardwareSmartSpeaker": {
+        "name": "smartSpeakerIcon"
+      },
+      "nrkTilgjengelighetTegnspraak": {
+        "name": "signLanguageIcon"
+      },
+      "nrkDice2Active": {
+        "name": "dice2SolidIcon"
+      },
+      "nrkHome": {
+        "name": "houseIcon"
+      },
+      "nrkAlarmClock": {
+        "name": "clockAlarmIcon"
+      },
+      "nrkDice5Active": {
+        "name": "dice5SolidIcon"
+      },
+      "nrkHomeActive": {
+        "name": "houseSolidIcon"
+      },
+      "nrkLongread": {
+        "name": "glassesIcon"
+      },
+      "nrkBell": {
+        "name": "bellIcon"
+      },
+      "nrkArrangeList": {
+        "name": "dragHorizontalIcon"
+      },
+      "nrkDice2": {
+        "name": "dice2Icon"
+      },
+      "nrkBulletSquare": {
+        "name": "bulletPointIcon"
+      },
+      "nrkStar": {
+        "name": "starIcon"
+      },
+      "nrkMinus": {
+        "name": "minusIcon"
+      },
+      "nrkDice4Active": {
+        "name": "dice4SolidIcon"
+      },
+      "nrkMediaVolumeMuted": {
+        "name": "volumeXIcon"
+      },
+      "nrkMat": {
+        "name": "cutleryIcon"
+      },
+      "nrkSomeEmbed": {
+        "name": "codeIcon"
+      },
+      "nrkLiveActivity": {
+        "name": "clockAndDotIcon"
+      },
+      "nrkStarActive": {
+        "name": "starSolidIcon"
+      },
+      "nrkRectangleLandscapeToPortrait": {
+        "name": "rectangleLandscapeToPortraitIcon"
+      },
+      "nrkRectanglePortraitToLandscape": {
+        "name": "rectanglePortraitToLandscapeIcon"
+      },
+      "nrkSpeechBubbleQuote": {
+        "name": "speechBubbleQuoteIcon"
+      },
+      "nrkSpeechBubbleQuoteActive": {
+        "name": "speechBubbleQuoteSolidIcon"
+      }
+    },
+    "removed": [
+      "nrkFlagNorwegian",
+      "nrkMediaDirekteAnimatedActive",
+      "nrkProgress",
+      "nrkSpinner"
+    ]
+  },
+  "@nrk/core-icons/expressive": {
+    "renames": {
+      "nrkRadioExpressiveActive": {
+        "name": "radioButtonCheckedIcon",
+        "source": "@nrk/core-icons"
+      },
+      "nrkCheckExpressiveActive": {
+        "name": "checkmarkCircleCheckedSolidExpressiveIcon"
+      },
+      "nrkMediaCompletedExpressive": {
+        "name": "checkmarkCircleCheckedSolidExpressiveIcon"
+      },
+      "nrkHardwareMicrophoneExpressiveActive": {
+        "name": "microphoneSolidExpressiveIcon"
+      },
+      "nrkGeopointExpressiveActive": {
+        "name": "pinSolidExpressiveIcon"
+      },
+      "nrkOnlineExpressive": {
+        "name": "wifiExpressiveIcon"
+      },
+      "nrkBackExpressive": {
+        "name": "arrowUturnLeftExpressiveIcon"
+      },
+      "nrkSettingsExpressiveActive": {
+        "name": "settingsSolidExpressiveIcon"
+      },
+      "nrkLatestNewsExpressiveActive": {
+        "name": "dotRadiowavesCircleSolidExpressiveIcon"
+      },
+      "nrkHardwareWatchExpressive": {
+        "name": "watchExpressiveIcon"
+      },
+      "nrkOfflineExpressive": {
+        "name": "wifiSlashExpressiveIcon"
+      },
+      "nrkInfoExpressive": {
+        "name": "infoCircleExpressiveIcon"
+      },
+      "nrkMinusExpressive": {
+        "name": "minusExpressiveIcon"
+      },
+      "nrkPersonExpressive": {
+        "name": "personExpressiveIcon"
+      },
+      "nrkSearchExpressiveActive": {
+        "name": "magnifyingGlassStrongExpressiveIcon"
+      },
+      "nrkListExpressiveActive": {
+        "name": "listStrongExpressiveIcon"
+      },
+      "nrkTilgjengelighetExpressive": {
+        "name": "accessibilityExpressiveIcon"
+      },
+      "nrkMediaPictureInPictureExpressive": {
+        "name": "pictureInPictureEnterExpressiveIcon"
+      },
+      "nrkHardwareHeadphonesExpressive": {
+        "name": "headphonesExpressiveIcon"
+      },
+      "nrkMediaVideoExpressive": {
+        "name": "playRectangleExpressiveIcon"
+      },
+      "nrkMediaQuaverExpressive": {
+        "name": "musicNoteExpressiveIcon"
+      },
+      "nrkMediaIndexQuaverTinyExpressive": {
+        "name": "musicNoteTinyExpressiveIcon"
+      },
+      "nrkMediaChromecastExpressive": {
+        "name": "chromecastExpressiveIcon"
+      },
+      "nrkSomeTommelnedExpressiveActive": {
+        "name": "thumbsDownSolidExpressiveIcon"
+      },
+      "nrkMediaAirplayExpressive": {
+        "name": "airplayExpressiveIcon"
+      },
+      "nrkMediaChromecastExpressive3": {
+        "name": "chromecast3ExpressiveIcon"
+      },
+      "nrkMediaQuaverOffExpressive": {
+        "name": "musicNoteSlashExpressiveIcon"
+      },
+      "nrkBellExpressiveActive": {
+        "name": "bellSolidExpressiveIcon"
+      },
+      "nrkMediaAirplayExpressiveActive": {
+        "name": "airplaySolidExpressiveIcon"
+      },
+      "nrkHeartExpressiveActive": {
+        "name": "heartSolidExpressiveIcon"
+      },
+      "nrkChevronUpExpressive": {
+        "name": "chevronUpExpressiveIcon"
+      },
+      "nrkCloseExpressive": {
+        "name": "xmarkExpressiveIcon"
+      },
+      "nrkSomeTommelnedExpressive": {
+        "name": "thumbsDownExpressiveIcon"
+      },
+      "nrkRotateExpressive": {
+        "name": "arrowsCircleCounterclockwiseExpressiveIcon"
+      },
+      "nrkArrowRightLongExpressive": {
+        "name": "arrowRightLongExpressiveIcon"
+      },
+      "nrkMediaBeamNoteExpressive": {
+        "name": "musicNotesExpressiveIcon"
+      },
+      "nrkHeartExpressive": {
+        "name": "heartExpressiveIcon"
+      },
+      "nrkSomeTommeloppExpressive": {
+        "name": "thumbsUpExpressiveIcon"
+      },
+      "nrkGeoExpressiveActive": {
+        "name": "targetSolidExpressiveIcon"
+      },
+      "nrkMediaPlaylistRemoveExpressive": {
+        "name": "listXmarkExpressiveIcon"
+      },
+      "nrkMediaPlaylistAddedExpressive": {
+        "name": "listCheckExpressiveIcon"
+      },
+      "nrkCheckboxExpressiveActive": {
+        "name": "checkboxCheckedSolidExpressiveIcon"
+      },
+      "nrkLogoutExpressive": {
+        "name": "logoutExpressiveIcon"
+      },
+      "nrkMediaChromecastExpressive1": {
+        "name": "chromecast1ExpressiveIcon"
+      },
+      "nrkLatestNewsExpressive": {
+        "name": "dotRadiowavesExpressiveIcon"
+      },
+      "nrk404Expressive": {
+        "name": "shapesUnorderedExpressiveIcon"
+      },
+      "nrkMedia404NotfoundExpressive": {
+        "name": "shapesUnorderedExpressiveIcon"
+      },
+      "nrkMediaSubtitlesExpressiveActive": {
+        "name": "speechBubbleSubtitlesSolidExpressiveIcon"
+      },
+      "nrkMediaPlaylistExpressive": {
+        "name": "listPlayExpressiveIcon"
+      },
+      "nrkMediaPlaylistAddLaterExpressive": {
+        "name": "listArrowToBottomExpressiveIcon"
+      },
+      "nrkMediaBluetoothExpressive": {
+        "name": "bluetoothExpressiveIcon"
+      },
+      "nrkMediaDirektetvExpressiveActive": {
+        "name": "tvDotSolidExpressiveIcon"
+      },
+      "nrkMediaPlaylistAddExpressive": {
+        "name": "listPlusExpressiveIcon"
+      },
+      "nrkGeoExpressive": {
+        "name": "targetExpressiveIcon"
+      },
+      "nrkMediaChromecastExpressive2": {
+        "name": "chromecast2ExpressiveIcon"
+      },
+      "nrkMeningExpressive": {
+        "name": "quoteExpressiveIcon"
+      },
+      "nrkHardwareSpeakerExpressive": {
+        "name": "speakerExpressiveIcon"
+      },
+      "nrkGeopointExpressive": {
+        "name": "pinExpressiveIcon"
+      },
+      "nrkHardwareComputerExpressive": {
+        "name": "monitorExpressiveIcon"
+      },
+      "nrkArrowLeftLongExpressive": {
+        "name": "arrowLeftLongExpressiveIcon"
+      },
+      "nrkMediaPlayExpressive": {
+        "name": "playExpressiveIcon"
+      },
+      "nrkMediaMediaIncompleteExpressive": {
+        "name": "xmarkCircleCheckedExpressiveIcon"
+      },
+      "nrkMediaTilgjengelighetGeoblockedExpressive": {
+        "name": "parasolExpressiveIcon"
+      },
+      "nrkHardwareSmartWatchExpressive": {
+        "name": "smartWatchExpressiveIcon"
+      },
+      "nrkGlobeExpressive": {
+        "name": "globeExpressiveIcon"
+      },
+      "nrkHardwareRadioExpressive": {
+        "name": "radioExpressiveIcon"
+      },
+      "nrkLockExpressive": {
+        "name": "lockClosedExpressiveIcon"
+      },
+      "nrkNewChatExpressive": {
+        "name": "speechBubblePlusExpressiveIcon"
+      },
+      "nrkDownloadedExpressive": {
+        "name": "mobileCheckExpressiveIcon"
+      },
+      "nrkUserLoggedinExpressive": {
+        "name": "faceGrinningExpressiveIcon"
+      },
+      "nrkTrashExpressiveActive": {
+        "name": "trashcanSolidExpressiveIcon"
+      },
+      "nrkMediaVolumeExpressive1": {
+        "name": "volume1ExpressiveIcon"
+      },
+      "nrkHideExpressive": {
+        "name": "eyeSlashExpressiveIcon"
+      },
+      "nrkHelpExpressive": {
+        "name": "questionMarkCircleExpressiveIcon"
+      },
+      "nrkMediaPictureInPictureExpressiveActive": {
+        "name": "pictureInPictureExitExpressiveIcon"
+      },
+      "nrkDialogueExpressive": {
+        "name": "speechBubblesExpressiveIcon"
+      },
+      "nrkMediaVolumeExpressive2": {
+        "name": "volume2ExpressiveIcon"
+      },
+      "nrkSomeTommeloppExpressiveActive": {
+        "name": "thumbsUpSolidExpressiveIcon"
+      },
+      "nrkMediaVolumeExpressive3": {
+        "name": "volume3ExpressiveIcon"
+      },
+      "nrkSettingsExpressive": {
+        "name": "settingsExpressiveIcon"
+      },
+      "nrkArrowRightExpressive": {
+        "name": "arrowRightExpressiveIcon"
+      },
+      "nrkArrowLeftExpressive": {
+        "name": "arrowLeftExpressiveIcon"
+      },
+      "nrkSomeShareExpressive": {
+        "name": "arrowTurnUpRightExpressiveIcon"
+      },
+      "nrkSomeEmailExpressive": {
+        "name": "envelopeExpressiveIcon"
+      },
+      "nrkArrowNestedExpressive": {
+        "name": "arrowTurnRightDownExpressiveIcon"
+      },
+      "nrkReorderExpressive": {
+        "name": "arrowsUpDownExpressiveIcon"
+      },
+      "nrkMediaRwd15secExpressive": {
+        "name": "goBackward15ExpressiveIcon"
+      },
+      "nrkMediaFfw15secExpressive": {
+        "name": "goForward15ExpressiveIcon"
+      },
+      "nrkMediaStopExpressive": {
+        "name": "stopExpressiveIcon"
+      },
+      "nrkMediaPreviousExpressive": {
+        "name": "backwardEndExpressiveIcon"
+      },
+      "nrkMediaFfwExpressive": {
+        "name": "forwardExpressiveIcon"
+      },
+      "nrkMediaFfw30secExpressive": {
+        "name": "goForward30ExpressiveIcon"
+      },
+      "nrkUnlockExpressiveActive": {
+        "name": "lockOpenSolidExpressiveIcon"
+      },
+      "nrkSearchExpressive": {
+        "name": "magnifyingGlassExpressiveIcon"
+      },
+      "nrkDownloadExpressive": {
+        "name": "downloadExpressiveIcon"
+      },
+      "nrkUploadExpressive": {
+        "name": "uploadExpressiveIcon"
+      },
+      "nrkMediaRwd5secExpressive": {
+        "name": "goBackward5ExpressiveIcon"
+      },
+      "nrkUnlockExpressive": {
+        "name": "lockOpenExpressiveIcon"
+      },
+      "nrkArrowDownExpressive": {
+        "name": "arrowDownExpressiveIcon"
+      },
+      "nrk360Expressive": {
+        "name": "arrowCirclePerspectiveCounterclockwiseExpressiveIcon"
+      },
+      "nrkMediaMediaCompleteExpressive": {
+        "name": "checkmarkCircleCheckedExpressiveIcon"
+      },
+      "nrkBookmarkExpressive": {
+        "name": "bookmarkExpressiveIcon"
+      },
+      "nrkOpenInNewExpressive": {
+        "name": "openExternalExpressiveIcon"
+      },
+      "nrkMediaRwd30secExpressive": {
+        "name": "goBackward30ExpressiveIcon"
+      },
+      "nrkMediaRwdExpressive": {
+        "name": "backwardExpressiveIcon"
+      },
+      "nrkCloseExpressiveActive": {
+        "name": "xmarkCircleCheckedSolidExpressiveIcon"
+      },
+      "nrkArrowDropdownExpressive": {
+        "name": "arrowheadDownExpressiveIcon"
+      },
+      "nrkBroadcastExpressive": {
+        "name": "antennaExpressiveIcon"
+      },
+      "nrkBookmarkExpressiveActive": {
+        "name": "bookmarkSolidExpressiveIcon"
+      },
+      "nrkEllipsisExpressive": {
+        "name": "ellipsisExpressiveIcon"
+      },
+      "nrkMediaJumptoExpressive": {
+        "name": "jumptoExpressiveIcon"
+      },
+      "nrkEditExpressive": {
+        "name": "pencilLineExpressiveIcon"
+      },
+      "nrkSomeShareIosExpressive": {
+        "name": "squareAndArrowUpExpressiveIcon"
+      },
+      "nrkCheckboxExpressive": {
+        "name": "checkboxUncheckedExpressiveIcon"
+      },
+      "nrkMoreExpressiveActive": {
+        "name": "ellipsisVerticalCircleSolidExpressiveIcon"
+      },
+      "nrkMoreExpressive": {
+        "name": "ellipsisVerticalExpressiveIcon"
+      },
+      "nrkLinkExpressive": {
+        "name": "linkExpressiveIcon"
+      },
+      "nrkCheckExpressive": {
+        "name": "checkmarkExpressiveIcon"
+      },
+      "nrkChevronRightExpressive": {
+        "name": "chevronRightExpressiveIcon"
+      },
+      "nrkRefreshExpressive": {
+        "name": "arrowCircleClockwiseExpressiveIcon"
+      },
+      "nrkArticleExpressive": {
+        "name": "documentExpressiveIcon"
+      },
+      "nrkCommentExpressive": {
+        "name": "speechBubbleLineExpressiveIcon"
+      },
+      "nrkSleepExpressive": {
+        "name": "zzExpressiveIcon"
+      },
+      "nrkCategoryExpressiveActive": {
+        "name": "squares2x2SolidExpressiveIcon"
+      },
+      "nrkUserLoggedinExpressiveActive": {
+        "name": "faceGrinningSolidExpressiveIcon"
+      },
+      "nrkShowExpressive": {
+        "name": "eyeExpressiveIcon"
+      },
+      "nrkMediaChromecastExpressiveActive": {
+        "name": "chromecastSolidExpressiveIcon"
+      },
+      "nrkMediaQuaverExpressiveActive": {
+        "name": "musicNoteSolidExpressiveIcon"
+      },
+      "nrkHardwareMicrophoneExpressive": {
+        "name": "microphoneExpressiveIcon"
+      },
+      "nrkHardwareCameraExpressive": {
+        "name": "cameraExpressiveIcon"
+      },
+      "nrkChevronDownExpressive": {
+        "name": "chevronDownExpressiveIcon"
+      },
+      "nrkCalendarExpressive": {
+        "name": "calendarExpressiveIcon"
+      },
+      "nrkHardwareGameExpressive": {
+        "name": "gameControllerExpressiveIcon"
+      },
+      "nrkUserNotloggedinExpressiveActive": {
+        "name": "faceSmilingSolidExpressiveIcon"
+      },
+      "nrkDurationExpressive": {
+        "name": "clockTimerExpressiveIcon"
+      },
+      "nrkMediaTilgjengelighetKommerExpressive": {
+        "name": "clockTimerExpressiveIcon"
+      },
+      "nrkMediaNextExpressive": {
+        "name": "forwardEndExpressiveIcon"
+      },
+      "nrkHardwarePrinterExpressive": {
+        "name": "printerExpressiveIcon"
+      },
+      "nrkMediaDirektetvExpressive": {
+        "name": "tvDotExpressiveIcon"
+      },
+      "nrkMediaPauseExpressive": {
+        "name": "pauseExpressiveIcon"
+      },
+      "nrkBulletedListExpressive": {
+        "name": "listBulletExpressiveIcon"
+      },
+      "nrkReloadExpressive": {
+        "name": "arrowCircleCounterclockwiseExpressiveIcon"
+      },
+      "nrkUserNotloggedinExpressive": {
+        "name": "faceSmilingExpressiveIcon"
+      },
+      "nrkHardwareTvExpressive": {
+        "name": "tvExpressiveIcon"
+      },
+      "nrkLockExpressiveActive": {
+        "name": "lockClosedSolidExpressiveIcon"
+      },
+      "nrkFullscreenExpressive": {
+        "name": "arrowsExpandExpressiveIcon"
+      },
+      "nrkUserAvatarExpressive": {
+        "name": "nrksuperAvatarExpressiveIcon"
+      },
+      "nrkMediaTheaterExpressive": {
+        "name": "rectangleExpandExpressiveIcon"
+      },
+      "nrkWarningExpressive": {
+        "name": "exclamationMarkTriangleExpressiveIcon"
+      },
+      "nrkPollExpressive": {
+        "name": "barGraphExpressiveIcon"
+      },
+      "nrkMediaFfw5secExpressive": {
+        "name": "goForward5ExpressiveIcon"
+      },
+      "nrkBellExpressive": {
+        "name": "bellExpressiveIcon"
+      },
+      "nrkLongreadExpressiveActive": {
+        "name": "glassesSolidExpressiveIcon"
+      },
+      "nrkTilgjengelighetSynstolkingExpressive": {
+        "name": "audioDescriptionExpressiveIcon"
+      },
+      "nrkMediaSoundwaveExpressive": {
+        "name": "soundwaveExpressiveIcon"
+      },
+      "nrkCategoryExpressive": {
+        "name": "squares2x2ExpressiveIcon"
+      },
+      "nrkLongreadExpressive": {
+        "name": "glassesExpressiveIcon"
+      },
+      "nrkMatExpressive": {
+        "name": "cutleryExpressiveIcon"
+      },
+      "nrkLynExpressive": {
+        "name": "lightningBoltSolidExpressiveIcon"
+      },
+      "nrkArrangeListExpressive": {
+        "name": "dragHorizontalExpressiveIcon"
+      },
+      "nrkMediaVolumeExpressiveMuted": {
+        "name": "volumeXExpressiveIcon"
+      },
+      "nrkMediaTilgjengelighetIkkelengertilgjengeligExpressive": {
+        "name": "sunHorizonExpressiveIcon"
+      },
+      "nrkMediaTheaterExpressiveActive": {
+        "name": "rectangleContractExpressiveIcon"
+      },
+      "nrkChevronLeftExpressive": {
+        "name": "chevronLeftExpressiveIcon"
+      },
+      "nrkTilgjengelighetHorbarhetExpressive": {
+        "name": "earExpressiveIcon"
+      },
+      "nrkHardwareSmartSpeakerExpressive": {
+        "name": "smartSpeakerExpressiveIcon"
+      },
+      "nrkMediaTilgjengelighetSnartutilgjengeligExpressive": {
+        "name": "hourglassExpressiveIcon"
+      },
+      "nrkMediaProgramguideExpressiveActive": {
+        "name": "magazineSolidExpressiveIcon"
+      },
+      "nrkMediaSubtitlesExpressive": {
+        "name": "speechBubbleSubtitlesExpressiveIcon"
+      },
+      "nrkArrowUpExpressive": {
+        "name": "arrowUpExpressiveIcon"
+      },
+      "nrkHardwareTabletExpressive": {
+        "name": "tabletExpressiveIcon"
+      },
+      "nrkTilgjengelighetLydtekstExpressive": {
+        "name": "spokenSubtitlesExpressiveIcon"
+      },
+      "nrkTrashExpressive": {
+        "name": "trashcanExpressiveIcon"
+      },
+      "nrkTilgjengelighetTegnspraakExpressive": {
+        "name": "signLanguageExpressiveIcon"
+      },
+      "nrkBulletSquareExpressive": {
+        "name": "bulletPointExpressiveIcon"
+      },
+      "nrkAlarmClockExpressive": {
+        "name": "clockAlarmExpressiveIcon"
+      },
+      "nrkFullscreenExpressiveActive": {
+        "name": "arrowsContractExpressiveIcon"
+      },
+      "nrkHardwareLaptopExpressive": {
+        "name": "laptopExpressiveIcon"
+      },
+      "nrkHomeExpressive": {
+        "name": "houseExpressiveIcon"
+      },
+      "nrkHomeExpressiveActive": {
+        "name": "houseSolidExpressiveIcon"
+      },
+      "nrkClockExpressive": {
+        "name": "clockExpressiveIcon"
+      },
+      "nrkMediaSubtitlesExpressiveUnavailable": {
+        "name": "speechBubbleInactiveExpressiveIcon"
+      },
+      "nrkListExpressive": {
+        "name": "listExpressiveIcon"
+      },
+      "nrkMediaProgramguideExpressive": {
+        "name": "magazineExpressiveIcon"
+      },
+      "nrkPlusExpressive": {
+        "name": "plusExpressiveIcon"
+      },
+      "nrkMediaPlayExpressiveFail": {
+        "name": "playSlashExpressiveIcon"
+      },
+      "nrkGalleryExpressive": {
+        "name": "imageStackExpressiveIcon"
+      },
+      "nrkMediaPlaylistAddNextExpressive": {
+        "name": "listArrowToTopExpressiveIcon"
+      },
+      "nrkStarExpressiveActive": {
+        "name": "starSolidExpressiveIcon"
+      },
+      "nrkSomeEmbedExpressive": {
+        "name": "codeExpressiveIcon"
+      },
+      "nrkStarExpressive": {
+        "name": "starExpressiveIcon"
+      },
+      "nrkEllipsisExpressiveActive": {
+        "name": "ellipsisCircleSolidExpressiveIcon"
+      },
+      "nrkRectangleLandscapeToPortraitExpressive": {
+        "name": "rectangleLandscapeToPortraitExpressiveIcon"
+      },
+      "nrkRectanglePortraitToLandscapeExpressive": {
+        "name": "rectanglePortraitToLandscapeExpressiveIcon"
+      },
+      "nrkSpeechBubbleQuoteExpressive": {
+        "name": "speechBubbleQuoteExpressiveIcon"
+      },
+      "nrkSpeechBubbleQuoteExpressiveActive": {
+        "name": "speechBubbleQuoteSolidExpressiveIcon"
+      }
+    },
+    "removed": [
+      "nrkFlagNorwegianExpressive",
+      "nrkProgressExpressive",
+      "nrkSpinnerExpressive"
+    ]
+  },
+  "@nrk/core-icons/logo": {
+    "renames": {
+      "nrkLogoNrkP1PlussOnLight": {
+        "name": "nrkP1PlussOnLightLogo"
+      },
+      "nrkLogoNrkYrRadioOnDark": {
+        "name": "nrkYrRadioOnDarkLogo"
+      },
+      "nrkLogoNrkTegnspraakOnLight": {
+        "name": "nrkTegnspraakOnLightLogo"
+      },
+      "nrkLogoNrkTegnspraakTitleBelowOnDark": {
+        "name": "nrkTegnspraakTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkTegnspraakOnDark": {
+        "name": "nrkTegnspraakOnDarkLogo"
+      },
+      "nrkLogoMgp": {
+        "name": "mgpLogo"
+      },
+      "nrkLogoNrkTegnspraakSymbolWithBg": {
+        "name": "nrkTegnspraakSymbolWithBgLogo"
+      },
+      "nrkLogoNrkSuperSymbol": {
+        "name": "nrkSuperSymbolLogo"
+      },
+      "nrkLogoNrkSuperOnDark": {
+        "name": "nrkSuperOnDarkLogo"
+      },
+      "nrkLogoNrkTegnspraakSymbolOnDark": {
+        "name": "nrkTegnspraakSymbolOnDarkLogo"
+      },
+      "nrkLogoNrkKringkastingsorkestretTitleBelow": {
+        "name": "nrkKringkastingsorkestretTitleBelowLogo"
+      },
+      "nrkLogoNrkRogalandOnDark": {
+        "name": "nrkRogalandOnDarkLogo"
+      },
+      "nrkLogoNrkTrafikk": {
+        "name": "nrkTrafikkLogo"
+      },
+      "nrkLogoNrkSportTitleBelowOnLight": {
+        "name": "nrkSportTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkRogalandTitleBelow": {
+        "name": "nrkRogalandTitleBelowLogo"
+      },
+      "nrkLogoNrkMp3": {
+        "name": "nrkMp3Logo"
+      },
+      "nrkLogoNrkP3TitleBelowOnDark": {
+        "name": "nrkP3TitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkSamiRadioTitleBelowOnDark": {
+        "name": "nrkSamiRadioTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkNordlandTitleBelowOnDark": {
+        "name": "nrkNordlandTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkSuperTitleBelowOnDark": {
+        "name": "nrkSuperTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkSamiRadio": {
+        "name": "nrkSamiRadioLogo"
+      },
+      "nrkLogoNrkFolkemusikkTitleBelow": {
+        "name": "nrkFolkemusikkTitleBelowLogo"
+      },
+      "nrkLogoNrkFolkemusikkTitleBelowOnLight": {
+        "name": "nrkFolkemusikkTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkKlassiskOnDark": {
+        "name": "nrkKlassiskOnDarkLogo"
+      },
+      "nrkLogoNrkP1": {
+        "name": "nrkP1Logo"
+      },
+      "nrkLogoNrkYrRadioOnLight": {
+        "name": "nrkYrRadioOnLightLogo"
+      },
+      "nrkLogoNrkNordlandOnDark": {
+        "name": "nrkNordlandOnDarkLogo"
+      },
+      "nrkLogoNrk3OnLight": {
+        "name": "nrk3OnLightLogo"
+      },
+      "nrkLogoNrkTegnspraakTitleBelow": {
+        "name": "nrkTegnspraakTitleBelowLogo"
+      },
+      "nrkLogoNrkMoreOgRomsdalTitleBelowOnLight": {
+        "name": "nrkMoreOgRomsdalTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkStorOsloTitleBelow": {
+        "name": "nrkStorOsloTitleBelowLogo"
+      },
+      "nrkLogoNrk3": {
+        "name": "nrk3Logo"
+      },
+      "nrkLogoNrkTegnspraakSymbol": {
+        "name": "nrkTegnspraakSymbolLogo"
+      },
+      "nrkLogoNrkP1TitleBelow": {
+        "name": "nrkP1TitleBelowLogo"
+      },
+      "nrkLogoNrkP3MusikkOnDark": {
+        "name": "nrkP3MusikkOnDarkLogo"
+      },
+      "nrkLogoNrk1OnDark": {
+        "name": "nrk1OnDarkLogo"
+      },
+      "nrkLogoNrkP3Musikk": {
+        "name": "nrkP3MusikkLogo"
+      },
+      "nrkLogoNrk2WithBg": {
+        "name": "nrk2WithBgLogo"
+      },
+      "nrkLogoNrkNyheterOnDark": {
+        "name": "nrkNyheterOnDarkLogo"
+      },
+      "nrkLogoNrkRadioOnLight": {
+        "name": "nrkRadioOnLightLogo"
+      },
+      "nrkLogoNrkRadioOnDark": {
+        "name": "nrkRadioOnDarkLogo"
+      },
+      "nrkLogoNrkP1WithBg": {
+        "name": "nrkP1WithBgLogo"
+      },
+      "nrkLogoNrkRadioTitleBelow": {
+        "name": "nrkRadioTitleBelowLogo"
+      },
+      "nrkLogoNrk1": {
+        "name": "nrk1Logo"
+      },
+      "nrkLogoNrkP2": {
+        "name": "nrkP2Logo"
+      },
+      "nrkLogoNrkKlassiskOnLight": {
+        "name": "nrkKlassiskOnLightLogo"
+      },
+      "nrkLogoNrkP3OnLight": {
+        "name": "nrkP3OnLightLogo"
+      },
+      "nrkLogoNrkP1TitleBelowOnDark": {
+        "name": "nrkP1TitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkMp3TitleBelowOnLight": {
+        "name": "nrkMp3TitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkTegnspraakSymbolOnLight": {
+        "name": "nrkTegnspraakSymbolOnLightLogo"
+      },
+      "nrkLogoNrkStorOslo": {
+        "name": "nrkStorOsloLogo"
+      },
+      "nrkLogoNrkSamiRadioTitleBelowOnLight": {
+        "name": "nrkSamiRadioTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkKringkastingsorkestretOnLight": {
+        "name": "nrkKringkastingsorkestretOnLightLogo"
+      },
+      "nrkLogoNrkJazzTitleBelowOnLight": {
+        "name": "nrkJazzTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkYrRadioWithBg": {
+        "name": "nrkYrRadioWithBgLogo"
+      },
+      "nrkLogoNrkTegnspraakWithBg": {
+        "name": "nrkTegnspraakWithBgLogo"
+      },
+      "nrkLogoNrkSuperTitleBelow": {
+        "name": "nrkSuperTitleBelowLogo"
+      },
+      "nrkLogoNrkSuperTitleBelowOnLight": {
+        "name": "nrkSuperTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkP3MusikkWithBg": {
+        "name": "nrkP3MusikkWithBgLogo"
+      },
+      "nrkLogoNrkKlassiskTitleBelowOnLight": {
+        "name": "nrkKlassiskTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkMoreOgRomsdalTitleBelow": {
+        "name": "nrkMoreOgRomsdalTitleBelowLogo"
+      },
+      "nrkLogoNrkJazzOnLight": {
+        "name": "nrkJazzOnLightLogo"
+      },
+      "nrkLogoNrkRadioWithBg": {
+        "name": "nrkRadioWithBgLogo"
+      },
+      "nrkLogoNrkMp3WithBg": {
+        "name": "nrkMp3WithBgLogo"
+      },
+      "nrkLogoNrk3WithBg": {
+        "name": "nrk3WithBgLogo"
+      },
+      "nrkLogoNrkP1PlussTitleBelowOnLight": {
+        "name": "nrkP1PlussTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkRadioTitleBelowOnLight": {
+        "name": "nrkRadioTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkTrafikkOnLight": {
+        "name": "nrkTrafikkOnLightLogo"
+      },
+      "nrkLogoNrkKlassiskWithBg": {
+        "name": "nrkKlassiskWithBgLogo"
+      },
+      "nrkLogoNrkP3WithBg": {
+        "name": "nrkP3WithBgLogo"
+      },
+      "nrkLogoNrkRadioTitleBelowOnDark": {
+        "name": "nrkRadioTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkP3TitleBelowOnLight": {
+        "name": "nrkP3TitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkNordlandWithBg": {
+        "name": "nrkNordlandWithBgLogo"
+      },
+      "nrkLogoNrkMp3TitleBelow": {
+        "name": "nrkMp3TitleBelowLogo"
+      },
+      "nrkLogoNrkTv": {
+        "name": "nrkTvLogo"
+      },
+      "nrkLogoNrkP1OnDark": {
+        "name": "nrkP1OnDarkLogo"
+      },
+      "nrkLogoNrkTrafikkTitleBelowOnLight": {
+        "name": "nrkTrafikkTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkStorOsloTitleBelowOnDark": {
+        "name": "nrkStorOsloTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkP3MusikkOnLight": {
+        "name": "nrkP3MusikkOnLightLogo"
+      },
+      "nrkLogoNrkKringkastingsorkestretWithBg": {
+        "name": "nrkKringkastingsorkestretWithBgLogo"
+      },
+      "nrkLogoNrkTvTitleBelowOnDark": {
+        "name": "nrkTvTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkSuperOnLight": {
+        "name": "nrkSuperOnLightLogo"
+      },
+      "nrkLogoNrkJazzTitleBelow": {
+        "name": "nrkJazzTitleBelowLogo"
+      },
+      "nrkLogoNrkTegnspraakTitleBelowOnLight": {
+        "name": "nrkTegnspraakTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkSuperWithBg": {
+        "name": "nrkSuperWithBgLogo"
+      },
+      "nrkLogoNrkJazzOnDark": {
+        "name": "nrkJazzOnDarkLogo"
+      },
+      "nrkLogoNrkP1PlussOnDark": {
+        "name": "nrkP1PlussOnDarkLogo"
+      },
+      "nrkLogoNrkP1OnLight": {
+        "name": "nrkP1OnLightLogo"
+      },
+      "nrkLogoNrkNyheter": {
+        "name": "nrkNyheterLogo"
+      },
+      "nrkLogoNrkTrafikkTitleBelow": {
+        "name": "nrkTrafikkTitleBelowLogo"
+      },
+      "nrkLogoNrkBuskerudOnLight": {
+        "name": "nrkBuskerudOnLightLogo"
+      },
+      "nrkLogoNrkKlassiskTitleBelowOnDark": {
+        "name": "nrkKlassiskTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkNordland": {
+        "name": "nrkNordlandLogo"
+      },
+      "nrkLogoNrkStorOsloTitleBelowOnLight": {
+        "name": "nrkStorOsloTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkInnlandetTitleBelowOnDark": {
+        "name": "nrkInnlandetTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkSorlandetOnDark": {
+        "name": "nrkSorlandetOnDarkLogo"
+      },
+      "nrkLogoNrkVestfoldOgTelemarkOnDark": {
+        "name": "nrkVestfoldOgTelemarkOnDarkLogo"
+      },
+      "nrkLogoNrkNyheterTitleBelowOnLight": {
+        "name": "nrkNyheterTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkSportOnLight": {
+        "name": "nrkSportOnLightLogo"
+      },
+      "nrkLogoNrkSorlandetWithBg": {
+        "name": "nrkSorlandetWithBgLogo"
+      },
+      "nrkLogoNrkRogalandTitleBelowOnLight": {
+        "name": "nrkRogalandTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkFolkemusikkWithBg": {
+        "name": "nrkFolkemusikkWithBgLogo"
+      },
+      "nrkLogoNrkSorlandetOnLight": {
+        "name": "nrkSorlandetOnLightLogo"
+      },
+      "nrkLogoNrkTrondelagTitleBelowOnDark": {
+        "name": "nrkTrondelagTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkP2OnDark": {
+        "name": "nrkP2OnDarkLogo"
+      },
+      "nrkLogoNrkTvOnLight": {
+        "name": "nrkTvOnLightLogo"
+      },
+      "nrkLogoNrkBuskerudTitleBelowOnLight": {
+        "name": "nrkBuskerudTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkBuskerudOnDark": {
+        "name": "nrkBuskerudOnDarkLogo"
+      },
+      "nrkLogoNrkRogalandTitleBelowOnDark": {
+        "name": "nrkRogalandTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkSorlandetTitleBelow": {
+        "name": "nrkSorlandetTitleBelowLogo"
+      },
+      "nrkLogoNrkP2TitleBelow": {
+        "name": "nrkP2TitleBelowLogo"
+      },
+      "nrkLogoNrkBuskerudWithBg": {
+        "name": "nrkBuskerudWithBgLogo"
+      },
+      "nrkLogoNrkTromsOnDark": {
+        "name": "nrkTromsOnDarkLogo"
+      },
+      "nrkLogoNrkTroms": {
+        "name": "nrkTromsLogo"
+      },
+      "nrkLogoNrkNordlandTitleBelowOnLight": {
+        "name": "nrkNordlandTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkStorOsloOnDark": {
+        "name": "nrkStorOsloOnDarkLogo"
+      },
+      "nrkLogoNrkKringkastingsorkestretTitleBelowOnDark": {
+        "name": "nrkKringkastingsorkestretTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkFinnmarkTitleBelowOnDark": {
+        "name": "nrkFinnmarkTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkVestland": {
+        "name": "nrkVestlandLogo"
+      },
+      "nrkLogoNrkFolkemusikkOnLight": {
+        "name": "nrkFolkemusikkOnLightLogo"
+      },
+      "nrkLogoNrkSport": {
+        "name": "nrkSportLogo"
+      },
+      "nrkLogoNrkSportWithBg": {
+        "name": "nrkSportWithBgLogo"
+      },
+      "nrkLogoNrkNordlandOnLight": {
+        "name": "nrkNordlandOnLightLogo"
+      },
+      "nrkLogoNrkSorlandetTitleBelowOnLight": {
+        "name": "nrkSorlandetTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkSorlandetTitleBelowOnDark": {
+        "name": "nrkSorlandetTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkP3TitleBelow": {
+        "name": "nrkP3TitleBelowLogo"
+      },
+      "nrkLogoNrkTrondelag": {
+        "name": "nrkTrondelagLogo"
+      },
+      "nrkLogoNrkVestlandTitleBelow": {
+        "name": "nrkVestlandTitleBelowLogo"
+      },
+      "nrkLogoNrkSamiRadioTitleBelow": {
+        "name": "nrkSamiRadioTitleBelowLogo"
+      },
+      "nrkLogoNrkP1PlussTitleBelow": {
+        "name": "nrkP1PlussTitleBelowLogo"
+      },
+      "nrkLogoNrkJazzWithBg": {
+        "name": "nrkJazzWithBgLogo"
+      },
+      "nrkLogoNrkVestlandWithBg": {
+        "name": "nrkVestlandWithBgLogo"
+      },
+      "nrkLogoNrkMp3OnLight": {
+        "name": "nrkMp3OnLightLogo"
+      },
+      "nrkLogoNrkP2OnLight": {
+        "name": "nrkP2OnLightLogo"
+      },
+      "nrkLogoNrkFinnmark": {
+        "name": "nrkFinnmarkLogo"
+      },
+      "nrkLogoNrkP2WithBg": {
+        "name": "nrkP2WithBgLogo"
+      },
+      "nrkLogoNrkP2TitleBelowOnDark": {
+        "name": "nrkP2TitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkFolkemusikkTitleBelowOnDark": {
+        "name": "nrkFolkemusikkTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkFolkemusikkOnDark": {
+        "name": "nrkFolkemusikkOnDarkLogo"
+      },
+      "nrkLogoNrkSapmiTitleBelowOnLight": {
+        "name": "nrkSapmiTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkTrafikkWithBg": {
+        "name": "nrkTrafikkWithBgLogo"
+      },
+      "nrkLogoNrkKlassisk": {
+        "name": "nrkKlassiskLogo"
+      },
+      "nrkLogoNrkKlassiskTitleBelow": {
+        "name": "nrkKlassiskTitleBelowLogo"
+      },
+      "nrkLogoNrkJazzTitleBelowOnDark": {
+        "name": "nrkJazzTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkJazz": {
+        "name": "nrkJazzLogo"
+      },
+      "nrkLogoNrkKringkastingsorkestretTitleBelowOnLight": {
+        "name": "nrkKringkastingsorkestretTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkInnlandetWithBg": {
+        "name": "nrkInnlandetWithBgLogo"
+      },
+      "nrkLogoNrkInnlandetTitleBelow": {
+        "name": "nrkInnlandetTitleBelowLogo"
+      },
+      "nrkLogoNrkRogalandWithBg": {
+        "name": "nrkRogalandWithBgLogo"
+      },
+      "nrkLogoNrkMoreOgRomsdalOnLight": {
+        "name": "nrkMoreOgRomsdalOnLightLogo"
+      },
+      "nrkLogoNrkFinnmarkTitleBelow": {
+        "name": "nrkFinnmarkTitleBelowLogo"
+      },
+      "nrkLogoNrkFinnmarkOnDark": {
+        "name": "nrkFinnmarkOnDarkLogo"
+      },
+      "nrkLogoNrkP3MusikkTitleBelowOnDark": {
+        "name": "nrkP3MusikkTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkP3MusikkTitleBelow": {
+        "name": "nrkP3MusikkTitleBelowLogo"
+      },
+      "nrkLogoYr": {
+        "name": "yrLogo"
+      },
+      "nrkLogoNrkTromsTitleBelow": {
+        "name": "nrkTromsTitleBelowLogo"
+      },
+      "nrkLogoNrkP1TitleBelowOnLight": {
+        "name": "nrkP1TitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkVestfoldOgTelemark": {
+        "name": "nrkVestfoldOgTelemarkLogo"
+      },
+      "nrkLogoNrkTegnspraak": {
+        "name": "nrkTegnspraakLogo"
+      },
+      "nrkLogoNrkP1Pluss": {
+        "name": "nrkP1PlussLogo"
+      },
+      "nrkLogoNrk2OnDark": {
+        "name": "nrk2OnDarkLogo"
+      },
+      "nrkLogoNrkP1PlussWithBg": {
+        "name": "nrkP1PlussWithBgLogo"
+      },
+      "nrkLogoNrkVestlandOnDark": {
+        "name": "nrkVestlandOnDarkLogo"
+      },
+      "nrkLogoNrkFinnmarkTitleBelowOnLight": {
+        "name": "nrkFinnmarkTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkVestlandTitleBelowOnLight": {
+        "name": "nrkVestlandTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkVestfoldOgTelemarkTitleBelow": {
+        "name": "nrkVestfoldOgTelemarkTitleBelowLogo"
+      },
+      "nrkLogoNrkInnlandetTitleBelowOnLight": {
+        "name": "nrkInnlandetTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkBuskerudTitleBelow": {
+        "name": "nrkBuskerudTitleBelowLogo"
+      },
+      "nrkLogoNrkVestlandOnLight": {
+        "name": "nrkVestlandOnLightLogo"
+      },
+      "nrkLogoNrkSuper": {
+        "name": "nrkSuperLogo"
+      },
+      "nrkLogoNrkVestfoldOgTelemarkOnLight": {
+        "name": "nrkVestfoldOgTelemarkOnLightLogo"
+      },
+      "nrkLogoNrkInnlandet": {
+        "name": "nrkInnlandetLogo"
+      },
+      "nrkLogoNrkP1PlussTitleBelowOnDark": {
+        "name": "nrkP1PlussTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkFinnmarkWithBg": {
+        "name": "nrkFinnmarkWithBgLogo"
+      },
+      "nrkLogoNrkVestfoldOgTelemarkTitleBelowOnLight": {
+        "name": "nrkVestfoldOgTelemarkTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkP3OnDark": {
+        "name": "nrkP3OnDarkLogo"
+      },
+      "nrkLogoNrkMoreOgRomsdalWithBg": {
+        "name": "nrkMoreOgRomsdalWithBgLogo"
+      },
+      "nrkLogoNrkVestfoldOgTelemarkTitleBelowOnDark": {
+        "name": "nrkVestfoldOgTelemarkTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkTvWithBg": {
+        "name": "nrkTvWithBgLogo"
+      },
+      "nrkLogoNrkNyheterTitleBelowOnDark": {
+        "name": "nrkNyheterTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkSportTitleBelowOnDark": {
+        "name": "nrkSportTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkBuskerudTitleBelowOnDark": {
+        "name": "nrkBuskerudTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkSapmiTitleBelowOnDark": {
+        "name": "nrkSapmiTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkTromsOnLight": {
+        "name": "nrkTromsOnLightLogo"
+      },
+      "nrkLogoNrkNordlandTitleBelow": {
+        "name": "nrkNordlandTitleBelowLogo"
+      },
+      "nrkLogoNrkSapmi": {
+        "name": "nrkSapmiLogo"
+      },
+      "nrkLogoNrkTromsTitleBelowOnLight": {
+        "name": "nrkTromsTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrk3OnDark": {
+        "name": "nrk3OnDarkLogo"
+      },
+      "nrkLogoNrkRogaland": {
+        "name": "nrkRogalandLogo"
+      },
+      "nrkLogoNrkMoreOgRomsdalTitleBelowOnDark": {
+        "name": "nrkMoreOgRomsdalTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkTromsWithBg": {
+        "name": "nrkTromsWithBgLogo"
+      },
+      "nrkLogoNrkP2TitleBelowOnLight": {
+        "name": "nrkP2TitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkTromsTitleBelowOnDark": {
+        "name": "nrkTromsTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkStorOsloOnLight": {
+        "name": "nrkStorOsloOnLightLogo"
+      },
+      "nrkLogoNrkSamiRadioOnDark": {
+        "name": "nrkSamiRadioOnDarkLogo"
+      },
+      "nrkLogoNrkSapmiOnLight": {
+        "name": "nrkSapmiOnLightLogo"
+      },
+      "nrkLogoNrkTrafikkTitleBelowOnDark": {
+        "name": "nrkTrafikkTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkMp3TitleBelowOnDark": {
+        "name": "nrkMp3TitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkTvTitleBelowOnLight": {
+        "name": "nrkTvTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkSapmiTitleBelow": {
+        "name": "nrkSapmiTitleBelowLogo"
+      },
+      "nrkLogoNrkSorlandet": {
+        "name": "nrkSorlandetLogo"
+      },
+      "nrkLogoNrkMoreOgRomsdalOnDark": {
+        "name": "nrkMoreOgRomsdalOnDarkLogo"
+      },
+      "nrkLogoNrkSamiRadioOnLight": {
+        "name": "nrkSamiRadioOnLightLogo"
+      },
+      "nrkLogoNrkTrondelagOnDark": {
+        "name": "nrkTrondelagOnDarkLogo"
+      },
+      "nrkLogoYrColor": {
+        "name": "yrColorLogo"
+      },
+      "nrkLogoNrkTrondelagTitleBelow": {
+        "name": "nrkTrondelagTitleBelowLogo"
+      },
+      "nrkLogoNrkKringkastingsorkestretOnDark": {
+        "name": "nrkKringkastingsorkestretOnDarkLogo"
+      },
+      "nrkLogoNrkTrondelagTitleBelowOnLight": {
+        "name": "nrkTrondelagTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkSapmiOnDark": {
+        "name": "nrkSapmiOnDarkLogo"
+      },
+      "nrkLogoNrkMoreOgRomsdal": {
+        "name": "nrkMoreOgRomsdalLogo"
+      },
+      "nrkLogoNrkYrRadio": {
+        "name": "nrkYrRadioLogo"
+      },
+      "nrkLogoNrkP3MusikkTitleBelowOnLight": {
+        "name": "nrkP3MusikkTitleBelowOnLightLogo"
+      },
+      "nrkLogoNrkTrondelagWithBg": {
+        "name": "nrkTrondelagWithBgLogo"
+      },
+      "nrkLogoNrkKringkastingsorkestret": {
+        "name": "nrkKringkastingsorkestretLogo"
+      },
+      "nrkLogoNrkSapmiWithBg": {
+        "name": "nrkSapmiWithBgLogo"
+      },
+      "nrkLogoNrkTrondelagOnLight": {
+        "name": "nrkTrondelagOnLightLogo"
+      },
+      "nrkLogoNrk": {
+        "name": "nrkLogo"
+      },
+      "nrkLogoNrkRogalandOnLight": {
+        "name": "nrkRogalandOnLightLogo"
+      },
+      "nrkLogoNrkSamiRadioWithBg": {
+        "name": "nrkSamiRadioWithBgLogo"
+      },
+      "nrkLogoNrkSportTitleBelow": {
+        "name": "nrkSportTitleBelowLogo"
+      },
+      "nrkLogoNrkFolkemusikk": {
+        "name": "nrkFolkemusikkLogo"
+      },
+      "nrkLogoNrkVestlandTitleBelowOnDark": {
+        "name": "nrkVestlandTitleBelowOnDarkLogo"
+      },
+      "nrkLogoNrkMp3OnDark": {
+        "name": "nrkMp3OnDarkLogo"
+      },
+      "nrkLogoNrkP3": {
+        "name": "nrkP3Logo"
+      },
+      "nrkLogoNrk1WithBg": {
+        "name": "nrk1WithBgLogo"
+      },
+      "nrkLogoNrk2OnLight": {
+        "name": "nrk2OnLightLogo"
+      },
+      "nrkLogoYrBlackwhite": {
+        "name": "yrBlackwhiteLogo"
+      },
+      "nrkLogoNrkNyheterTitleBelow": {
+        "name": "nrkNyheterTitleBelowLogo"
+      },
+      "nrkLogoNrkTrafikkOnDark": {
+        "name": "nrkTrafikkOnDarkLogo"
+      },
+      "nrkLogoNrkStorOsloWithBg": {
+        "name": "nrkStorOsloWithBgLogo"
+      },
+      "nrkLogoNrkNyheterWithBg": {
+        "name": "nrkNyheterWithBgLogo"
+      },
+      "nrkLogoNrkBuskerud": {
+        "name": "nrkBuskerudLogo"
+      },
+      "nrkLogoNrkWithBg": {
+        "name": "nrkWithBgLogo"
+      },
+      "nrkLogoNrk1OnLight": {
+        "name": "nrk1OnLightLogo"
+      },
+      "nrkLogoNrkTvTitleBelow": {
+        "name": "nrkTvTitleBelowLogo"
+      },
+      "nrkLogoNrkRadio": {
+        "name": "nrkRadioLogo"
+      },
+      "nrkLogoNrk2": {
+        "name": "nrk2Logo"
+      },
+      "nrkLogoNrkInnlandetOnLight": {
+        "name": "nrkInnlandetOnLightLogo"
+      },
+      "nrkLogoNrkInnlandetOnDark": {
+        "name": "nrkInnlandetOnDarkLogo"
+      },
+      "nrkLogoNrkSportOnDark": {
+        "name": "nrkSportOnDarkLogo"
+      },
+      "nrkLogoNrkVestfoldOgTelemarkWithBg": {
+        "name": "nrkVestfoldOgTelemarkWithBgLogo"
+      },
+      "nrkLogoNrkTvOnDark": {
+        "name": "nrkTvOnDarkLogo"
+      },
+      "nrkLogoNrkNyheterOnLight": {
+        "name": "nrkNyheterOnLightLogo"
+      },
+      "nrkLogoNrkFinnmarkOnLight": {
+        "name": "nrkFinnmarkOnLightLogo"
+      }
+    },
+    "removed": [
+      "nrkLogoNrkNyheterSymbol",
+      "nrkLogoNrkNyheterSymbolBlackwhite",
+      "nrkLogoNrkNyheterSymbolColor",
+      "nrkLogoNrkP13",
+      "nrkLogoNrkP13OnDark",
+      "nrkLogoNrkP13OnLight",
+      "nrkLogoNrkP13Radioresepsjonen",
+      "nrkLogoNrkP13TitleBelow",
+      "nrkLogoNrkP13TitleBelowOnDark",
+      "nrkLogoNrkP13TitleBelowOnLight",
+      "nrkLogoNrkP13WithBg",
+      "nrkLogoNrkP3NationalRapShow",
+      "nrkLogoNrkP3Urort",
+      "nrkLogoNrkP3UrortOnDark",
+      "nrkLogoNrkP3UrortOnLight",
+      "nrkLogoNrkP3UrortTitleBelow",
+      "nrkLogoNrkP3UrortTitleBelowOnDark",
+      "nrkLogoNrkP3UrortTitleBelowOnLight",
+      "nrkLogoNrkP3UrortWithBg",
+      "nrkLogoNrkP3X",
+      "nrkLogoNrkP3XOnDark",
+      "nrkLogoNrkP3XOnLight",
+      "nrkLogoNrkP3XTitleBelow",
+      "nrkLogoNrkP3XTitleBelowOnDark",
+      "nrkLogoNrkP3XTitleBelowOnLight",
+      "nrkLogoNrkP3XWithBg",
+      "nrkLogoNrkSportSymbol",
+      "nrkLogoNrkSportSymbolBlackwhite",
+      "nrkLogoNrkSportSymbolColor",
+      "nrkLogoNrkSuperSentrert",
+      "nrkLogoNrkTegnspraakColorblack",
+      "nrkLogoNrkTegnspraakColorgrey",
+      "nrkLogoNrkTegnspraakColorwhite",
+      "nrkLogoOstfold",
+      "nrkLogoOstfoldOnDark",
+      "nrkLogoOstfoldOnLight",
+      "nrkLogoOstfoldTitleBelow",
+      "nrkLogoOstfoldTitleBelowOnDark",
+      "nrkLogoOstfoldTitleBelowOnLight",
+      "nrkLogoOstfoldWithBg",
+      "NrkLogoNrkNyheterSymbolBlackwhite",
+      "NrkLogoNrkNyheterSymbolColor",
+      "NrkLogoNrkNyheterSymbol",
+      "NrkLogoNrkP13OnDark",
+      "NrkLogoNrkP13OnLight",
+      "NrkLogoNrkP13Radioresepsjonen",
+      "NrkLogoNrkP13TitleBelowOnDark",
+      "NrkLogoNrkP13TitleBelowOnLight",
+      "NrkLogoNrkP13TitleBelow",
+      "NrkLogoNrkP13WithBg",
+      "NrkLogoNrkP13",
+      "NrkLogoNrkP3NationalRapShow",
+      "NrkLogoNrkP3UrortOnDark",
+      "NrkLogoNrkP3UrortOnLight",
+      "NrkLogoNrkP3UrortTitleBelowOnDark",
+      "NrkLogoNrkP3UrortTitleBelowOnLight",
+      "NrkLogoNrkP3UrortTitleBelow",
+      "NrkLogoNrkP3UrortWithBg",
+      "NrkLogoNrkP3Urort",
+      "NrkLogoNrkP3XOnDark",
+      "NrkLogoNrkP3XOnLight",
+      "NrkLogoNrkP3XTitleBelowOnDark",
+      "NrkLogoNrkP3XTitleBelowOnLight",
+      "NrkLogoNrkP3XTitleBelow",
+      "NrkLogoNrkP3XWithBg",
+      "NrkLogoNrkP3X",
+      "NrkLogoNrkSportSymbolBlackwhite",
+      "NrkLogoNrkSportSymbolColor",
+      "NrkLogoNrkSportSymbol",
+      "NrkLogoNrkSuperSentrert",
+      "NrkLogoNrkTegnspraakColorblack",
+      "NrkLogoNrkTegnspraakColorgrey",
+      "NrkLogoNrkTegnspraakColorwhite",
+      "NrkLogoOstfoldOnDark",
+      "NrkLogoOstfoldOnLight",
+      "NrkLogoOstfoldTitleBelowOnDark",
+      "NrkLogoOstfoldTitleBelowOnLight",
+      "NrkLogoOstfoldTitleBelow",
+      "NrkLogoOstfoldWithBg",
+      "NrkLogoOstfold"
+    ]
+  },
+  "@nrk/core-icons/logo/large": {
+    "renames": {
+      "nrkLogoLargeNrkTv": {
+        "name": "nrkTvLargeLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "nrkLogoLargeNrkTvWithBg": {
+        "name": "nrkTvWithBgLargeLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "nrkLogoLargeNrk": {
+        "name": "nrkLargeLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "nrkLogoLargeNrkTvTitleBelow": {
+        "name": "nrkTvTitleBelowLargeLogo",
+        "source": "@nrk/core-icons/logo"
+      }
+    },
+    "removed": []
+  },
+  "@nrk/core-icons/jsx": {
+    "renames": {
+      "NrkCheckActive": {
+        "name": "checkmarkCircleCheckedSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaCompleted": {
+        "name": "checkmarkCircleCheckedSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareMicrophoneActive": {
+        "name": "microphoneSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkGeopoint": {
+        "name": "pinIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkBack": {
+        "name": "arrowUturnLeftIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkGeo": {
+        "name": "targetIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkOnline": {
+        "name": "wifiIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaBeamNote": {
+        "name": "musicNotesIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkNote2": {
+        "name": "musicNotesIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkList": {
+        "name": "listIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkGlobe": {
+        "name": "globeIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHide": {
+        "name": "eyeSlashIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkOffline": {
+        "name": "wifiSlashIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkCategory": {
+        "name": "squares2x2Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaDirekteGolive": {
+        "name": "circleInCircleSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkSettingsActive": {
+        "name": "settingsSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkRefresh": {
+        "name": "arrowCircleClockwiseIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaPictureInPicture": {
+        "name": "pictureInPictureEnterIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwarePrinter": {
+        "name": "printerIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkArrowUp": {
+        "name": "arrowUpIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkUserNotloggedinActive": {
+        "name": "faceSmilingSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDice1Active": {
+        "name": "dice1SolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaVideo": {
+        "name": "playRectangleIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkSomeTommelnedActive": {
+        "name": "thumbsDownSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaQuaverOff": {
+        "name": "musicNoteSlashIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkNote1Off": {
+        "name": "musicNoteSlashIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaSpeed1_5x": {
+        "name": "multiplier1_5Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaQuaver": {
+        "name": "musicNoteIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkNote1": {
+        "name": "musicNoteIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaIndexQuaverTiny": {
+        "name": "musicNoteTinyIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaChromecast": {
+        "name": "chromecastIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaChromecast3": {
+        "name": "chromecast3Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaAirplay": {
+        "name": "airplayIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkCategoryActive": {
+        "name": "squares2x2SolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkRotate": {
+        "name": "arrowsCircleCounterclockwiseIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaFfw15sec": {
+        "name": "goForward15Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDownload": {
+        "name": "downloadIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkEdit": {
+        "name": "pencilLineIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkTrash": {
+        "name": "trashcanIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkSuperEmojiPoopAngry": {
+        "name": "nrksuperPoopSadIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkSomeShareIos": {
+        "name": "squareAndArrowUpIcon",
+        "source": "@nrk/core-icons"
+      },
+      "Nrk360": {
+        "name": "arrowCirclePerspectiveCounterclockwiseIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkSomeShare": {
+        "name": "arrowTurnUpRightIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaPrevious": {
+        "name": "backwardEndIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaSubtitles": {
+        "name": "speechBubbleSubtitlesIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkLogout": {
+        "name": "logoutIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaDirektetvActive": {
+        "name": "tvDotSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkCheckboxActive": {
+        "name": "checkboxCheckedSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkBellActive": {
+        "name": "bellSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkLatestNews": {
+        "name": "dotRadiowavesIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaChromecast1": {
+        "name": "chromecast1Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkGeoActive": {
+        "name": "targetSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaProgramguide": {
+        "name": "magazineIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDice4": {
+        "name": "dice4Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaPlaylistAdded": {
+        "name": "listCheckIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaPlaylistRemove": {
+        "name": "listXmarkIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkCalendar": {
+        "name": "calendarIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaPlaylistAdd": {
+        "name": "listPlusIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareRadio": {
+        "name": "radioIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaBluetooth": {
+        "name": "bluetoothIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareComputer": {
+        "name": "monitorIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkArrowLeftLong": {
+        "name": "arrowLeftLongIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMening": {
+        "name": "quoteIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareMobile": {
+        "name": "phoneIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaChromecast2": {
+        "name": "chromecast2Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareSpeaker": {
+        "name": "speakerIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareCamera": {
+        "name": "cameraIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkSomeEmail": {
+        "name": "envelopeIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkLiveActivityActive": {
+        "name": "clockAndDotSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkEllipsisActive": {
+        "name": "ellipsisCircleSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkArrowDropdown": {
+        "name": "arrowheadDownIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkReload": {
+        "name": "arrowCircleCounterclockwiseIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkClock": {
+        "name": "clockIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaStop": {
+        "name": "stopIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaPlay": {
+        "name": "playIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaMediaIncomplete": {
+        "name": "xmarkCircleCheckedIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaTilgjengelighetGeoblocked": {
+        "name": "parasolIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDice6": {
+        "name": "dice6Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaTheater": {
+        "name": "rectangleExpandIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkComment": {
+        "name": "speechBubbleLineIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkSearchActive": {
+        "name": "magnifyingGlassStrongIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkTilgjengelighet": {
+        "name": "accessibilityIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkUserLoggedin": {
+        "name": "faceGrinningIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHelp": {
+        "name": "questionMarkCircleIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDialogue": {
+        "name": "speechBubblesIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkTrashActive": {
+        "name": "trashcanSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaPlaylist": {
+        "name": "listPlayIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaPictureInPictureActive": {
+        "name": "pictureInPictureExitIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkInfo": {
+        "name": "infoCircleIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDownloaded": {
+        "name": "mobileCheckIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareWatch": {
+        "name": "watchIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaPause": {
+        "name": "pauseIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaVolume3": {
+        "name": "volume3Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaPlaylistAddLater": {
+        "name": "listArrowToBottomIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkFullscreen": {
+        "name": "arrowsExpandIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaVolume2": {
+        "name": "volume2Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkNewChat": {
+        "name": "speechBubblePlusIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaNy": {
+        "name": "tagNyIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkSettings": {
+        "name": "settingsIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkArrowLeft": {
+        "name": "arrowLeftIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaSpeed2x": {
+        "name": "multiplier2Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaSpeed1_25x": {
+        "name": "multiplier1_25Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkArrowRightLong": {
+        "name": "arrowRightLongIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkGeopointActive": {
+        "name": "pinSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaSpeed0_8x": {
+        "name": "multiplier0_8Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkUserNotloggedin": {
+        "name": "faceSmilingIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkReorder": {
+        "name": "arrowsUpDownIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaJumpto": {
+        "name": "jumptoIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkArrowNested": {
+        "name": "arrowTurnRightDownIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkSomeTommelned": {
+        "name": "thumbsDownIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkEllipsis": {
+        "name": "ellipsisIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaSpeed1x": {
+        "name": "multiplier1Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkArrowDown": {
+        "name": "arrowDownIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkUnlockActive": {
+        "name": "lockOpenSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaMediaComplete": {
+        "name": "checkmarkCircleCheckedIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkBookmark": {
+        "name": "bookmarkIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaRwd30sec": {
+        "name": "goBackward30Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHeart": {
+        "name": "heartIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkChevronUp": {
+        "name": "chevronUpIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkRadioActive": {
+        "name": "radioButtonCheckedIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaRwd5sec": {
+        "name": "goBackward5Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaFfw30sec": {
+        "name": "goForward30Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkSomeTommelopp": {
+        "name": "thumbsUpIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkUpload": {
+        "name": "uploadIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkCheckRadioUnchecked": {
+        "name": "radioButtonUncheckedIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkBroadcast": {
+        "name": "antennaIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkSearch": {
+        "name": "magnifyingGlassIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaRwd": {
+        "name": "backwardIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMore": {
+        "name": "ellipsisVerticalIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkUnlock": {
+        "name": "lockOpenIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHeartActive": {
+        "name": "heartSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkLink": {
+        "name": "linkIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkCloseActive": {
+        "name": "xmarkCircleCheckedSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkOpenInNew": {
+        "name": "openExternalIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMoreActive": {
+        "name": "ellipsisVerticalCircleSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaAirplayActive": {
+        "name": "airplaySolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaFfw": {
+        "name": "forwardIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaRwd15sec": {
+        "name": "goBackward15Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkCheck": {
+        "name": "checkmarkIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkChevronRight": {
+        "name": "chevronRightIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkClose": {
+        "name": "xmarkIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkCheckbox": {
+        "name": "checkboxUncheckedIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkBookmarkActive": {
+        "name": "bookmarkSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkListActive": {
+        "name": "listStrongIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkUserLoggedinActive": {
+        "name": "faceGrinningSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareMicrophone": {
+        "name": "microphoneIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaDirektetv": {
+        "name": "tvDotIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkArticle": {
+        "name": "documentIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareTv": {
+        "name": "tvIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaQuaverActive": {
+        "name": "musicNoteSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkSleep": {
+        "name": "zzIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaChromecastActive": {
+        "name": "chromecastSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkPoll": {
+        "name": "barGraphIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkBulletedList": {
+        "name": "listBulletIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkQuiz": {
+        "name": "questionmarkIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareGame": {
+        "name": "gameControllerIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkChevronDown": {
+        "name": "chevronDownIcon",
+        "source": "@nrk/core-icons"
+      },
+      "Nrk404": {
+        "name": "shapesUnorderedIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMedia404Notfound": {
+        "name": "shapesUnorderedIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkWarning": {
+        "name": "exclamationMarkTriangleIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkLock": {
+        "name": "lockClosedIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareHeadphones": {
+        "name": "headphonesIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkShow": {
+        "name": "eyeIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkLockActive": {
+        "name": "lockClosedSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaNext": {
+        "name": "forwardEndIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareSmartWatch": {
+        "name": "smartWatchIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkLatestNewsActive": {
+        "name": "dotRadiowavesCircleSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaSubtitlesActive": {
+        "name": "speechBubbleSubtitlesSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDuration": {
+        "name": "clockTimerIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaTilgjengelighetKommer": {
+        "name": "clockTimerIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkUserAvatar": {
+        "name": "nrksuperAvatarIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaVolume1": {
+        "name": "volume1Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareTablet": {
+        "name": "tabletIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaTilgjengelighetIkkelengertilgjengelig": {
+        "name": "sunHorizonIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkLyn": {
+        "name": "lightningBoltSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaSubtitlesUnavailable": {
+        "name": "speechBubbleInactiveIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaPlaylistAddNext": {
+        "name": "listArrowToTopIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkSomeTommeloppActive": {
+        "name": "thumbsUpSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDice1": {
+        "name": "dice1Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkArrowRight": {
+        "name": "arrowRightIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkFullscreenActive": {
+        "name": "arrowsContractIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaTilgjengelighetSnartutilgjengelig": {
+        "name": "hourglassIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDice3Active": {
+        "name": "dice3SolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkTilgjengelighetSynstolking": {
+        "name": "audioDescriptionIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkLongreadActive": {
+        "name": "glassesSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaSoundwave": {
+        "name": "soundwaveIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaTheaterActive": {
+        "name": "rectangleContractIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaFfw5sec": {
+        "name": "goForward5Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDice5": {
+        "name": "dice5Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkTilgjengelighetHorbarhet": {
+        "name": "earIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaPlayFail": {
+        "name": "playSlashIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkPlus": {
+        "name": "plusIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaProgramguideActive": {
+        "name": "magazineSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDice6Active": {
+        "name": "dice6SolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaDirekteNotlive": {
+        "name": "circleInCircleIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkChevronLeft": {
+        "name": "chevronLeftIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDice3": {
+        "name": "dice3Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkPerson": {
+        "name": "personIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkGallery": {
+        "name": "imageStackIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareLaptop": {
+        "name": "laptopIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkTilgjengelighetLydtekst": {
+        "name": "spokenSubtitlesIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHardwareSmartSpeaker": {
+        "name": "smartSpeakerIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkTilgjengelighetTegnspraak": {
+        "name": "signLanguageIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDice2Active": {
+        "name": "dice2SolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHome": {
+        "name": "houseIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkAlarmClock": {
+        "name": "clockAlarmIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDice5Active": {
+        "name": "dice5SolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkHomeActive": {
+        "name": "houseSolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkLongread": {
+        "name": "glassesIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkBell": {
+        "name": "bellIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkArrangeList": {
+        "name": "dragHorizontalIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDice2": {
+        "name": "dice2Icon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkBulletSquare": {
+        "name": "bulletPointIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkStar": {
+        "name": "starIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMinus": {
+        "name": "minusIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkDice4Active": {
+        "name": "dice4SolidIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMediaVolumeMuted": {
+        "name": "volumeXIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkMat": {
+        "name": "cutleryIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkSomeEmbed": {
+        "name": "codeIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkLiveActivity": {
+        "name": "clockAndDotIcon",
+        "source": "@nrk/core-icons"
+      },
+      "NrkStarActive": {
+        "name": "starSolidIcon",
+        "source": "@nrk/core-icons"
+      }
+    },
+    "removed": [
+      "NrkFlagNorwegian",
+      "NrkMediaDirekteAnimatedActive",
+      "NrkProgress",
+      "NrkSpinner",
+      "NrkFlagNorwegian",
+      "NrkMediaDirekteAnimatedActive",
+      "NrkProgress",
+      "NrkSpinner"
+    ]
+  },
+  "@nrk/core-icons/jsx/expressive": {
+    "renames": {
+      "NrkCheckExpressiveActive": {
+        "name": "checkmarkCircleCheckedSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaCompletedExpressive": {
+        "name": "checkmarkCircleCheckedSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwareMicrophoneExpressiveActive": {
+        "name": "microphoneSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkGeopointExpressiveActive": {
+        "name": "pinSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkOnlineExpressive": {
+        "name": "wifiExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkBackExpressive": {
+        "name": "arrowUturnLeftExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkSettingsExpressiveActive": {
+        "name": "settingsSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkLatestNewsExpressiveActive": {
+        "name": "dotRadiowavesCircleSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwareWatchExpressive": {
+        "name": "watchExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkOfflineExpressive": {
+        "name": "wifiSlashExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkInfoExpressive": {
+        "name": "infoCircleExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMinusExpressive": {
+        "name": "minusExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkPersonExpressive": {
+        "name": "personExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkSearchExpressiveActive": {
+        "name": "magnifyingGlassStrongExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkListExpressiveActive": {
+        "name": "listStrongExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkTilgjengelighetExpressive": {
+        "name": "accessibilityExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaPictureInPictureExpressive": {
+        "name": "pictureInPictureEnterExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwareHeadphonesExpressive": {
+        "name": "headphonesExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaVideoExpressive": {
+        "name": "playRectangleExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaQuaverExpressive": {
+        "name": "musicNoteExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaIndexQuaverTinyExpressive": {
+        "name": "musicNoteTinyExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaChromecastExpressive": {
+        "name": "chromecastExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkSomeTommelnedExpressiveActive": {
+        "name": "thumbsDownSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaAirplayExpressive": {
+        "name": "airplayExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaChromecastExpressive3": {
+        "name": "chromecast3ExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaQuaverOffExpressive": {
+        "name": "musicNoteSlashExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkBellExpressiveActive": {
+        "name": "bellSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaAirplayExpressiveActive": {
+        "name": "airplaySolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHeartExpressiveActive": {
+        "name": "heartSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkChevronUpExpressive": {
+        "name": "chevronUpExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkCloseExpressive": {
+        "name": "xmarkExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkSomeTommelnedExpressive": {
+        "name": "thumbsDownExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkRotateExpressive": {
+        "name": "arrowsCircleCounterclockwiseExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkArrowRightLongExpressive": {
+        "name": "arrowRightLongExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaBeamNoteExpressive": {
+        "name": "musicNotesExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHeartExpressive": {
+        "name": "heartExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkSomeTommeloppExpressive": {
+        "name": "thumbsUpExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkGeoExpressiveActive": {
+        "name": "targetSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaPlaylistRemoveExpressive": {
+        "name": "listXmarkExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaPlaylistAddedExpressive": {
+        "name": "listCheckExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkCheckboxExpressiveActive": {
+        "name": "checkboxCheckedSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkLogoutExpressive": {
+        "name": "logoutExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaChromecastExpressive1": {
+        "name": "chromecast1ExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkLatestNewsExpressive": {
+        "name": "dotRadiowavesExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "Nrk404Expressive": {
+        "name": "shapesUnorderedExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMedia404NotfoundExpressive": {
+        "name": "shapesUnorderedExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaSubtitlesExpressiveActive": {
+        "name": "speechBubbleSubtitlesSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaPlaylistExpressive": {
+        "name": "listPlayExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaPlaylistAddLaterExpressive": {
+        "name": "listArrowToBottomExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaBluetoothExpressive": {
+        "name": "bluetoothExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaDirektetvExpressiveActive": {
+        "name": "tvDotSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaPlaylistAddExpressive": {
+        "name": "listPlusExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkGeoExpressive": {
+        "name": "targetExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaChromecastExpressive2": {
+        "name": "chromecast2ExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMeningExpressive": {
+        "name": "quoteExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwareSpeakerExpressive": {
+        "name": "speakerExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkGeopointExpressive": {
+        "name": "pinExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwareComputerExpressive": {
+        "name": "monitorExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkArrowLeftLongExpressive": {
+        "name": "arrowLeftLongExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaPlayExpressive": {
+        "name": "playExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaMediaIncompleteExpressive": {
+        "name": "xmarkCircleCheckedExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaTilgjengelighetGeoblockedExpressive": {
+        "name": "parasolExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwareSmartWatchExpressive": {
+        "name": "smartWatchExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkGlobeExpressive": {
+        "name": "globeExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwareRadioExpressive": {
+        "name": "radioExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkLockExpressive": {
+        "name": "lockClosedExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkNewChatExpressive": {
+        "name": "speechBubblePlusExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkDownloadedExpressive": {
+        "name": "mobileCheckExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkUserLoggedinExpressive": {
+        "name": "faceGrinningExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkTrashExpressiveActive": {
+        "name": "trashcanSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaVolumeExpressive1": {
+        "name": "volume1ExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHideExpressive": {
+        "name": "eyeSlashExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHelpExpressive": {
+        "name": "questionMarkCircleExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaPictureInPictureExpressiveActive": {
+        "name": "pictureInPictureExitExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkDialogueExpressive": {
+        "name": "speechBubblesExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaVolumeExpressive2": {
+        "name": "volume2ExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkSomeTommeloppExpressiveActive": {
+        "name": "thumbsUpSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaVolumeExpressive3": {
+        "name": "volume3ExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkSettingsExpressive": {
+        "name": "settingsExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkArrowRightExpressive": {
+        "name": "arrowRightExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkArrowLeftExpressive": {
+        "name": "arrowLeftExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkSomeShareExpressive": {
+        "name": "arrowTurnUpRightExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkSomeEmailExpressive": {
+        "name": "envelopeExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkArrowNestedExpressive": {
+        "name": "arrowTurnRightDownExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkReorderExpressive": {
+        "name": "arrowsUpDownExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaRwd15secExpressive": {
+        "name": "goBackward15ExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaFfw15secExpressive": {
+        "name": "goForward15ExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaStopExpressive": {
+        "name": "stopExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaPreviousExpressive": {
+        "name": "backwardEndExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaFfwExpressive": {
+        "name": "forwardExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaFfw30secExpressive": {
+        "name": "goForward30ExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkUnlockExpressiveActive": {
+        "name": "lockOpenSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkSearchExpressive": {
+        "name": "magnifyingGlassExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkDownloadExpressive": {
+        "name": "downloadExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkUploadExpressive": {
+        "name": "uploadExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaRwd5secExpressive": {
+        "name": "goBackward5ExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkUnlockExpressive": {
+        "name": "lockOpenExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkArrowDownExpressive": {
+        "name": "arrowDownExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "Nrk360Expressive": {
+        "name": "arrowCirclePerspectiveCounterclockwiseExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaMediaCompleteExpressive": {
+        "name": "checkmarkCircleCheckedExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkBookmarkExpressive": {
+        "name": "bookmarkExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkOpenInNewExpressive": {
+        "name": "openExternalExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaRwd30secExpressive": {
+        "name": "goBackward30ExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaRwdExpressive": {
+        "name": "backwardExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkCloseExpressiveActive": {
+        "name": "xmarkCircleCheckedSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkArrowDropdownExpressive": {
+        "name": "arrowheadDownExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkBroadcastExpressive": {
+        "name": "antennaExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkBookmarkExpressiveActive": {
+        "name": "bookmarkSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkEllipsisExpressive": {
+        "name": "ellipsisExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaJumptoExpressive": {
+        "name": "jumptoExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkEditExpressive": {
+        "name": "pencilLineExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkSomeShareIosExpressive": {
+        "name": "squareAndArrowUpExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkCheckboxExpressive": {
+        "name": "checkboxUncheckedExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMoreExpressiveActive": {
+        "name": "ellipsisVerticalCircleSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMoreExpressive": {
+        "name": "ellipsisVerticalExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkLinkExpressive": {
+        "name": "linkExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkCheckExpressive": {
+        "name": "checkmarkExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkChevronRightExpressive": {
+        "name": "chevronRightExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkRefreshExpressive": {
+        "name": "arrowCircleClockwiseExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkArticleExpressive": {
+        "name": "documentExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkCommentExpressive": {
+        "name": "speechBubbleLineExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkSleepExpressive": {
+        "name": "zzExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkCategoryExpressiveActive": {
+        "name": "squares2x2SolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkUserLoggedinExpressiveActive": {
+        "name": "faceGrinningSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkShowExpressive": {
+        "name": "eyeExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaChromecastExpressiveActive": {
+        "name": "chromecastSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaQuaverExpressiveActive": {
+        "name": "musicNoteSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwareMicrophoneExpressive": {
+        "name": "microphoneExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwareCameraExpressive": {
+        "name": "cameraExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkChevronDownExpressive": {
+        "name": "chevronDownExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkCalendarExpressive": {
+        "name": "calendarExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwareGameExpressive": {
+        "name": "gameControllerExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkUserNotloggedinExpressiveActive": {
+        "name": "faceSmilingSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkDurationExpressive": {
+        "name": "clockTimerExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaTilgjengelighetKommerExpressive": {
+        "name": "clockTimerExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaNextExpressive": {
+        "name": "forwardEndExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwarePrinterExpressive": {
+        "name": "printerExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaDirektetvExpressive": {
+        "name": "tvDotExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaPauseExpressive": {
+        "name": "pauseExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkBulletedListExpressive": {
+        "name": "listBulletExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkReloadExpressive": {
+        "name": "arrowCircleCounterclockwiseExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkUserNotloggedinExpressive": {
+        "name": "faceSmilingExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwareTvExpressive": {
+        "name": "tvExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkLockExpressiveActive": {
+        "name": "lockClosedSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkFullscreenExpressive": {
+        "name": "arrowsExpandExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkUserAvatarExpressive": {
+        "name": "nrksuperAvatarExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaTheaterExpressive": {
+        "name": "rectangleExpandExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkWarningExpressive": {
+        "name": "exclamationMarkTriangleExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkPollExpressive": {
+        "name": "barGraphExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaFfw5secExpressive": {
+        "name": "goForward5ExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkBellExpressive": {
+        "name": "bellExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkLongreadExpressiveActive": {
+        "name": "glassesSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkTilgjengelighetSynstolkingExpressive": {
+        "name": "audioDescriptionExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaSoundwaveExpressive": {
+        "name": "soundwaveExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkCategoryExpressive": {
+        "name": "squares2x2ExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkLongreadExpressive": {
+        "name": "glassesExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMatExpressive": {
+        "name": "cutleryExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkLynExpressive": {
+        "name": "lightningBoltSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkArrangeListExpressive": {
+        "name": "dragHorizontalExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaVolumeExpressiveMuted": {
+        "name": "volumeXExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaTilgjengelighetIkkelengertilgjengeligExpressive": {
+        "name": "sunHorizonExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaTheaterExpressiveActive": {
+        "name": "rectangleContractExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkChevronLeftExpressive": {
+        "name": "chevronLeftExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkTilgjengelighetHorbarhetExpressive": {
+        "name": "earExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwareSmartSpeakerExpressive": {
+        "name": "smartSpeakerExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaTilgjengelighetSnartutilgjengeligExpressive": {
+        "name": "hourglassExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaProgramguideExpressiveActive": {
+        "name": "magazineSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaSubtitlesExpressive": {
+        "name": "speechBubbleSubtitlesExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkArrowUpExpressive": {
+        "name": "arrowUpExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwareTabletExpressive": {
+        "name": "tabletExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkTilgjengelighetLydtekstExpressive": {
+        "name": "spokenSubtitlesExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkTrashExpressive": {
+        "name": "trashcanExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkTilgjengelighetTegnspraakExpressive": {
+        "name": "signLanguageExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkBulletSquareExpressive": {
+        "name": "bulletPointExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkAlarmClockExpressive": {
+        "name": "clockAlarmExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkFullscreenExpressiveActive": {
+        "name": "arrowsContractExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHardwareLaptopExpressive": {
+        "name": "laptopExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHomeExpressive": {
+        "name": "houseExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkHomeExpressiveActive": {
+        "name": "houseSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkClockExpressive": {
+        "name": "clockExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaSubtitlesExpressiveUnavailable": {
+        "name": "speechBubbleInactiveExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkListExpressive": {
+        "name": "listExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaProgramguideExpressive": {
+        "name": "magazineExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkPlusExpressive": {
+        "name": "plusExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaPlayExpressiveFail": {
+        "name": "playSlashExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkGalleryExpressive": {
+        "name": "imageStackExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkMediaPlaylistAddNextExpressive": {
+        "name": "listArrowToTopExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkStarExpressiveActive": {
+        "name": "starSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkSomeEmbedExpressive": {
+        "name": "codeExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkStarExpressive": {
+        "name": "starExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkEllipsisExpressiveActive": {
+        "name": "ellipsisCircleSolidExpressiveIcon",
+        "source": "@nrk/core-icons/expressive"
+      },
+      "NrkRadioExpressiveActive": {
+        "name": "radioButtonCheckedIcon",
+        "source": "@nrk/core-icons"
+      }
+    },
+    "removed": [
+      "NrkFlagNorwegianExpressive",
+      "NrkProgressExpressive",
+      "NrkSpinnerExpressive",
+      "NrkFlagNorwegianExpressive",
+      "NrkProgressExpressive",
+      "NrkSpinnerExpressive"
+    ]
+  },
+  "@nrk/core-icons/jsx/logo": {
+    "renames": {
+      "NrkLogoNrkP1PlussOnLight": {
+        "name": "nrkP1PlussOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkYrRadioOnDark": {
+        "name": "nrkYrRadioOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTegnspraakOnLight": {
+        "name": "nrkTegnspraakOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTegnspraakTitleBelowOnDark": {
+        "name": "nrkTegnspraakTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTegnspraakOnDark": {
+        "name": "nrkTegnspraakOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoMgp": {
+        "name": "mgpLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTegnspraakSymbolWithBg": {
+        "name": "nrkTegnspraakSymbolWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSuperSymbol": {
+        "name": "nrkSuperSymbolLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSuperOnDark": {
+        "name": "nrkSuperOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTegnspraakSymbolOnDark": {
+        "name": "nrkTegnspraakSymbolOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkKringkastingsorkestretTitleBelow": {
+        "name": "nrkKringkastingsorkestretTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkRogalandOnDark": {
+        "name": "nrkRogalandOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTrafikk": {
+        "name": "nrkTrafikkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSportTitleBelowOnLight": {
+        "name": "nrkSportTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkRogalandTitleBelow": {
+        "name": "nrkRogalandTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkMp3": {
+        "name": "nrkMp3Logo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP3TitleBelowOnDark": {
+        "name": "nrkP3TitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSamiRadioTitleBelowOnDark": {
+        "name": "nrkSamiRadioTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkNordlandTitleBelowOnDark": {
+        "name": "nrkNordlandTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSuperTitleBelowOnDark": {
+        "name": "nrkSuperTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSamiRadio": {
+        "name": "nrkSamiRadioLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkFolkemusikkTitleBelow": {
+        "name": "nrkFolkemusikkTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkFolkemusikkTitleBelowOnLight": {
+        "name": "nrkFolkemusikkTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkKlassiskOnDark": {
+        "name": "nrkKlassiskOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP1": {
+        "name": "nrkP1Logo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkYrRadioOnLight": {
+        "name": "nrkYrRadioOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkNordlandOnDark": {
+        "name": "nrkNordlandOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrk3OnLight": {
+        "name": "nrk3OnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTegnspraakTitleBelow": {
+        "name": "nrkTegnspraakTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkMoreOgRomsdalTitleBelowOnLight": {
+        "name": "nrkMoreOgRomsdalTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkStorOsloTitleBelow": {
+        "name": "nrkStorOsloTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrk3": {
+        "name": "nrk3Logo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTegnspraakSymbol": {
+        "name": "nrkTegnspraakSymbolLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP1TitleBelow": {
+        "name": "nrkP1TitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP3MusikkOnDark": {
+        "name": "nrkP3MusikkOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrk1OnDark": {
+        "name": "nrk1OnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP3Musikk": {
+        "name": "nrkP3MusikkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrk2WithBg": {
+        "name": "nrk2WithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkNyheterOnDark": {
+        "name": "nrkNyheterOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkRadioOnLight": {
+        "name": "nrkRadioOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkRadioOnDark": {
+        "name": "nrkRadioOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP1WithBg": {
+        "name": "nrkP1WithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkRadioTitleBelow": {
+        "name": "nrkRadioTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrk1": {
+        "name": "nrk1Logo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP2": {
+        "name": "nrkP2Logo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkKlassiskOnLight": {
+        "name": "nrkKlassiskOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP3OnLight": {
+        "name": "nrkP3OnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP1TitleBelowOnDark": {
+        "name": "nrkP1TitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkMp3TitleBelowOnLight": {
+        "name": "nrkMp3TitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTegnspraakSymbolOnLight": {
+        "name": "nrkTegnspraakSymbolOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkStorOslo": {
+        "name": "nrkStorOsloLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSamiRadioTitleBelowOnLight": {
+        "name": "nrkSamiRadioTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkKringkastingsorkestretOnLight": {
+        "name": "nrkKringkastingsorkestretOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkJazzTitleBelowOnLight": {
+        "name": "nrkJazzTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkYrRadioWithBg": {
+        "name": "nrkYrRadioWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTegnspraakWithBg": {
+        "name": "nrkTegnspraakWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSuperTitleBelow": {
+        "name": "nrkSuperTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSuperTitleBelowOnLight": {
+        "name": "nrkSuperTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP3MusikkWithBg": {
+        "name": "nrkP3MusikkWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkKlassiskTitleBelowOnLight": {
+        "name": "nrkKlassiskTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkMoreOgRomsdalTitleBelow": {
+        "name": "nrkMoreOgRomsdalTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkJazzOnLight": {
+        "name": "nrkJazzOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkRadioWithBg": {
+        "name": "nrkRadioWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkMp3WithBg": {
+        "name": "nrkMp3WithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrk3WithBg": {
+        "name": "nrk3WithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP1PlussTitleBelowOnLight": {
+        "name": "nrkP1PlussTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkRadioTitleBelowOnLight": {
+        "name": "nrkRadioTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTrafikkOnLight": {
+        "name": "nrkTrafikkOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkKlassiskWithBg": {
+        "name": "nrkKlassiskWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP3WithBg": {
+        "name": "nrkP3WithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkRadioTitleBelowOnDark": {
+        "name": "nrkRadioTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP3TitleBelowOnLight": {
+        "name": "nrkP3TitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkNordlandWithBg": {
+        "name": "nrkNordlandWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkMp3TitleBelow": {
+        "name": "nrkMp3TitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTv": {
+        "name": "nrkTvLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP1OnDark": {
+        "name": "nrkP1OnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTrafikkTitleBelowOnLight": {
+        "name": "nrkTrafikkTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkStorOsloTitleBelowOnDark": {
+        "name": "nrkStorOsloTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP3MusikkOnLight": {
+        "name": "nrkP3MusikkOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkKringkastingsorkestretWithBg": {
+        "name": "nrkKringkastingsorkestretWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTvTitleBelowOnDark": {
+        "name": "nrkTvTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSuperOnLight": {
+        "name": "nrkSuperOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkJazzTitleBelow": {
+        "name": "nrkJazzTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTegnspraakTitleBelowOnLight": {
+        "name": "nrkTegnspraakTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSuperWithBg": {
+        "name": "nrkSuperWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkJazzOnDark": {
+        "name": "nrkJazzOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP1PlussOnDark": {
+        "name": "nrkP1PlussOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP1OnLight": {
+        "name": "nrkP1OnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkNyheter": {
+        "name": "nrkNyheterLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTrafikkTitleBelow": {
+        "name": "nrkTrafikkTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkBuskerudOnLight": {
+        "name": "nrkBuskerudOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkKlassiskTitleBelowOnDark": {
+        "name": "nrkKlassiskTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkNordland": {
+        "name": "nrkNordlandLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkStorOsloTitleBelowOnLight": {
+        "name": "nrkStorOsloTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkInnlandetTitleBelowOnDark": {
+        "name": "nrkInnlandetTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSorlandetOnDark": {
+        "name": "nrkSorlandetOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkVestfoldOgTelemarkOnDark": {
+        "name": "nrkVestfoldOgTelemarkOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkNyheterTitleBelowOnLight": {
+        "name": "nrkNyheterTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSportOnLight": {
+        "name": "nrkSportOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSorlandetWithBg": {
+        "name": "nrkSorlandetWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkRogalandTitleBelowOnLight": {
+        "name": "nrkRogalandTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkFolkemusikkWithBg": {
+        "name": "nrkFolkemusikkWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSorlandetOnLight": {
+        "name": "nrkSorlandetOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTrondelagTitleBelowOnDark": {
+        "name": "nrkTrondelagTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP2OnDark": {
+        "name": "nrkP2OnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTvOnLight": {
+        "name": "nrkTvOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkBuskerudTitleBelowOnLight": {
+        "name": "nrkBuskerudTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkBuskerudOnDark": {
+        "name": "nrkBuskerudOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkRogalandTitleBelowOnDark": {
+        "name": "nrkRogalandTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSorlandetTitleBelow": {
+        "name": "nrkSorlandetTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP2TitleBelow": {
+        "name": "nrkP2TitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkBuskerudWithBg": {
+        "name": "nrkBuskerudWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTromsOnDark": {
+        "name": "nrkTromsOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTroms": {
+        "name": "nrkTromsLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkNordlandTitleBelowOnLight": {
+        "name": "nrkNordlandTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkStorOsloOnDark": {
+        "name": "nrkStorOsloOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkKringkastingsorkestretTitleBelowOnDark": {
+        "name": "nrkKringkastingsorkestretTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkFinnmarkTitleBelowOnDark": {
+        "name": "nrkFinnmarkTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkVestland": {
+        "name": "nrkVestlandLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkFolkemusikkOnLight": {
+        "name": "nrkFolkemusikkOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSport": {
+        "name": "nrkSportLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSportWithBg": {
+        "name": "nrkSportWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkNordlandOnLight": {
+        "name": "nrkNordlandOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSorlandetTitleBelowOnLight": {
+        "name": "nrkSorlandetTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSorlandetTitleBelowOnDark": {
+        "name": "nrkSorlandetTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP3TitleBelow": {
+        "name": "nrkP3TitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTrondelag": {
+        "name": "nrkTrondelagLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkVestlandTitleBelow": {
+        "name": "nrkVestlandTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSamiRadioTitleBelow": {
+        "name": "nrkSamiRadioTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP1PlussTitleBelow": {
+        "name": "nrkP1PlussTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkJazzWithBg": {
+        "name": "nrkJazzWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkVestlandWithBg": {
+        "name": "nrkVestlandWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkMp3OnLight": {
+        "name": "nrkMp3OnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP2OnLight": {
+        "name": "nrkP2OnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkFinnmark": {
+        "name": "nrkFinnmarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP2WithBg": {
+        "name": "nrkP2WithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP2TitleBelowOnDark": {
+        "name": "nrkP2TitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkFolkemusikkTitleBelowOnDark": {
+        "name": "nrkFolkemusikkTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkFolkemusikkOnDark": {
+        "name": "nrkFolkemusikkOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSapmiTitleBelowOnLight": {
+        "name": "nrkSapmiTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTrafikkWithBg": {
+        "name": "nrkTrafikkWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkKlassisk": {
+        "name": "nrkKlassiskLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkKlassiskTitleBelow": {
+        "name": "nrkKlassiskTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkJazzTitleBelowOnDark": {
+        "name": "nrkJazzTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkJazz": {
+        "name": "nrkJazzLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkKringkastingsorkestretTitleBelowOnLight": {
+        "name": "nrkKringkastingsorkestretTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkInnlandetWithBg": {
+        "name": "nrkInnlandetWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkInnlandetTitleBelow": {
+        "name": "nrkInnlandetTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkRogalandWithBg": {
+        "name": "nrkRogalandWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkMoreOgRomsdalOnLight": {
+        "name": "nrkMoreOgRomsdalOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkFinnmarkTitleBelow": {
+        "name": "nrkFinnmarkTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkFinnmarkOnDark": {
+        "name": "nrkFinnmarkOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP3MusikkTitleBelowOnDark": {
+        "name": "nrkP3MusikkTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP3MusikkTitleBelow": {
+        "name": "nrkP3MusikkTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoYr": {
+        "name": "yrLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTromsTitleBelow": {
+        "name": "nrkTromsTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP1TitleBelowOnLight": {
+        "name": "nrkP1TitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkVestfoldOgTelemark": {
+        "name": "nrkVestfoldOgTelemarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTegnspraak": {
+        "name": "nrkTegnspraakLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP1Pluss": {
+        "name": "nrkP1PlussLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrk2OnDark": {
+        "name": "nrk2OnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP1PlussWithBg": {
+        "name": "nrkP1PlussWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkVestlandOnDark": {
+        "name": "nrkVestlandOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkFinnmarkTitleBelowOnLight": {
+        "name": "nrkFinnmarkTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkVestlandTitleBelowOnLight": {
+        "name": "nrkVestlandTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkVestfoldOgTelemarkTitleBelow": {
+        "name": "nrkVestfoldOgTelemarkTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkInnlandetTitleBelowOnLight": {
+        "name": "nrkInnlandetTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkBuskerudTitleBelow": {
+        "name": "nrkBuskerudTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkVestlandOnLight": {
+        "name": "nrkVestlandOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSuper": {
+        "name": "nrkSuperLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkVestfoldOgTelemarkOnLight": {
+        "name": "nrkVestfoldOgTelemarkOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkInnlandet": {
+        "name": "nrkInnlandetLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP1PlussTitleBelowOnDark": {
+        "name": "nrkP1PlussTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkFinnmarkWithBg": {
+        "name": "nrkFinnmarkWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkVestfoldOgTelemarkTitleBelowOnLight": {
+        "name": "nrkVestfoldOgTelemarkTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP3OnDark": {
+        "name": "nrkP3OnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkMoreOgRomsdalWithBg": {
+        "name": "nrkMoreOgRomsdalWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkVestfoldOgTelemarkTitleBelowOnDark": {
+        "name": "nrkVestfoldOgTelemarkTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTvWithBg": {
+        "name": "nrkTvWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkNyheterTitleBelowOnDark": {
+        "name": "nrkNyheterTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSportTitleBelowOnDark": {
+        "name": "nrkSportTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkBuskerudTitleBelowOnDark": {
+        "name": "nrkBuskerudTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSapmiTitleBelowOnDark": {
+        "name": "nrkSapmiTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTromsOnLight": {
+        "name": "nrkTromsOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkNordlandTitleBelow": {
+        "name": "nrkNordlandTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSapmi": {
+        "name": "nrkSapmiLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTromsTitleBelowOnLight": {
+        "name": "nrkTromsTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrk3OnDark": {
+        "name": "nrk3OnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkRogaland": {
+        "name": "nrkRogalandLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkMoreOgRomsdalTitleBelowOnDark": {
+        "name": "nrkMoreOgRomsdalTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTromsWithBg": {
+        "name": "nrkTromsWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP2TitleBelowOnLight": {
+        "name": "nrkP2TitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTromsTitleBelowOnDark": {
+        "name": "nrkTromsTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkStorOsloOnLight": {
+        "name": "nrkStorOsloOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSamiRadioOnDark": {
+        "name": "nrkSamiRadioOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSapmiOnLight": {
+        "name": "nrkSapmiOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTrafikkTitleBelowOnDark": {
+        "name": "nrkTrafikkTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkMp3TitleBelowOnDark": {
+        "name": "nrkMp3TitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTvTitleBelowOnLight": {
+        "name": "nrkTvTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSapmiTitleBelow": {
+        "name": "nrkSapmiTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSorlandet": {
+        "name": "nrkSorlandetLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkMoreOgRomsdalOnDark": {
+        "name": "nrkMoreOgRomsdalOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSamiRadioOnLight": {
+        "name": "nrkSamiRadioOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTrondelagOnDark": {
+        "name": "nrkTrondelagOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoYrColor": {
+        "name": "yrColorLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTrondelagTitleBelow": {
+        "name": "nrkTrondelagTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkKringkastingsorkestretOnDark": {
+        "name": "nrkKringkastingsorkestretOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTrondelagTitleBelowOnLight": {
+        "name": "nrkTrondelagTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSapmiOnDark": {
+        "name": "nrkSapmiOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkMoreOgRomsdal": {
+        "name": "nrkMoreOgRomsdalLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkYrRadio": {
+        "name": "nrkYrRadioLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP3MusikkTitleBelowOnLight": {
+        "name": "nrkP3MusikkTitleBelowOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTrondelagWithBg": {
+        "name": "nrkTrondelagWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkKringkastingsorkestret": {
+        "name": "nrkKringkastingsorkestretLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSapmiWithBg": {
+        "name": "nrkSapmiWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTrondelagOnLight": {
+        "name": "nrkTrondelagOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrk": {
+        "name": "nrkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkRogalandOnLight": {
+        "name": "nrkRogalandOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSamiRadioWithBg": {
+        "name": "nrkSamiRadioWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSportTitleBelow": {
+        "name": "nrkSportTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkFolkemusikk": {
+        "name": "nrkFolkemusikkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkVestlandTitleBelowOnDark": {
+        "name": "nrkVestlandTitleBelowOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkMp3OnDark": {
+        "name": "nrkMp3OnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkP3": {
+        "name": "nrkP3Logo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrk1WithBg": {
+        "name": "nrk1WithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrk2OnLight": {
+        "name": "nrk2OnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoYrBlackwhite": {
+        "name": "yrBlackwhiteLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkNyheterTitleBelow": {
+        "name": "nrkNyheterTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTrafikkOnDark": {
+        "name": "nrkTrafikkOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkStorOsloWithBg": {
+        "name": "nrkStorOsloWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkNyheterWithBg": {
+        "name": "nrkNyheterWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkBuskerud": {
+        "name": "nrkBuskerudLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkWithBg": {
+        "name": "nrkWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrk1OnLight": {
+        "name": "nrk1OnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTvTitleBelow": {
+        "name": "nrkTvTitleBelowLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkRadio": {
+        "name": "nrkRadioLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrk2": {
+        "name": "nrk2Logo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkInnlandetOnLight": {
+        "name": "nrkInnlandetOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkInnlandetOnDark": {
+        "name": "nrkInnlandetOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkSportOnDark": {
+        "name": "nrkSportOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkVestfoldOgTelemarkWithBg": {
+        "name": "nrkVestfoldOgTelemarkWithBgLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkTvOnDark": {
+        "name": "nrkTvOnDarkLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkNyheterOnLight": {
+        "name": "nrkNyheterOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoNrkFinnmarkOnLight": {
+        "name": "nrkFinnmarkOnLightLogo",
+        "source": "@nrk/core-icons/logo"
+      }
+    },
+    "removed": [
+      "NrkLogoNrkNyheterSymbol",
+      "NrkLogoNrkNyheterSymbolBlackwhite",
+      "NrkLogoNrkNyheterSymbolColor",
+      "NrkLogoNrkP13",
+      "NrkLogoNrkP13OnDark",
+      "NrkLogoNrkP13OnLight",
+      "NrkLogoNrkP13Radioresepsjonen",
+      "NrkLogoNrkP13TitleBelow",
+      "NrkLogoNrkP13TitleBelowOnDark",
+      "NrkLogoNrkP13TitleBelowOnLight",
+      "NrkLogoNrkP13WithBg",
+      "NrkLogoNrkP3NationalRapShow",
+      "NrkLogoNrkP3Urort",
+      "NrkLogoNrkP3UrortOnDark",
+      "NrkLogoNrkP3UrortOnLight",
+      "NrkLogoNrkP3UrortTitleBelow",
+      "NrkLogoNrkP3UrortTitleBelowOnDark",
+      "NrkLogoNrkP3UrortTitleBelowOnLight",
+      "NrkLogoNrkP3UrortWithBg",
+      "NrkLogoNrkP3X",
+      "NrkLogoNrkP3XOnDark",
+      "NrkLogoNrkP3XOnLight",
+      "NrkLogoNrkP3XTitleBelow",
+      "NrkLogoNrkP3XTitleBelowOnDark",
+      "NrkLogoNrkP3XTitleBelowOnLight",
+      "NrkLogoNrkP3XWithBg",
+      "NrkLogoNrkSportSymbol",
+      "NrkLogoNrkSportSymbolBlackwhite",
+      "NrkLogoNrkSportSymbolColor",
+      "NrkLogoNrkSuperSentrert",
+      "NrkLogoNrkTegnspraakColorblack",
+      "NrkLogoNrkTegnspraakColorgrey",
+      "NrkLogoNrkTegnspraakColorwhite",
+      "NrkLogoOstfold",
+      "NrkLogoOstfoldOnDark",
+      "NrkLogoOstfoldOnLight",
+      "NrkLogoOstfoldTitleBelow",
+      "NrkLogoOstfoldTitleBelowOnDark",
+      "NrkLogoOstfoldTitleBelowOnLight",
+      "NrkLogoOstfoldWithBg",
+      "NrkLogoNrkNyheterSymbolBlackwhite",
+      "NrkLogoNrkNyheterSymbolColor",
+      "NrkLogoNrkNyheterSymbol",
+      "NrkLogoNrkP13OnDark",
+      "NrkLogoNrkP13OnLight",
+      "NrkLogoNrkP13Radioresepsjonen",
+      "NrkLogoNrkP13TitleBelowOnDark",
+      "NrkLogoNrkP13TitleBelowOnLight",
+      "NrkLogoNrkP13TitleBelow",
+      "NrkLogoNrkP13WithBg",
+      "NrkLogoNrkP13",
+      "NrkLogoNrkP3NationalRapShow",
+      "NrkLogoNrkP3UrortOnDark",
+      "NrkLogoNrkP3UrortOnLight",
+      "NrkLogoNrkP3UrortTitleBelowOnDark",
+      "NrkLogoNrkP3UrortTitleBelowOnLight",
+      "NrkLogoNrkP3UrortTitleBelow",
+      "NrkLogoNrkP3UrortWithBg",
+      "NrkLogoNrkP3Urort",
+      "NrkLogoNrkP3XOnDark",
+      "NrkLogoNrkP3XOnLight",
+      "NrkLogoNrkP3XTitleBelowOnDark",
+      "NrkLogoNrkP3XTitleBelowOnLight",
+      "NrkLogoNrkP3XTitleBelow",
+      "NrkLogoNrkP3XWithBg",
+      "NrkLogoNrkP3X",
+      "NrkLogoNrkSportSymbolBlackwhite",
+      "NrkLogoNrkSportSymbolColor",
+      "NrkLogoNrkSportSymbol",
+      "NrkLogoNrkSuperSentrert",
+      "NrkLogoNrkTegnspraakColorblack",
+      "NrkLogoNrkTegnspraakColorgrey",
+      "NrkLogoNrkTegnspraakColorwhite",
+      "NrkLogoOstfoldOnDark",
+      "NrkLogoOstfoldOnLight",
+      "NrkLogoOstfoldTitleBelowOnDark",
+      "NrkLogoOstfoldTitleBelowOnLight",
+      "NrkLogoOstfoldTitleBelow",
+      "NrkLogoOstfoldWithBg",
+      "NrkLogoOstfold"
+    ]
+  },
+  "@nrk/core-icons/jsx/logo/large": {
+    "renames": {
+      "NrkLogoLargeNrkTv": {
+        "name": "nrkTvLargeLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoLargeNrkTvWithBg": {
+        "name": "nrkTvWithBgLargeLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoLargeNrk": {
+        "name": "nrkLargeLogo",
+        "source": "@nrk/core-icons/logo"
+      },
+      "NrkLogoLargeNrkTvTitleBelow": {
+        "name": "nrkTvTitleBelowLargeLogo",
+        "source": "@nrk/core-icons/logo"
+      }
+    },
+    "removed": []
+  }
+}

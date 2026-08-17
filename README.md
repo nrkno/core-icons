@@ -9,6 +9,28 @@
 
 https://static.nrk.no/core-icons/latest/
 
+## Migrating to the v19 naming scheme
+
+v19 renamed every icon and logo (see [the naming scheme](docs/new-naming-scheme.md)). The old
+exports still work as deprecated aliases in v19, but will be removed in the next major version.
+A codemod rewrites imports and usages in consuming projects:
+
+```bash
+# Preview changes
+npx --package=@nrk/core-icons core-icons-codemod src/ --dry
+# Apply
+npx --package=@nrk/core-icons core-icons-codemod src/
+```
+
+The codemod renames string exports (including logos and the merged `logo/large` entry point) and
+reports anything that needs manual attention: JSX imports (removed without replacement — migrate
+to the string exports), removed icons, and `require()` calls. Review the diff before committing.
+
+The old → new mapping is machine-readable in
+[`docs/public/new-naming-scheme.csv`](docs/public/new-naming-scheme.csv) and
+[`bin/codemod-map.json`](bin/codemod-map.json) (regenerate with
+`node scripts/generate-codemod-map.ts` after `core-icons sync-compat`).
+
 ## Local development
 
 First clone `@nrk/core-icons` and install its dependencies:
