@@ -46,6 +46,7 @@ jobs:
             --latest \
             --major
         env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_READ }}
           STATIC_NETSTORAGE_API_ACCOUNT: ${{ secrets.STATIC_NETSTORAGE_API_ACCOUNT }}
           STATIC_NETSTORAGE_API_KEY: ${{ secrets.STATIC_NETSTORAGE_API_KEY }}
 
