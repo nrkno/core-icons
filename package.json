@@ -81,7 +81,7 @@
     "@changesets/cli": "^2.31.1",
     "@changesets/write": "^0.4.0",
     "@figma/rest-api-spec": "^0.41.0",
-    "@types/node": "^24.12.4",
+    "@types/node": "^26.2.0",
     "@vitest/ui": "^4.1.10",
     "commander": "^15.0.0",
     "lefthook": "^2.1.10",
