@@ -140,6 +140,28 @@ describe('codemod', () => {
     expect(result.warnings).toEqual([])
   })
 
+  it('rewrites astro frontmatter imports and template usages', () => {
+    const result = transform(
+      dedent`
+        ---
+        import { nrkLogoNrk } from '@nrk/core-icons/logo';
+        ---
+
+        <Fragment set:html={nrkLogoNrk} />
+      `,
+      map,
+    )
+    expect(result.changed).toBe(true)
+    expect(result.warnings).toEqual([])
+    expect(result.code).toBe(dedent`
+      ---
+      import { nrkLogo } from '@nrk/core-icons/logo';
+      ---
+
+      <Fragment set:html={nrkLogo} />
+    `)
+  })
+
   it('leaves already-migrated code alone', () => {
     const code = "import { magnifyingGlassIcon } from '@nrk/core-icons'"
     const result = transform(code, map)
