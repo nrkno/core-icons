@@ -9,7 +9,7 @@
     android:fillAlpha=".5"
     android:fillColor="#fff0f0f0"
     android:fillType="evenOdd"
-    android:pathData="M22 12v10H10V12zm-10 2v6h8v-6z"
+    android:pathData="M22 12v10H10V12zM12 14v6h8v-6z"
   />
 
   <path
