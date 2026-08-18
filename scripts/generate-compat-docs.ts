@@ -82,7 +82,7 @@ for (const component of components) {
         previous_name: prevName,
         name,
         previous_camel_cased: prevCamelCased,
-        camel_cased: toExportedName(name),
+        camel_cased: toExportedName(name, 'logo'),
         previous_pascal_cased: toPascalCase(prevName),
         pascal_cased: toPascalCase(toExportedName(name, 'logo')),
       })

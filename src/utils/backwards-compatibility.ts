@@ -1,4 +1,4 @@
-const removedLogos = [
+export const removedLogos = [
   'nrkLogoNrkNyheterSymbol',
   'nrkLogoNrkNyheterSymbolBlackwhite',
   'nrkLogoNrkNyheterSymbolColor',
