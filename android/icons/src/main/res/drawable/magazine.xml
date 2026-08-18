@@ -13,6 +13,6 @@
   <path
     android:fillColor="#fff0f0f0"
     android:fillType="evenOdd"
-    android:pathData="M23 2.333v17.411l-11 3.3-11-3.3V2.333l1.735-1.156L12 3.956l9.265-2.78zm-11 3.71-9-2.7v14.913l8 2.4V9.251l2-.6v12.005l8-2.4V3.344z"
+    android:pathData="M23 2.333v17.411l-11 3.3-11-3.3V2.333l1.735-1.156L12 3.956l9.265-2.78zM12 6.043l-9-2.7v14.913l8 2.4V9.251l2-.6v12.005l8-2.4V3.344z"
   />
 </vector>

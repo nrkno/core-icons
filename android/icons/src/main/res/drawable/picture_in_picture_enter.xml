@@ -8,7 +8,7 @@
   <path
     android:fillColor="#fff0f0f0"
     android:fillType="evenOdd"
-    android:pathData="M23 11v10H10V11zm-11 2v6h9v-6z"
+    android:pathData="M23 11v10H10V11zM12 13v6h9v-6z"
   />
 
   <path
