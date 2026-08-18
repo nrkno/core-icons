@@ -19,6 +19,7 @@ const EXTENSIONS = new Set([
   '.cts',
   '.vue',
   '.svelte',
+  '.astro',
 ])
 const SKIP_DIRS = new Set([
   'node_modules',
