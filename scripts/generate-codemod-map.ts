@@ -46,29 +46,11 @@ const JSX_ENTRIES = [
 const DEPRECATION =
   /\/\*\* @deprecated(?: Use `(?<replacement>\w+)`(?: from `(?<source>[^`]+)`)? instead)? \*\/\s*export const (?<name>\w+)/g
 
-// Successors designated by the v19.1.0 release notes but not (yet) recorded in the
-// compat JSDoc: circle-three-quarter replaces nrk-progress, and circle-half-dotted
-// replaces nrk-spinner in the loading context. Remove once the Figma component
-// descriptions list them under "Tidligere navn" and sync-compat picks them up.
-const SUCCESSORS: Record<string, Record<string, string>> = {
-  '@nrk/core-icons': {
-    nrkProgress: 'circleThreeQuarterIcon',
-    nrkSpinner: 'circleHalfDottedIcon',
-  },
-  '@nrk/core-icons/expressive': {
-    nrkProgressExpressive: 'circleThreeQuarterExpressiveIcon',
-    nrkSpinnerExpressive: 'circleHalfDottedExpressiveIcon',
-  },
-}
-
 function parseCompatFile(file: string, source: string): EntryMap {
   const entry: EntryMap = { renames: {}, removed: [] }
   for (const match of readFile(file).matchAll(DEPRECATION)) {
     const { name, replacement, source: replacementSource } = match.groups!
-    const successor = SUCCESSORS[source]?.[name]
-    if (successor) {
-      entry.renames[name] = { name: successor }
-    } else if (!replacement) {
+    if (!replacement) {
       entry.removed.push(name)
     } else {
       entry.renames[name] = replacementSource

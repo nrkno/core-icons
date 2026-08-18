@@ -1,12 +1,6 @@
 {
   "@nrk/core-icons": {
     "renames": {
-      "nrkProgress": {
-        "name": "circleThreeQuarterIcon"
-      },
-      "nrkSpinner": {
-        "name": "circleHalfDottedIcon"
-      },
       "nrkCheckActive": {
         "name": "checkmarkCircleCheckedSolidIcon"
       },
@@ -685,7 +679,9 @@
     },
     "removed": [
       "nrkFlagNorwegian",
-      "nrkMediaDirekteAnimatedActive"
+      "nrkMediaDirekteAnimatedActive",
+      "nrkProgress",
+      "nrkSpinner"
     ]
   },
   "@nrk/core-icons/expressive": {
@@ -693,12 +689,6 @@
       "nrkRadioExpressiveActive": {
         "name": "radioButtonCheckedIcon",
         "source": "@nrk/core-icons"
-      },
-      "nrkProgressExpressive": {
-        "name": "circleThreeQuarterExpressiveIcon"
-      },
-      "nrkSpinnerExpressive": {
-        "name": "circleHalfDottedExpressiveIcon"
       },
       "nrkCheckExpressiveActive": {
         "name": "checkmarkCircleCheckedSolidExpressiveIcon"
@@ -1287,7 +1277,9 @@
       }
     },
     "removed": [
-      "nrkFlagNorwegianExpressive"
+      "nrkFlagNorwegianExpressive",
+      "nrkProgressExpressive",
+      "nrkSpinnerExpressive"
     ]
   },
   "@nrk/core-icons/logo": {
@@ -2131,14 +2123,6 @@
   },
   "@nrk/core-icons/jsx": {
     "renames": {
-      "NrkProgress": {
-        "name": "circleThreeQuarterIcon",
-        "source": "@nrk/core-icons"
-      },
-      "NrkSpinner": {
-        "name": "circleHalfDottedIcon",
-        "source": "@nrk/core-icons"
-      },
       "NrkCheckActive": {
         "name": "checkmarkCircleCheckedSolidIcon",
         "source": "@nrk/core-icons"
@@ -3027,20 +3011,16 @@
     "removed": [
       "NrkFlagNorwegian",
       "NrkMediaDirekteAnimatedActive",
+      "NrkProgress",
+      "NrkSpinner",
       "NrkFlagNorwegian",
-      "NrkMediaDirekteAnimatedActive"
+      "NrkMediaDirekteAnimatedActive",
+      "NrkProgress",
+      "NrkSpinner"
     ]
   },
   "@nrk/core-icons/jsx/expressive": {
     "renames": {
-      "NrkProgressExpressive": {
-        "name": "circleThreeQuarterExpressiveIcon",
-        "source": "@nrk/core-icons/expressive"
-      },
-      "NrkSpinnerExpressive": {
-        "name": "circleHalfDottedExpressiveIcon",
-        "source": "@nrk/core-icons/expressive"
-      },
       "NrkCheckExpressiveActive": {
         "name": "checkmarkCircleCheckedSolidExpressiveIcon",
         "source": "@nrk/core-icons/expressive"
@@ -3812,7 +3792,11 @@
     },
     "removed": [
       "NrkFlagNorwegianExpressive",
-      "NrkFlagNorwegianExpressive"
+      "NrkProgressExpressive",
+      "NrkSpinnerExpressive",
+      "NrkFlagNorwegianExpressive",
+      "NrkProgressExpressive",
+      "NrkSpinnerExpressive"
     ]
   },
   "@nrk/core-icons/jsx/logo": {
