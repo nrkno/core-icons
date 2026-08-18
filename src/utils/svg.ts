@@ -1,6 +1,7 @@
 import { format } from 'oxfmt'
 import { type CustomPlugin, type XastElement, optimize, type PluginConfig } from 'svgo'
 import { readFile } from './fs.ts'
+import { normalizePathData } from './path-data.ts'
 import { sortObjectKeys } from './object.ts'
 
 const basePlugins: PluginConfig[] = [
@@ -152,7 +153,7 @@ function toAndroidAttributes(node: XastElement): Record<string, string> {
     return attrs
   }
 
-  attrs['android:pathData'] = node.attributes.d
+  attrs['android:pathData'] = normalizePathData(node.attributes.d)
 
   if (!node.attributes.fill || node.attributes.fill === 'currentColor') {
     node.attributes.fill = '#fff0f0f0'
