@@ -1,6 +1,5 @@
 .DS_Store
 .npm
-.vscode
 .idea
 node_modules/
 npm-debug*
