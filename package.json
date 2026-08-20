@@ -84,7 +84,6 @@
     "@types/node": "^24.12.4",
     "@vitest/ui": "^4.1.10",
     "commander": "^15.0.0",
-    "lefthook": "^2.1.10",
     "ora": "^9.4.1",
     "oxfmt": "^0.62.0",
     "oxlint": "^1.76.0",
