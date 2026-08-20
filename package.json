@@ -87,7 +87,7 @@
     "@vitest/ui": "^4.1.10",
     "commander": "^15.0.0",
     "ora": "^9.4.1",
-    "oxfmt": "^0.62.0",
+    "oxfmt": "^0.63.0",
     "oxlint": "^1.76.0",
     "oxlint-tsgolint": "^7.0.2001",
     "publint": "^0.3.22",
