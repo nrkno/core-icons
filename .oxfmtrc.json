@@ -4,7 +4,7 @@
   "singleQuote": true,
   "printWidth": 100,
   "trailingComma": "all",
-  "ignorePatterns": [],
+  "ignorePatterns": ["CHANGELOG.md", "lib", "bin/codemod-map.json", "docs/new-naming-scheme.md"],
   "sortImports": {
     "newlinesBetween": false,
     "internalPattern": ["#"],
