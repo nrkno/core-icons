@@ -70,9 +70,8 @@
     "build:lib": "rolldown -c rolldown.config.ts",
     "build:docs": "vite build docs",
     "dev": "vite docs",
-    "lint": "npm run lint:oxlint",
-    "lint:oxlint": "oxlint",
-    "lint:publint": "publint",
+    "lint": "oxfmt --check && oxlint",
+    "format": "oxfmt --write",
     "test": "vitest run",
     "test:watch": "vitest --ui",
     "release": "npm run build && publint && changeset publish"
