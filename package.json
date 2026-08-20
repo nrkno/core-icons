@@ -9,6 +9,9 @@
     "type": "git",
     "url": "git+https://github.com/nrkno/core-icons.git"
   },
+  "bin": {
+    "core-icons-codemod": "bin/codemod.js"
+  },
   "files": [
     "dist",
     "bin/codemod.js",
@@ -101,8 +104,5 @@
   },
   "volta": {
     "node": "24.15.0"
-  },
-  "bin": {
-    "core-icons-codemod": "bin/codemod.js"
   }
 }
