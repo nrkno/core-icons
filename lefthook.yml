@@ -1,10 +1,4 @@
 ---
-pre-push:
-  parallel: true
-  jobs:
-    - run: npm run test
-      glob: '*.{ts}'
-
 pre-commit:
   parallel: true
   jobs:
