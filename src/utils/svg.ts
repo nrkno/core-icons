@@ -1,8 +1,8 @@
 import { format } from 'oxfmt'
 import { type CustomPlugin, type XastElement, optimize, type PluginConfig } from 'svgo'
 import { readFile } from './fs.ts'
-import { normalizePathData } from './path-data.ts'
 import { sortObjectKeys } from './object.ts'
+import { normalizePathData } from './path-data.ts'
 
 const basePlugins: PluginConfig[] = [
   // Use default preset

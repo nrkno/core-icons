@@ -98,19 +98,13 @@ We host the following scripts for use in the browser on our cdn
 For stability, please link to the appropriate major version
 
 ```html
-<script
-  async
-  src="https://static.nrk.no/core-icons/major/18/core-icons-iife.js"
-></script>
+<script async src="https://static.nrk.no/core-icons/major/18/core-icons-iife.js"></script>
 ```
 
 Linking to `/latest/` is recommended only for prototyping.
 
 ```html
-<script
-  async
-  src="https://static.nrk.no/core-icons/latest/core-icons-iife.js"
-></script>
+<script async src="https://static.nrk.no/core-icons/latest/core-icons-iife.js"></script>
 ```
 
 ### Using Android
