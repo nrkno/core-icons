@@ -16,7 +16,7 @@ import {
   writeFile,
   writeManifest,
 } from '#utils/fs.ts'
-import { optimizeIcon, optimizeLogo } from '#utils/svg.ts'
+import { optimizeSvg } from '#utils/svg.ts'
 
 export const syncCommand = new Command('sync')
   .description('Export icons from Figma')
@@ -149,12 +149,12 @@ async function syncAction(options: Options) {
   rmrf('.tmp')
   try {
     await Promise.all(
-      assets.map(async (icon) => {
-        const url = imageUrls.get(icon.componentNodeId)!
+      assets.map(async (asset) => {
+        const url = imageUrls.get(asset.componentNodeId)!
         const svg = await fetch(url).then((res) => res.text())
-        const optimized = await (icon.kind === 'logo' ? optimizeLogo(svg) : optimizeIcon(svg))
-        mkdirp(`.tmp/${dirname(icon.file)}`)
-        writeFile(`.tmp/${icon.file}`, optimized)
+        const optimized = await optimizeSvg(asset, svg)
+        mkdirp(`.tmp/${dirname(asset.file)}`)
+        writeFile(`.tmp/${asset.file}`, optimized)
       }),
     )
   } catch (err) {

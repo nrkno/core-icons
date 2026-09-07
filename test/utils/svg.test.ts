@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'vitest'
 import { dedent } from '#utils/string.ts'
-import { toAndroidVectorXml } from '#utils/svg.ts'
+import { optimizeLogo, isMonochrome, toAndroidVectorXml } from '#utils/svg.ts'
 
 describe('toAndroidVectorXml', () => {
   test('simple path', async () => {
@@ -151,5 +151,158 @@ describe('toAndroidVectorXml', () => {
       </vector>
     `
     expect(await toAndroidVectorXml(input)).toEqual(expected)
+  })
+})
+
+describe('optimizeLogo', () => {
+  test('keeps fill colors', async () => {
+    const input = dedent /* xml */ `
+      <svg viewBox="0 0 24 24">
+        <path fill="#ff5d46" d="M12 2L2 22h20L12 2z"/>
+      </svg>
+    `
+    const expected = dedent /* xml */ `
+      <svg viewBox="0 0 24 24">
+        <path
+          fill="#ff5d46"
+          d="M12 2 2 22h20z"
+        />
+      </svg>
+    `
+    expect(await optimizeLogo(input)).toEqual(expected)
+  })
+
+  test('opts.monochrome adds fill="currentColor" to svg element and removes path fills', async () => {
+    const input = dedent /* xml */ `
+      <svg viewBox="0 0 24 24">
+        <path fill="#fff" d="M12 2L2 22h20L12 2z"/>
+        <path fill="#fff" d="M12 2L2 22h20L12 2z"/>
+      </svg>
+    `
+    const expected = dedent /* xml */ `
+      <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path d="M12 2 2 22h20z" />
+
+        <path d="M12 2 2 22h20z" />
+      </svg>
+    `
+    expect(await optimizeLogo(input, { monochrome: true })).toEqual(expected)
+  })
+})
+
+describe('isMonochrome', () => {
+  test('icons are always monochrome', () => {
+    expect(isMonochrome({ kind: 'icon', name: 'foo' })).toBe(true)
+  })
+
+  test('logos with `-on-dark` suffixes are not monochrome', () => {
+    expect(
+      isMonochrome({
+        kind: 'logo' as const,
+        name: 'nrk-1-on-dark',
+      }),
+    ).toBe(false)
+  })
+
+  test('logos with `-on-dark-large` suffixes are not monochrome', () => {
+    expect(
+      isMonochrome({
+        kind: 'logo' as const,
+        name: 'nrk-1-on-dark-large',
+      }),
+    ).toBe(false)
+  })
+
+  test('logos with `-on-light` suffixes are not monochrome', () => {
+    expect(
+      isMonochrome({
+        kind: 'logo' as const,
+        name: 'nrk-1-on-light',
+      }),
+    ).toBe(false)
+  })
+
+  test('logos with `-on-light-large` suffixes are not monochrome', () => {
+    expect(
+      isMonochrome({
+        kind: 'logo' as const,
+        name: 'nrk-1-on-light-large',
+      }),
+    ).toBe(false)
+  })
+
+  test('logos with `-with-bg` suffixes are not monochrome', () => {
+    expect(
+      isMonochrome({
+        kind: 'logo' as const,
+        name: 'nrk-1-with-bg',
+      }),
+    ).toBe(false)
+  })
+
+  test('logos with `-with-bg-large` suffixes are not monochrome', () => {
+    expect(
+      isMonochrome({
+        kind: 'logo' as const,
+        name: 'nrk-1-with-bg-large',
+      }),
+    ).toBe(false)
+  })
+
+  test('logos with `-color` suffixes are not monochrome', () => {
+    expect(
+      isMonochrome({
+        kind: 'logo' as const,
+        name: 'yr-color',
+      }),
+    ).toBe(false)
+  })
+
+  test('logos with `-color-large` suffixes are not monochrome', () => {
+    expect(
+      isMonochrome({
+        kind: 'logo' as const,
+        name: 'yr-color-large',
+      }),
+    ).toBe(false)
+  })
+
+  test('logos with `-blackwhite` suffixes are not monochrome', () => {
+    expect(
+      isMonochrome({
+        kind: 'logo' as const,
+        name: 'yr-blackwhite',
+      }),
+    ).toBe(false)
+  })
+
+  test('logos with `-blackwhite-large` suffixes are not monochrome', () => {
+    expect(
+      isMonochrome({
+        kind: 'logo' as const,
+        name: 'yr-blackwhite-large',
+      }),
+    ).toBe(false)
+  })
+
+  test('logos without suffixes are monochrome', () => {
+    expect(
+      isMonochrome({
+        kind: 'logo' as const,
+        name: 'nrk-1',
+      }),
+    ).toBe(true)
+  })
+
+  test('logos with only `-large` suffixes are monochrome', () => {
+    expect(
+      isMonochrome({
+        kind: 'logo' as const,
+        name: 'nrk-1-large',
+      }),
+    ).toBe(true)
   })
 })
