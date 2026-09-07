@@ -1,5 +1,5 @@
 ---
-"@nrk/core-icons": minor
+'@nrk/core-icons': minor
 ---
 
 Fixed SVG generation for monochrome logos.
