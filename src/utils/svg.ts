@@ -1,5 +1,6 @@
 import { format } from 'oxfmt'
 import { type CustomPlugin, type XastElement, optimize, type PluginConfig } from 'svgo'
+import type { ManifestAsset } from '#src/manifest.ts'
 import { readFile } from './fs.ts'
 import { sortObjectKeys } from './object.ts'
 import { normalizePathData } from './path-data.ts'
@@ -22,33 +23,46 @@ const basePlugins: PluginConfig[] = [
   },
 ]
 
+const monochromePlugins: PluginConfig[] = [
+  {
+    name: 'removeAttrs',
+    params: {
+      attrs: ['*:fill'],
+    },
+  },
+  {
+    name: 'addAttributesToSVGElement',
+    params: {
+      attributes: [{ fill: 'currentColor' }],
+    },
+  },
+]
+
 export async function optimizeIcon(svg: string): Promise<string> {
   const output = optimize(svg, {
-    plugins: [
-      ...basePlugins,
-      'collapseGroups',
-      {
-        name: 'removeAttrs',
-        params: {
-          attrs: ['*:fill'],
-        },
-      },
-      {
-        name: 'addAttributesToSVGElement',
-        params: {
-          attributes: [{ fill: 'currentColor' }],
-        },
-      },
-    ],
+    plugins: [...basePlugins, 'collapseGroups', ...monochromePlugins],
   })
   return pretty(output.data)
 }
 
-export async function optimizeLogo(svg: string): Promise<string> {
-  const output = optimize(svg, {
-    plugins: basePlugins,
-  })
+export async function optimizeLogo(
+  svg: string,
+  opts: { monochrome?: boolean } = {},
+): Promise<string> {
+  const plugins = [...basePlugins]
+  if (opts.monochrome) {
+    plugins.push(...monochromePlugins)
+  }
+
+  const output = optimize(svg, { plugins })
   return pretty(output.data)
+}
+
+export function optimizeSvg(asset: ManifestAsset, svg: string): Promise<string> {
+  if (asset.kind === 'logo') {
+    return optimizeLogo(svg, { monochrome: isMonochrome(asset) })
+  }
+  return optimizeIcon(svg)
 }
 
 /**
@@ -168,6 +182,16 @@ function toAndroidAttributes(node: XastElement): Record<string, string> {
     attrs['android:fillAlpha'] = node.attributes.opacity
   }
   return sortObjectKeys(attrs)
+}
+
+const nonMonochromeLogoPattern = /(-with-bg|-on-dark|-on-light|-color|-blackwhite)(-large)?$/
+
+export function isMonochrome(asset: Pick<ManifestAsset, 'kind' | 'name'>): boolean {
+  if (asset.kind === 'logo' && asset.name.match(nonMonochromeLogoPattern)) {
+    return false
+  }
+
+  return true
 }
 
 async function pretty(input: string): Promise<string> {
