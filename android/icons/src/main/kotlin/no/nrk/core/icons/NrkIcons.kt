@@ -237,6 +237,11 @@ object NrkIcons {
     expressive = R.drawable.chevron_down_expressive
   )
 
+  val ChevronDownUpIcon = NrkIcon(
+    normal = R.drawable.chevron_down_up,
+    expressive = R.drawable.chevron_down_up_expressive
+  )
+
   val ChevronLeftIcon = NrkIcon(
     normal = R.drawable.chevron_left,
     expressive = R.drawable.chevron_left_expressive
@@ -325,6 +330,16 @@ object NrkIcons {
   val CodeIcon = NrkIcon(
     normal = R.drawable.code,
     expressive = R.drawable.code_expressive
+  )
+
+  val CompassIcon = NrkIcon(
+    normal = R.drawable.compass,
+    expressive = R.drawable.compass_expressive
+  )
+
+  val CopyIcon = NrkIcon(
+    normal = R.drawable.copy,
+    expressive = R.drawable.copy_expressive
   )
 
   val CutleryIcon = NrkIcon(
@@ -417,6 +432,36 @@ object NrkIcons {
     expressive = R.drawable.drag_horizontal_expressive
   )
 
+  val DropIcon = NrkIcon(
+    normal = R.drawable.drop,
+    expressive = R.drawable.drop_expressive
+  )
+
+  val Drop1Icon = NrkIcon(
+    normal = R.drawable.drop_1,
+    expressive = R.drawable.drop_1_expressive
+  )
+
+  val Drop2Icon = NrkIcon(
+    normal = R.drawable.drop_2,
+    expressive = R.drawable.drop_2_expressive
+  )
+
+  val Drop3Icon = NrkIcon(
+    normal = R.drawable.drop_3,
+    expressive = R.drawable.drop_3_expressive
+  )
+
+  val DropPercentIcon = NrkIcon(
+    normal = R.drawable.drop_percent,
+    expressive = R.drawable.drop_percent_expressive
+  )
+
+  val DropSolidIcon = NrkIcon(
+    normal = R.drawable.drop_solid,
+    expressive = R.drawable.drop_solid_expressive
+  )
+
   val EarIcon = NrkIcon(
     normal = R.drawable.ear,
     expressive = R.drawable.ear_expressive
@@ -445,6 +490,11 @@ object NrkIcons {
   val EnvelopeIcon = NrkIcon(
     normal = R.drawable.envelope,
     expressive = R.drawable.envelope_expressive
+  )
+
+  val ExclamationMarkCircleIcon = NrkIcon(
+    normal = R.drawable.exclamation_mark_circle,
+    expressive = R.drawable.exclamation_mark_circle_expressive
   )
 
   val ExclamationMarkTriangleIcon = NrkIcon(
@@ -482,6 +532,16 @@ object NrkIcons {
     expressive = R.drawable.face_smiling_solid_expressive
   )
 
+  val FilePdfIcon = NrkIcon(
+    normal = R.drawable.file_pdf,
+    expressive = R.drawable.file_pdf_expressive
+  )
+
+  val FileSvgIcon = NrkIcon(
+    normal = R.drawable.file_svg,
+    expressive = R.drawable.file_svg_expressive
+  )
+
   val ForwardIcon = NrkIcon(
     normal = R.drawable.forward,
     expressive = R.drawable.forward_expressive
@@ -495,6 +555,11 @@ object NrkIcons {
   val GameControllerIcon = NrkIcon(
     normal = R.drawable.game_controller,
     expressive = R.drawable.game_controller_expressive
+  )
+
+  val GaugeIcon = NrkIcon(
+    normal = R.drawable.gauge,
+    expressive = R.drawable.gauge_expressive
   )
 
   val GlassesIcon = NrkIcon(
@@ -540,6 +605,16 @@ object NrkIcons {
   val GoForward5Icon = NrkIcon(
     normal = R.drawable.go_forward_5,
     expressive = R.drawable.go_forward_5_expressive
+  )
+
+  val GpsIcon = NrkIcon(
+    normal = R.drawable.gps,
+    expressive = R.drawable.gps_expressive
+  )
+
+  val GpsSolidIcon = NrkIcon(
+    normal = R.drawable.gps_solid,
+    expressive = R.drawable.gps_solid_expressive
   )
 
   val HeadphonesIcon = NrkIcon(
@@ -597,9 +672,19 @@ object NrkIcons {
     expressive = R.drawable.laptop_expressive
   )
 
-  val LightningBoltOutlineIcon = NrkIcon(
-    normal = R.drawable.lightning_bolt_outline,
-    expressive = R.drawable.lightning_bolt_outline_expressive
+  val LifebouyIcon = NrkIcon(
+    normal = R.drawable.lifebouy,
+    expressive = R.drawable.lifebouy_expressive
+  )
+
+  val LightbulbIcon = NrkIcon(
+    normal = R.drawable.lightbulb,
+    expressive = R.drawable.lightbulb_expressive
+  )
+
+  val LightningBoltIcon = NrkIcon(
+    normal = R.drawable.lightning_bolt,
+    expressive = R.drawable.lightning_bolt_expressive
   )
 
   val LightningBoltSolidIcon = NrkIcon(
@@ -640,6 +725,11 @@ object NrkIcons {
   val ListCheckIcon = NrkIcon(
     normal = R.drawable.list_check,
     expressive = R.drawable.list_check_expressive
+  )
+
+  val ListMagnifyingGlassIcon = NrkIcon(
+    normal = R.drawable.list_magnifying_glass,
+    expressive = R.drawable.list_magnifying_glass_expressive
   )
 
   val ListPlayIcon = NrkIcon(
@@ -702,9 +792,29 @@ object NrkIcons {
     expressive = R.drawable.magnifying_glass_expressive
   )
 
+  val MagnifyingGlassMinusIcon = NrkIcon(
+    normal = R.drawable.magnifying_glass_minus,
+    expressive = R.drawable.magnifying_glass_minus_expressive
+  )
+
+  val MagnifyingGlassPlusIcon = NrkIcon(
+    normal = R.drawable.magnifying_glass_plus,
+    expressive = R.drawable.magnifying_glass_plus_expressive
+  )
+
   val MagnifyingGlassStrongIcon = NrkIcon(
     normal = R.drawable.magnifying_glass_strong,
     expressive = R.drawable.magnifying_glass_strong_expressive
+  )
+
+  val MapIcon = NrkIcon(
+    normal = R.drawable.map,
+    expressive = R.drawable.map_expressive
+  )
+
+  val MapSolidIcon = NrkIcon(
+    normal = R.drawable.map_solid,
+    expressive = R.drawable.map_solid_expressive
   )
 
   val MicrophoneIcon = NrkIcon(
@@ -730,6 +840,36 @@ object NrkIcons {
   val MonitorIcon = NrkIcon(
     normal = R.drawable.monitor,
     expressive = R.drawable.monitor_expressive
+  )
+
+  val MoonIcon = NrkIcon(
+    normal = R.drawable.moon,
+    expressive = R.drawable.moon_expressive
+  )
+
+  val MoonArrowDownIcon = NrkIcon(
+    normal = R.drawable.moon_arrow_down,
+    expressive = R.drawable.moon_arrow_down_expressive
+  )
+
+  val MoonArrowDownSolidIcon = NrkIcon(
+    normal = R.drawable.moon_arrow_down_solid,
+    expressive = R.drawable.moon_arrow_down_solid_expressive
+  )
+
+  val MoonArrowUpIcon = NrkIcon(
+    normal = R.drawable.moon_arrow_up,
+    expressive = R.drawable.moon_arrow_up_expressive
+  )
+
+  val MoonArrowUpSolidIcon = NrkIcon(
+    normal = R.drawable.moon_arrow_up_solid,
+    expressive = R.drawable.moon_arrow_up_solid_expressive
+  )
+
+  val MountainIcon = NrkIcon(
+    normal = R.drawable.mountain,
+    expressive = R.drawable.mountain_expressive
   )
 
   val Multiplier0_8Icon = NrkIcon(
@@ -867,6 +1007,11 @@ object NrkIcons {
     expressive = R.drawable.parasol_expressive
   )
 
+  val PartlyCloudyIcon = NrkIcon(
+    normal = R.drawable.partly_cloudy,
+    expressive = R.drawable.partly_cloudy_expressive
+  )
+
   val PauseIcon = NrkIcon(
     normal = R.drawable.pause,
     expressive = R.drawable.pause_expressive
@@ -987,6 +1132,16 @@ object NrkIcons {
     expressive = R.drawable.rectangle_portrait_to_landscape_expressive
   )
 
+  val RulerIcon = NrkIcon(
+    normal = R.drawable.ruler,
+    expressive = R.drawable.ruler_expressive
+  )
+
+  val SeaCurrentIcon = NrkIcon(
+    normal = R.drawable.sea_current,
+    expressive = R.drawable.sea_current_expressive
+  )
+
   val SettingsIcon = NrkIcon(
     normal = R.drawable.settings,
     expressive = R.drawable.settings_expressive
@@ -1020,6 +1175,11 @@ object NrkIcons {
   val SmartWatchIcon = NrkIcon(
     normal = R.drawable.smart_watch,
     expressive = R.drawable.smart_watch_expressive
+  )
+
+  val SnowIcon = NrkIcon(
+    normal = R.drawable.snow,
+    expressive = R.drawable.snow_expressive
   )
 
   val SoundwaveIcon = NrkIcon(
@@ -1112,9 +1272,39 @@ object NrkIcons {
     expressive = R.drawable.stop_expressive
   )
 
+  val SunIcon = NrkIcon(
+    normal = R.drawable.sun,
+    expressive = R.drawable.sun_expressive
+  )
+
   val SunHorizonIcon = NrkIcon(
     normal = R.drawable.sun_horizon,
     expressive = R.drawable.sun_horizon_expressive
+  )
+
+  val SunHorizonAboveIcon = NrkIcon(
+    normal = R.drawable.sun_horizon_above,
+    expressive = R.drawable.sun_horizon_above_expressive
+  )
+
+  val SunHorizonBelowIcon = NrkIcon(
+    normal = R.drawable.sun_horizon_below,
+    expressive = R.drawable.sun_horizon_below_expressive
+  )
+
+  val SunRisingIcon = NrkIcon(
+    normal = R.drawable.sun_rising,
+    expressive = R.drawable.sun_rising_expressive
+  )
+
+  val SunSettingIcon = NrkIcon(
+    normal = R.drawable.sun_setting,
+    expressive = R.drawable.sun_setting_expressive
+  )
+
+  val SunSolidIcon = NrkIcon(
+    normal = R.drawable.sun_solid,
+    expressive = R.drawable.sun_solid_expressive
   )
 
   val TabletIcon = NrkIcon(
@@ -1135,6 +1325,11 @@ object NrkIcons {
   val TargetSolidIcon = NrkIcon(
     normal = R.drawable.target_solid,
     expressive = R.drawable.target_solid_expressive
+  )
+
+  val ThermometerIcon = NrkIcon(
+    normal = R.drawable.thermometer,
+    expressive = R.drawable.thermometer_expressive
   )
 
   val ThumbsDownIcon = NrkIcon(
@@ -1182,6 +1377,16 @@ object NrkIcons {
     expressive = R.drawable.tv_dot_solid_expressive
   )
 
+  val UmbrellaIcon = NrkIcon(
+    normal = R.drawable.umbrella,
+    expressive = R.drawable.umbrella_expressive
+  )
+
+  val UmbrellaSolidIcon = NrkIcon(
+    normal = R.drawable.umbrella_solid,
+    expressive = R.drawable.umbrella_solid_expressive
+  )
+
   val UploadIcon = NrkIcon(
     normal = R.drawable.upload,
     expressive = R.drawable.upload_expressive
@@ -1212,6 +1417,36 @@ object NrkIcons {
     expressive = R.drawable.watch_expressive
   )
 
+  val WaterIcon = NrkIcon(
+    normal = R.drawable.water,
+    expressive = R.drawable.water_expressive
+  )
+
+  val WaterArrowDownIcon = NrkIcon(
+    normal = R.drawable.water_arrow_down,
+    expressive = R.drawable.water_arrow_down_expressive
+  )
+
+  val WaterArrowUpIcon = NrkIcon(
+    normal = R.drawable.water_arrow_up,
+    expressive = R.drawable.water_arrow_up_expressive
+  )
+
+  val WaterPinIcon = NrkIcon(
+    normal = R.drawable.water_pin,
+    expressive = R.drawable.water_pin_expressive
+  )
+
+  val WaterThermometerIcon = NrkIcon(
+    normal = R.drawable.water_thermometer,
+    expressive = R.drawable.water_thermometer_expressive
+  )
+
+  val WaveIcon = NrkIcon(
+    normal = R.drawable.wave,
+    expressive = R.drawable.wave_expressive
+  )
+
   val WifiIcon = NrkIcon(
     normal = R.drawable.wifi,
     expressive = R.drawable.wifi_expressive
@@ -1220,6 +1455,11 @@ object NrkIcons {
   val WifiSlashIcon = NrkIcon(
     normal = R.drawable.wifi_slash,
     expressive = R.drawable.wifi_slash_expressive
+  )
+
+  val WindIcon = NrkIcon(
+    normal = R.drawable.wind,
+    expressive = R.drawable.wind_expressive
   )
 
   val XmarkIcon = NrkIcon(
