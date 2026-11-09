@@ -4,7 +4,13 @@
   "singleQuote": true,
   "printWidth": 100,
   "trailingComma": "all",
-  "ignorePatterns": ["CHANGELOG.md", "lib", "bin/codemod-map.json", "docs/new-naming-scheme.md"],
+  "ignorePatterns": [
+    "CHANGELOG.md",
+    ".changeset",
+    "lib",
+    "bin/codemod-map.json",
+    "docs/new-naming-scheme.md"
+  ],
   "sortImports": {
     "newlinesBetween": false,
     "internalPattern": ["#"],
